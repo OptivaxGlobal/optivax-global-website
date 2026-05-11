@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="https://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <url>
+    <loc>https://optivaxglobal.com/</loc>
+    <priority>1.00</priority>
+  </url>
+
+  <url>
+    <loc>https://optivaxglobal.com/contact</loc>
+    <priority>0.80</priority>
+  </url>
+
+  <url>
+    <loc>https://optivaxglobal.com/project</loc>
+    <priority>0.80</priority>
+  </url>
+
+  <url>
+    <loc>https://optivaxglobal.com/website-design</loc>
+    <priority>0.90</priority>
+  </url>
+
+  <url>
+    <loc>https://optivaxglobal.com/logo-design</loc>
+    <priority>0.90</priority>
+  </url>
+
+  <url>
+    <loc>https://optivaxglobal.com/digital-marketing</loc>
+    <priority>0.90</priority>
+  </url>
+
+  <url>
+    <loc>https://optivaxglobal.com/app-ui-ux</loc>
+    <priority>0.90</priority>
+  </url>
+
+  <url>
+    <loc>https://optivaxglobal.com/ebook-cover</loc>
+    <priority>0.90</priority>
+  </url>
+
+  <url>
+    <loc>https://optivaxglobal.com/corporate-presentation</loc>
+    <priority>0.80</priority>
+  </url>
+
+  <url>
+    <loc>https://optivaxglobal.com/privacy-policy</loc>
+    <priority>0.50</priority>
+  </url>
+
+  <url>
+    <loc>https://optivaxglobal.com/terms</loc>
+    <priority>0.50</priority>
+  </url>
+
+</urlset>
