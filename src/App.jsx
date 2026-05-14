@@ -15,6 +15,19 @@ import AppUIUX from "./pages/AppUIUX";
 import EbookCover from "./pages/EbookCover";
 import CorporatePresentation from "./pages/CorporatePresentation";
 import './index.css';
+import Faqs from "./pages/Faqs";
+import { useEffect } from "react";
+function MetaPixelPageView() {
+  const location = useLocation();
+
+  useEffect(() => {
+    if (window.fbq) {
+      window.fbq("track", "PageView");
+    }
+  }, [location.pathname]);
+
+  return null;
+}
 
 function App() {
   const location = useLocation();
@@ -26,15 +39,16 @@ function App() {
           <Route index element={<Home />} />
           <Route path="contact" element={<Contact />} />
           <Route path="project/:projectId" element={<Project />} />
-          <Route path="website-design-services" element={<WebsiteDesign />} />
+          <Route path="website-design" element={<WebsiteDesign />} />
           <Route path="thank-you" element={<ThankYou />} />
-          <Route path="logo-design-services" element={<LogoDesign />} />
-          <Route path="digital-marketing-services" element={<DigitalMarketing />} />
+          <Route path="logo-design" element={<LogoDesign />} />
+          <Route path="digital-marketing" element={<DigitalMarketing />} />
           <Route path="app-ui-ux-design" element={<AppUIUX />} />
           <Route path="ebook-cover-design" element={<EbookCover />} />
           <Route path="corporate-presentation-design" element={<CorporatePresentation />} />
           <Route path="privacy-policy" element={<PrivacyPolicy />} />
           <Route path="terms" element={<Terms />} />
+          <Route path="/faqs" element={<Faqs />} />
         </Route>
       </Routes>
     </AnimatePresence>

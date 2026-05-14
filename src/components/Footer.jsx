@@ -1,17 +1,24 @@
 import React from "react";
 import { SITE } from "@/lib/siteConfig";
+import logo from "@/assets/logo.png";
 import {
-  Facebook,
-  Instagram,
-  Youtube,
-  Linkedin,
   Mail,
   Phone,
   MapPin,
   ArrowRight,
   Globe,
 } from "lucide-react";
-import { FaPinterestP, FaTiktok, FaThreads } from "react-icons/fa6";
+
+import {
+  FaFacebookF,
+  FaInstagram,
+  FaLinkedinIn,
+  FaYoutube,
+  FaPinterestP,
+  FaTiktok,
+} from "react-icons/fa";
+
+import { RiThreadsFill } from "react-icons/ri";
 import { useNavigate } from "react-router-dom";
 
 const Footer = () => {
@@ -50,15 +57,16 @@ const Footer = () => {
         { name: "Portfolio", href: "/#portfolio" },
         { name: "About", href: "/#about" },
         { name: "Testimonials", href: "/#testimonials" },
+        { name: "FAQs", href: "/faqs" },
       ],
     },
     {
       title: "Services",
       links: [
-        { name: "Website Design", href: "/website-design-services" },
-        { name: "Logo & Branding", href: "/logo-design-services" },
+        { name: "Website Design", href: "/website-design" },
+        { name: "Logo & Branding", href: "/logo-design" },
         { name: "App UI/UX Design", href: "/app-ui-ux-design" },
-        { name: "Digital Marketing", href: "/digital-marketing-services" },
+        { name: "Digital Marketing", href: "/digital-marketing" },
         { name: "Ebook Cover Design", href: "/ebook-cover-design" },
         {
           name: "Corporate Presentation",
@@ -69,42 +77,56 @@ const Footer = () => {
   ];
 
   const socialLinks = [
-    {
-      label: "Facebook",
-      icon: <Facebook size={18} />,
-      link: "https://www.facebook.com/OptivaxGlobalSolution/",
-    },
-    {
-      label: "Instagram",
-      icon: <Instagram size={18} />,
-      link: "https://www.instagram.com/optivaxglobal/",
-    },
-    {
-      label: "YouTube",
-      icon: <Youtube size={18} />,
-      link: "https://www.youtube.com/@OptivaxGlobal",
-    },
-    {
-      label: "LinkedIn",
-      icon: <Linkedin size={18} />,
-      link: "https://www.linkedin.com/company/115777328/admin/page-posts/published/",
-    },
-    {
-      label: "Pinterest",
-      icon: <FaPinterestP size={18} />,
-      link: "https://www.pinterest.com/optivaxglobal/",
-    },
-    {
-      label: "TikTok",
-      icon: <FaTiktok size={18} />,
-      link: "https://www.tiktok.com/@optivaxglobal",
-    },
-    {
-      label: "Threads",
-      icon: <FaThreads size={18} />,
-      link: "https://www.threads.com/@optivaxglobal",
-    },
-  ];
+  {
+    label: "Facebook",
+    icon: <FaFacebookF size={16} />,
+    link: "https://www.facebook.com/OptivaxGlobalSolution/",
+    hover:
+      "hover:bg-[#1877F2] hover:border-[#1877F2] hover:text-white",
+  },
+  {
+    label: "Instagram",
+    icon: <FaInstagram size={16} />,
+    link: "https://www.instagram.com/optivaxglobal/",
+    hover:
+      "hover:bg-pink-500 hover:border-pink-500 hover:text-white",
+  },
+  {
+    label: "LinkedIn",
+    icon: <FaLinkedinIn size={16} />,
+    link: "https://www.linkedin.com/company/115777328/",
+    hover:
+      "hover:bg-[#0A66C2] hover:border-[#0A66C2] hover:text-white",
+  },
+  {
+    label: "YouTube",
+    icon: <FaYoutube size={16} />,
+    link: "https://www.youtube.com/@OptivaxGlobal",
+    hover:
+      "hover:bg-red-500 hover:border-red-500 hover:text-white",
+  },
+  {
+    label: "Pinterest",
+    icon: <FaPinterestP size={16} />,
+    link: "https://www.pinterest.com/optivaxglobal/",
+    hover:
+      "hover:bg-[#E60023] hover:border-[#E60023] hover:text-white",
+  },
+  {
+    label: "TikTok",
+    icon: <FaTiktok size={16} />,
+    link: "https://www.tiktok.com/@optivaxglobal",
+    hover:
+      "hover:bg-black hover:border-white hover:text-white",
+  },
+  {
+    label: "Threads",
+    icon: <RiThreadsFill size={16} />,
+    link: "https://www.threads.net/@optivaxglobal",
+    hover:
+      "hover:bg-black hover:border-white hover:text-white",
+  },
+];
 
   const footerLinkClass =
     "relative inline-flex items-center w-fit text-sm font-semibold text-[#E9FBFF]/85 hover:text-white transition-all duration-300 group";
@@ -117,13 +139,28 @@ const Footer = () => {
       <div className="max-w-7xl mx-auto px-6">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
           <div>
-            <button
-              onClick={() => navigate("/")}
-              className="text-left text-2xl font-extrabold mb-4 bg-gradient-to-r from-white to-accent-purple bg-clip-text text-transparent hover:scale-105 transition-all duration-300"
-              aria-label="Go to Optivax Global homepage"
-            >
-              OPTIVAX GLOBAL
-            </button>
+            <div className="mb-5">
+  <button
+    onClick={() => {
+      navigate("/");
+
+      setTimeout(() => {
+        window.scrollTo({
+          top: 0,
+          behavior: "smooth",
+        });
+      }, 100);
+    }}
+    aria-label="Go to Optivax Global homepage"
+    className="group"
+  >
+    <img
+      src={logo}
+      alt="Optivax Global"
+      className="h-14 w-auto object-contain transition-all duration-300 group-hover:scale-105"
+    />
+  </button>
+</div>
 
             <p className="text-gray-400 mb-6 leading-relaxed">
               We help businesses grow with high-performing websites, strategic
@@ -132,12 +169,12 @@ const Footer = () => {
             </p>
 
             <button
-              onClick={() => navigate("/contact")}
-              className="group inline-flex items-center gap-2 bg-gradient-to-r from-[#1699F1] to-[#004495] hover:from-[#38D9FF] hover:to-[#1699F1] text-white px-5 py-3 rounded-full font-semibold shadow-lg shadow-[#1699F1]/20 hover:shadow-[#1699F1]/40 hover:-translate-y-0.5 transition-all duration-300"
-            >
-              Get a Free Consultation
-              <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" />
-            </button>
+  onClick={() => navigate("/contact")}
+  className="group inline-flex items-center gap-2 bg-gradient-to-r from-[#1BBCEF] to-[#004495] hover:from-[#004495] hover:to-[#1BBCEF] text-white px-5 py-3 rounded-full font-semibold shadow-lg shadow-[#1BBCEF]/25 hover:-translate-y-0.5 transition-all duration-300 border-0"
+>
+  Get a Free Consultation
+  <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" />
+</button>
           </div>
 
           {footerSections.map((section) => (
@@ -223,7 +260,7 @@ const Footer = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label={`Follow Optivax Global on ${social.label}`}
-                  className="w-11 h-11 flex items-center justify-center rounded-full bg-white/5 border border-white/10 text-gray-400 hover:text-white hover:border-[#38D9FF] hover:bg-[#1699F1]/20 transition-all duration-300 hover:scale-110 hover:-translate-y-1"
+                  className={`w-11 h-11 rounded-full bg-white/[0.05] border border-white/10 flex items-center justify-center text-gray-300 transition-all duration-300 hover:scale-110 ${social.hover}`}
                 >
                   {social.icon}
                 </a>

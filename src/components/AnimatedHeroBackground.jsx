@@ -22,6 +22,7 @@ const layers = [
     transition: { duration: 30, repeat: Infinity, repeatType: 'mirror', ease: 'easeInOut' },
     opacity: 1,
   },
+  
 ];
 
 const AnimatedHeroBackground = () => {

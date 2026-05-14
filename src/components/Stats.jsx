@@ -1,6 +1,6 @@
-import React, { useEffect, useRef, useState } from 'react';
-import { useInView } from 'framer-motion';
-import { Briefcase, Smile, Clock, Star } from 'lucide-react';
+import React, { useEffect, useRef, useState } from "react";
+import { useInView } from "framer-motion";
+import { Briefcase, Smile, Clock, Star } from "lucide-react";
 
 const AnimatedCounter = ({ to, suffix }) => {
   const ref = useRef(null);
@@ -40,36 +40,36 @@ const AnimatedCounter = ({ to, suffix }) => {
 const defaultStats = [
   {
     value: 150,
-    suffix: '+',
-    label: 'Projects Delivered',
+    suffix: "+",
+    label: "Projects Delivered",
     description:
-      'Creative design, branding, website, and marketing projects completed for growing businesses.',
-    icon: Briefcase
+      "Creative websites, branding, UI/UX, publishing, and marketing projects completed for growing businesses.",
+    icon: Briefcase,
   },
   {
     value: 98,
-    suffix: '%',
-    label: 'Client Satisfaction',
+    suffix: "%",
+    label: "Client Satisfaction",
     description:
-      'A strong focus on communication, quality, and reliable delivery keeps our clients confident.',
-    icon: Smile
+      "A client-first process focused on clear communication, quality work, and reliable project delivery.",
+    icon: Smile,
   },
   {
     value: 300,
-    suffix: '+',
-    label: 'Design Hours',
+    suffix: "+",
+    label: "Design Hours",
     description:
-      'Hours invested in building professional visuals, websites, interfaces, and brand assets.',
-    icon: Clock
+      "Hours invested in creating professional visuals, websites, interfaces, and brand assets.",
+    icon: Clock,
   },
   {
     value: 4.9,
-    suffix: '/5',
-    label: 'Average Rating',
+    suffix: "/5",
+    label: "Average Rating",
     description:
-      'Trusted for clean design, business-focused strategy, and conversion-oriented digital solutions.',
-    icon: Star
-  }
+      "Trusted for clean design, smart strategy, and conversion-focused digital solutions.",
+    icon: Star,
+  },
 ];
 
 const Stats = ({ customStats }) => {
@@ -87,18 +87,18 @@ const Stats = ({ customStats }) => {
               </span>
 
               <h2 className="text-4xl md:text-6xl font-extrabold text-white leading-tight">
-                Results That Build
+                Digital Results That
                 <span className="block text-accent-purple">
-                  Trust & Growth
+                  Build Trust & Growth
                 </span>
               </h2>
             </div>
 
             <div className="flex items-end">
-              <p className="text-lg text-gray-400 max-w-md leading-relaxed">
-                We focus on meaningful digital results  better brand presence,
-                stronger user engagement, improved credibility, and sales-oriented
-                online experiences.
+              <p className="text-lg text-gray-300 max-w-md leading-relaxed">
+                We focus on meaningful outcomes: stronger brand presence, better
+                user engagement, improved credibility, and sales-focused digital
+                experiences.
               </p>
             </div>
           </div>
@@ -119,7 +119,7 @@ const Stats = ({ customStats }) => {
             return (
               <div
                 key={stat.label}
-                className="bg-[#1E1E2A] p-8 rounded-3xl h-full border border-white/10 hover:border-accent-purple/40 transition-colors"
+                className="bg-white/[0.04] p-8 rounded-3xl h-full border border-white/10 hover:border-accent-purple/40 hover:bg-white/[0.07] hover:-translate-y-1 transition-all duration-300"
               >
                 <div className="w-14 h-14 rounded-2xl bg-accent-purple/15 border border-accent-purple/30 flex items-center justify-center text-accent-purple mb-7">
                   <Icon size={26} />

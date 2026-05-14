@@ -35,7 +35,7 @@ const WebsiteDesign = () => {
   return (
     <>
       <Helmet>
-        <title>Website Design Services | Professional Web Design Agency | Optivax Global</title>
+        <title>Professional Website Design Company In USA - Optivax Global</title>
         <meta
           name="description"
           content="Optivax Global offers professional website design services for businesses, startups, and brands. Get a modern, mobile responsive, SEO-ready website built to generate leads."
@@ -44,7 +44,7 @@ const WebsiteDesign = () => {
           name="keywords"
           content="website design services, professional web design, business website design, responsive website design, web design agency, website development services"
         />
-        <link rel="canonical" href="https://optivaxglobal.netlify.app/website-design-services" />
+        <link rel="canonical" href="https://optivaxglobal.com/website-design" />
       </Helmet>
 
       <main className="bg-[#0C0D0D] text-white overflow-hidden">
@@ -75,7 +75,11 @@ const WebsiteDesign = () => {
 
                 <div className="flex flex-col sm:flex-row gap-4">
                   <button
-                    onClick={() => navigate("/contact")}
+                    onClick={() =>
+  navigate("/contact", {
+    state: { service: "Website Design" },
+  })
+}
                     className="inline-flex items-center justify-center gap-2 bg-accent-purple hover:bg-accent-purple/90 text-white px-7 py-4 rounded-full font-bold transition group"
                   >
                     Get a Free Consultation
@@ -221,7 +225,11 @@ const WebsiteDesign = () => {
             </p>
 
             <button
-              onClick={() => navigate("/contact")}
+              onClick={() =>
+  navigate("/contact", {
+    state: { service: "Website Design" },
+  })
+}
               className="inline-flex items-center justify-center gap-2 bg-accent-purple hover:bg-accent-purple/90 text-white px-8 py-4 rounded-full font-bold transition group"
             >
               Start Your Website Project

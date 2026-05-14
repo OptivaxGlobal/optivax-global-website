@@ -11,19 +11,20 @@ const Header = () => {
   const navigate = useNavigate();
 
   const servicesLinks = [
-    { name: "Website Design", href: "/website-design-services" },
-    { name: "Logo & Branding", href: "/logo-design-services" },
-    { name: "Digital Marketing", href: "/digital-marketing-services" },
+    { name: "Website Design", href: "/website-design" },
+    { name: "Logo & Branding", href: "/logo-design" },
+    { name: "Digital Marketing", href: "/digital-marketing" },
     { name: "App UI/UX Design", href: "/app-ui-ux-design" },
     { name: "Ebook Cover Design", href: "/ebook-cover-design" },
     { name: "Corporate Presentation", href: "/corporate-presentation-design" },
   ];
 
   const navLinks = [
-    { name: "About", href: "/#about" },
-    { name: "Portfolio", href: "/#portfolio" },
-    { name: "Testimonials", href: "/#testimonials" },
-  ];
+  { name: "About", href: "/#about" },
+  { name: "Portfolio", href: "/#portfolio" },
+  { name: "Testimonials", href: "/#testimonials" },
+  { name: "FAQs", href: "/faqs" },
+];
 
   useEffect(() => {
     const handleScroll = () => setIsScrolled(window.scrollY > 10);
@@ -90,7 +91,7 @@ const Header = () => {
       <img
         src={logo}
         alt="Optivax Global logo"
-        className="h-16 md:h-[74px] lg:h-[82px] w-auto object-contain drop-shadow-[0_0_25px_rgba(56,217,255,0.30)] group-hover:scale-105 transition-all duration-300"className="h-14 md:h-16 lg:h-[72px] w-auto object-contain drop-shadow-[0_0_22px_rgba(56,217,255,0.28)] group-hover:scale-105 transition-all duration-300"
+        className="h-14 md:h-16 lg:h-[72px] w-auto object-contain drop-shadow-[0_0_22px_rgba(56,217,255,0.28)] group-hover:scale-105 transition-all duration-300"
       />
     </button>
   );
@@ -183,9 +184,9 @@ const Header = () => {
             <button
               type="button"
               onClick={handleCTA}
-              className="group bg-gradient-to-r from-[#1699F1] to-[#004495] hover:from-[#38D9FF] hover:to-[#1699F1] text-[#E9FBFF] px-6 py-2.5 rounded-full flex items-center gap-2 font-semibold shadow-lg shadow-[#1699F1]/25 hover:shadow-[#1699F1]/45 hover:-translate-y-0.5 transition-all duration-300"
+              className="group bg-gradient-to-r from-[#1BBCEF] to-[#004495] hover:from-[#004495] hover:to-[#1BBCEF] text-[#E9FBFF] px-6 py-2.5 rounded-full flex items-center gap-2 font-semibold shadow-lg shadow-[#1BBCEF]/25 hover:shadow-[#1BBCEF]/45 hover:-translate-y-0.5 transition-all duration-300"
             >
-              Get a Free Consultation
+              Start Your Project
               <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" />
             </button>
           </div>
@@ -268,9 +269,9 @@ const Header = () => {
                 <button
                   type="button"
                   onClick={handleCTA}
-                  className="w-full bg-gradient-to-r from-[#1699F1] to-[#004495] text-white py-4 rounded-full text-lg font-semibold shadow-lg shadow-[#1699F1]/25"
+                  className="w-full bg-gradient-to-r from-[#1BBCEF] to-[#004495] hover:from-[#004495] hover:to-[#1BBCEF] text-white py-4 rounded-full text-lg font-semibold shadow-lg shadow-[#1BBCEF]/25 transition-all duration-300"
                 >
-                  Get a Free Consultation
+                  Start Your Project
                 </button>
               </div>
             </div>

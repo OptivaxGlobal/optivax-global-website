@@ -17,59 +17,95 @@ const services = [
     slug: "/website-design-services",
     icon: Globe,
     description:
-      "We create fast, modern, mobile-responsive websites designed to attract visitors, build trust, and convert leads into paying customers.",
-    points: ["Business Websites", "Landing Pages", "Responsive Design", "SEO-Ready Structure"],
+      "We build modern, responsive, and high-performing websites designed to strengthen your online presence, build customer trust, and turn visitors into clients.",
+    points: [
+      "Business Websites",
+      "Landing Pages",
+      "Responsive Design",
+      "SEO-Optimized Structure",
+    ],
   },
   {
-    title: "Logo & Branding & Branding",
+    title: "Logo & Branding",
     slug: "/logo-design-services",
     icon: PenTool,
     description:
-      "We design memorable brand identities including professional logos, colors, typography, and visual systems that make your business stand out.",
-    points: ["Custom Logo & Branding", "Brand Identity", "Color Palette", "Typography System"],
+      "We create memorable brand identities with professional logos, color systems, typography, and visual branding that help businesses stand out confidently.",
+    points: [
+      "Custom Logo Design",
+      "Brand Identity",
+      "Color Palette",
+      "Typography System",
+    ],
   },
   {
     title: "App UI/UX Design",
     slug: "/app-ui-ux-design",
     icon: Smartphone,
     description:
-      "We design clean and user-friendly mobile app interfaces that improve user experience, engagement, and customer retention.",
-    points: ["Mobile App UI", "User Experience", "Wireframes", "Prototype Design"],
+      "We design clean and engaging mobile app experiences focused on usability, user satisfaction, and modern interface design.",
+    points: [
+      "Mobile App UI",
+      "User Experience",
+      "Wireframes",
+      "Interactive Prototypes",
+    ],
   },
   {
     title: "Digital Marketing",
     slug: "/digital-marketing-services",
     icon: Megaphone,
     description:
-      "We help businesses grow online through result-driven marketing strategies focused on visibility, engagement, leads, and sales.",
-    points: ["Social Media Marketing", "Ad Strategy", "Lead Generation", "Campaign Planning"],
+      "We help brands grow through strategic digital marketing, SEO, content planning, and campaigns focused on visibility, engagement, and conversions.",
+    points: [
+      "SEO Optimization",
+      "Social Media Marketing",
+      "Lead Generation",
+      "Marketing Campaigns",
+    ],
   },
   {
-    title: "Ebook Cover Design",
+    title: "eBook Cover Design",
     slug: "/ebook-cover-design",
     icon: BookOpen,
     description:
-      "We create professional ebook covers that grab attention, improve credibility, and help authors increase clicks and sales on platforms like KDP.",
-    points: ["KDP Covers", "Book Branding", "Creative Concepts", "Sales-Focused Design"],
+      "We design professional eBook covers that capture attention, improve credibility, and help authors increase clicks, engagement, and sales.",
+    points: [
+      "KDP Covers",
+      "Book Branding",
+      "Creative Concepts",
+      "Sales-Focused Design",
+    ],
   },
   {
     title: "Corporate Presentation Design",
     slug: "/corporate-presentation-design",
     icon: Presentation,
     description:
-      "We design premium business presentations, pitch decks, and company profiles that help you impress clients, investors, and partners.",
-    points: ["Pitch Decks", "Company Profiles", "Business Proposals", "Presentation Design"],
+      "We create premium pitch decks, company profiles, and business presentations designed to impress clients, investors, and business partners.",
+    points: [
+      "Pitch Decks",
+      "Company Profiles",
+      "Business Proposals",
+      "Presentation Design",
+    ],
   },
 ];
 
-const filterTags = ["Web Design", "Branding", "App UI/UX", "Marketing", "Ebook Covers"];
+const filterTags = [
+  "Web Design",
+  "Branding",
+  "App UI/UX",
+  "Marketing",
+  "eBook Covers",
+];
 
 const tagLinks = {
   "Web Design": "/website-design-services",
-  "Branding": "/logo-design-services",
+  Branding: "/logo-design-services",
   "App UI/UX": "/app-ui-ux-design",
-  "Marketing": "/digital-marketing-services",
-  "Ebook Covers": "/ebook-cover-design",
+  Marketing: "/digital-marketing-services",
+  "eBook Covers": "/ebook-cover-design",
 };
 
 const Services = () => {
@@ -85,19 +121,21 @@ const Services = () => {
       <div className="container mx-auto px-6 relative z-10">
         <div className="mb-16 max-w-5xl">
           <span className="inline-block text-accent-purple font-semibold uppercase tracking-[0.25em] mb-4">
-            What We Do
+            Professional Digital Services
           </span>
 
           <h2 className="text-4xl md:text-6xl lg:text-7xl font-extrabold mb-6 leading-tight text-white">
-            Digital Services Built to
-            <span className="block text-accent-purple">Grow Your Business</span>
-          </h2>
+  Digital Solutions Built to
+  <span className="block text-accent-purple">
+    Elevate Modern Brands
+  </span>
+</h2>
 
           <p className="text-lg md:text-2xl text-gray-300 max-w-3xl mt-4 leading-relaxed">
-            From brand identity to high-converting websites and marketing campaigns,
-            Optivax Global helps businesses build a stronger online presence and turn
-            visitors into customers.
-          </p>
+  From professional websites and branding to UI/UX design, SEO, and digital
+  marketing, Optivax Global helps businesses build a stronger online presence
+  and create lasting customer impact.
+</p>
 
           <div className="flex flex-wrap gap-3 mt-8">
             {filterTags.map((tag) => (
@@ -117,7 +155,7 @@ const Services = () => {
             const Icon = service.icon;
 
             return (
-              <div key={service.title} className="border-b border-gray-800">
+              <div key={service.title} className="border-b border-white/10 hover:bg-white/[0.02] transition-all duration-300">
                 <button
                   type="button"
                   className="w-full flex justify-between items-center text-left cursor-pointer py-8 group"
@@ -136,7 +174,7 @@ const Services = () => {
                       className={`w-12 h-12 rounded-full border flex items-center justify-center transition-colors duration-300 ${
                         activeIndex === index
                           ? "border-accent-purple bg-accent-purple/15 text-accent-purple"
-                          : "border-gray-700 text-gray-500 group-hover:text-accent-purple group-hover:border-accent-purple/50"
+                          : "border-white/10 text-gray-500 group-hover:text-accent-purple group-hover:border-accent-purple/50"
                       }`}
                     >
                       <Icon size={22} />
@@ -146,7 +184,7 @@ const Services = () => {
                       className={`text-2xl md:text-4xl lg:text-5xl font-bold transition-colors duration-300 ${
                         activeIndex === index
                           ? "text-white"
-                          : "text-gray-500 group-hover:text-gray-300"
+                          : "text-gray-400 group-hover:text-white"
                       }`}
                     >
                       {service.title}
@@ -180,7 +218,7 @@ const Services = () => {
                       className="overflow-hidden"
                     >
                       <div className="pb-8 md:pl-17">
-                        <p className="text-lg text-gray-400 max-w-3xl leading-relaxed mb-5">
+                        <p className="text-lg text-gray-300 max-w-3xl leading-relaxed mb-5">
                           {service.description}
                         </p>
 

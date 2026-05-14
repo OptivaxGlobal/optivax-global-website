@@ -1,35 +1,35 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { CheckCircle2, Target, Lightbulb, TrendingUp } from 'lucide-react';
-import AnimatedAboutBackground from '@/components/AnimatedAboutBackground';
+import React from "react";
+import { motion } from "framer-motion";
+import { CheckCircle2, Target, Lightbulb, TrendingUp } from "lucide-react";
+import AnimatedAboutBackground from "@/components/AnimatedAboutBackground";
 
 const About = () => {
   const strengths = [
-    'Business-focused digital strategy',
-    'Modern design with clean user experience',
-    'SEO-ready website structure',
-    'Sales-oriented content and conversion flow'
+    "Business-focused digital strategy",
+    "Modern design with clean user experience",
+    "SEO-ready website structure",
+    "Sales-oriented content and conversion flow",
   ];
 
   const process = [
     {
       icon: Target,
-      title: 'Strategy First',
+      title: "Strategy First",
       description:
-        'We understand your business, audience, competitors, and goals before starting any design or marketing work.'
+        "We understand your business, audience, competitors, and goals before starting any design, development, or marketing work.",
     },
     {
       icon: Lightbulb,
-      title: 'Creative Execution',
+      title: "Creative Execution",
       description:
-        'We turn ideas into professional visuals, websites, app interfaces, and brand assets that look premium and feel trustworthy.'
+        "We turn ideas into polished websites, brand visuals, app interfaces, and digital assets that look premium and feel trustworthy.",
     },
     {
       icon: TrendingUp,
-      title: 'Growth Focused',
+      title: "Growth Focused",
       description:
-        'Our work is designed to improve visibility, increase engagement, generate leads, and support long-term business growth.'
-    }
+        "Every solution is designed to improve visibility, increase engagement, generate leads, and support long-term business growth.",
+    },
   ];
 
   return (
@@ -42,7 +42,7 @@ const About = () => {
             initial={{ opacity: 0, x: -45 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true, amount: 0.3 }}
-            transition={{ duration: 0.75, ease: 'easeOut' }}
+            transition={{ duration: 0.75, ease: "easeOut" }}
           >
             <div className="relative rounded-3xl overflow-hidden aspect-[4/3] border border-white/10 shadow-2xl">
               <img
@@ -58,7 +58,7 @@ const About = () => {
                   Optivax Global
                 </p>
                 <p className="text-white text-lg font-bold">
-                  Digital solutions built for visibility, trust, and sales.
+                  Digital solutions built for visibility, trust, and growth.
                 </p>
               </div>
             </div>
@@ -68,31 +68,31 @@ const About = () => {
             initial={{ opacity: 0, x: 45 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true, amount: 0.3 }}
-            transition={{ duration: 0.75, ease: 'easeOut' }}
+            transition={{ duration: 0.75, ease: "easeOut" }}
           >
             <span className="inline-block text-accent-purple font-semibold uppercase tracking-[0.25em] mb-4">
               About Optivax Global
             </span>
 
             <h2 className="text-4xl md:text-5xl lg:text-6xl font-extrabold mb-6 leading-tight text-white">
-              We Build Digital Brands That
+              We Create Digital Experiences That
               <span className="block text-accent-purple">
-                Look Better & Sell Better
+                Build Trust & Drive Growth
               </span>
             </h2>
 
-            <p className="text-lg md:text-xl text-gray-400 leading-relaxed mb-8">
-              Optivax Global is a professional digital service provider helping
-              startups, authors, entrepreneurs, and businesses grow online through
-              website design, Logo & Branding, app UI/UX, ebook cover design,
-              branding, and digital marketing.
+            <p className="text-lg md:text-xl text-gray-300 leading-relaxed mb-8">
+              Optivax Global helps businesses, startups, and modern brands grow
+              online through professional website design, strategic branding,
+              UI/UX design, SEO, publishing support, and result-focused digital
+              marketing solutions.
             </p>
 
             <div className="grid sm:grid-cols-2 gap-4">
               {strengths.map((item) => (
                 <div
                   key={item}
-                  className="flex items-start gap-3 bg-white/5 border border-white/10 rounded-2xl p-4 hover:border-accent-purple/40 hover:bg-white/10 transition-all duration-300"
+                  className="flex items-start gap-3 bg-white/[0.03] border border-white/10 backdrop-blur-sm rounded-2xl p-4 hover:border-accent-purple/40 hover:bg-white/10 transition-all duration-300"
                 >
                   <CheckCircle2 className="w-5 h-5 text-accent-purple mt-1 shrink-0" />
                   <p className="text-gray-300">{item}</p>
@@ -109,12 +109,13 @@ const About = () => {
             </span>
 
             <h2 className="text-4xl md:text-5xl font-extrabold text-white leading-tight">
-              From Idea to Professional Digital Presence
+              Turning Ideas Into Modern Digital Brands
             </h2>
 
-            <p className="text-lg text-gray-400 mt-5 leading-relaxed">
-              We follow a clear process to make sure every project is strategic,
-              visually strong, user-friendly, and ready for business growth.
+            <p className="text-lg text-gray-300 mt-5 leading-relaxed">
+              Our process is built around strategy, creativity, and user
+              experience to deliver digital solutions that look professional,
+              perform smoothly, and support long-term business growth.
             </p>
           </div>
 
@@ -129,7 +130,7 @@ const About = () => {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true, amount: 0.25 }}
                   transition={{ duration: 0.65, delay: index * 0.12 }}
-                  className="bg-white/5 border border-white/10 rounded-3xl p-7 hover:border-accent-purple/40 hover:bg-white/10 transition-all duration-300"
+                  className="bg-white/5 border border-white/10 rounded-3xl p-7 hover:border-accent-purple/40 hover:bg-white/[0.08] hover:-translate-y-1 transition-all duration-300"
                 >
                   <div className="w-14 h-14 rounded-2xl bg-accent-purple/15 border border-accent-purple/30 flex items-center justify-center text-accent-purple mb-6">
                     <Icon size={26} />

@@ -19,7 +19,9 @@ const Layout = () => {
     <div className="min-h-screen bg-[#0C0D0D] text-white overflow-x-hidden flex flex-col">
       
       {/* Cursor */}
-      <CustomCursor />
+      <div className="hidden lg:block">
+  <CustomCursor />
+</div>
       {/* Header */}
       <Header />
 
