@@ -84,7 +84,7 @@ const Hero = () => {
             className="flex flex-wrap gap-4 justify-start md:justify-center mb-10 text-gray-200"
           >
             <Link
-              to="/website-design-services"
+              to="/website-design"
               className="flex items-center gap-2 hover:text-accent-purple transition"
             >
               <CheckCircle2 className="w-5 h-5 text-accent-purple" />
@@ -92,7 +92,7 @@ const Hero = () => {
             </Link>
 
             <Link
-              to="/logo-design-services"
+              to="/logo-design"
               className="flex items-center gap-2 hover:text-accent-purple transition"
             >
               <CheckCircle2 className="w-5 h-5 text-accent-purple" />
@@ -100,7 +100,7 @@ const Hero = () => {
             </Link>
 
             <Link
-              to="/digital-marketing-services"
+              to="/digital-marketing"
               className="flex items-center gap-2 hover:text-accent-purple transition"
             >
               <CheckCircle2 className="w-5 h-5 text-accent-purple" />
