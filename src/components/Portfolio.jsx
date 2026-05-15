@@ -43,7 +43,7 @@ const portfolioSections = [
     subtitle: "Strategic branding and visual identity projects",
     images: [logo1, logo2, logo3, logo4, logo5, logo6],
     contain: true,
-    link: "/logo-design-services",
+    link: "/logo-design",
   },
   {
     title: "eBook Cover Design",
@@ -64,7 +64,7 @@ const portfolioSections = [
     subtitle: "Creative campaigns built for visibility and engagement",
     images: [dm1, dm2, dm3, dm4],
     contain: false,
-    link: "/digital-marketing-services",
+    link: "/digital-marketing",
   },
 ];
 

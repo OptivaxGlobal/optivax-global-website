@@ -14,7 +14,7 @@ import {
 const services = [
   {
     title: "Website Design & Development",
-    slug: "/website-design-services",
+    slug: "/website-design",
     icon: Globe,
     description:
       "We build modern, responsive, and high-performing websites designed to strengthen your online presence, build customer trust, and turn visitors into clients.",
@@ -27,7 +27,7 @@ const services = [
   },
   {
     title: "Logo & Branding",
-    slug: "/logo-design-services",
+    slug: "/logo-design",
     icon: PenTool,
     description:
       "We create memorable brand identities with professional logos, color systems, typography, and visual branding that help businesses stand out confidently.",
@@ -53,7 +53,7 @@ const services = [
   },
   {
     title: "Digital Marketing",
-    slug: "/digital-marketing-services",
+    slug: "/digital-marketing",
     icon: Megaphone,
     description:
       "We help brands grow through strategic digital marketing, SEO, content planning, and campaigns focused on visibility, engagement, and conversions.",
@@ -101,10 +101,10 @@ const filterTags = [
 ];
 
 const tagLinks = {
-  "Web Design": "/website-design-services",
-  Branding: "/logo-design-services",
+  "Web Design": "/website-design",
+  Branding: "/logo-design",
   "App UI/UX": "/app-ui-ux-design",
-  Marketing: "/digital-marketing-services",
+  Marketing: "/digital-marketing",
   "eBook Covers": "/ebook-cover-design",
 };
 
