@@ -2,38 +2,42 @@ import React from "react";
 import { motion } from "framer-motion";
 import { CheckCircle2, Target, Lightbulb, TrendingUp } from "lucide-react";
 import AnimatedAboutBackground from "@/components/AnimatedAboutBackground";
+import AboutImage from "@/assets/about-images/001.webp";
 
 const About = () => {
   const strengths = [
-    "Business-focused digital strategy",
-    "Modern design with clean user experience",
-    "SEO-ready website structure",
-    "Sales-oriented content and conversion flow",
+    "Business digital strategies",
+    "A modern, easy to use design",
+    "SEO-optimized website structure",
+    "Conversion Layouts & Content",
   ];
 
   const process = [
     {
       icon: Target,
-      title: "Strategy First",
+      title: "First Strategy",
       description:
-        "We understand your business, audience, competitors, and goals before starting any design, development, or marketing work.",
+        "We take the time to understand your business, your audience, your competitors and your goals before starting any project. This enables us to build solutions that align with your vision and growth strategies.",
     },
     {
       icon: Lightbulb,
       title: "Creative Execution",
       description:
-        "We turn ideas into polished websites, brand visuals, app interfaces, and digital assets that look premium and feel trustworthy.",
+        "We turn ideas into finished websites, modern brand visuals, app interfaces and digital assets. Our work is professional, trustworthy and looks strong visually.",
     },
     {
       icon: TrendingUp,
       title: "Growth Focused",
       description:
-        "Every solution is designed to improve visibility, increase engagement, generate leads, and support long-term business growth.",
+        "We plan each project with growth in mind to increase visibility and engagement, to generate quality leads and to build a stronger online presence for your brand.",
     },
   ];
 
   return (
-    <section id="about" className="relative py-24 bg-[#0C0D0D] overflow-hidden">
+    <section
+      id="about"
+      className="relative py-24 bg-[#0C0D0D] overflow-hidden"
+    >
       <AnimatedAboutBackground />
 
       <div className="container mx-auto px-6 relative z-10">
@@ -46,10 +50,10 @@ const About = () => {
           >
             <div className="relative rounded-3xl overflow-hidden aspect-[4/3] border border-white/10 shadow-2xl">
               <img
-                className="w-full h-full object-cover"
-                alt="Optivax Global creative digital agency team working on website design and branding projects"
-                src="https://horizons-cdn.hostinger.com/c43e6596-ab28-43b9-ad53-b1a7341229e7/charlesdeluvio-lks7vei-eag-unsplash-7Or6F.jpg"
-              />
+  className="w-full h-full object-cover"
+  alt="Optivax Global creative team working on projects for modern website design, branding and digital growth."
+  src={AboutImage}
+/>
 
               <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
 
@@ -57,8 +61,10 @@ const About = () => {
                 <p className="text-accent-purple font-semibold mb-1">
                   Optivax Global
                 </p>
+
                 <p className="text-white text-lg font-bold">
-                  Digital solutions built for visibility, trust, and growth.
+                  We build digital solutions that help brands grow, build trust
+                  and stand out.
                 </p>
               </div>
             </div>
@@ -71,21 +77,26 @@ const About = () => {
             transition={{ duration: 0.75, ease: "easeOut" }}
           >
             <span className="inline-block text-accent-purple font-semibold uppercase tracking-[0.25em] mb-4">
-              About Optivax Global
+              Optivax Global About Us
             </span>
 
             <h2 className="text-4xl md:text-5xl lg:text-6xl font-extrabold mb-6 leading-tight text-white">
-              We Create Digital Experiences That
+              We Create Digital 
               <span className="block text-accent-purple">
-                Build Trust & Drive Growth
-              </span>
+               Experiences to Help Brands Grow
+            </span>
             </h2>
 
             <p className="text-lg md:text-xl text-gray-300 leading-relaxed mb-8">
-              Optivax Global helps businesses, startups, and modern brands grow
-              online through professional website design, strategic branding,
-              UI/UX design, SEO, publishing support, and result-focused digital
-              marketing solutions.
+              Optivax Global helps businesses, startups and modern brands to
+              build a stronger online presence with professional website design,
+              branding, UI/UX design, SEO, publishing support and results-driven
+              digital marketing.
+              <br />
+              <br />
+              We’re all about creating digital experiences that are modern and
+              professional, and support businesses to build stronger
+              relationships with their audience and grow with confidence.
             </p>
 
             <div className="grid sm:grid-cols-2 gap-4">
@@ -95,6 +106,7 @@ const About = () => {
                   className="flex items-start gap-3 bg-white/[0.03] border border-white/10 backdrop-blur-sm rounded-2xl p-4 hover:border-accent-purple/40 hover:bg-white/10 transition-all duration-300"
                 >
                   <CheckCircle2 className="w-5 h-5 text-accent-purple mt-1 shrink-0" />
+
                   <p className="text-gray-300">{item}</p>
                 </div>
               ))}
@@ -109,13 +121,16 @@ const About = () => {
             </span>
 
             <h2 className="text-4xl md:text-5xl font-extrabold text-white leading-tight">
-              Turning Ideas Into Modern Digital Brands
+              Turning Ideas Into Professional
+              <span className="block text-accent-purple">
+               Digital Experiences
+            </span>
             </h2>
 
             <p className="text-lg text-gray-300 mt-5 leading-relaxed">
-              Our process is built around strategy, creativity, and user
-              experience to deliver digital solutions that look professional,
-              perform smoothly, and support long-term business growth.
+              We combine strategy, creativity and user experience to create
+              fresh digital solutions that perform and grow your business
+              long-term.
             </p>
           </div>
 

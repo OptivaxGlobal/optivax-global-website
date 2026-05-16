@@ -1,4 +1,5 @@
+# https://robotstxt.org
 User-agent: *
-Allow: /
+Disallow:
 
 Sitemap: https://optivaxglobal.com/sitemap.xml

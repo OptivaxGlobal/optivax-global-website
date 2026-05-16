@@ -1,96 +1,97 @@
 import React, { useRef, useState, useEffect } from "react";
 import { ArrowLeft, ArrowRight, Quote, Star } from "lucide-react";
 
+import Avatar01 from "@/assets/testimonials/01.webp";
+import Avatar02 from "@/assets/testimonials/02.webp";
+import Avatar03 from "@/assets/testimonials/03.webp";
+import Avatar04 from "@/assets/testimonials/04.webp";
+import Avatar05 from "@/assets/testimonials/05.webp";
+import Avatar06 from "@/assets/testimonials/06.webp";
+import Avatar07 from "@/assets/testimonials/07.webp";
+import Avatar08 from "@/assets/testimonials/08.webp";
+import Avatar09 from "@/assets/testimonials/09.webp";
+import Avatar10 from "@/assets/testimonials/10.webp";
+
 const testimonials = [
   {
     id: 1,
-    name: "Sarah Johnson",
-    role: "Founder, TechVision",
+    name: "Olivia Carter",
+    role: "Manager, TechVision",
     content:
-      "Optivax Global gave our brand a complete professional upgrade. The website design, visuals, and strategy helped us look more credible and attract better leads.",
-    avatar:
-      "https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
+      "Our brand’s online presence has been completely transformed by Optivax Global. The website now feels modern, professional, and much better aligned with our business goals. Since the redesign, we’ve also started getting higher quality leads.",
+    avatar: Avatar02,
   },
   {
     id: 2,
-    name: "Michael Chen",
-    role: "Marketing Director, GrowthCo",
+    name: "Ethan Walker",
+    role: "Marketing Assistant, GrowthCo",
     content:
-      "Their digital marketing approach was clear, practical, and result-focused. We finally had a stronger online presence and better engagement from our audience.",
-    avatar:
-      "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
+      "Their team made digital marketing feel simple and effective. Everything was explained clearly, and the strategies genuinely helped us improve engagement and build a much stronger online presence.",
+    avatar: Avatar01,
   },
   {
     id: 3,
-    name: "Emily Rodriguez",
-    role: "Author & Entrepreneur",
+    name: "Sophia Bennett",
+    role: "Management Director",
     content:
-      "The eBook cover design was premium and eye-catching. It instantly made my book look more professional and helped improve buyer confidence.",
-    avatar:
-      "https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
+      "I really loved the final eBook cover design. It looked clean, premium, and eye-catching without feeling over the top. It gave my book a far more professional and polished appearance.",
+    avatar: Avatar04,
   },
   {
     id: 4,
-    name: "David Thompson",
+    name: "James Mitchell",
     role: "Business Owner",
     content:
-      "From logo design to website layout, everything was handled professionally. The team understood our vision and turned it into a clean digital brand.",
-    avatar:
-      "https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
+      "They handled everything from the logo design to the website layout with great attention to detail. The team understood our vision perfectly and delivered a modern, trustworthy brand identity.",
+    avatar: Avatar03,
   },
   {
     id: 5,
-    name: "Jessica Williams",
+    name: "Chloe Anderson",
     role: "Product Manager, NexGen",
     content:
-      "Their app UI/UX design was simple, modern, and user-friendly. The final interface looked premium and made the user journey much easier.",
-    avatar:
-      "https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
+      "The UI/UX design process was smooth from start to finish. The final app interface looked premium, was easy to navigate, and felt much more user-friendly than our previous design.",
+    avatar: Avatar05,
   },
   {
     id: 6,
-    name: "Chris Martinez",
+    name: "Daniel Reyes",
     role: "Startup Consultant",
     content:
-      "Optivax Global delivers more than design. They think about business, trust, conversion, and customer experience — exactly what a growing brand needs.",
-    avatar:
-      "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
+      "What impressed us most was that they focused on more than just visuals. They genuinely thought about branding, customer experience, and how to make the business feel more credible online.",
+    avatar: Avatar07,
   },
   {
     id: 7,
-    name: "Ayesha Khan",
+    name: "Hannah Malik",
     role: "Founder, StyleNest",
     content:
-      "They created a clean brand identity and website that finally matched the quality of our business. Everything felt polished, modern, and easy to use.",
-    avatar:
-      "https://images.unsplash.com/photo-1531123897727-8f129e1688ce?auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
+      "Our old branding felt outdated, but Optivax Global gave us a fresh and modern identity that truly reflects the quality of our business. The website now feels polished, sleek, and easy for customers to use.",
+    avatar: Avatar06,
   },
   {
     id: 8,
-    name: "Daniel Brooks",
+    name: "Nathan Brooks",
     role: "Agency Partner",
     content:
-      "The communication was smooth and the final work looked premium. Optivax Global helped us present our services with more confidence and clarity.",
-    avatar:
-      "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
+      "Communication throughout the project was smooth and professional. The final designs helped us present our services with much more clarity, confidence, and professionalism.",
+    avatar: Avatar08,
   },
   {
     id: 9,
-    name: "Noor Hassan",
+    name: "Zara Ahmed",
     role: "Author",
     content:
-      "My book cover looked professional, bold, and market-ready. The design made the book feel more premium and helped it stand out visually.",
-    avatar:
-      "https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
+      "The book cover exceeded my expectations. It looked bold, professional, and visually strong enough to stand out instantly. I also received amazing feedback from readers after the launch.",
+    avatar: Avatar09,
   },
   {
     id: 10,
-    name: "Ryan Cooper",
+    name: "Lucas Turner",
     role: "Small Business Owner",
     content:
-      "Their website design gave our business a much stronger first impression. The layout, copy, and visual direction all felt professional and trustworthy.",
-    avatar:
-      "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
+      "The new website gave our business a far stronger first impression. From the layout to the visual direction, everything looked clean, modern, and professionally designed.",
+    avatar: Avatar10,
   },
 ];
 
