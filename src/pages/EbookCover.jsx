@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useState } from "react";
 import { Helmet } from "react-helmet";
 import {
   CheckCircle2,
@@ -32,13 +32,27 @@ import cover17 from "@/assets/ebook-cover-showcase/ebook-cover-17.webp";
 import cover18 from "@/assets/ebook-cover-showcase/ebook-cover-18.webp";
 import cover19 from "@/assets/ebook-cover-showcase/ebook-cover-19.webp";
 import cover20 from "@/assets/ebook-cover-showcase/ebook-cover-20.webp";
+import cover21 from "@/assets/ebook-cover-showcase/ebook-cover-21.webp";
+import cover22 from "@/assets/ebook-cover-showcase/ebook-cover-22.webp";
+import cover23 from "@/assets/ebook-cover-showcase/ebook-cover-23.webp";
+import cover24 from "@/assets/ebook-cover-showcase/ebook-cover-24.webp";
+import cover25 from "@/assets/ebook-cover-showcase/ebook-cover-25.webp";
+import cover26 from "@/assets/ebook-cover-showcase/ebook-cover-26.webp";
+import cover27 from "@/assets/ebook-cover-showcase/ebook-cover-27.webp";
+import cover28 from "@/assets/ebook-cover-showcase/ebook-cover-28.webp";
+import cover29 from "@/assets/ebook-cover-showcase/ebook-cover-29.webp";
+import cover30 from "@/assets/ebook-cover-showcase/ebook-cover-30.webp";
+import cover31 from "@/assets/ebook-cover-showcase/ebook-cover-31.webp";
+import cover32 from "@/assets/ebook-cover-showcase/ebook-cover-32.webp";
+import cover33 from "@/assets/ebook-cover-showcase/ebook-cover-33.webp";
+import cover34 from "@/assets/ebook-cover-showcase/ebook-cover-34.webp";
+import cover35 from "@/assets/ebook-cover-showcase/ebook-cover-35.webp";
+import cover36 from "@/assets/ebook-cover-showcase/ebook-cover-36.webp";
+import cover37 from "@/assets/ebook-cover-showcase/ebook-cover-37.webp";
 
 const EbookCover = () => {
   const navigate = useNavigate();
-  const sliderRef = useRef(null);
-  const autoScrollRef = useRef(null);
-  const isDraggingRef = useRef(false);
-  const [activeIndex, setActiveIndex] = useState(0);
+  const [selectedImage, setSelectedImage] = useState(null);
 
   const showcase = [
     cover1,
@@ -61,6 +75,22 @@ const EbookCover = () => {
     cover18,
     cover19,
     cover20,
+    cover22,
+    cover23,
+    cover24,
+    cover25,
+    cover26,
+    cover27,
+    cover28,
+    cover29,
+    cover30,
+    cover31,
+    cover32,
+    cover33,
+    cover34,
+    cover35,
+    cover36,
+    cover37,
   ];
 
   const deliverables = [
@@ -97,144 +127,12 @@ const EbookCover = () => {
     },
   ];
 
-  const updateActiveCard = () => {
-    const slider = sliderRef.current;
-    if (!slider) return;
-
-    const cards = slider.querySelectorAll(".ebook-card");
-    const sliderCenter = slider.scrollLeft + slider.clientWidth / 2;
-
-    let closestIndex = 0;
-    let closestDistance = Infinity;
-
-    cards.forEach((card, index) => {
-      const cardCenter = card.offsetLeft + card.offsetWidth / 2;
-      const distance = Math.abs(sliderCenter - cardCenter);
-
-      if (distance < closestDistance) {
-        closestDistance = distance;
-        closestIndex = index;
-      }
-    });
-
-    setActiveIndex(closestIndex);
-  };
-
-  const startAutoScroll = () => {
-    clearInterval(autoScrollRef.current);
-
-    autoScrollRef.current = setInterval(() => {
-      const slider = sliderRef.current;
-      if (!slider || isDraggingRef.current) return;
-
-      slider.scrollLeft += 1.5;
-
-      if (slider.scrollLeft + slider.clientWidth >= slider.scrollWidth - 10) {
-        slider.scrollLeft = 0;
-      }
-
-      updateActiveCard();
-    }, 16);
-  };
-
-  useEffect(() => {
-    const slider = sliderRef.current;
-    if (!slider) return;
-
-    startAutoScroll();
-    updateActiveCard();
-
-    slider.addEventListener("scroll", updateActiveCard);
-    window.addEventListener("resize", updateActiveCard);
-
-    return () => {
-      clearInterval(autoScrollRef.current);
-      slider.removeEventListener("scroll", updateActiveCard);
-      window.removeEventListener("resize", updateActiveCard);
-    };
-  }, []);
-
-  const scrollSlider = (direction) => {
-    clearInterval(autoScrollRef.current);
-
-    const slider = sliderRef.current;
-    if (!slider) return;
-
-    slider.scrollBy({
-      left: direction === "left" ? -430 : 430,
-      behavior: "smooth",
-    });
-
-    setTimeout(() => {
-      updateActiveCard();
-      startAutoScroll();
-    }, 600);
-  };
-
-  const centerCard = (index) => {
-    clearInterval(autoScrollRef.current);
-
-    const slider = sliderRef.current;
-    if (!slider) return;
-
-    const cards = slider.querySelectorAll(".ebook-card");
-    const card = cards[index];
-    if (!card) return;
-
-    const scrollTo =
-      card.offsetLeft - slider.clientWidth / 2 + card.offsetWidth / 2;
-
-    slider.scrollTo({
-      left: scrollTo,
-      behavior: "smooth",
-    });
-
-    setActiveIndex(index);
-
-    setTimeout(() => {
-      startAutoScroll();
-    }, 800);
-  };
-
-  const handlePointerDown = (e) => {
-    const slider = sliderRef.current;
-    if (!slider) return;
-
-    isDraggingRef.current = true;
-    clearInterval(autoScrollRef.current);
-
-    slider.dataset.startX = e.clientX;
-    slider.dataset.scrollLeft = slider.scrollLeft;
-    slider.classList.add("cursor-grabbing");
-  };
-
-  const handlePointerMove = (e) => {
-    const slider = sliderRef.current;
-    if (!slider || !isDraggingRef.current) return;
-
-    e.preventDefault();
-
-    const moveX = e.clientX - Number(slider.dataset.startX);
-    slider.scrollLeft = Number(slider.dataset.scrollLeft) - moveX * 1.8;
-
-    updateActiveCard();
-  };
-
-  const stopDragging = () => {
-    const slider = sliderRef.current;
-    if (!slider) return;
-
-    isDraggingRef.current = false;
-    slider.classList.remove("cursor-grabbing");
-
-    updateActiveCard();
-    startAutoScroll();
-  };
-
   return (
     <>
       <Helmet>
-        <title>Ebook Cover Design Services | KDP Book Covers | Optivax Global</title>
+        <title>
+          Ebook Cover Design Services | KDP Book Covers | Optivax Global
+        </title>
         <meta
           name="description"
           content="Professional ebook cover design services for authors. Get KDP-ready, eye-catching book covers designed to build trust, attract readers, and increase clicks."
@@ -272,10 +170,10 @@ const EbookCover = () => {
               <div className="flex flex-col sm:flex-row gap-4">
                 <button
                   onClick={() =>
-  navigate("/contact", {
-    state: { service: "Ebook Cover Design" },
-  })
-}
+                    navigate("/contact", {
+                      state: { service: "Ebook Cover Design" },
+                    })
+                  }
                   className="inline-flex items-center justify-center gap-2 bg-gradient-to-r from-[#1BBCEF] to-[#004495] hover:from-[#004495] hover:to-[#1BBCEF] text-white px-7 py-4 rounded-full font-bold transition-all duration-300 group shadow-lg shadow-[#1BBCEF]/20"
                 >
                   Get Ebook Cover
@@ -346,114 +244,60 @@ const EbookCover = () => {
 
         <section className="relative bg-black py-16 md:py-24 overflow-hidden border-t border-white/10">
           <div className="max-w-[1450px] mx-auto px-4 md:px-8">
-            <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-6 mb-10">
-              <div>
-                <span className="inline-block text-[#1CA4F4] font-semibold uppercase tracking-[0.22em] mb-3 text-xs sm:text-sm">
-                  Featured Covers
-                </span>
+            <div className="mb-10">
+              <span className="inline-block text-[#1CA4F4] font-semibold uppercase tracking-[0.22em] mb-3 text-xs sm:text-sm">
+                Featured Covers
+              </span>
 
-                <h2 className="text-4xl md:text-6xl font-black text-white leading-tight">
-                  Ebook Cover Showcase
-                </h2>
+              <h2 className="text-4xl md:text-6xl font-black text-white leading-tight">
+                Ebook Cover Showcase
+              </h2>
 
-                <p className="text-white/60 text-sm md:text-lg max-w-2xl mt-4">
-                  Professional ebook covers crafted with premium visuals, modern
-                  typography, and market-ready presentation.
-                </p>
-              </div>
-
-              <div className="hidden md:flex items-center gap-4">
-                <button
-                  onClick={() => scrollSlider("left")}
-                  className="w-14 h-14 rounded-full bg-[#131326] border border-white/10 flex items-center justify-center text-white hover:bg-[#1CA4F4] transition-all duration-300"
-                >
-                  ←
-                </button>
-
-                <button
-                  onClick={() => scrollSlider("right")}
-                  className="w-14 h-14 rounded-full bg-[#131326] border border-white/10 flex items-center justify-center text-white hover:bg-[#1CA4F4] transition-all duration-300"
-                >
-                  →
-                </button>
-              </div>
+              <p className="text-white/60 text-sm md:text-lg max-w-2xl mt-4">
+                Professional ebook covers crafted with premium visuals, modern
+                typography, and market-ready presentation.
+              </p>
             </div>
 
-            <div
-              ref={sliderRef}
-              onPointerDown={handlePointerDown}
-              onPointerMove={handlePointerMove}
-              onPointerUp={stopDragging}
-              onPointerCancel={stopDragging}
-              onPointerLeave={stopDragging}
-              className="
-                flex items-center gap-5 md:gap-7
-                overflow-x-auto scrollbar-hide
-                snap-x snap-mandatory select-none
-                cursor-grab active:cursor-grabbing
-                scroll-smooth pb-10 pt-8
-                px-[8vw] md:px-[10vw] lg:px-[12vw]
-                touch-pan-y
-              "
-              style={{
-                WebkitOverflowScrolling: "touch",
-                touchAction: "pan-y",
-              }}
-            >
-              {showcase.map((image, index) => {
-                const isActive = activeIndex === index;
-
-                return (
-                  <div
-                    key={index}
-                    onClick={() => centerCard(index)}
-                    className={`
-                      ebook-card snap-center flex-shrink-0 rounded-[26px]
-                      overflow-hidden border transition-all duration-500
-                      cursor-pointer bg-[#101018]
-                      ${
-                        isActive
-                          ? "scale-100 opacity-100 border-[#1CA4F4] shadow-[0_0_80px_rgba(28,164,244,0.40)] z-20"
-                          : "scale-[0.83] opacity-35 border-white/5"
-                      }
-                    `}
-                  >
-                    <div
-                      className="
-                        w-[260px] h-[260px]
-                        sm:w-[320px] sm:h-[300px]
-                        md:w-[380px] md:h-[340px]
-                        lg:w-[420px] lg:h-[380px]
-                      "
-                    >
-                      <img
-                        src={image}
-                        alt={`Ebook Cover ${index + 1}`}
-                        draggable="false"
-                        className="w-full h-full object-contain pointer-events-none"
-                      />
-                    </div>
+            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+              {showcase.map((image, index) => (
+                <div
+                  key={index}
+                  onClick={() => setSelectedImage(image)}
+                  className="group cursor-pointer rounded-[26px] overflow-hidden bg-[#101018] border border-white/10 hover:border-[#1CA4F4] hover:-translate-y-2 transition-all duration-300 shadow-xl hover:shadow-[0_0_55px_rgba(28,164,244,0.25)]"
+                >
+                  <div className="w-full h-[280px] sm:h-[320px] md:h-[360px] bg-black/30 flex items-center justify-center p-5">
+                    <img
+                      src={image}
+                      alt={`Ebook Cover ${index + 1}`}
+                      className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-300"
+                    />
                   </div>
-                );
-              })}
-            </div>
-
-            <div className="flex md:hidden items-center justify-center gap-4 mt-2">
-              <button
-                onClick={() => scrollSlider("left")}
-                className="w-12 h-12 rounded-full bg-[#131326] border border-white/10 flex items-center justify-center text-white hover:bg-[#1CA4F4]"
-              >
-                ←
-              </button>
-
-              <button
-                onClick={() => scrollSlider("right")}
-                className="w-12 h-12 rounded-full bg-[#131326] border border-white/10 flex items-center justify-center text-white hover:bg-[#1CA4F4]"
-              >
-                →
-              </button>
+                </div>
+              ))}
             </div>
           </div>
+
+          {selectedImage && (
+            <div
+              className="fixed inset-0 z-[9999] bg-black/85 backdrop-blur-sm flex items-center justify-center px-4"
+              onClick={() => setSelectedImage(null)}
+            >
+              <button
+                onClick={() => setSelectedImage(null)}
+                className="absolute top-5 right-5 w-11 h-11 rounded-full bg-white text-black font-bold text-2xl flex items-center justify-center hover:bg-[#1CA4F4] hover:text-white transition z-10"
+              >
+                ×
+              </button>
+
+              <img
+                src={selectedImage}
+                alt="Selected Ebook Cover"
+                onClick={(e) => e.stopPropagation()}
+                className="max-w-[92vw] max-h-[88vh] object-contain rounded-2xl shadow-2xl"
+              />
+            </div>
+          )}
         </section>
 
         <section className="py-20 border-t border-white/10">
@@ -476,8 +320,7 @@ const EbookCover = () => {
             <p>
               We study your book genre, audience, title, and market style before
               creating design concepts. Then we build a cover that feels
-              visually balanced, professional, and easy for readers to
-              recognize.
+              visually balanced, professional, and easy for readers to recognize.
             </p>
           </div>
         </section>
@@ -498,10 +341,10 @@ const EbookCover = () => {
 
             <button
               onClick={() =>
-  navigate("/contact", {
-    state: { service: "Ebook Cover Design" },
-  })
-}
+                navigate("/contact", {
+                  state: { service: "Ebook Cover Design" },
+                })
+              }
               className="inline-flex items-center gap-2 bg-gradient-to-r from-[#1BBCEF] to-[#004495] hover:from-[#004495] hover:to-[#1BBCEF] px-8 py-4 rounded-full font-bold transition-all duration-300 shadow-lg shadow-[#1BBCEF]/20"
             >
               Start Cover Design

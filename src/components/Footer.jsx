@@ -65,7 +65,7 @@ const Footer = () => {
       links: [
         { name: "Website Design", href: "/website-design" },
         { name: "Logo & Branding", href: "/logo-design" },
-        { name: "App UI/UX Design", href: "/app-ui-ux-design" },
+         { name: "Mobile App Design", href: "/mobile-app-design" },
         { name: "Digital Marketing", href: "/digital-marketing" },
         { name: "Ebook Cover Design", href: "/ebook-cover-design" },
         {

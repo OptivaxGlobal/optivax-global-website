@@ -12,9 +12,25 @@ const Header = () => {
 
   const servicesLinks = [
     { name: "Website Design", href: "/website-design" },
-    { name: "Logo & Branding", href: "/logo-design" },
+    { name: "Web Development", href: "/web-development" },
+    { name: "Logo Design", href: "/logo-design" },
+    { name: "Brand Design", href: "/brand-design" },
+    { name: "Animation", href: "/animation" },
+    { name: "Graphics Design", href: "/graphics-design" },
+    { name: "Brochure Design", href: "/brochure-design" },
+    { name: "Flyer Design", href: "/flyer-design" },
+    { name: "Stationary Design", href: "/stationary-design" },
+    { name: "Mobile App Development", href: "/mobile-app-development" },
+    { name: "Mobile App Design", href: "/mobile-app-design" },
+    { name: "UI UX Design", href: "/ui-ux-design" },
+    { name: "Brand Management", href: "/brand-management" },
+    { name: "Content Management System", href: "/content-management-system" },
     { name: "Digital Marketing", href: "/digital-marketing" },
-    { name: "App UI/UX Design", href: "/app-ui-ux-design" },
+    { name: "Email Marketing", href: "/email-marketing" },
+    { name: "Pay Per Click (PPC)", href: "/pay-per-click" },
+    { name: "Search Engine Marketing", href: "/search-engine-marketing" },
+    { name: "Search Engine Optimization", href: "/search-engine-optimization" },
+    { name: "Social Media Marketing", href: "/social-media-marketing" },
     { name: "Ebook Cover Design", href: "/ebook-cover-design" },
     { name: "Corporate Presentation", href: "/corporate-presentation-design" },
   ];
@@ -147,20 +163,22 @@ const Header = () => {
                     animate={{ opacity: 1, y: 0, scale: 1 }}
                     exit={{ opacity: 0, y: 12, scale: 0.98 }}
                     transition={{ duration: 0.22 }}
-                    className="absolute top-full left-0 mt-3 w-72 rounded-2xl overflow-hidden bg-[#031C33]/95 backdrop-blur-xl border border-[#E9FBFF]/12 shadow-[0_24px_70px_rgba(0,0,0,0.35)]"
+                    className="absolute top-full left-0 mt-3 w-[44rem] rounded-2xl overflow-hidden bg-[#031C33]/95 backdrop-blur-xl border border-[#E9FBFF]/12 shadow-[0_24px_70px_rgba(0,0,0,0.35)]"
                   >
                     <div className="p-2">
-                      {servicesLinks.map((service) => (
-                        <Link
-                          key={service.name}
-                          to={service.href}
-                          onClick={handleServiceClick}
-                          className="flex items-center justify-between px-4 py-3 rounded-xl text-sm text-[#E9FBFF]/78 hover:text-white hover:bg-[#1699F1]/18 transition-all duration-300 group/item"
-                        >
-                          <span>{service.name}</span>
-                          <ArrowRight className="w-4 h-4 opacity-0 -translate-x-2 group-hover/item:opacity-100 group-hover/item:translate-x-0 transition-all duration-300 text-[#38D9FF]" />
-                        </Link>
-                      ))}
+                      <div className="grid grid-cols-3 gap-2">
+                        {servicesLinks.map((service) => (
+                          <Link
+                            key={service.name}
+                            to={service.href}
+                            onClick={handleServiceClick}
+                            className="flex items-center justify-between px-4 py-3 rounded-xl text-sm text-[#E9FBFF]/78 hover:text-white hover:bg-[#1699F1]/18 transition-all duration-300 group/item"
+                          >
+                            <span>{service.name}</span>
+                            <ArrowRight className="w-4 h-4 opacity-0 -translate-x-2 group-hover/item:opacity-100 group-hover/item:translate-x-0 transition-all duration-300 text-[#38D9FF]" />
+                          </Link>
+                        ))}
+                      </div>
                     </div>
                   </motion.div>
                 )}

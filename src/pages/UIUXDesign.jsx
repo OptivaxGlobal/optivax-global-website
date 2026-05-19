@@ -17,7 +17,7 @@ import ui2 from "@/assets/app-uiux-showcase/app-uiux-2.webp";
 import ui3 from "@/assets/app-uiux-showcase/app-uiux-3.webp";
 import ui4 from "@/assets/app-uiux-showcase/app-uiux-4.webp";
 
-const AppUIUX = () => {
+const UIUXDesign = () => {
   const navigate = useNavigate();
 
   const deliverables = [
@@ -60,22 +60,15 @@ const AppUIUX = () => {
     <>
       <Helmet>
         <title>
-          Professional User Interface & UX Design Agency In USA - Optivax Global
+          Custom UI UX Design Services  In Wyoming USA - Optimax Global
         </title>
 
         <meta
           name="description"
           content="Professional app UI/UX design services for mobile apps. Optivax Global creates clean, modern, and user-friendly app interfaces focused on usability and engagement."
         />
-        
 
-        <link
-          rel="canonical"
-          href="https://optivaxglobal.com/app-ui-ux-design"
-        />
-
-        
-
+        <link rel="canonical" href="https://optivaxglobal.com/ui-ux-design" />
       </Helmet>
 
       <main className="bg-[#0C0D0D] text-white overflow-hidden">
@@ -88,13 +81,13 @@ const AppUIUX = () => {
           <div className="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-14 items-center relative z-10">
             <div>
               <span className="inline-block text-accent-purple font-semibold uppercase tracking-[0.25em] mb-5">
-                App UI/UX Design
+                UI/UX Design
               </span>
 
               <h1 className="text-4xl md:text-6xl lg:text-7xl font-extrabold leading-tight mb-6">
-                Mobile App Interfaces
+                UI/UX Design
                 <span className="block text-accent-purple">
-                  Designed for Real Users
+                That Build Trust
                 </span>
               </h1>
 
@@ -108,10 +101,10 @@ const AppUIUX = () => {
               <div className="flex flex-col sm:flex-row gap-4">
                 <button
                   onClick={() =>
-  navigate("/contact", {
-    state: { service: "App UI/UX Design" },
-  })
-}
+                    navigate("/contact", {
+                      state: { service: "App UI/UX Design" },
+                    })
+                  }
                   className="inline-flex items-center justify-center gap-2 bg-gradient-to-r from-[#1BBCEF] to-[#004495] hover:from-[#004495] hover:to-[#1BBCEF] text-white px-7 py-4 rounded-full font-bold transition-all duration-300 group shadow-lg shadow-[#1BBCEF]/20"
                 >
                   Start App Design
@@ -136,7 +129,6 @@ const AppUIUX = () => {
                 {deliverables.map((item) => (
                   <div key={item} className="flex items-center gap-3">
                     <CheckCircle2 className="text-accent-purple w-5 h-5 shrink-0" />
-
                     <span className="text-gray-300">{item}</span>
                   </div>
                 ))}
@@ -218,57 +210,52 @@ const AppUIUX = () => {
           </div>
         </section>
 
-        {/* CONTENT */}
         <section className="py-20 border-t border-white/10">
           <div className="max-w-4xl mx-auto px-6 space-y-8 text-gray-300 leading-relaxed">
             <h2 className="text-3xl md:text-4xl font-extrabold text-white">
-              Why UI/UX Design Matters
+              Build App Experiences Users Trust
             </h2>
 
             <p>
-              Users quickly leave apps that feel confusing or difficult to use.
-              A strong UI/UX experience improves navigation, trust, engagement,
-              and overall product satisfaction.
+              People expect mobile apps to be easy, intuitive, and fast. We
+              design app interfaces that reduce confusion, improve user flow,
+              and encourage visitors to take action.
             </p>
 
             <h2 className="text-3xl md:text-4xl font-extrabold text-white">
-              Our App Design Process
+              Design with Real Users in Mind
             </h2>
 
             <p>
-              We start by understanding your users, app goals, and feature
-              structure. Then we create wireframes, user flows, and modern
-              interface designs that feel smooth, clear, and easy to navigate.
+              Every screen is created to support a clear purpose, whether it is
+              onboarding, completing a purchase, or navigating an app feature.
             </p>
           </div>
         </section>
 
-        {/* CTA */}
-        <section className="relative py-20 border-t border-white/10 text-center overflow-hidden bg-[#031426]">
+        <section className="relative py-20 border-t border-white/10 overflow-hidden bg-[#031426]">
           <AnimatedCtaBackground />
-
           <div className="absolute inset-0 bg-gradient-to-b from-[#031426]/30 via-[#031426]/55 to-[#031426]/80"></div>
 
-          <div className="max-w-5xl mx-auto px-6 relative z-10">
+          <div className="max-w-5xl mx-auto px-6 text-center relative z-10">
             <h2 className="text-4xl md:text-6xl font-extrabold mb-6">
-              Need a Better App Experience?
+              Ready to Build a Better UI/UX?
             </h2>
 
-            <p className="text-gray-300 text-lg max-w-2xl mx-auto mb-8 leading-relaxed">
-              Let’s design a mobile app interface that feels modern,
-              user-friendly, and built to create a smoother experience for your
-              users.
+            <p className="text-gray-400 text-lg max-w-2xl mx-auto mb-8">
+              Let’s design a mobile experience that feels modern, easy to use,
+              and built to grow your users’ confidence.
             </p>
 
             <button
               onClick={() =>
-  navigate("/contact", {
-    state: { service: "App UI/UX Design" },
-  })
-}
+                navigate("/contact", {
+                  state: { service: "App UI/UX Design" },
+                })
+              }
               className="inline-flex items-center gap-2 bg-gradient-to-r from-[#1BBCEF] to-[#004495] hover:from-[#004495] hover:to-[#1BBCEF] px-8 py-4 rounded-full font-bold transition-all duration-300 shadow-lg shadow-[#1BBCEF]/20"
             >
-              Start UI/UX Project
+              Start Your UI/UX Project
               <ArrowRight className="w-5 h-5" />
             </button>
           </div>
@@ -278,4 +265,4 @@ const AppUIUX = () => {
   );
 };
 
-export default AppUIUX;
+export default UIUXDesign;

@@ -35,7 +35,7 @@ const WebsiteDesign = () => {
   return (
     <>
       <Helmet>
-        <title>Professional Website Design Company In USA - Optivax Global</title>
+        <title>Professional Web Development Services in Wyoming USA - Optivax Global</title>
         <meta
           name="description"
           content="Optivax Global offers professional website design services for businesses, startups, and brands. Get a modern, mobile responsive, SEO-ready website built to generate leads."
@@ -44,7 +44,7 @@ const WebsiteDesign = () => {
           name="keywords"
           content="website design services, professional web design, business website design, responsive website design, web design agency, website development services"
         />
-        <link rel="canonical" href="https://optivaxglobal.com/website-design" />
+        <link rel="canonical" href="https://optivaxglobal.com/web-development" />
       </Helmet>
 
       <main className="bg-[#0C0D0D] text-white overflow-hidden">
@@ -80,22 +80,22 @@ const WebsiteDesign = () => {
     state: { service: "Website Design" },
   })
 }
-                    className="inline-flex items-center justify-center gap-2 bg-accent-purple hover:bg-accent-purple/90 text-white px-7 py-4 rounded-full font-bold transition group"
-                  >
-                    Get a Free Consultation
-                    <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-                  </button>
-
-                  <a
-                    href="https://wa.me/923162787814"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center justify-center bg-white/5 hover:bg-white/10 border border-white/10 text-white px-7 py-4 rounded-full font-bold transition"
-                  >
-                    Chat on WhatsApp
-                  </a>
-                </div>
-              </div>
+                    className="inline-flex items-center justify-center gap-2 bg-gradient-to-r from-[#1BBCEF] to-[#004495] hover:from-[#004495] hover:to-[#1BBCEF] text-white px-7 py-4 rounded-full font-bold transition-all duration-300 group shadow-lg shadow-[#1BBCEF]/20"
+                                    >
+                                      Get Website Design
+                                      <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                                    </button>
+                    
+                                    <a
+                                      href="https://wa.me/13074301006"
+                                      target="_blank"
+                                      rel="noopener noreferrer"
+                                      className="inline-flex items-center justify-center bg-white/5 hover:bg-white/10 border border-white/10 text-white px-7 py-4 rounded-full font-bold transition"
+                                    >
+                                      Chat on WhatsApp
+                                    </a>
+                                  </div>
+                                </div>
 
               <div className="bg-[#1E1E2A]/75 backdrop-blur-xl border border-white/10 rounded-3xl p-8 shadow-2xl">
                 <h2 className="text-2xl font-bold mb-6">What You Get</h2>
@@ -230,7 +230,7 @@ const WebsiteDesign = () => {
     state: { service: "Website Design" },
   })
 }
-              className="inline-flex items-center justify-center gap-2 bg-accent-purple hover:bg-accent-purple/90 text-white px-8 py-4 rounded-full font-bold transition group"
+             className="inline-flex items-center gap-2 bg-gradient-to-r from-[#1BBCEF] to-[#004495] hover:from-[#004495] hover:to-[#1BBCEF] px-8 py-4 rounded-full font-bold transition-all duration-300 shadow-lg shadow-[#1BBCEF]/20"
             >
               Start Your Website Project
               <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
