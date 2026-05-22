@@ -13,6 +13,7 @@ const Header = () => {
   const servicesLinks = [
     { name: "Web Design", href: "/web-design" },
     { name: "Web Development", href: "/web-development" },
+    { name: "Ebook Cover Design", href: "/ebook-cover-design" },
     { name: "Logo Design", href: "/logo-design" },
     { name: "Brand Design", href: "/brand-design" },
     { name: "Animation", href: "/animation" },
@@ -31,7 +32,6 @@ const Header = () => {
     { name: "Search Engine Marketing", href: "/search-engine-marketing" },
     { name: "Search Engine Optimization (SEO)", href: "/search-engine-optimization" },
     { name: "Social Media Marketing", href: "/social-media-marketing" },
-    { name: "Ebook Cover Design", href: "/ebook-cover-design" },
     { name: "Corporate Presentation", href: "/corporate-presentation-design" },
   ];
 

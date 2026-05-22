@@ -133,7 +133,8 @@ const CorporatePresentation = () => {
         <section className="py-20 border-t border-white/10">
           <div className="max-w-7xl mx-auto px-6">
             <h2 className="text-3xl md:text-5xl font-extrabold mb-5">
-              Presentation Design That Feels Clear & Professional
+              Presentation Design That Feels <br />
+              Clear & Professional
             </h2>
 
             <p className="text-gray-300 text-lg leading-relaxed max-w-3xl mb-12">
