@@ -38,14 +38,14 @@ const SearchEngineMarketing = () => {
 
   return (
     <ServiceTemplate
-      pageTitle="Professional SEO Marketing  Services Online In USA - Optivax Global"
+      pageTitle="Professional Search Engine Marketing Services in Wyoming USA - Optivax Global"
       metaDescription="Optivax Global offers search engine marketing services that combine paid search, search strategy, and conversion-oriented campaigns for stronger visibility."
       metaKeywords="search engine marketing, sem services, paid search strategy, search marketing agency, search advertising"
       canonicalUrl="https://optivaxglobal.com/search-engine-marketing"
       serviceLabel="Search Engine Marketing"
       heroHeadline="Search Engine Marketing"
       heroSubheadline="That Connects Your Brand with Searchers"
-      heroText="We build search engine marketing plans that help your business show up for the keywords your customers use and turn search traffic into leads." 
+      heroText="We plan search campaigns around how people search, then connect those searches with landing pages and offers that make sense." 
       buttonText="Start Search Marketing"
       contactServiceName="Search Engine Marketing"
       features={features}

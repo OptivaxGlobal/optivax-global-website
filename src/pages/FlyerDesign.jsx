@@ -38,7 +38,7 @@ const FlyerDesign = () => {
 
   return (
     <ServiceTemplate
-      pageTitle="Custom Flyer Design Services In Wyoming  USA - Optivax Global"
+      pageTitle="Custom Flyer Design Services in Wyoming USA - Optivax Global"
       metaDescription="Optivax Global creates flyer design services for promotions, events, and campaigns, delivering professional print and digital flyers that communicate clearly."
       metaKeywords="flyer design, event flyer design, promotional flyer design, print flyer design, digital flyer design"
       canonicalUrl="https://optivaxglobal.com/flyer-design"

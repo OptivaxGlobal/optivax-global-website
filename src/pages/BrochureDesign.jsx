@@ -38,7 +38,7 @@ const BrochureDesign = () => {
 
   return (
     <ServiceTemplate
-      pageTitle="Professional Brochure Design Services in Wyoming USA -Optivax Global"
+      pageTitle="Professional Brochure Design Services in Wyoming USA - Optivax Global"
       metaDescription="Optivax Global creates brochure design services for print and digital distribution, helping businesses present offers, brand stories, and product details with clarity and style."
       metaKeywords="brochure design, print brochure design, digital brochure, marketing brochure layout, brochure design services"
       canonicalUrl="https://optivaxglobal.com/brochure-design"

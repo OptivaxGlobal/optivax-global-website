@@ -38,7 +38,7 @@ const BrandManagement = () => {
 
   return (
     <ServiceTemplate
-      pageTitle="Custom Brand Manegment Services Wyoming USA - Optivax Global"
+      pageTitle="Custom Brand Management Services in Wyoming USA - Optivax Global"
       metaDescription="Optivax Global offers brand management services to keep your messaging, design, and identity consistent across all channels for a stronger business presence."
       metaKeywords="brand management, brand strategy, brand consistency, brand guidelines, brand reputation management"
       canonicalUrl="https://optivaxglobal.com/brand-management"

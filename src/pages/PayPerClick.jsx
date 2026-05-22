@@ -38,14 +38,14 @@ const PayPerClick = () => {
 
   return (
     <ServiceTemplate
-      pageTitle="Custom Pay Per Click (PPC) Advertising Services Online In USA - Optivax Global"
-      metaDescription="Optivax Global helps businesses run pay per click ads with targeted campaigns, conversion-focused creatives, and performance monitoring for faster visibility."
+      pageTitle="Custom Pay Per Click (PPC) Advertising Services in Wyoming USA - Optivax Global"
+      metaDescription="Optivax Global helps businesses run pay-per-click ads with targeted campaigns, conversion-focused creatives, and performance monitoring for faster visibility."
       metaKeywords="pay per click services, ppc management, ppc agency, paid ads, google ads management"
       canonicalUrl="https://optivaxglobal.com/pay-per-click"
       serviceLabel="Pay Per Click Services"
       heroHeadline="Pay Per Click (PPC)"
       heroSubheadline="That Delivers Faster Visibility"
-      heroText="We design and plan PPC campaigns that target the right audience with strong offers, measurable results, and efficient budget use." 
+      heroText="We plan paid search campaigns that put your offer in front of the right people quickly and make your budget work harder." 
       buttonText="Start PPC Campaign"
       contactServiceName="Pay Per Click"
       features={features}

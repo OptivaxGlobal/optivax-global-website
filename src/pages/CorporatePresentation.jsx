@@ -88,9 +88,7 @@ const CorporatePresentation = () => {
               </h1>
 
               <p className="text-lg md:text-xl text-gray-300 leading-relaxed max-w-2xl mb-8">
-                We design clean and professional presentations that help
-                businesses explain ideas clearly, impress clients, and present
-                information with confidence.
+                We design clean, professional presentations that help your team explain ideas clearly, impress clients, and present information with confidence.
               </p>
 
               <div className="flex flex-col sm:flex-row gap-4">

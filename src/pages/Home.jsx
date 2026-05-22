@@ -34,7 +34,7 @@ const Home = () => {
     {
       "@type": "Service",
       "name": "Website Design & Development",
-      "url": "https://optivaxglobal.com/website-design-services"
+      "url": " https://optivaxglobal.com/web-design-services"
     },
     {
       "@type": "Service",
@@ -54,7 +54,7 @@ const Home = () => {
     {
       "@type": "Service",
       "name": "Ebook Cover Design",
-      "url": "https://optivaxglobal.com/ebook-cover-design"
+      "url": "https://optivaxglobal.com/ebook-cover-design-design"
     },
     {
       "@type": "Service",

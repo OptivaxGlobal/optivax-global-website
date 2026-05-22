@@ -38,7 +38,7 @@ const StationaryDesign = () => {
 
   return (
     <ServiceTemplate
-      pageTitle="Stationery Design Services In Wyoming USA - Optivax Global"
+      pageTitle="Stationery Design Services in Wyoming USA - Optivax Global"
       metaDescription="Optivax Global provides stationery design services like business cards, letterheads, envelopes, and template design for polished, brand-consistent business materials."
       metaKeywords="stationery design, business card design, letterhead design, envelope design, brand stationery"
       canonicalUrl="https://optivaxglobal.com/stationary-design"

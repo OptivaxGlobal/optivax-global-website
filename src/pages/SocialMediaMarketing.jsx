@@ -24,28 +24,28 @@ const SocialMediaMarketing = () => {
   const contentSections = [
     {
       title: "Social Marketing That Feels Purposeful",
-      text: "Social media success starts with clarity. We help your brand share content that feels useful, consistent, and worth engaging with.",
+      text: "Social media works best when every post supports a clear idea. We help your brand share content that feels useful, consistent, and worth engaging with.",
     },
     {
       title: "More Than Just Posts",
-      text: "A strong social media plan connects your content, campaigns, and brand story so each post supports your goals.",
+      text: "A strong social media plan connects content, timing, and message so your activity supports real business goals.",
     },
     {
       title: "Building Visibility and Trust",
-      text: "With the right social media presence, your business can become more familiar, trusted, and visible to ideal customers.",
+      text: "When your social presence is consistent and helpful, your business becomes easier to recognize and trust.",
     },
   ];
 
   return (
     <ServiceTemplate
-      pageTitle="Social Media Marketing Services In Wyoming USA - Optivax Global"
+      pageTitle="Social Media Marketing Services in Wyoming USA - Optivax Global"
       metaDescription="Optivax Global provides social media marketing services for post strategy, campaign design, engagement planning, and brand consistency across social platforms."
       metaKeywords="social media marketing, social content strategy, social campaign design, social media agency, social media management"
       canonicalUrl="https://optivaxglobal.com/social-media-marketing"
       serviceLabel="Social Media Marketing"
       heroHeadline="Social Media Marketing"
       heroSubheadline="That Builds Real Engagement"
-      heroText="We create social media content and campaign ideas that help your business look active, professional, and easy to follow." 
+      heroText="We create social media content and campaign ideas that help your business feel active, professional, and easy to follow." 
       buttonText="Start Social Marketing"
       contactServiceName="Social Media Marketing"
       features={features}

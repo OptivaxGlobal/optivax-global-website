@@ -11,13 +11,10 @@
     <priority>0.80</priority>
   </url>
 
-  <url>
-    <loc>https://optivaxglobal.com/project</loc>
-    <priority>0.80</priority>
-  </url>
+  
 
   <url>
-    <loc>https://optivaxglobal.com/website-design</loc>
+    <loc> https://optivaxglobal.com/web-design</loc>
     <priority>0.90</priority>
   </url>
 
@@ -37,7 +34,7 @@
   </url>
 
   <url>
-    <loc>https://optivaxglobal.com/ebook-cover</loc>
+    <loc>https://optivaxglobal.com/ebook-cover-design</loc>
     <priority>0.90</priority>
   </url>
 

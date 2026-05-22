@@ -11,7 +11,7 @@ const Header = () => {
   const navigate = useNavigate();
 
   const servicesLinks = [
-    { name: "Website Design", href: "/website-design" },
+    { name: "Web Design", href: "/web-design" },
     { name: "Web Development", href: "/web-development" },
     { name: "Logo Design", href: "/logo-design" },
     { name: "Brand Design", href: "/brand-design" },
@@ -29,7 +29,7 @@ const Header = () => {
     { name: "Email Marketing", href: "/email-marketing" },
     { name: "Pay Per Click (PPC)", href: "/pay-per-click" },
     { name: "Search Engine Marketing", href: "/search-engine-marketing" },
-    { name: "Search Engine Optimization", href: "/search-engine-optimization" },
+    { name: "Search Engine Optimization (SEO)", href: "/search-engine-optimization" },
     { name: "Social Media Marketing", href: "/social-media-marketing" },
     { name: "Ebook Cover Design", href: "/ebook-cover-design" },
     { name: "Corporate Presentation", href: "/corporate-presentation-design" },
@@ -39,7 +39,8 @@ const Header = () => {
   { name: "About", href: "/#about" },
   { name: "Portfolio", href: "/#portfolio" },
   { name: "Testimonials", href: "/#testimonials" },
-  { name: "FAQs", href: "/faqs" },
+  { name: "FAQs", href: "/faqs" },  
+  { name: "Blog", href: "/blog" },
 ];
 
   useEffect(() => {

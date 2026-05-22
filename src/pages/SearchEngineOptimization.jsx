@@ -28,7 +28,7 @@ const SearchEngineOptimization = () => {
     },
     {
       title: "Stronger, More Stable Rankings",
-      text: "SEO is a long-term investment. We focus on consistent structure, better content, and technical improvements that help your site rank more reliably.",
+      text: "SEO is a long-term effort. We improve your page structure, content, and technical setup so your website can earn more stable visibility over time.",
     },
     {
       title: "Visibility That Supports Growth",
@@ -38,14 +38,14 @@ const SearchEngineOptimization = () => {
 
   return (
     <ServiceTemplate
-      pageTitle="Professional SEO Services In Wyoming USA -Optivax Global"
+      pageTitle="Professional SEO Services in Wyoming USA - Optivax Global"
       metaDescription="Optivax Global provides search engine optimization services to improve website visibility, SEO-friendly content, page structure, and long-term search performance."
       metaKeywords="search engine optimization, seo services, on-page seo, website seo, seo agency"
       canonicalUrl="https://optivaxglobal.com/search-engine-optimization"
       serviceLabel="Search Engine Optimization"
       heroHeadline="Search Engine Optimization"
       heroSubheadline="That Helps Your Site Be Found"
-      heroText="We optimize your website content, page structure, and technical setup so search engines can find and rank your business more easily." 
+      heroText="We shape your website so people and search engines both understand what your business offers." 
       buttonText="Start SEO"
       contactServiceName="Search Engine Optimization"
       features={features}

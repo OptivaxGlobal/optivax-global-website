@@ -162,9 +162,7 @@ const EbookCover = () => {
               </h1>
 
               <p className="text-lg md:text-xl text-gray-300 leading-relaxed max-w-2xl mb-8">
-                We create ebook covers that help your book look professional,
-                attract attention quickly, and give readers a stronger reason to
-                click and explore your story.
+                We create ebook covers that help your book look professional, stand out in marketplace listings, and give readers a stronger reason to click and explore your story.
               </p>
 
               <div className="flex flex-col sm:flex-row gap-4">

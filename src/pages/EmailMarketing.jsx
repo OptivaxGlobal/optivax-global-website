@@ -24,28 +24,28 @@ const EmailMarketing = () => {
   const contentSections = [
     {
       title: "Emails That Feel Valuable",
-      text: "The best email marketing delivers useful content, offers, and updates without feeling spammy. We design email campaigns that customers want to open.",
+      text: "The best email campaigns deliver real value, not noise. We help you send messages people actually want to open.",
     },
     {
       title: "Designed for Engagement",
-      text: "Every email should have a clear goal and easy path to act. We create layouts and messaging that help your audience respond.",
+      text: "Clear layouts and strong calls to action make it easy for readers to understand what to do next.",
     },
     {
-      title: "Stronger Campaign Results",
-      text: "With the right email strategy and design, your business can turn subscribers into loyal customers while building lasting connections.",
+      title: "Measure What Matters",
+      text: "We help you track opens, clicks, and responses so your email program improves over time.",
     },
   ];
 
   return (
     <ServiceTemplate
-      pageTitle="Smart Email Marketing Services In Wyoming USA -Optivax Global"
+      pageTitle="Smart Email Marketing Services in Wyoming USA - Optivax Global"
       metaDescription="Optivax Global offers email marketing services to create campaign strategy, newsletter design, automated email sequences, and performance-focused email content."
       metaKeywords="email marketing services, newsletter design, email campaign design, email automation, email strategy"
       canonicalUrl="https://optivaxglobal.com/email-marketing"
       serviceLabel="Email Marketing Services"
       heroHeadline="Email Marketing"
       heroSubheadline="That Connects with Customers"
-      heroText="We design email campaigns and newsletter layouts that look professional, deliver value, and drive engagement from your target audience." 
+      heroText="Email is the direct channel for people who already know your business. We craft messages that feel helpful, clear, and worth opening." 
       buttonText="Start Email Marketing"
       contactServiceName="Email Marketing"
       features={features}

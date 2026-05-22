@@ -60,7 +60,7 @@ const DigitalMarketing = () => {
     <>
       <Helmet>
         <title>
-          Custom Digital Marketing Solutions In USA - Optivax Global
+          Custom Digital Marketing Solutions in Wyoming USA - Optivax Global
         </title>
         <meta
           name="description"
@@ -91,11 +91,7 @@ const DigitalMarketing = () => {
               </h1>
 
               <p className="text-lg md:text-xl text-gray-300 leading-relaxed max-w-2xl mb-8">
-                We help your business show up with the right message, reach the
-                right audience, and turn online attention into real enquiries.
-                From SEO and content planning to social media campaigns,
-                everything is built around trust, visibility, and consistent
-                growth.
+                We position your business where people are already looking, then turn that visibility into dependable enquiries. From search and content planning to social and ads, everything is built to feel clear, useful, and aligned with your goals.
               </p>
 
               <div className="flex flex-col sm:flex-row gap-4">

@@ -14,11 +14,12 @@ import ThankYou from "./pages/ThankYou";
 import LogoDesign from "./pages/LogoDesign";
 import DigitalMarketing from "./pages/DigitalMarketing";
 import MobileAppDesign from "./pages/MobileAppDesign";
+import MobileAppDevelopment from "./pages/MobileAppDevelopment";
+import WebDevelopment from "./pages/WebDevelopment";
 import UIUXDesign from "./pages/UIUXDesign";
 import BrandDesign from "./pages/BrandDesign";
 import BrochureDesign from "./pages/BrochureDesign";
 import GraphicsDesign from "./pages/GraphicsDesign";
-import MobileAppDevelopment from "./pages/MobileAppDevelopment";
 import FlyerDesign from "./pages/FlyerDesign";
 import StationaryDesign from "./pages/StationaryDesign";
 import BrandManagement from "./pages/BrandManagement";
@@ -31,8 +32,14 @@ import SocialMediaMarketing from "./pages/SocialMediaMarketing";
 import Animation from "./pages/Animation";
 import EbookCover from "./pages/EbookCover";
 import CorporatePresentation from "./pages/CorporatePresentation";
+
 import Faqs from "./pages/Faqs";
 import NotFound from "./pages/NotFound";
+import Blog from "./pages/Blog";
+import LogoDesignBlog from "./pages/blogs/LogoDesignBlog";
+import WebDesignBlog from "./pages/blogs/WebDesignBlog";
+import SeoBlog from "./pages/blogs/SeoBlog";
+import BrandingBlog from "./pages/blogs/BrandingBlog";
 
 import AnalyticsTracker from "./components/AnalyticsTracker";
 
@@ -74,12 +81,12 @@ function App() {
             />
 
             <Route
-              path="website-design"
+              path="web-design"
               element={<WebsiteDesign />}
             />
             <Route
-              path="web-design"
-              element={<WebsiteDesign />}
+              path="web-development"
+              element={<WebDevelopment />}
             />
 
             <Route
@@ -95,6 +102,27 @@ function App() {
               path="thank-you"
               element={<ThankYou />}
             />
+            <Route path="/blog" element={<Blog />} />
+
+<Route
+  path="/blog/professional-logo-design"
+  element={<LogoDesignBlog />}
+/>
+
+<Route
+  path="/blog/importance-of-professional-web-design"
+  element={<WebDesignBlog />}
+/>
+
+<Route
+  path="/blog/importance-of-seo-for-service-businesses"
+  element={<SeoBlog />}
+/>
+
+<Route
+  path="/blog/professional-branding-for-business-growth"
+  element={<BrandingBlog />}
+/>
 
             <Route
               path="logo-design"
@@ -170,10 +198,6 @@ function App() {
               path="animation"
               element={<Animation />}
             />
-            <Route
-              path="web-development"
-              element={<WebsiteDesign />}
-            />
 
             <Route
               path="ebook-cover-design"
@@ -184,6 +208,7 @@ function App() {
               path="corporate-presentation-design"
               element={<CorporatePresentation />}
             />
+            <Route path="blog" element={<Blog />} />
 
             <Route
               path="privacy-policy"

@@ -23,7 +23,7 @@ const WebsiteDesign = () => {
     "CTA sections",
     "Contact form setup",
     "SEO-friendly content structure",
-    "Basic performance optimization"
+    "Brand and style direction"
   ];
 
   const faqs = [
@@ -35,16 +35,16 @@ const WebsiteDesign = () => {
   return (
     <>
       <Helmet>
-        <title>Professional Web Development Services in Wyoming USA - Optivax Global</title>
+        <title>Professional Web Design Services in Wyoming USA - Optivax Global</title>
         <meta
           name="description"
           content="Optivax Global offers professional website design services for businesses, startups, and brands. Get a modern, mobile responsive, SEO-ready website built to generate leads."
         />
         <meta
           name="keywords"
-          content="website design services, professional web design, business website design, responsive website design, web design agency, website development services"
+          content="website design services, professional web design, business website design, responsive website design, web design agency, website layout design"
         />
-        <link rel="canonical" href="https://optivaxglobal.com/web-development" />
+        <link rel="canonical" href="https://optivaxglobal.com/web-design" />
       </Helmet>
 
       <main className="bg-[#0C0D0D] text-white overflow-hidden">
@@ -68,9 +68,7 @@ const WebsiteDesign = () => {
                 </h1>
 
                 <p className="text-lg md:text-xl text-gray-400 leading-relaxed max-w-2xl mb-8">
-                  Optivax Global designs modern, mobile responsive, and SEO-ready
-                  websites that help businesses build trust, attract customers,
-                  and generate more leads online.
+                  We design modern websites that make it easy for visitors to understand your services and take the next step. The result is a polished, mobile-friendly site that looks professional and helps your business feel trustworthy.
                 </p>
 
                 <div className="flex flex-col sm:flex-row gap-4">
@@ -121,8 +119,9 @@ const WebsiteDesign = () => {
                 Website Design That Supports Business Growth
               </h2>
               <p className="text-gray-400 text-lg leading-relaxed">
-                A good website should not only look beautiful it should guide
-                visitors, build credibility, and encourage them to take action.
+                A great website guides visitors, builds credibility, and makes
+                it easy for people to take the next step — whether that’s
+                contacting you, requesting a quote, or booking a service.
               </p>
             </div>
 
@@ -157,11 +156,9 @@ const WebsiteDesign = () => {
             </h2>
 
             <p>
-              Your website is often the first place customers check before
-              trusting your business. A slow, outdated, or unclear website can
-              make visitors leave quickly. A professional website helps you
-              create a strong first impression, explain your services clearly,
-              and guide users toward contacting you.
+              Most visitors decide in seconds whether your business is worth
+              contacting. A slow, confusing, or dated website makes that decision
+              harder. We design sites that feel clear, fast, and easy to explore.
             </p>
 
             <h2 className="text-3xl md:text-4xl font-extrabold text-white">
@@ -169,10 +166,9 @@ const WebsiteDesign = () => {
             </h2>
 
             <p>
-              At Optivax Global, we create websites for businesses, startups,
-              authors, agencies, and service providers. Our focus is on clean
-              design, smooth user experience, mobile responsiveness, SEO-ready
-              structure, and conversion-focused content.
+              We build websites for businesses, startups, and service providers.
+              The design is clean, intuitive, mobile-ready, and structured so it
+              supports growth and helps people understand your offer quickly.
             </p>
 
             <h2 className="text-3xl md:text-4xl font-extrabold text-white">
@@ -180,10 +176,9 @@ const WebsiteDesign = () => {
             </h2>
 
             <p>
-              We start by understanding your business goals, target audience,
-              competitors, and services. Then we plan the page structure, design
-              the layout, write conversion-focused sections, and build a website
-              that supports user engagement and lead generation.
+              We start by understanding your audience, goals, and competitors.
+              From there, we plan the site structure, design layouts, and build
+              pages that help visitors move from interest to contact.
             </p>
           </div>
         </section>

@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { Helmet } from "react-helmet";
 import { motion } from "framer-motion";
 import { Mail, Phone, Send, MapPin } from "lucide-react";
@@ -28,15 +28,98 @@ const Contact = () => {
   });
 
   const [loading, setLoading] = useState(false);
+  const [servicesOpen, setServicesOpen] = useState(false);
+  const dropdownRef = useRef(null);
+
+  const serviceOptions = [
+    "Web Design",
+    "Web Development",
+    "Logo Design",
+    "Brand Design",
+    "Animation",
+    "Graphics Design",
+    "Brochure Design",
+    "Flyer Design",
+    "Stationary Design",
+    "Mobile App Development",
+    "Mobile App Design",
+    "UI UX Design",
+    "Brand Management",
+    "Content Management System",
+    "Digital Marketing",
+    "Email Marketing",
+    "Pay Per Click (PPC)",
+    "Search Engine Marketing",
+    "Search Engine Optimization (SEO)",
+    "Social Media Marketing",
+    "Ebook Cover Design",
+    "Corporate Presentation",
+  ];
+
+  // Normalize service names to match dropdown options
+  const normalizeServiceName = (serviceName) => {
+    if (!serviceName) return "";
+    
+    const serviceMap = {
+      "Brand Design": "Brand Design",
+      "Brochure Design": "Brochure Design",
+      "Graphics Design": "Graphics Design",
+      "Logo Design": "Logo Design",
+      "Mobile App Design": "Mobile App Design",
+      "Mobile App Development": "Mobile App Development",
+      "Flyer Design": "Flyer Design",
+      "Stationary Design": "Stationary Design",
+      "UI UX Design": "UI UX Design",
+      "UI/UX Design": "UI UX Design",
+      "Web Design": "Web Design",
+      "Web Development": "Web Development",
+      "Animation": "Animation",
+      "Animation Services": "Animation",
+      "Brand Management": "Brand Management",
+      "Content Management": "Content Management System",
+      "Content Management System": "Content Management System",
+      "Digital Marketing": "Digital Marketing",
+      "Email Marketing": "Email Marketing",
+      "Pay Per Click": "Pay Per Click (PPC)",
+      "Pay Per Click (PPC)": "Pay Per Click (PPC)",
+      "Search Engine Marketing": "Search Engine Marketing",
+      "Search Engine Optimization": "Search Engine Optimization (SEO)",
+      "Search Engine Optimization (SEO)": "Search Engine Optimization (SEO)",
+      "Social Media Marketing": "Social Media Marketing",
+      "Ebook Cover": "Ebook Cover Design",
+      "Ebook Cover Design": "Ebook Cover Design",
+      "Corporate Presentation": "Corporate Presentation",
+      "Corporate Presentation Design": "Corporate Presentation",
+    };
+
+    return serviceMap[serviceName] || serviceName;
+  };
 
   useEffect(() => {
     if (location.state?.service) {
+      const normalizedService = normalizeServiceName(location.state.service);
       setForm((prev) => ({
         ...prev,
-        service: location.state.service,
+        service: normalizedService,
       }));
+      // Close dropdown if it was open
+      setServicesOpen(false);
     }
   }, [location.state]);
+
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (
+        dropdownRef.current &&
+        !dropdownRef.current.contains(event.target)
+      ) {
+        setServicesOpen(false);
+      }
+    };
+
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => document.removeEventListener("mousedown", handleClickOutside);
+  }, []);
 
   const handleChange = (e) => {
     setForm({ ...form, [e.target.name]: e.target.value });
@@ -125,9 +208,9 @@ const Contact = () => {
               animate={{ opacity: 1, x: 0 }}
             >
               <h1 className="text-4xl md:text-6xl font-extrabold mb-6">
-                Build Your Next
+                Let’s Build Something Your
                 <span className="block text-accent-purple">
-                  Digital Experience
+                  Customers Will Remember
                 </span>
               </h1>
 
@@ -259,69 +342,35 @@ const Contact = () => {
                   className="w-full p-4 rounded-xl bg-[#0C0D0D]/30 border border-white/10 outline-none focus:border-accent-purple/50 transition"
                 />
 
-                <div className="relative">
-                  <select
-                    name="service"
-                    value={form.service}
-                    required
-                    onChange={handleChange}
-                    className="
-                      w-full p-4 pr-14 rounded-2xl
-                      bg-[#10131F]
-                      border border-white/10
-                      text-white
-                      outline-none
-                      appearance-none
-                      focus:border-[#1BBCEF]
-                      focus:shadow-[0_0_0_4px_rgba(27,188,239,0.12)]
-                      hover:border-white/20
-                      transition-all duration-300
-                    "
+                <div className="relative" ref={dropdownRef}>
+                  <button
+                    type="button"
+                    onClick={() => setServicesOpen((prev) => !prev)}
+                    className="w-full p-4 rounded-2xl bg-[#10131F] border border-white/10 text-left text-white outline-none focus:border-[#1BBCEF] focus:shadow-[0_0_0_4px_rgba(27,188,239,0.12)] hover:border-white/20 transition-all duration-300 flex items-center justify-between"
                   >
-                    <option value="" className="bg-[#10131F] text-gray-400">
-                      Select Service
-                    </option>
+                    <span className={form.service ? "text-white" : "text-gray-400"}>
+                      {form.service || "Select Service"}
+                    </span>
+                    <span className="text-[#1BBCEF] text-sm">▼</span>
+                  </button>
 
-                    <option value="Website Design" className="bg-[#10131F]">
-                      Website Design
-                    </option>
-
-                    <option value="Logo & Branding" className="bg-[#10131F]">
-                      Logo & Branding
-                    </option>
-
-                    <option
-                      value="App UI/UX Design"
-                      className="bg-[#10131F]"
-                    >
-                      App UI/UX Design
-                    </option>
-
-                    <option
-                      value="Digital Marketing"
-                      className="bg-[#10131F]"
-                    >
-                      Digital Marketing
-                    </option>
-
-                    <option
-                      value="Ebook Cover Design"
-                      className="bg-[#10131F]"
-                    >
-                      Ebook Cover Design
-                    </option>
-
-                    <option
-                      value="Corporate Presentation"
-                      className="bg-[#10131F]"
-                    >
-                      Corporate Presentation
-                    </option>
-                  </select>
-
-                  <div className="absolute right-5 top-1/2 -translate-y-1/2 pointer-events-none text-[#1BBCEF] text-sm">
-                    ▼
-                  </div>
+                  {servicesOpen && (
+                    <div className="absolute left-0 right-0 mt-2 max-h-72 overflow-auto rounded-3xl bg-[#031C33] border border-white/10 shadow-[0_24px_80px_rgba(0,0,0,0.25)] z-20 py-2">
+                      {serviceOptions.map((option) => (
+                        <button
+                          key={option}
+                          type="button"
+                          onClick={() => {
+                            setForm((prev) => ({ ...prev, service: option }));
+                            setServicesOpen(false);
+                          }}
+                          className="w-full text-left px-4 py-3 text-white hover:bg-white/10 transition-colors duration-200"
+                        >
+                          {option}
+                        </button>
+                      ))}
+                    </div>
+                  )}
                 </div>
 
                 <textarea

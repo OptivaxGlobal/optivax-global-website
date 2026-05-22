@@ -4,48 +4,48 @@ import { Smartphone, Code2, Layers, Zap } from "lucide-react";
 
 const MobileAppDevelopment = () => {
   const features = [
-    { icon: <Smartphone size={24} />, title: "App-First Experience", text: "Mobile applications designed to feel fast, intuitive, and polished on every screen." },
-    { icon: <Code2 size={24} />, title: "End-to-End Development", text: "We build mobile app projects that include design, development, deployment, and performance." },
-    { icon: <Layers size={24} />, title: "Native-Like Usability", text: "App interfaces that behave like native mobile experiences with smooth navigation and clear controls." },
-    { icon: <Zap size={24} />, title: "Launch-Ready Delivery", text: "A complete, polished app experience ready for user testing, launch, and ongoing app growth." },
+    { icon: <Smartphone size={24} />, title: "App Performance Focus", text: "We build mobile app experiences optimized for smooth loading, responsive behavior, and stable interactions." },
+    { icon: <Code2 size={24} />, title: "Technical App Development", text: "Our process covers the frontend, integration points, and launch readiness for your mobile product." },
+    { icon: <Layers size={24} />, title: "Functional App Architecture", text: "We structure app screens, data flow, and navigation so your app works reliably across devices." },
+    { icon: <Zap size={24} />, title: "Ready for Launch", text: "Your mobile app project will be prepared for testing, deployment, and ongoing improvement." },
   ];
 
   const deliverables = [
-    "Custom mobile app design",
-    "UX and interaction planning",
-    "Clickable screen prototypes",
-    "Developer-ready UI assets",
-    "Performance-focused interface design",
-    "App store ready visuals",
-    "Mobile product strategy advice",
-    "Modern design and navigation patterns",
+    "Custom mobile app development",
+    "Responsive app frontend build",
+    "API and integration support",
+    "App performance tuning",
+    "App store or deployment prep",
+    "Cross-device testing",
+    "Scalable app structure",
+    "Technical handoff documentation",
   ];
 
   const contentSections = [
     {
-      title: "Development That Starts with Users",
-      text: "Mobile app development should begin with clarity around user goals. We focus on simple, effective screens that help people complete actions quickly and confidently.",
+      title: "Development That Starts with Strategy",
+      text: "We define the customer journey, technical requirements, and success criteria so the app delivers real value.",
     },
     {
-      title: "Polished Mobile Experiences",
-      text: "Your app design should feel as responsive and intuitive as the best native mobile apps. We design each screen so users understand what to do without confusion.",
+      title: "Reliable App Functionality",
+      text: "Our focus is stable, testable code, efficient data flow, and performance tuning that keeps the app responsive.",
     },
     {
-      title: "Launch-Ready App Design",
-      text: "From onboarding to primary flows, we design app interfaces that are ready for developer handoff and real user adoption.",
+      title: "Launch-Ready Delivery",
+      text: "We prepare your app for deployment with testing, integration guidance, and documentation for smooth releases and future updates.",
     },
   ];
 
   return (
     <ServiceTemplate
-      pageTitle="Custom Mobile App DSevelopment Services Wyoming USA - Optivax Global"
-      metaDescription="Optivax Global delivers mobile app development services that include UX design, app interface development, prototypes, and launch-ready mobile experiences."
+      pageTitle="Custom Mobile App Development Services Wyoming USA - Optivax Global"
+      metaDescription="Optivax Global delivers mobile app development services focused on performance, integrations and launch readiness for mobile products."
       metaKeywords="mobile app development, app design services, mobile application development, ios app development, android app development"
       canonicalUrl="https://optivaxglobal.com/mobile-app-development"
       serviceLabel="Mobile App Development"
       heroHeadline="Mobile App Development"
       heroSubheadline="Built for Smooth Mobile Experiences"
-      heroText="We deliver mobile app design and development support for polished, modern applications that feel intuitive and perform reliably." 
+      heroText="We build mobile apps that feel fast, function reliably, and are ready for testing, launch, and future updates." 
       buttonText="Start App Development"
       contactServiceName="Mobile App Development"
       features={features}

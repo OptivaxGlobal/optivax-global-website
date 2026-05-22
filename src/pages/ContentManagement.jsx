@@ -24,15 +24,15 @@ const ContentManagement = () => {
   const contentSections = [
     {
       title: "Manage Content with Confidence",
-      text: "Content management helps your business stay relevant and consistent. We create structures and strategies so your content supports your goals clearly.",
+      text: "Content should feel organized and easy to update. We set up the process so your team can publish with less friction.",
     },
     {
       title: "Content That Works for Your Brand",
-      text: "Good content should be useful, easy to find, and aligned with your brand voice. We help shape content that feels cohesive across website, email, and social channels.",
+      text: "Every page, post, and email should support your brand story. We shape content so it feels consistent, useful, and easy to understand.",
     },
     {
       title: "Publish More Without Chaos",
-      text: "A solid content process saves time and keeps every asset on-brand. We provide direction for content planning, creation, and publishing across your team.",
+      text: "A clear content process keeps updates on track and helps your brand voice stay steady across every channel.",
     },
   ];
 
@@ -44,8 +44,8 @@ const ContentManagement = () => {
       canonicalUrl="https://optivaxglobal.com/content-management-system"
       serviceLabel="Content Management Services"
       heroHeadline="Content Management"
-      heroSubheadline="That Keeps Your Brand Clear"
-      heroText="We help manage your content strategy, publishing workflow, and brand voice so every page, post, and email feels aligned with your business goals." 
+      heroSubheadline="That Keeps Your Brand Moving Forward"
+      heroText="We make content easier to plan, publish, and keep aligned so your website, email, and social channels all tell the same story." 
       buttonText="Start Content Management"
       contactServiceName="Content Management"
       features={features}

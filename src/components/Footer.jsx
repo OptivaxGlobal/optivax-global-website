@@ -58,14 +58,15 @@ const Footer = () => {
         { name: "About", href: "/#about" },
         { name: "Testimonials", href: "/#testimonials" },
         { name: "FAQs", href: "/faqs" },
+        { name: "Blog", href: "/blog" },
       ],
     },
     {
       title: "Services",
       links: [
-        { name: "Website Design", href: "/website-design" },
+        { name: "Website Design", href: "/web-design" },
         { name: "Logo & Branding", href: "/logo-design" },
-         { name: "Mobile App Design", href: "/mobile-app-design" },
+        { name: "Mobile App Design", href: "/mobile-app-design" },
         { name: "Digital Marketing", href: "/digital-marketing" },
         { name: "Ebook Cover Design", href: "/ebook-cover-design" },
         {
@@ -183,7 +184,13 @@ const Footer = () => {
                 {section.title}
               </h3>
 
-              <ul className="space-y-3">
+              <ul
+                className={
+                  section.title === "Services"
+                    ? "space-y-3"
+                    : "space-y-3"
+                }
+              >
                 {section.links.map((link) => (
                   <li key={link.name}>
                     <a

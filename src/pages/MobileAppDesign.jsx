@@ -17,40 +17,40 @@ import ui2 from "@/assets/app-uiux-showcase/app-uiux-2.webp";
 import ui3 from "@/assets/app-uiux-showcase/app-uiux-3.webp";
 import ui4 from "@/assets/app-uiux-showcase/app-uiux-4.webp";
 
-const AppUIUX = () => {
+const MobileAppDesign = () => {
   const navigate = useNavigate();
 
   const deliverables = [
-    "Mobile app UI design",
-    "User experience planning",
-    "Wireframes & layout structure",
-    "Clickable design prototype",
-    "Modern design system",
-    "User flow direction",
-    "Clean screen organization",
-    "Developer-ready design structure",
+    "App screen design",
+    "UX flow planning",
+    "Wireframes and prototypes",
+    "Visual design system",
+    "Navigation and interaction design",
+    "App icon and button style",
+    "Mobile-first layout design",
+    "Developer-ready design assets",
   ];
 
   const features = [
     {
       icon: Smartphone,
-      title: "Modern Mobile Interfaces",
-      text: "Clean and modern app screens designed to feel smooth, professional, and easy to use.",
+      title: "Screen-by-Screen Design",
+      text: "Each app screen is designed with clarity, visual hierarchy, and strong user interaction patterns.",
     },
     {
       icon: LayoutGrid,
-      title: "Organized Screen Layouts",
-      text: "Every screen is structured clearly so users can understand features without confusion.",
+      title: "Intuitive Flow",
+      text: "We map the user journey so app screens guide people naturally from start to finish.",
     },
     {
       icon: MousePointerClick,
-      title: "Better User Flow",
-      text: "We create experiences that guide users naturally toward important actions and interactions.",
+      title: "Interactive Prototypes",
+      text: "Clickable prototypes help you test the design and review the experience before development begins.",
     },
     {
       icon: Users,
-      title: "User-Focused Experience",
-      text: "Design decisions are made around clarity, usability, engagement, and real user behavior.",
+      title: "User-Centered Interface",
+      text: "Design decisions are made for real users, not just for visuals, to improve usability and trust.",
     },
   ];
 
@@ -60,22 +60,18 @@ const AppUIUX = () => {
     <>
       <Helmet>
         <title>
-          Top Mobile App Design Services In Wyoming USA -Optivax Global
+          Top Mobile App Design Services in Wyoming USA - Optivax Global
         </title>
 
         <meta
           name="description"
-          content="Optivax Global offers top mobile app design services in the USA, creating modern, user-friendly, and high-performing mobile app UI/UX designs for businesse."
+          content="Optivax Global offers mobile app design services for polished, user-friendly app screens, clear navigation, and intuitive mobile interactions for businesses."
         />
-        
 
         <link
           rel="canonical"
           href="https://optivaxglobal.com/mobile-app-design"
         />
-
-        
-
       </Helmet>
 
       <main className="bg-[#0C0D0D] text-white overflow-hidden">
@@ -99,22 +95,22 @@ const AppUIUX = () => {
               </h1>
 
               <p className="text-lg md:text-xl text-gray-300 leading-relaxed max-w-2xl mb-8">
-                We design mobile app experiences that feel clean, modern, and
-                easy to use. From user flow planning to screen design, every
-                detail is focused on clarity, engagement, and better user
-                experience.
+                We craft polished app screens, interaction patterns and visual
+                systems that help users complete tasks quickly and confidently.
+                Our deliverables are developer-ready so design handoffs are
+                smooth and efficient.
               </p>
 
               <div className="flex flex-col sm:flex-row gap-4">
                 <button
                   onClick={() =>
   navigate("/contact", {
-    state: { service: "App UI/UX Design" },
+    state: { service: "Mobile App Design" },
   })
 }
                   className="inline-flex items-center justify-center gap-2 bg-gradient-to-r from-[#1BBCEF] to-[#004495] hover:from-[#004495] hover:to-[#1BBCEF] text-white px-7 py-4 rounded-full font-bold transition-all duration-300 group shadow-lg shadow-[#1BBCEF]/20"
                 >
-                  Start App Design
+                  Start App Design Project
                   <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                 </button>
 
@@ -149,13 +145,13 @@ const AppUIUX = () => {
         <section className="py-20 border-t border-white/10">
           <div className="max-w-7xl mx-auto px-6">
             <h2 className="text-3xl md:text-5xl font-extrabold mb-5">
-              UI/UX Design That Feels Clear & Easy to Use
+              App Design That Guides Users Smoothly
             </h2>
 
             <p className="text-gray-300 text-lg leading-relaxed max-w-3xl mb-12">
-              Good app design is not only about visuals. It is about helping
-              users understand the product quickly, move smoothly through the
-              interface, and complete actions without frustration.
+              Great app design balances visual polish with easy interaction.
+              We make screen layouts, gestures, and flows feel natural so users
+              can complete tasks without confusion.
             </p>
 
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -194,9 +190,9 @@ const AppUIUX = () => {
               </h2>
 
               <p className="text-gray-300 text-lg leading-relaxed">
-                Explore modern app interfaces designed with usability, clean
-                layouts, and user-friendly experiences that help digital
-                products feel more professional and engaging.
+                Browse examples of app screens we designed for clarity,
+                accessibility and efficient task flows. Each layout is built to
+                reduce friction and improve user satisfaction.
               </p>
             </div>
 
@@ -208,7 +204,7 @@ const AppUIUX = () => {
                 >
                   <img
                     src={img}
-                    alt={`App UI/UX showcase ${index + 1}`}
+                    alt={`Mobile app design showcase ${index + 1}`}
                     loading="lazy"
                     className="w-full h-72 md:h-80 object-cover group-hover:scale-105 transition-transform duration-500"
                   />
@@ -222,23 +218,23 @@ const AppUIUX = () => {
         <section className="py-20 border-t border-white/10">
           <div className="max-w-4xl mx-auto px-6 space-y-8 text-gray-300 leading-relaxed">
             <h2 className="text-3xl md:text-4xl font-extrabold text-white">
-              Why UI/UX Design Matters
+              Why Mobile App Design Matters
             </h2>
 
             <p>
-              Users quickly leave apps that feel confusing or difficult to use.
-              A strong UI/UX experience improves navigation, trust, engagement,
-              and overall product satisfaction.
+              Mobile app design focuses on screen layout, interactions, and
+              visual clarity. It makes your app feel intuitive, trustworthy, and
+              easy to use before any development begins.
             </p>
 
             <h2 className="text-3xl md:text-4xl font-extrabold text-white">
-              Our App Design Process
+              Our Mobile App Design Process
             </h2>
 
             <p>
-              We start by understanding your users, app goals, and feature
-              structure. Then we create wireframes, user flows, and modern
-              interface designs that feel smooth, clear, and easy to navigate.
+              We begin with the user journey, then craft screen layouts,
+              interaction details, and visual style so your app feels consistent,
+              modern, and easy to use.
             </p>
           </div>
         </section>
@@ -263,7 +259,7 @@ const AppUIUX = () => {
             <button
               onClick={() =>
   navigate("/contact", {
-    state: { service: "App UI/UX Design" },
+    state: { service: "Mobile App Design" },
   })
 }
               className="inline-flex items-center gap-2 bg-gradient-to-r from-[#1BBCEF] to-[#004495] hover:from-[#004495] hover:to-[#1BBCEF] px-8 py-4 rounded-full font-bold transition-all duration-300 shadow-lg shadow-[#1BBCEF]/20"
@@ -278,4 +274,4 @@ const AppUIUX = () => {
   );
 };
 
-export default AppUIUX;
+export default MobileAppDesign;

@@ -73,7 +73,7 @@ const LogoDesign = () => {
     <>
       <Helmet>
         <title>
-          Custom Logo Design Services In Wyoming USA -Optivax Global
+          Custom Logo Design Services in Wyoming USA - Optivax Global
         </title>
         <meta
           name="description"

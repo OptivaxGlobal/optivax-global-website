@@ -60,7 +60,7 @@ const UIUXDesign = () => {
     <>
       <Helmet>
         <title>
-          Custom UI UX Design Services  In Wyoming USA - Optimax Global
+          Custom UI/UX Design Services in Wyoming USA - Optivax Global
         </title>
 
         <meta
@@ -87,7 +87,7 @@ const UIUXDesign = () => {
               <h1 className="text-4xl md:text-6xl lg:text-7xl font-extrabold leading-tight mb-6">
                 UI/UX Design
                 <span className="block text-accent-purple">
-                That Build Trust
+                That Builds Trust
                 </span>
               </h1>
 
@@ -177,38 +177,6 @@ const UIUXDesign = () => {
           </div>
         </section>
 
-        {/* SHOWCASE */}
-        <section className="py-20 border-t border-white/10">
-          <div className="max-w-7xl mx-auto px-6">
-            <div className="max-w-4xl mb-12">
-              <h2 className="text-3xl md:text-5xl font-extrabold mb-5">
-                App Interface Showcase
-              </h2>
-
-              <p className="text-gray-300 text-lg leading-relaxed">
-                Explore modern app interfaces designed with usability, clean
-                layouts, and user-friendly experiences that help digital
-                products feel more professional and engaging.
-              </p>
-            </div>
-
-            <div className="grid md:grid-cols-2 gap-6">
-              {showcase.map((img, index) => (
-                <div
-                  key={index}
-                  className="group rounded-3xl overflow-hidden bg-white/[0.04] border border-white/10 hover:border-accent-purple/40 hover:shadow-2xl hover:shadow-accent-purple/20 transition-all duration-300 shadow-xl"
-                >
-                  <img
-                    src={img}
-                    alt={`App UI/UX showcase ${index + 1}`}
-                    loading="lazy"
-                    className="w-full h-72 md:h-80 object-cover group-hover:scale-105 transition-transform duration-500"
-                  />
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
 
         <section className="py-20 border-t border-white/10">
           <div className="max-w-4xl mx-auto px-6 space-y-8 text-gray-300 leading-relaxed">
