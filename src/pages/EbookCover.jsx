@@ -32,10 +32,10 @@ import cover17 from "@/assets/ebook-cover-showcase/ebook-cover-17.webp";
 import cover18 from "@/assets/ebook-cover-showcase/ebook-cover-18.webp";
 import cover19 from "@/assets/ebook-cover-showcase/ebook-cover-19.webp";
 import cover20 from "@/assets/ebook-cover-showcase/ebook-cover-20.webp";
+import cover21 from "@/assets/ebook-cover-showcase/ebook-cover-21.webp";
 import cover22 from "@/assets/ebook-cover-showcase/ebook-cover-22.webp";
 import cover23 from "@/assets/ebook-cover-showcase/ebook-cover-23.webp";
 import cover24 from "@/assets/ebook-cover-showcase/ebook-cover-24.webp";
-import cover25 from "@/assets/ebook-cover-showcase/ebook-cover-25.webp";
 import cover26 from "@/assets/ebook-cover-showcase/ebook-cover-26.webp";
 import cover27 from "@/assets/ebook-cover-showcase/ebook-cover-27.webp";
 import cover28 from "@/assets/ebook-cover-showcase/ebook-cover-28.webp";
@@ -48,6 +48,12 @@ import cover34 from "@/assets/ebook-cover-showcase/ebook-cover-34.webp";
 import cover35 from "@/assets/ebook-cover-showcase/ebook-cover-35.webp";
 import cover36 from "@/assets/ebook-cover-showcase/ebook-cover-36.webp";
 import cover37 from "@/assets/ebook-cover-showcase/ebook-cover-37.webp";
+import cover38 from "@/assets/ebook-cover-showcase/ebook-cover-38.webp";
+import cover39 from "@/assets/ebook-cover-showcase/ebook-cover-39.webp";
+import cover40 from "@/assets/ebook-cover-showcase/ebook-cover-40.webp";
+import cover41 from "@/assets/ebook-cover-showcase/ebook-cover-41.webp";
+import cover42 from "@/assets/ebook-cover-showcase/ebook-cover-42.webp";
+import cover43 from "@/assets/ebook-cover-showcase/ebook-cover-43.webp";
 
 const EbookCover = () => {
   const navigate = useNavigate();
@@ -74,10 +80,10 @@ const EbookCover = () => {
     cover18,
     cover19,
     cover20,
+    cover21,
     cover22,
     cover23,
     cover24,
-    cover25,
     cover26,
     cover27,
     cover28,
@@ -90,6 +96,12 @@ const EbookCover = () => {
     cover35,
     cover36,
     cover37,
+    cover38,
+    cover39,
+    cover40,
+    cover41,
+    cover42,
+    cover43,
   ];
 
   const deliverables = [

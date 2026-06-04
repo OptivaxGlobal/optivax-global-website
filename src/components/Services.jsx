@@ -9,6 +9,7 @@ import {
   Megaphone,
   BookOpen,
   Presentation,
+  ArrowUpRight,
 } from "lucide-react";
 
 const services = [
@@ -17,12 +18,12 @@ const services = [
     slug: "/web-design",
     icon: Globe,
     description:
-      "We build modern, responsive, and high-performing websites designed to strengthen your online presence, build customer trust, and turn visitors into clients.",
+      "Your website is often the first place people meet your brand. We design and develop clean, fast, and responsive websites that look professional, feel easy to use, and help turn visitors into real customers.",
     points: [
-      "Business Websites",
-      "Landing Pages",
-      "Responsive Design",
-      "SEO-Optimized Structure",
+      { title: "Mobile App Design", link: "/mobile-app-design", highlight: true },
+      { title: "SEO Optimization", link: "/search-engine-optimization", highlight: true },
+      { title: "Responsive Design" },
+      { title: "Landing Pages" },
     ],
   },
   {
@@ -30,12 +31,12 @@ const services = [
     slug: "/brand-design",
     icon: PenTool,
     description:
-      "We create memorable brand identities with professional logos, color systems, typography, and visual branding that help businesses stand out confidently.",
+      "A strong brand makes your business easier to remember and trust. We create meaningful brand identities with logos, colors, typography, and visuals that give your business a polished and consistent look.",
     points: [
-      "Custom Logo Design",
-      "Brand Identity",
-      "Color Palette",
-      "Typography System",
+      { title: "Logo Design", link: "/logo-design", highlight: true },
+      { title: "Brand Identity" },
+      { title: "Color Palette" },
+      { title: "Typography Style" },
     ],
   },
   {
@@ -43,12 +44,12 @@ const services = [
     slug: "/ui-ux-design",
     icon: Smartphone,
     description:
-      "We design clean and engaging mobile app experiences focused on usability, user satisfaction, and modern interface design.",
+      "Good design is not just about how it looks. It is about how smoothly it works. We design modern, user-friendly interfaces that make websites and apps simple, clear, and enjoyable for your audience.",
     points: [
-      "Mobile App UI",
-      "User Experience",
-      "Wireframes",
-      "Interactive Prototypes",
+      { title: "Mobile App Design", link: "/mobile-app-design", highlight: true },
+      { title: "Website UI Design" },
+      { title: "Wireframes" },
+      { title: "Interactive Prototypes" },
     ],
   },
   {
@@ -56,12 +57,12 @@ const services = [
     slug: "/digital-marketing",
     icon: Megaphone,
     description:
-      "We help brands grow through strategic digital marketing, SEO, content planning, and campaigns focused on visibility, engagement, and conversions.",
+      "We help your brand get seen by the right people. From SEO and social media to smart campaign planning, our marketing approach is focused on visibility, engagement, and better business results.",
     points: [
-      "SEO Optimization",
-      "Social Media Marketing",
-      "Lead Generation",
-      "Marketing Campaigns",
+      { title: "SEO Optimization", link: "/search-engine-optimization", highlight: true },
+      { title: "Social Media Marketing", link: "/social-media-marketing", highlight: true },
+      { title: "Lead Generation" },
+      { title: "Campaign Strategy" },
     ],
   },
   {
@@ -69,12 +70,12 @@ const services = [
     slug: "/ebook-cover-design",
     icon: BookOpen,
     description:
-      "We design professional eBook covers that capture attention, improve credibility, and help authors increase clicks, engagement, and sales.",
+      "A great cover can make readers stop, look, and click. We design professional eBook covers that match your story, build trust, and help your book stand out on Amazon KDP and other platforms.",
     points: [
-      "KDP Covers",
-      "Book Branding",
-      "Creative Concepts",
-      "Sales-Focused Design",
+      { title: "KDP Covers" },
+      { title: "Book Branding" },
+      { title: "Creative Concepts" },
+      { title: "Sales-Focused Covers" },
     ],
   },
   {
@@ -82,12 +83,12 @@ const services = [
     slug: "/corporate-presentation-design",
     icon: Presentation,
     description:
-      "We create premium pitch decks, company profiles, and business presentations designed to impress clients, investors, and business partners.",
+      "Your presentation should explain your ideas clearly and leave a strong impression. We design premium pitch decks, company profiles, and corporate presentations that look sharp, organized, and business-ready.",
     points: [
-      "Pitch Decks",
-      "Company Profiles",
-      "Business Proposals",
-      "Presentation Design",
+      { title: "Pitch Decks" },
+      { title: "Company Profiles" },
+      { title: "Business Proposals" },
+      { title: "Presentation Design" },
     ],
   },
 ];
@@ -102,18 +103,22 @@ const filterTags = [
 
 const tagLinks = {
   "Web Design": "/web-design",
-  "Branding": "/brand-design",
+  Branding: "/brand-design",
   "UI/UX Design": "/ui-ux-design",
-  "Marketing": "/digital-marketing",
+  Marketing: "/digital-marketing",
   "eBook Covers": "/ebook-cover-design",
 };
 
 const Services = () => {
-  const [activeIndex, setActiveIndex] = useState(0);
+  const [activeIndex, setActiveIndex] = useState(null);
   const navigate = useNavigate();
 
-  const handleServiceClick = (index) => {
-    setActiveIndex(activeIndex === index ? null : index);
+  const handleServiceClick = (index, slug) => {
+    if (activeIndex === index) {
+      navigate(slug);
+    } else {
+      setActiveIndex(index);
+    }
   };
 
   return (
@@ -125,17 +130,17 @@ const Services = () => {
           </span>
 
           <h2 className="text-4xl md:text-6xl lg:text-7xl font-extrabold mb-6 leading-tight text-white">
-  Digital Solutions Built to
-  <span className="block text-accent-purple">
-    Elevate Modern Brands
-  </span>
-</h2>
+            Digital Solutions Built to
+            <span className="block text-accent-purple">
+              Elevate Modern Brands
+            </span>
+          </h2>
 
           <p className="text-lg md:text-2xl text-gray-300 max-w-3xl mt-4 leading-relaxed">
-  From professional websites and branding to UI/UX design, SEO, and digital
-  marketing, Optivax Global helps businesses build a stronger online presence
-  and create lasting customer impact.
-</p>
+            We help businesses build a stronger digital presence with
+            professional websites, creative branding, smooth UI/UX design,
+            result-focused marketing, and high-quality visual content.
+          </p>
 
           <div className="flex flex-wrap gap-3 mt-8">
             {filterTags.map((tag) => (
@@ -153,26 +158,24 @@ const Services = () => {
         <div className="border-t border-gray-800">
           {services.map((service, index) => {
             const Icon = service.icon;
+            const isActive = activeIndex === index;
 
             return (
-              <div key={service.title} className="border-b border-white/10 hover:bg-white/[0.02] transition-all duration-300">
+              <div
+                key={service.title}
+                className="border-b border-white/10 hover:bg-white/[0.02] transition-all duration-300"
+              >
                 <button
                   type="button"
                   className="w-full flex justify-between items-center text-left cursor-pointer py-8 group"
-                  onClick={() => {
-                    if (service.slug) {
-                      navigate(service.slug);
-                    } else {
-                      handleServiceClick(index);
-                    }
-                  }}
-                  aria-expanded={activeIndex === index}
+                  onClick={() => handleServiceClick(index, service.slug)}
+                  aria-expanded={isActive}
                   aria-controls={`service-${index}`}
                 >
                   <div className="flex items-center gap-5">
                     <div
                       className={`w-12 h-12 rounded-full border flex items-center justify-center transition-colors duration-300 ${
-                        activeIndex === index
+                        isActive
                           ? "border-accent-purple bg-accent-purple/15 text-accent-purple"
                           : "border-white/10 text-gray-500 group-hover:text-accent-purple group-hover:border-accent-purple/50"
                       }`}
@@ -182,7 +185,7 @@ const Services = () => {
 
                     <h3
                       className={`text-2xl md:text-4xl lg:text-5xl font-bold transition-colors duration-300 ${
-                        activeIndex === index
+                        isActive
                           ? "text-white"
                           : "text-gray-400 group-hover:text-white"
                       }`}
@@ -192,14 +195,14 @@ const Services = () => {
                   </div>
 
                   <motion.div
-                    animate={{ rotate: activeIndex === index ? 45 : 0 }}
+                    animate={{ rotate: isActive ? 45 : 0 }}
                     transition={{ duration: 0.3 }}
                     className="ml-4 shrink-0"
                   >
                     <Plus
                       size={36}
                       className={`transition-colors ${
-                        activeIndex === index
+                        isActive
                           ? "text-accent-purple"
                           : "text-gray-600 group-hover:text-gray-400"
                       }`}
@@ -208,7 +211,7 @@ const Services = () => {
                 </button>
 
                 <AnimatePresence>
-                  {activeIndex === index && (
+                  {isActive && (
                     <motion.div
                       id={`service-${index}`}
                       initial={{ opacity: 0, height: 0, y: -15 }}
@@ -223,14 +226,37 @@ const Services = () => {
                         </p>
 
                         <div className="flex flex-wrap gap-3">
-                          {service.points.map((point) => (
-                            <span
-                              key={point}
-                              className="px-4 py-2 rounded-full bg-white/5 border border-white/10 text-gray-300 text-sm"
-                            >
-                              {point}
-                            </span>
-                          ))}
+                          {service.points.map((point) =>
+                            point.link ? (
+                              <Link
+                                key={point.title}
+                                to={point.link}
+                                onClick={(e) => e.stopPropagation()}
+                                className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-accent-purple text-white border border-accent-purple text-sm font-semibold shadow-lg shadow-accent-purple/20 hover:bg-white hover:text-[#0C0D0D] hover:border-white transition-all duration-300"
+                              >
+                                {point.title}
+                                <ArrowUpRight size={16} />
+                              </Link>
+                            ) : (
+                              <span
+                                key={point.title}
+                                className="px-4 py-2 rounded-full bg-white/5 border border-white/10 text-gray-300 text-sm"
+                              >
+                                {point.title}
+                              </span>
+                            )
+                          )}
+                        </div>
+
+                        <div className="mt-6">
+                          <Link
+                            to={service.slug}
+                            onClick={(e) => e.stopPropagation()}
+                            className="inline-flex items-center gap-2 text-accent-purple font-semibold hover:gap-3 transition-all duration-300"
+                          >
+                            Learn More
+                            <ArrowUpRight size={22} />
+                          </Link>
                         </div>
                       </div>
                     </motion.div>
