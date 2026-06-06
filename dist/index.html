@@ -30,8 +30,6 @@
     <link rel="preconnect" href="https://www.googletagmanager.com" crossorigin />
     <link rel="preconnect" href="https://connect.facebook.net" crossorigin />
 
-    
-
     <!-- Open Graph -->
     <meta property="og:title" content="Optivax Global | Digital Solutions for Modern Businesses" />
     <meta property="og:description" content="Professional website development, branding, UI/UX, SEO, app design, publishing support, and digital marketing services." />
@@ -49,8 +47,21 @@
     <meta name="twitter:description" content="Professional digital services for businesses, startups, and brands." />
     <meta name="twitter:image" content="https://optivaxglobal.com/og-image.jpg" />
 
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-801DY13JQ5"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){ dataLayer.push(arguments); }
+      window.gtag = gtag;
+
+      gtag("js", new Date());
+      gtag("config", "G-801DY13JQ5", {
+        anonymize_ip: true
+      });
+    </script>
+
     <!-- Meta Pixel lazy load -->
-    <script defer>
+    <script>
       window.addEventListener("load", function () {
         setTimeout(function () {
           !(function (f, b, e, v, n, t, s) {
@@ -104,17 +115,12 @@
     </script>
 
     <meta name="generator" content="Hostinger Horizons" />
-    
-    <!-- Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-801DY13JQ5"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-801DY13JQ5', { 'anonymize_ip': true });
-    </script>
-    <script type="module" crossorigin src="/assets/index-eba2d263.js"></script>
-    <link rel="stylesheet" href="/assets/index-712f93de.css">
+    <script type="module" crossorigin src="/assets/index-5b539290.js"></script>
+    <link rel="modulepreload" crossorigin href="/assets/react-61af2ca1.js">
+    <link rel="modulepreload" crossorigin href="/assets/router-75dac96e.js">
+    <link rel="modulepreload" crossorigin href="/assets/motion-9fa9f788.js">
+    <link rel="modulepreload" crossorigin href="/assets/icons-838f9b69.js">
+    <link rel="stylesheet" href="/assets/index-c6aa5690.css">
   </head>
 
   <body>

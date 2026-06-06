@@ -53,9 +53,7 @@ const Hero = () => {
 
              <h1 className="text-4xl sm:text-5xl md:text-7xl lg:text-[5.3rem] font-extrabold mb-6 leading-[0.95] text-white tracking-[-0.04em]"
 >
-  <span className="block">
     Build a Digital Brand
-  </span>
 
   <span className="block text-accent-purple">
     That People Trust & Remember

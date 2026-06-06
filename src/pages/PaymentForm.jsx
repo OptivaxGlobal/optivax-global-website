@@ -23,6 +23,8 @@ const services = {
     "Complete brand identity design including logo style, colors, typography, and visual direction.",
   Animation:
     "Creative animation services for business promotion, social media, and digital branding.",
+  "Comic Art":
+    "Premium comic art and illustration services for comic books, graphic novels, manga-style artwork, character design, storyboards, and custom visual storytelling for print, digital publishing, and promotional projects.",
   "Graphics Design":
     "Professional graphics for social media, marketing campaigns, ads, and business promotion.",
   "Brochure Design":
@@ -186,33 +188,34 @@ const PaymentForm = () => {
         method: "POST",
         body: web3FormData,
       });
-      const emailResponse = await fetch(
-  "https://wdaaadhohvixycyrnlax.supabase.co/functions/v1/send-payment-email",
-  {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-      apikey: import.meta.env.VITE_SUPABASE_ANON_KEY,
-      Authorization: `Bearer ${import.meta.env.VITE_SUPABASE_ANON_KEY}`,
-    },
-    body: JSON.stringify({
-      name: form.name,
-      email: form.email,
-      contact: form.contact,
-      service: form.service,
-      service_details: serviceDetails,
-      total_payment: form.total_payment,
-      advance_percentage: form.advance_percentage,
-      advance_payment: form.advance_payment,
-      remaining_payment: form.remaining_payment,
-      payment_method: form.payment_method,
-      screenshot_url: screenshotUrl,
-    }),
-  }
-);
 
-const emailResult = await emailResponse.json();
-console.log("EMAIL RESULT:", emailResult);
+      const emailResponse = await fetch(
+        "https://wdaaadhohvixycyrnlax.supabase.co/functions/v1/send-payment-email",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            apikey: import.meta.env.VITE_SUPABASE_ANON_KEY,
+            Authorization: `Bearer ${import.meta.env.VITE_SUPABASE_ANON_KEY}`,
+          },
+          body: JSON.stringify({
+            name: form.name,
+            email: form.email,
+            contact: form.contact,
+            service: form.service,
+            service_details: serviceDetails,
+            total_payment: form.total_payment,
+            advance_percentage: form.advance_percentage,
+            advance_payment: form.advance_payment,
+            remaining_payment: form.remaining_payment,
+            payment_method: form.payment_method,
+            screenshot_url: screenshotUrl,
+          }),
+        }
+      );
+
+      const emailResult = await emailResponse.json();
+      console.log("EMAIL RESULT:", emailResult);
 
       navigate("/payment-successful");
     } catch (err) {
@@ -274,51 +277,49 @@ console.log("EMAIL RESULT:", emailResult);
 
             <div className="relative z-10 space-y-6">
               <div className="grid md:grid-cols-3 gap-5">
+                <div>
+                  <label className="block mb-2 text-sm font-medium text-[#1BBCEF]">
+                    Client Name
+                  </label>
 
-  <div>
-    <label className="block mb-2 text-sm font-medium text-[#1BBCEF]">
-      Client Name
-    </label>
+                  <input
+                    name="name"
+                    value={form.name}
+                    onChange={handleChange}
+                    required
+                    className="w-full p-4 rounded-2xl bg-[#020817]/45 border border-white/10 outline-none text-white focus:border-[#1BBCEF]/60 focus:shadow-[0_0_0_4px_rgba(27,188,239,0.12)] transition"
+                  />
+                </div>
 
-    <input
-      name="name"
-      value={form.name}
-      onChange={handleChange}
-      required
-      className="w-full p-4 rounded-2xl bg-[#020817]/45 border border-white/10 outline-none text-white focus:border-[#1BBCEF]/60 focus:shadow-[0_0_0_4px_rgba(27,188,239,0.12)] transition"
-    />
-  </div>
+                <div>
+                  <label className="block mb-2 text-sm font-medium text-[#1BBCEF]">
+                    Client Email
+                  </label>
 
-  <div>
-    <label className="block mb-2 text-sm font-medium text-[#1BBCEF]">
-      Client Email
-    </label>
+                  <input
+                    name="email"
+                    type="email"
+                    value={form.email}
+                    onChange={handleChange}
+                    required
+                    className="w-full p-4 rounded-2xl bg-[#020817]/45 border border-white/10 outline-none text-white focus:border-[#1BBCEF]/60 focus:shadow-[0_0_0_4px_rgba(27,188,239,0.12)] transition"
+                  />
+                </div>
 
-    <input
-      name="email"
-      type="email"
-      value={form.email}
-      onChange={handleChange}
-      required
-      className="w-full p-4 rounded-2xl bg-[#020817]/45 border border-white/10 outline-none text-white focus:border-[#1BBCEF]/60 focus:shadow-[0_0_0_4px_rgba(27,188,239,0.12)] transition"
-    />
-  </div>
+                <div>
+                  <label className="block mb-2 text-sm font-medium text-[#1BBCEF]">
+                    Contact Number
+                  </label>
 
-  <div>
-    <label className="block mb-2 text-sm font-medium text-[#1BBCEF]">
-      Contact Number
-    </label>
-
-    <input
-      name="contact"
-      value={form.contact}
-      onChange={handleChange}
-      required
-      className="w-full p-4 rounded-2xl bg-[#020817]/45 border border-white/10 outline-none text-white focus:border-[#1BBCEF]/60 focus:shadow-[0_0_0_4px_rgba(27,188,239,0.12)] transition"
-    />
-  </div>
-
-</div>
+                  <input
+                    name="contact"
+                    value={form.contact}
+                    onChange={handleChange}
+                    required
+                    className="w-full p-4 rounded-2xl bg-[#020817]/45 border border-white/10 outline-none text-white focus:border-[#1BBCEF]/60 focus:shadow-[0_0_0_4px_rgba(27,188,239,0.12)] transition"
+                  />
+                </div>
+              </div>
 
               <select
                 name="service"
@@ -352,90 +353,88 @@ console.log("EMAIL RESULT:", emailResult);
               )}
 
               <div className="grid md:grid-cols-4 gap-5">
+                <div>
+                  <label className="block mb-2 text-sm font-medium text-[#1BBCEF]">
+                    Total Payment
+                  </label>
 
-  <div>
-    <label className="block mb-2 text-sm font-medium text-[#1BBCEF]">
-      Total Payment
-    </label>
+                  <div className="relative">
+                    <span className="absolute left-4 top-1/2 -translate-y-1/2 text-[#1BBCEF] font-bold">
+                      $
+                    </span>
 
-    <div className="relative">
-      <span className="absolute left-4 top-1/2 -translate-y-1/2 text-[#1BBCEF] font-bold">
-        $
-      </span>
+                    <input
+                      name="total_payment"
+                      type="number"
+                      value={form.total_payment}
+                      onChange={handleChange}
+                      required
+                      className="w-full p-4 pl-10 rounded-2xl bg-[#020817]/45 border border-white/10 outline-none text-white focus:border-[#1BBCEF]/60"
+                    />
+                  </div>
+                </div>
 
-      <input
-        name="total_payment"
-        type="number"
-        value={form.total_payment}
-        onChange={handleChange}
-        required
-        className="w-full p-4 pl-10 rounded-2xl bg-[#020817]/45 border border-white/10 outline-none text-white focus:border-[#1BBCEF]/60"
-      />
-    </div>
-  </div>
+                <div>
+                  <label className="block mb-2 text-sm font-medium text-[#1BBCEF]">
+                    Advance Percentage
+                  </label>
 
-  <div>
-    <label className="block mb-2 text-sm font-medium text-[#1BBCEF]">
-      Advance Percentage
-    </label>
+                  <div className="relative">
+                    <span className="absolute right-4 top-1/2 -translate-y-1/2 text-[#1BBCEF] font-bold">
+                      %
+                    </span>
 
-    <div className="relative">
-      <span className="absolute right-4 top-1/2 -translate-y-1/2 text-[#1BBCEF] font-bold">
-        %
-      </span>
+                    <input
+                      name="advance_percentage"
+                      type="number"
+                      value={form.advance_percentage}
+                      onChange={handleChange}
+                      required
+                      className="w-full p-4 pr-10 rounded-2xl bg-[#020817]/45 border border-white/10 outline-none text-white focus:border-[#1BBCEF]/60"
+                    />
+                  </div>
+                </div>
 
-      <input
-        name="advance_percentage"
-        type="number"
-        value={form.advance_percentage}
-        onChange={handleChange}
-        required
-        className="w-full p-4 pr-10 rounded-2xl bg-[#020817]/45 border border-white/10 outline-none text-white focus:border-[#1BBCEF]/60"
-      />
-    </div>
-  </div>
+                <div>
+                  <label className="block mb-2 text-sm font-medium text-[#1BBCEF]">
+                    Advance Payment
+                  </label>
 
-  <div>
-    <label className="block mb-2 text-sm font-medium text-[#1BBCEF]">
-      Advance Payment
-    </label>
+                  <div className="relative">
+                    <span className="absolute left-4 top-1/2 -translate-y-1/2 text-[#1BBCEF] font-bold">
+                      $
+                    </span>
 
-    <div className="relative">
-      <span className="absolute left-4 top-1/2 -translate-y-1/2 text-[#1BBCEF] font-bold">
-        $
-      </span>
+                    <input
+                      name="advance_payment"
+                      type="number"
+                      value={form.advance_payment}
+                      readOnly
+                      className="w-full p-4 pl-10 rounded-2xl bg-[#020817]/45 border border-white/10 outline-none text-white"
+                    />
+                  </div>
+                </div>
 
-      <input
-        name="advance_payment"
-        type="number"
-        value={form.advance_payment}
-        readOnly
-        className="w-full p-4 pl-10 rounded-2xl bg-[#020817]/45 border border-white/10 outline-none text-white"
-      />
-    </div>
-  </div>
+                <div>
+                  <label className="block mb-2 text-sm font-medium text-[#1BBCEF]">
+                    Remaining Payment
+                  </label>
 
-  <div>
-    <label className="block mb-2 text-sm font-medium text-[#1BBCEF]">
-      Remaining Payment
-    </label>
+                  <div className="relative">
+                    <span className="absolute left-4 top-1/2 -translate-y-1/2 text-[#1BBCEF] font-bold">
+                      $
+                    </span>
 
-    <div className="relative">
-      <span className="absolute left-4 top-1/2 -translate-y-1/2 text-[#1BBCEF] font-bold">
-        $
-      </span>
-
-      <input
-        name="remaining_payment"
-        type="number"
-        value={form.remaining_payment}
-        readOnly
-        className="w-full p-4 pl-10 rounded-2xl bg-[#020817]/45 border border-white/10 outline-none text-white"
-      />
-    </div>
-  </div>
-
-</div>
+                    <input
+                      name="remaining_payment"
+                      type="number"
+                      value={form.remaining_payment}
+                      readOnly
+                      className="w-full p-4 pl-10 rounded-2xl bg-[#020817]/45 border border-white/10 outline-none text-white"
+                    />
+                  </div>
+                </div>
+              </div>
 
               <div className="bg-yellow-500/10 border border-yellow-500/30 rounded-xl p-3 mt-4">
                 <p className="text-yellow-300 text-sm">

@@ -1,7 +1,6 @@
 import React, { useEffect } from "react";
 import { Routes, Route, useLocation } from "react-router-dom";
 import { AnimatePresence } from "framer-motion";
-import { ClipboardList } from "lucide-react";
 
 import PrivacyPolicy from "./pages/PrivacyPolicy";
 import Terms from "./pages/Terms";
@@ -46,7 +45,6 @@ import AnalyticsTracker from "./components/AnalyticsTracker";
 import PaymentForm from "@/pages/PaymentForm";
 import PaymentSuccessful from "@/pages/PaymentSuccessful";
 
-import "./index.css";
 
 function MetaPixelPageView() {
   const location = useLocation();
@@ -214,7 +212,6 @@ function App() {
               path="corporate-presentation-design"
               element={<CorporatePresentation />}
             />
-            <Route path="blog" element={<Blog />} />
 
             <Route
               path="privacy-policy"

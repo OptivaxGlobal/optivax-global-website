@@ -48,8 +48,9 @@ body,
   overflow-x: hidden;
   scroll-behavior: smooth;
   color: hsl(var(--foreground));
-  font-family: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  background-color: #0C0D0D;
+  font-family: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji",
+    "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  background-color: #0c0d0d;
 }
 
 a,
@@ -79,7 +80,7 @@ button {
 
 /* Premium Blue Accent Override */
 .text-accent-purple {
-  color: #1699F1 !important;
+  color: #1699f1 !important;
 }
 
 .bg-accent-purple {
@@ -205,15 +206,13 @@ button {
   box-shadow: 0 18px 45px rgba(22, 153, 241, 0.36);
 }
 
-/* Image Optimization & Aspect Ratio Fixes */
-img {
+/* Global Image Aspect Ratio Fix */
+img,
+picture img,
+figure img {
   max-width: 100%;
   height: auto;
   display: block;
-}
-
-img[aspect-ratio] {
-  aspect-ratio: attr(aspect-ratio);
 }
 
 /* Responsive Images */
@@ -225,7 +224,7 @@ img[aspect-ratio] {
   object-position: center;
 }
 
-/* Aspect Ratio Container */
+/* Fixed Ratio Image Containers */
 .aspect-container {
   position: relative;
   width: 100%;
@@ -235,19 +234,47 @@ img[aspect-ratio] {
 .aspect-container > img,
 .aspect-container > picture > img {
   width: 100%;
-  height: auto;
-  display: block;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
 }
 
-/* Fix render-blocking CSS */
-@media (prefers-reduced-motion: reduce) {
-  *,
-  *::before,
-  *::after {
-    animation-duration: 0.01ms !important;
-    animation-iteration-count: 1 !important;
-    transition-duration: 0.01ms !important;
-  }
+.aspect-square-img {
+  aspect-ratio: 1 / 1;
+  overflow: hidden;
+}
+
+.aspect-video-img {
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+}
+
+.aspect-portfolio-img {
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+}
+
+.aspect-book-img {
+  aspect-ratio: 2 / 3;
+  overflow: hidden;
+}
+
+/* Tailwind/Common Image Stretch Fixes */
+img.w-full.h-full,
+img[class*="w-full"][class*="h-full"] {
+  object-fit: cover;
+  object-position: center;
+}
+
+/* Card/Portfolio Images */
+.card img,
+.project-card img,
+.portfolio-card img,
+.service-card img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  object-position: center;
 }
 
 /* Lazy loading placeholder */
@@ -255,6 +282,19 @@ img[loading="lazy"] {
   background-color: #1a1a1a;
 }
 
-img[loading="lazy"]:not([src]) {
-  min-height: 280px;
+/* Motion Accessibility */
+@media (prefers-reduced-motion: reduce) {
+  html,
+  body,
+  #root {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
 }
