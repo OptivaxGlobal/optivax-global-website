@@ -8,6 +8,10 @@ import logoBlogImg from "@/assets/blog-images/logo-blog.webp";
 import webDesignBlogImg from "@/assets/blog-images/web-design-blog.webp";
 import seoBlogImg from "@/assets/blog-images/seo-blog.webp";
 import brandingBlogImg from "@/assets/blog-images/branding-blog.webp";
+import brochureBlogImg from "@/assets/blog-images/brochure-design-blog.webp";
+import graphicDesignBlogImg from "@/assets/blog-images/graphic-design-blog.webp";
+import mobileAppBlogImg from "@/assets/blog-images/mobile-app-blog.webp";
+import ppcBlogImg from "@/assets/blog-images/ppc-blog.webp";
 
 const blogPosts = [
   {
@@ -15,9 +19,27 @@ const blogPosts = [
     excerpt:
       "A professional logo is more than a graphic. It builds trust, improves recognition, and creates a powerful first impression across every platform.",
     category: "Logo Design",
-    date: "May 2026",
+    date: "April 2026",
     image: logoBlogImg,
     url: "/importance-of-professional-logo-design-businesses",
+  },
+  {
+  title: "Why Graphic Design Is More Important for Professional Businesses Than Ever",
+  excerpt:
+    "Professional graphic design helps businesses create strong first impressions, build trust, improve recognition, and communicate clearly across digital and print platforms.",
+  category: "Graphic Design",
+  date: "April 2026",
+  image: graphicDesignBlogImg,
+  url: "/important-of-graphic-design-bussiness",
+},
+  {
+    title: "Why SEO Services Are Important for Small Businesses",
+    excerpt:
+      "SEO helps small businesses improve visibility, attract quality leads, build credibility, and grow consistently in competitive markets.",
+    category: "SEO",
+    date: "April 2026",
+    image: seoBlogImg,
+    url: "/importance-of-small-businesses-seo-services",
   },
   { title: "The Importance of Modern Web Design for Business Growth",
     excerpt:
@@ -28,15 +50,6 @@ const blogPosts = [
     url: "/importance-of-modern-web-design",
   },
   {
-    title: "Why SEO Services Are Important for Small Businesses",
-    excerpt:
-      "SEO helps small businesses improve visibility, attract quality leads, build credibility, and grow consistently in competitive markets.",
-    category: "SEO",
-    date: "May 2026",
-    image: seoBlogImg,
-    url: "/importance-of-small-businesses-seo-services",
-  },
-  {
     title: "Why Branding Is Critical for Today's Businesses",
     excerpt:
       "Strong branding helps businesses build trust, improve recognition, create emotional connection, and stand out in digital markets.",
@@ -45,6 +58,33 @@ const blogPosts = [
     image: brandingBlogImg,
     url: "/branding-more-critical-for-today-businesses",
   },
+  {
+  title: "Why Brochure Design Is More Important for Professional Businesses Than Ever",
+  excerpt:
+    "Professional brochure design helps businesses communicate services clearly, build credibility, strengthen branding, and create a lasting impression.",
+  category: "Brochure Design",
+  date: "June 2026",
+  image: brochureBlogImg,
+  url: "important-of-professional-brochure-design",
+},
+{
+  title: "Why Every Modern Business Needs a Well-Designed Mobile App",
+  excerpt:
+    "A professionally designed mobile app improves customer experience, strengthens brand visibility, increases engagement, and helps businesses stay competitive in a mobile-first world.",
+  category: "Mobile App Design",
+  date: "June 2026",
+  image: mobileAppBlogImg,
+  url: "/modern-bussiness-well-design-mobile-app",
+},
+{
+  title: "How PPC Advertising Helps Businesses Generate Faster Results",
+  excerpt:
+    "PPC advertising helps businesses reach high-intent customers, increase visibility, generate qualified leads, and achieve measurable marketing results faster.",
+  category: "PPC Advertising",
+  date: "June 2026",
+  image: ppcBlogImg,
+  url: "/ppc-advertising-help-to-generate-results",
+},
 ];
 
 const categories = [

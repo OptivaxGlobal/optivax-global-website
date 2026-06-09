@@ -40,6 +40,10 @@ import LogoDesignBlog from "./pages/blogs/LogoDesignBlog";
 import WebDesignBlog from "./pages/blogs/WebDesignBlog";
 import SeoBlog from "./pages/blogs/SeoBlog";
 import BrandingBlog from "./pages/blogs/BrandingBlog";
+import BrochureDesignBlog from "./pages/Blogs/BrochureDesignBlog";
+import GraphicDesignBlog from "./pages/blogs/GraphicDesignBlog";
+import MobileAppDesignBlog from "./pages/blogs/MobileAppDesignBlog";
+import PPCAdvertisingBlog from "./pages/blogs/PPCAdvertisingBlog";
 
 import AnalyticsTracker from "./components/AnalyticsTracker";
 import PaymentForm from "@/pages/PaymentForm";
@@ -124,6 +128,22 @@ function App() {
 <Route
   path="/branding-more-critical-for-today-businesses"
   element={<BrandingBlog />}
+/>
+<Route
+  path="important-of-professional-brochure-design"
+  element={<BrochureDesignBlog />}
+/>
+<Route
+  path="/important-of-graphic-design-bussiness"
+  element={<GraphicDesignBlog />}
+/>
+<Route
+  path="/modern-bussiness-well-design-mobile-app"
+  element={<MobileAppDesignBlog />}
+/>
+<Route
+  path="/ppc-advertising-help-to-generate-results"
+  element={<PPCAdvertisingBlog />}
 />
 <Route path="/payment-form" element={<PaymentForm />} />
 <Route path="/payment-successful" element={<PaymentSuccessful />} />

@@ -37,7 +37,7 @@ const LogoDesignBlog = () => {
   metaDescription="Learn why professional logo design helps businesses build trust, improve brand recognition, and create stronger first impressions online."
   canonicalUrl="https://optivaxglobal.com/importance-of-professional-logo-design-businesses"
   category="Logo Design"
-  date="May 2026"
+  date="April 2026"
   image={logoBlogImg}
   imageAlt="Professional logo design blog by Optivax Global"
   sections={sections}

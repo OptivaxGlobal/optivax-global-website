@@ -42,7 +42,7 @@ const SeoBlog = () => {
       metaDescription="Learn why SEO helps service businesses improve online visibility, build trust, attract quality leads, and grow organically."
       canonicalUrl="https://optivaxglobal.com/importance-of-small-businesses-seo-services"
       category="SEO"
-      date="May 2026"
+      date="April 2026"
       image={seoBlogImg}
       imageAlt="SEO for service businesses blog by Optivax Global"
       sections={sections}
