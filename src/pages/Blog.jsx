@@ -12,8 +12,49 @@ import brochureBlogImg from "@/assets/blog-images/brochure-design-blog.webp";
 import graphicDesignBlogImg from "@/assets/blog-images/graphic-design-blog.webp";
 import mobileAppBlogImg from "@/assets/blog-images/mobile-app-blog.webp";
 import ppcBlogImg from "@/assets/blog-images/ppc-blog.webp";
+import ebookCoverBlogImg from "@/assets/blog-images/ebook-cover-blog.webp";
+import flyerDesignBlogImg from "@/assets/blog-images/flyer-design-blog.webp";
+import contentManagementBlogImg from "@/assets/blog-images/content-management-blog.webp";
+import stationeryDesignBlogImg from "@/assets/blog-images/stationery-design-blog.webp";
 
 const blogPosts = [
+  
+  {
+  title: "Creative Flyer Design Services That Get Your Business Noticed",
+  excerpt:
+    "Professional flyer design helps businesses attract attention, communicate value, improve engagement, strengthen branding, and generate better marketing results.",
+  category: "Flyer Design",
+  date: "June 2026",
+  image: flyerDesignBlogImg,
+  url: "/Creative-flyer-design-get-your-business-noticed",
+},
+{
+  title: "How Custom Stationery Design Builds Business Credibility",
+  excerpt:
+    "Professional stationery design helps businesses strengthen branding, improve recognition, build trust, and create a more credible and professional image.",
+  category: "Stationery Design",
+  date: "June 2026",
+  image: stationeryDesignBlogImg,
+  url: "/custom-stationery-design-builds-business-credilbility",
+},
+{
+  title: "The Strategic Importance of Content Management in Modern Marketing",
+  excerpt:
+    "Effective content management helps businesses maintain consistency, improve customer engagement, strengthen branding, and support long-term marketing growth.",
+  category: "Content Management",
+  date: "June 2026",
+  image: contentManagementBlogImg,
+  url: "/strategic-important-of-content-management-marketing",
+},
+ {
+  title: "The Importance of Ebook Cover Design in a Competitive Marketplace",
+  excerpt:
+    "Professional ebook cover design helps authors attract readers, improve visibility, strengthen credibility, and increase sales potential in competitive marketplaces.",
+  category: "Ebook Cover Design",
+  date: "June 2026",
+  image: ebookCoverBlogImg,
+  url: "/important-of-ebook-design-for-competitive-market",
+}, 
 {
   title: "How PPC Advertising Helps Businesses Generate Faster Results",
   excerpt:

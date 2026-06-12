@@ -44,6 +44,11 @@ import BrochureDesignBlog from "./pages/Blogs/BrochureDesignBlog";
 import GraphicDesignBlog from "./pages/blogs/GraphicDesignBlog";
 import MobileAppDesignBlog from "./pages/blogs/MobileAppDesignBlog";
 import PPCAdvertisingBlog from "./pages/blogs/PPCAdvertisingBlog";
+import EbookCoverDesignBlog from "./pages/blogs/EbookCoverDesignBlog";
+import FlyerDesignBlog from "./pages/blogs/FlyerDesignBlog";
+import ContentManagementBlog from "./pages/blogs/ContentManagementBlog";
+import StationeryDesignBlog from "./pages/blogs/StationeryDesignBlog";
+
 
 import AnalyticsTracker from "./components/AnalyticsTracker";
 import PaymentForm from "@/pages/PaymentForm";
@@ -130,7 +135,7 @@ function App() {
   element={<BrandingBlog />}
 />
 <Route
-  path="important-of-professional-brochure-design"
+  path="/important-of-professional-brochure-design"
   element={<BrochureDesignBlog />}
 />
 <Route
@@ -145,6 +150,23 @@ function App() {
   path="/ppc-advertising-help-to-generate-results"
   element={<PPCAdvertisingBlog />}
 />
+<Route
+  path="/important-of-ebook-design-for-competitive-market"
+  element={<EbookCoverDesignBlog />}
+/>
+<Route
+  path="/Creative-flyer-design-get-your-business-noticed"
+  element={<FlyerDesignBlog />}
+/>
+<Route
+  path="/strategic-important-of-content-management-marketing"
+  element={<ContentManagementBlog />}
+/>
+<Route
+  path="/custom-stationery-design-builds-business-credilbility"
+  element={<StationeryDesignBlog />}
+/>
+
 <Route path="/payment-form" element={<PaymentForm />} />
 <Route path="/payment-successful" element={<PaymentSuccessful />} />
 
