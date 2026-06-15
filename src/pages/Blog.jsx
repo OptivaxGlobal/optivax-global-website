@@ -39,13 +39,13 @@ const blogPosts = [
   url: "/Creative-flyer-design-get-your-business-noticed",
 },
 {
-  title: "How Custom Stationery Design Builds Business Credibility",
+  title: "Why Branding Is Critical for Today's Businesses",
   excerpt:
-    "Professional stationery design helps businesses strengthen branding, improve recognition, build trust, and create a more credible and professional image.",
-  category: "Stationery Design",
+    "Strong branding helps businesses build trust, improve recognition, create emotional connection, and stand out in digital markets.",
+  category: "Branding",
   date: "June 2026",
-  image: stationeryDesignBlogImg,
-  url: "/custom-stationery-design-builds-business-credilbility",
+  image: brandingBlogImg,
+  url: "/branding-more-critical-for-today-businesses",
 },
 {
   title: "The Strategic Importance of Content Management in Modern Marketing",
@@ -93,14 +93,15 @@ const blogPosts = [
   url: "important-of-professional-brochure-design",
 },
 {
-  title: "Why Branding Is Critical for Today's Businesses",
+  title: "How Custom Stationery Design Builds Business Credibility",
   excerpt:
-    "Strong branding helps businesses build trust, improve recognition, create emotional connection, and stand out in digital markets.",
-  category: "Branding",
+    "Professional stationery design helps businesses strengthen branding, improve recognition, build trust, and create a more credible and professional image.",
+  category: "Stationery Design",
   date: "May 2026",
-  image: brandingBlogImg,
-  url: "/branding-more-critical-for-today-businesses",
+  image: stationeryDesignBlogImg,
+  url: "/custom-stationery-design-builds-business-credilbility",
 },
+
 {
   title: "The Importance of Modern Web Design for Business Growth",
   excerpt:

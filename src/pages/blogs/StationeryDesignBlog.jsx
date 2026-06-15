@@ -41,7 +41,7 @@ const StationeryDesignBlog = () => {
       metaDescription="Discover how custom stationery design helps businesses strengthen branding, build credibility, improve customer trust, and create a professional business image."
       canonicalUrl="https://optivaxglobal.com/custom-stationery-design-builds-business-credilbility"
       category="Stationery Design"
-      date="June 2026"
+      date="May 2026"
       image={stationeryDesignBlogImg}
       imageAlt="Custom stationery design blog by Optivax Global"
       sections={sections}

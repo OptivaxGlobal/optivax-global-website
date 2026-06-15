@@ -42,7 +42,7 @@ const BrandingBlog = () => {
       metaDescription="Discover how branding helps businesses build trust, improve recognition, create emotional connection, and stand out online."
       canonicalUrl="https://optivaxglobal.com/branding-more-critical-for-today-businesses"
       category="Branding"
-      date="May 2026"
+      date="June 2026"
       image={brandingBlogImg}
       imageAlt="Professional branding blog by Optivax Global"
       sections={sections}
