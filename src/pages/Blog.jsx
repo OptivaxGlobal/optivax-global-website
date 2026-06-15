@@ -16,9 +16,19 @@ import ebookCoverBlogImg from "@/assets/blog-images/ebook-cover-blog.webp";
 import flyerDesignBlogImg from "@/assets/blog-images/flyer-design-blog.webp";
 import contentManagementBlogImg from "@/assets/blog-images/content-management-blog.webp";
 import stationeryDesignBlogImg from "@/assets/blog-images/stationery-design-blog.webp";
+import uiUxBlogImg from "@/assets/blog-images/ui-ux-blog.webp";
 
 const blogPosts = [
-  
+
+  {
+  title: "How Great UI/UX Design Turns Visitors into Loyal Customers",
+  excerpt:
+    "Great UI/UX design improves user experience, builds trust, increases customer retention, and helps businesses convert visitors into loyal customers.",
+  category: "UI/UX Design",
+  date: "June 2026",
+  image: uiUxBlogImg,
+  url: "/ui-ux-design-turns-into-loyal-customers",
+},
   {
   title: "Creative Flyer Design Services That Get Your Business Noticed",
   excerpt:

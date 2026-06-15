@@ -48,6 +48,7 @@ import EbookCoverDesignBlog from "./pages/blogs/EbookCoverDesignBlog";
 import FlyerDesignBlog from "./pages/blogs/FlyerDesignBlog";
 import ContentManagementBlog from "./pages/blogs/ContentManagementBlog";
 import StationeryDesignBlog from "./pages/blogs/StationeryDesignBlog";
+import UIUXDesignBlog from "./pages/blogs/UIUXDesignBlog";
 
 
 import AnalyticsTracker from "./components/AnalyticsTracker";
@@ -166,6 +167,12 @@ function App() {
   path="/custom-stationery-design-builds-business-credilbility"
   element={<StationeryDesignBlog />}
 />
+<Route
+  path="/ui-ux-design-turns-into-loyal-customers"
+  element={<UIUXDesignBlog />}
+/>
+
+
 
 <Route path="/payment-form" element={<PaymentForm />} />
 <Route path="/payment-successful" element={<PaymentSuccessful />} />
