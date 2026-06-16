@@ -49,6 +49,8 @@ import FlyerDesignBlog from "./pages/blogs/FlyerDesignBlog";
 import ContentManagementBlog from "./pages/blogs/ContentManagementBlog";
 import StationeryDesignBlog from "./pages/blogs/StationeryDesignBlog";
 import UIUXDesignBlog from "./pages/blogs/UIUXDesignBlog";
+import EmailMarketingBlog from "./pages/blogs/EmailMarketingBlog";
+import SocialMediaMarketingBlog from "./pages/blogs/SocialMediaMarketingBlog";
 
 
 import AnalyticsTracker from "./components/AnalyticsTracker";
@@ -171,7 +173,14 @@ function App() {
   path="/ui-ux-design-turns-into-loyal-customers"
   element={<UIUXDesignBlog />}
 />
-
+<Route
+  path="/stronge-email-marketing-to-build-relationship"
+  element={<EmailMarketingBlog />}
+/>
+<Route
+  path="/power-of-social-media-in-digital-landscape"
+  element={<SocialMediaMarketingBlog />}
+/>
 
 
 <Route path="/payment-form" element={<PaymentForm />} />

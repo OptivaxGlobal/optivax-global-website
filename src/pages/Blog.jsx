@@ -17,9 +17,29 @@ import flyerDesignBlogImg from "@/assets/blog-images/flyer-design-blog.webp";
 import contentManagementBlogImg from "@/assets/blog-images/content-management-blog.webp";
 import stationeryDesignBlogImg from "@/assets/blog-images/stationery-design-blog.webp";
 import uiUxBlogImg from "@/assets/blog-images/ui-ux-blog.webp";
+import emailMarketingBlogImg from "@/assets/blog-images/email-marketing-blog.webp";
+import socialMediaMarketingBlogImg from "@/assets/blog-images/social-media-marketing-blog.webp";
 
 const blogPosts = [
-
+  
+ {
+  title: "The Power of Social Media Marketing in Today's Digital Landscape",
+  excerpt:
+    "Social media marketing helps businesses increase brand visibility, engage customers, build credibility, generate leads, and drive long-term business growth.",
+  category: "Social Media Marketing",
+  date: "June 2026",
+  image: socialMediaMarketingBlogImg,
+  url: "/power-of-social-media-in-digital-landscape",
+}, 
+{
+  title: "How Email Marketing Builds Stronger Customer Relationships",
+  excerpt:
+    "Email marketing helps businesses build trust, strengthen customer relationships, improve engagement, and encourage long-term customer loyalty.",
+  category: "Email Marketing",
+  date: "June 2026",
+  image: emailMarketingBlogImg,
+  url: "/stronge-email-marketing-to-build-relationship",
+},
   {
   title: "How Great UI/UX Design Turns Visitors into Loyal Customers",
   excerpt:
