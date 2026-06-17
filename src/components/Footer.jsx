@@ -219,7 +219,7 @@ const Footer = () => {
     size={18}
     className="group-hover:text-[#38D9FF] transition"
   />
-  <span>Contact Us</span>
+  <span>marketing@optivaxglobal.com</span>
 </a>
 
               <a
@@ -241,18 +241,7 @@ const Footer = () => {
                 <span>{SITE.location}</span>
               </div>
 
-              <a
-                href={SITE.website}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center gap-3 text-gray-400 hover:text-white transition-all duration-300 group"
-              >
-                <Globe
-                  size={18}
-                  className="group-hover:text-[#38D9FF] transition"
-                />
-                <span>{SITE.website.replace("https://", "")}</span>
-              </a>
+              
             </div>
 
             <h3 className="text-white font-semibold mb-4 text-lg">

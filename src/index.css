@@ -298,3 +298,111 @@ img[loading="lazy"] {
     transition-duration: 0.01ms !important;
   }
 }
+/* Phone Country Code Dropdown - Optivax Theme */
+
+.react-tel-input {
+  width: 100% !important;
+  font-family: inherit !important;
+}
+
+.react-tel-input .form-control {
+  width: 100% !important;
+  height: 56px !important;
+  background: rgba(12, 13, 13, 0.35) !important;
+  color: #ffffff !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+  border-radius: 12px !important;
+  padding-left: 60px !important;
+  font-size: 15px !important;
+  outline: none !important;
+}
+
+.react-tel-input .form-control::placeholder {
+  color: #9ca3af !important;
+}
+
+.react-tel-input .form-control:focus {
+  border-color: rgba(27, 188, 239, 0.6) !important;
+  box-shadow: 0 0 0 4px rgba(27, 188, 239, 0.12) !important;
+}
+
+.react-tel-input .flag-dropdown {
+  background: #10131f !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+  border-radius: 12px 0 0 12px !important;
+}
+
+.react-tel-input .selected-flag {
+  background: transparent !important;
+  border-radius: 12px 0 0 12px !important;
+}
+
+.react-tel-input .selected-flag:hover,
+.react-tel-input .selected-flag:focus,
+.react-tel-input .flag-dropdown.open {
+  background: rgba(27, 188, 239, 0.12) !important;
+}
+
+.react-tel-input .selected-flag .arrow {
+  border-top-color: #1bbcef !important;
+}
+
+.react-tel-input .selected-flag .arrow.up {
+  border-bottom-color: #1bbcef !important;
+}
+
+.react-tel-input .country-list {
+  background: #031c33 !important;
+  color: #ffffff !important;
+  border: 1px solid rgba(255, 255, 255, 0.12) !important;
+  border-radius: 18px !important;
+  margin-top: 10px !important;
+  box-shadow: 0 24px 80px rgba(0, 0, 0, 0.45) !important;
+  padding: 8px 0 !important;
+}
+
+.react-tel-input .country-list .country {
+  padding: 12px 14px !important;
+  color: #e5e7eb !important;
+}
+
+.react-tel-input .country-list .country:hover,
+.react-tel-input .country-list .country.highlight {
+  background: rgba(27, 188, 239, 0.15) !important;
+  color: #ffffff !important;
+}
+
+.react-tel-input .country-list .country-name {
+  color: #ffffff !important;
+}
+
+.react-tel-input .country-list .dial-code {
+  color: #1bbcef !important;
+}
+
+.react-tel-input .search-box {
+  background: #10131f !important;
+  color: #ffffff !important;
+  border: 1px solid rgba(27, 188, 239, 0.25) !important;
+  border-radius: 10px !important;
+  padding: 10px 12px !important;
+  margin: 8px 10px 10px !important;
+}
+
+.react-tel-input .search-box::placeholder {
+  color: #9ca3af !important;
+}
+
+/* Scrollbar */
+.react-tel-input .country-list::-webkit-scrollbar {
+  width: 8px;
+}
+
+.react-tel-input .country-list::-webkit-scrollbar-track {
+  background: #061120;
+}
+
+.react-tel-input .country-list::-webkit-scrollbar-thumb {
+  background: #1bbcef;
+  border-radius: 20px;
+}
