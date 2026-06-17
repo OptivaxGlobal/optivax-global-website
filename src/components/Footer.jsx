@@ -82,50 +82,50 @@ const Footer = () => {
     label: "Facebook",
     icon: <FaFacebookF size={16} />,
     link: "https://www.facebook.com/OptivaxGlobalSolution/",
-    hover:
-      "hover:bg-[#1877F2] hover:border-[#1877F2] hover:text-white",
+    color:
+      "bg-[#1877F2] border-[#1877F2] text-white hover:shadow-lg hover:shadow-[#1877F2]/40 hover:-translate-y-1",
   },
   {
     label: "Instagram",
     icon: <FaInstagram size={16} />,
     link: "https://www.instagram.com/optivaxglobal/",
-    hover:
-      "hover:bg-pink-500 hover:border-pink-500 hover:text-white",
+    color:
+      "bg-[radial-gradient(circle_at_30%_107%,#fdf497_0%,#fdf497_5%,#fd5949_45%,#d6249f_60%,#285AEB_90%)] border-[#d6249f] text-white hover:shadow-lg hover:shadow-[#d6249f]/40 hover:-translate-y-1",
   },
   {
     label: "LinkedIn",
     icon: <FaLinkedinIn size={16} />,
     link: "https://www.linkedin.com/company/115777328/",
-    hover:
-      "hover:bg-[#0A66C2] hover:border-[#0A66C2] hover:text-white",
+    color:
+      "bg-[#0A66C2] border-[#0A66C2] text-white hover:shadow-lg hover:shadow-[#0A66C2]/40 hover:-translate-y-1",
   },
   {
     label: "YouTube",
     icon: <FaYoutube size={16} />,
     link: "https://www.youtube.com/@OptivaxGlobal",
-    hover:
-      "hover:bg-red-500 hover:border-red-500 hover:text-white",
+    color:
+      "bg-[#CC0000] border-[#CC0000] text-white hover:bg-[#B00000] hover:border-[#B00000] hover:shadow-lg hover:shadow-[#CC0000]/40 hover:-translate-y-1",
   },
   {
     label: "Pinterest",
     icon: <FaPinterestP size={16} />,
     link: "https://www.pinterest.com/optivaxglobal/",
-    hover:
-      "hover:bg-[#E60023] hover:border-[#E60023] hover:text-white",
+    color:
+      "bg-[#E60023] border-[#E60023] text-white hover:shadow-lg hover:shadow-[#E60023]/40 hover:-translate-y-1",
   },
   {
     label: "TikTok",
     icon: <FaTiktok size={16} />,
     link: "https://www.tiktok.com/@optivaxglobal",
-    hover:
-      "hover:bg-black hover:border-white hover:text-white",
+    color:
+      "bg-black border-[#25F4EE] text-white hover:border-[#FE2C55] hover:shadow-lg hover:shadow-[#FE2C55]/40 hover:-translate-y-1",
   },
   {
     label: "Threads",
     icon: <RiThreadsFill size={16} />,
     link: "https://www.threads.net/@optivaxglobal",
-    hover:
-      "hover:bg-black hover:border-white hover:text-white",
+    color:
+      "bg-black border-white/40 text-white hover:bg-white hover:text-black hover:border-white hover:shadow-lg hover:shadow-white/20 hover:-translate-y-1",
   },
 ];
 
@@ -248,20 +248,20 @@ const Footer = () => {
               Follow Us
             </h3>
 
-            <div className="flex flex-wrap gap-3">
-              {socialLinks.map((social) => (
-                <a
-                  key={social.label}
-                  href={social.link}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label={`Follow Optivax Global on ${social.label}`}
-                  className={`w-11 h-11 rounded-full bg-white/[0.05] border border-white/10 flex items-center justify-center text-gray-300 transition-all duration-300 hover:scale-110 ${social.hover}`}
-                >
-                  {social.icon}
-                </a>
-              ))}
-            </div>
+            <div className="flex items-center justify-start gap-2 flex-nowrap">
+  {socialLinks.map((social) => (
+    <a
+      key={social.label}
+      href={social.link}
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label={`Follow Optivax Global on ${social.label}`}
+      className={`shrink-0 w-9 h-9 lg:w-10 lg:h-10 rounded-full border flex items-center justify-center transition-all duration-300 hover:scale-110 ${social.color}`}
+    >
+      {social.icon}
+    </a>
+  ))}
+</div>
           </div>
         </div>
 

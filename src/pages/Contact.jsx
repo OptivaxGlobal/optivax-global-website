@@ -62,6 +62,70 @@ const Contact = () => {
     "Corporate Presentation",
   ];
 
+  const socialLinks = [
+    {
+      label: "Facebook",
+      icon: <FaFacebookF size={16} />,
+      link: "https://www.facebook.com/OptivaxGlobalSolution/",
+      className:
+        "bg-[#1877F2] border-[#1877F2] text-white hover:shadow-lg hover:shadow-[#1877F2]/40 hover:-translate-y-1",
+    },
+    {
+      label: "Instagram",
+      icon: <FaInstagram size={16} />,
+      link: "https://www.instagram.com/optivaxglobal/",
+      className:
+        "bg-[radial-gradient(circle_at_30%_107%,#fdf497_0%,#fdf497_5%,#fd5949_45%,#d6249f_60%,#285AEB_90%)] border-[#d6249f] text-white hover:shadow-lg hover:shadow-[#d6249f]/40 hover:-translate-y-1",
+    },
+    {
+      label: "LinkedIn",
+      icon: <FaLinkedinIn size={16} />,
+      link: "https://www.linkedin.com/company/115777328/",
+      className:
+        "bg-[#0A66C2] border-[#0A66C2] text-white hover:shadow-lg hover:shadow-[#0A66C2]/40 hover:-translate-y-1",
+    },
+    {
+      label: "YouTube",
+      icon: <FaYoutube size={16} />,
+      link: "https://www.youtube.com/@OptivaxGlobal",
+      className:
+        "bg-[#CC0000] border-[#CC0000] text-white hover:bg-[#B00000] hover:border-[#B00000] hover:shadow-lg hover:shadow-[#CC0000]/40 hover:-translate-y-1",
+    },
+    {
+      label: "Pinterest",
+      icon: <FaPinterestP size={16} />,
+      link: "https://www.pinterest.com/optivaxglobal/",
+      className:
+        "bg-[#E60023] border-[#E60023] text-white hover:shadow-lg hover:shadow-[#E60023]/40 hover:-translate-y-1",
+    },
+    {
+      label: "TikTok",
+      icon: (
+        <span className="relative flex items-center justify-center w-4 h-4 leading-none">
+          <FaTiktok
+            size={15}
+            className="absolute text-[#25F4EE] -translate-x-[1px] translate-y-[1px]"
+          />
+          <FaTiktok
+            size={15}
+            className="absolute text-[#FE2C55] translate-x-[1px] -translate-y-[1px]"
+          />
+          <FaTiktok size={15} className="relative text-white" />
+        </span>
+      ),
+      link: "https://www.tiktok.com/@optivaxglobal",
+      className:
+        "bg-black border-[#25F4EE] text-white hover:border-[#FE2C55] hover:shadow-lg hover:shadow-[#25F4EE]/30 hover:-translate-y-1",
+    },
+    {
+      label: "Threads",
+      icon: <RiThreadsFill size={16} />,
+      link: "https://www.threads.net/@optivaxglobal",
+      className:
+        "bg-black border-white/40 text-white hover:bg-white hover:text-black hover:border-white hover:shadow-lg hover:shadow-white/20 hover:-translate-y-1",
+    },
+  ];
+
   const filteredServiceOptions = serviceOptions.filter((option) =>
     option.toLowerCase().includes(serviceSearch.toLowerCase())
   );
@@ -207,6 +271,7 @@ const Contact = () => {
       }
     } catch (err) {
       console.error("Submission Error:", err.message);
+      alert("Something went wrong. Please try again.");
     }
 
     setLoading(false);
@@ -228,6 +293,8 @@ const Contact = () => {
           .optivax-phone.react-tel-input {
             width: 100% !important;
             font-family: inherit !important;
+            position: relative !important;
+            z-index: 100 !important;
           }
 
           .optivax-phone .form-control {
@@ -255,11 +322,15 @@ const Contact = () => {
             background: #10131f !important;
             border: 1px solid rgba(255, 255, 255, 0.1) !important;
             border-radius: 12px 0 0 12px !important;
+            z-index: 99999 !important;
           }
 
           .optivax-phone .selected-flag {
+            width: 58px !important;
+            height: 58px !important;
             background: transparent !important;
             border-radius: 12px 0 0 12px !important;
+            z-index: 2 !important;
           }
 
           .optivax-phone .selected-flag:hover,
@@ -276,77 +347,106 @@ const Contact = () => {
             border-bottom-color: #1bbcef !important;
           }
 
-          .optivax-phone .country-list {
+          .optivax-phone-dropdown.country-list {
+            position: absolute !important;
+            top: 64px !important;
+            left: 0 !important;
+            width: min(380px, calc(100vw - 48px)) !important;
+            max-height: 320px !important;
             background: #031c33 !important;
             color: #ffffff !important;
-            border: 1px solid rgba(255, 255, 255, 0.12) !important;
+            border: 1px solid rgba(27, 188, 239, 0.25) !important;
             border-radius: 18px !important;
-            margin-top: 10px !important;
-            box-shadow: 0 24px 80px rgba(0, 0, 0, 0.45) !important;
-            padding: 8px 0 !important;
-            max-height: 260px !important;
+            margin: 0 !important;
+            padding: 0 0 8px 0 !important;
             overflow-y: auto !important;
-            z-index: 99999 !important;
+            overflow-x: hidden !important;
+            box-shadow: 0 24px 80px rgba(0, 0, 0, 0.55) !important;
+            z-index: 999999 !important;
           }
 
-          .optivax-phone .country-list .search {
-            background: #031c33 !important;
+          .optivax-phone-dropdown .search {
             position: sticky !important;
             top: 0 !important;
-            z-index: 2 !important;
-            padding: 8px 10px !important;
+            z-index: 999999 !important;
+            display: block !important;
+            background: #031c33 !important;
+            padding: 14px 14px 12px 14px !important;
+            margin: 0 !important;
+            border-radius: 18px 18px 0 0 !important;
+            box-shadow: 0 12px 18px rgba(3, 28, 51, 0.98) !important;
+            overflow: hidden !important;
+            isolation: isolate !important;
           }
 
-          .optivax-phone .country-list .country {
+          .optivax-phone-dropdown .search::before {
+            content: "" !important;
+            position: absolute !important;
+            inset: 0 !important;
+            background: #031c33 !important;
+            z-index: -1 !important;
+          }
+
+          .optivax-phone-dropdown .search-box {
+            position: relative !important;
+            z-index: 2 !important;
+            width: 100% !important;
+            height: 44px !important;
+            background: #10131f !important;
+            color: #ffffff !important;
+            border: 1px solid rgba(27, 188, 239, 0.45) !important;
+            border-radius: 10px !important;
+            padding: 10px 12px !important;
+            margin: 0 !important;
+            outline: none !important;
+            box-shadow: none !important;
+          }
+
+          .optivax-phone-dropdown .search-box::placeholder {
+            color: #9ca3af !important;
+          }
+
+          .optivax-phone-dropdown .country {
+            position: relative !important;
+            z-index: 1 !important;
             padding: 12px 14px !important;
             color: #e5e7eb !important;
+            background: transparent !important;
+            margin: 0 !important;
           }
 
-          .optivax-phone .country-list .country:hover,
-          .optivax-phone .country-list .country.highlight {
+          .optivax-phone-dropdown .country:hover,
+          .optivax-phone-dropdown .country.highlight {
             background: rgba(27, 188, 239, 0.15) !important;
             color: #ffffff !important;
           }
 
-          .optivax-phone .country-list .country-name {
+          .optivax-phone-dropdown .country-name {
             color: #ffffff !important;
           }
 
-          .optivax-phone .country-list .dial-code {
+          .optivax-phone-dropdown .dial-code {
             color: #1bbcef !important;
           }
 
-          .optivax-phone .search-box {
-            background: #10131f !important;
-            color: #ffffff !important;
-            border: 1px solid rgba(27, 188, 239, 0.35) !important;
-            border-radius: 10px !important;
-            padding: 10px 12px !important;
-            margin: 8px 10px 10px !important;
-          }
-
-          .optivax-phone .search-box::placeholder {
-            color: #9ca3af !important;
-          }
-
-          .optivax-phone .country-list::-webkit-scrollbar,
+          .optivax-phone-dropdown::-webkit-scrollbar,
           .custom-service-scroll::-webkit-scrollbar {
             width: 8px;
           }
 
-          .optivax-phone .country-list::-webkit-scrollbar-track,
+          .optivax-phone-dropdown::-webkit-scrollbar-track,
           .custom-service-scroll::-webkit-scrollbar-track {
             background: #061120;
             border-radius: 20px;
           }
 
-          .optivax-phone .country-list::-webkit-scrollbar-thumb,
+          .optivax-phone-dropdown::-webkit-scrollbar-thumb,
           .custom-service-scroll::-webkit-scrollbar-thumb {
             background: #1bbcef;
             border-radius: 20px;
           }
 
-          .optivax-phone .country-list::-webkit-scrollbar-thumb:hover,
+          .optivax-phone-dropdown::-webkit-scrollbar-thumb:hover,
           .custom-service-scroll::-webkit-scrollbar-thumb:hover {
             background: #159bd1;
           }
@@ -402,73 +502,21 @@ const Contact = () => {
                 </div>
 
                 <div className="pt-8">
-                  <p className="text-white font-semibold mb-4">
-                    Connect With Us
-                  </p>
+                  <p className="text-white font-semibold mb-4">Follow Us</p>
 
-                  <div className="flex flex-wrap gap-3">
-                    <a
-                      href="https://www.facebook.com/OptivaxGlobalSolution/"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="w-11 h-11 rounded-full bg-white/[0.05] border border-white/10 flex items-center justify-center text-gray-300 hover:text-white hover:bg-[#1877F2] hover:border-[#1877F2] transition-all duration-300"
-                    >
-                      <FaFacebookF size={16} />
-                    </a>
-
-                    <a
-                      href="https://www.instagram.com/optivaxglobal/"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="w-11 h-11 rounded-full bg-white/[0.05] border border-white/10 flex items-center justify-center text-gray-300 hover:text-white hover:bg-pink-500 hover:border-pink-500 transition-all duration-300"
-                    >
-                      <FaInstagram size={16} />
-                    </a>
-
-                    <a
-                      href="https://www.linkedin.com/company/115777328/"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="w-11 h-11 rounded-full bg-white/[0.05] border border-white/10 flex items-center justify-center text-gray-300 hover:text-white hover:bg-[#0A66C2] hover:border-[#0A66C2] transition-all duration-300"
-                    >
-                      <FaLinkedinIn size={16} />
-                    </a>
-
-                    <a
-                      href="https://www.youtube.com/@OptivaxGlobal"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="w-11 h-11 rounded-full bg-white/[0.05] border border-white/10 flex items-center justify-center text-gray-300 hover:text-white hover:bg-red-500 hover:border-red-500 transition-all duration-300"
-                    >
-                      <FaYoutube size={16} />
-                    </a>
-
-                    <a
-                      href="https://www.pinterest.com/optivaxglobal/"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="w-11 h-11 rounded-full bg-white/[0.05] border border-white/10 flex items-center justify-center text-gray-300 hover:text-white hover:bg-[#E60023] hover:border-[#E60023] transition-all duration-300"
-                    >
-                      <FaPinterestP size={16} />
-                    </a>
-
-                    <a
-                      href="https://www.tiktok.com/@optivaxglobal"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="w-11 h-11 rounded-full bg-white/[0.05] border border-white/10 flex items-center justify-center text-gray-300 hover:text-white hover:bg-black hover:border-white transition-all duration-300"
-                    >
-                      <FaTiktok size={16} />
-                    </a>
-
-                    <a
-                      href="https://www.threads.net/@optivaxglobal"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="w-11 h-11 rounded-full bg-white/[0.05] border border-white/10 flex items-center justify-center text-gray-300 hover:text-white hover:bg-black hover:border-white transition-all duration-300"
-                    >
-                      <RiThreadsFill size={16} />
-                    </a>
+                  <div className="flex flex-wrap items-center gap-3">
+                    {socialLinks.map((social) => (
+                      <a
+                        key={social.label}
+                        href={social.link}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label={`Follow Optivax Global on ${social.label}`}
+                        className={`shrink-0 overflow-hidden w-11 h-11 rounded-full border flex items-center justify-center transition-all duration-300 hover:scale-110 ${social.className}`}
+                      >
+                        {social.icon}
+                      </a>
+                    ))}
                   </div>
                 </div>
               </div>
@@ -513,6 +561,7 @@ const Contact = () => {
                   enableSearch={true}
                   disableSearchIcon={true}
                   searchPlaceholder="Search country"
+                  dropdownClass="optivax-phone-dropdown"
                   inputProps={{
                     name: "phone",
                     required: true,

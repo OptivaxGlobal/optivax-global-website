@@ -6,6 +6,7 @@ import Footer from "./Footer";
 import { Toaster } from "./ui/toaster";
 import CustomCursor from './CustomCursor'; 
 import WhatsAppButton from "./WhatsAppButton";
+import ChatBot from "./ChatBot";
 
 const Layout = () => {
   const location = useLocation();
@@ -38,6 +39,9 @@ const Layout = () => {
 
       {/* WhatsApp Floating Button (ALWAYS LAST) */}
       <WhatsAppButton />
+
+      
+      <ChatBot />
       
     </div>
   );

@@ -203,10 +203,10 @@ const Header = () => {
             <button
               type="button"
               onClick={handleCTA}
-              className="group bg-gradient-to-r from-[#1BBCEF] to-[#004495] hover:from-[#004495] hover:to-[#1BBCEF] text-[#E9FBFF] px-6 py-2.5 rounded-full flex items-center gap-2 font-semibold shadow-lg shadow-[#1BBCEF]/25 hover:shadow-[#1BBCEF]/45 hover:-translate-y-0.5 transition-all duration-300"
+              className="group bg-gradient-to-r from-[#1BBCEF] to-[#004495] hover:from-[#004495] hover:to-[#1BBCEF] text-[#E9FBFF] px-8 py-2.5 rounded-full flex items-center gap-2 font-semibold shadow-lg shadow-[#1BBCEF]/25 hover:shadow-[#1BBCEF]/45 hover:-translate-y-0.5 transition-all duration-300"
             >
-              Start Your Project
-              <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" />
+              Contact Us
+              <ArrowRight className="w-8 h-5 group-hover:translate-x-1 transition-transform duration-300" />
             </button>
           </div>
 
@@ -290,7 +290,7 @@ const Header = () => {
                   onClick={handleCTA}
                   className="w-full bg-gradient-to-r from-[#1BBCEF] to-[#004495] hover:from-[#004495] hover:to-[#1BBCEF] text-white py-4 rounded-full text-lg font-semibold shadow-lg shadow-[#1BBCEF]/25 transition-all duration-300"
                 >
-                  Start Your Project
+                  Contact Us 
                 </button>
               </div>
             </div>

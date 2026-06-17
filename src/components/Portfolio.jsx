@@ -1,15 +1,8 @@
-import React, { useRef, useState } from "react";
-import {
-  ArrowUpRight,
-  ChevronLeft,
-  ChevronRight,
-  ArrowRight,
-} from "lucide-react";
+import React, { useState } from "react";
+import { ArrowUpRight, ArrowRight } from "lucide-react";
 import { useNavigate } from "react-router-dom";
-import ResponsiveImage from "@/components/ResponsiveImage";
 
 /* LOGOS */
-
 import logo2 from "@/assets/logo-showcase/burgera.webp";
 import logo3 from "@/assets/logo-showcase/clean.webp";
 import logo4 from "@/assets/logo-showcase/classic-cars.webp";
@@ -74,14 +67,14 @@ const portfolioSections = [
   {
     title: "App UI/UX Design",
     subtitle: "Modern app experiences focused on usability and design",
-    images: [ui1, ui2, ui3, ui4],
+    images: [ui1, ui2, ui4],
     contain: false,
     link: "/app-ui-ux-design",
   },
   {
     title: "Digital Marketing",
     subtitle: "Creative campaigns built for visibility and engagement",
-    images: [dm1, dm2, dm3, dm4],
+    images: [dm1, dm2,  dm4],
     contain: false,
     link: "/digital-marketing",
   },
@@ -89,28 +82,7 @@ const portfolioSections = [
 
 const Portfolio = () => {
   const navigate = useNavigate();
-  const sliderRefs = useRef([]);
   const [selectedImage, setSelectedImage] = useState(null);
-
-  const scrollSlider = (index, direction) => {
-    const slider = sliderRefs.current[index];
-    if (!slider) return;
-
-    slider.scrollBy({
-      left: direction === "left" ? -420 : 420,
-      behavior: "smooth",
-    });
-  };
-
-  const handleWheelScroll = (e, index) => {
-    const slider = sliderRefs.current[index];
-    if (!slider) return;
-
-    if (Math.abs(e.deltaY) > Math.abs(e.deltaX)) {
-      e.preventDefault();
-      slider.scrollLeft += e.deltaY;
-    }
-  };
 
   return (
     <section
@@ -139,84 +111,70 @@ const Portfolio = () => {
           </p>
         </div>
 
-        <div className="space-y-24">
-          {portfolioSections.map((section, sectionIndex) => (
+        <div className="space-y-28">
+          {portfolioSections.map((section) => (
             <div key={section.title} className="relative">
-              <div className="flex items-end justify-between mb-8 flex-wrap gap-4">
+              <div className="flex items-end justify-between mb-10 flex-wrap gap-5">
                 <div>
-                  <h3 className="text-3xl md:text-4xl font-extrabold text-white mb-2">
+                  <span className="inline-block text-[#1CA4F4] font-semibold uppercase tracking-[0.22em] mb-3 text-xs sm:text-sm">
+                    Portfolio Showcase
+                  </span>
+
+                  <h3 className="text-3xl md:text-5xl font-black text-white leading-tight mb-3">
                     {section.title}
                   </h3>
 
-                  <p className="text-gray-400 text-lg">{section.subtitle}</p>
+                  <p className="text-white/60 text-sm md:text-lg max-w-2xl">
+                    {section.subtitle}
+                  </p>
                 </div>
 
-                <div className="flex items-center gap-3">
-                  <button
-                    onClick={() => scrollSlider(sectionIndex, "left")}
-                    className="w-11 h-11 rounded-full border border-white/10 bg-white/[0.04] hover:bg-[#1BBCEF] text-white flex items-center justify-center transition-all duration-300"
-                    aria-label="Scroll left"
-                  >
-                    <ChevronLeft size={22} />
-                  </button>
-
-                  <button
-                    onClick={() => scrollSlider(sectionIndex, "right")}
-                    className="w-11 h-11 rounded-full border border-white/10 bg-white/[0.04] hover:bg-[#1BBCEF] text-white flex items-center justify-center transition-all duration-300"
-                    aria-label="Scroll right"
-                  >
-                    <ChevronRight size={22} />
-                  </button>
-
-                  <button
-                    onClick={() => navigate(section.link)}
-                    className="hidden md:flex items-center gap-2 text-accent-purple hover:text-white transition-all duration-300 ml-2"
-                  >
-                    <ArrowUpRight className="w-5 h-5" />
-                    <span className="text-sm uppercase tracking-widest">
-                      View Page
-                    </span>
-                  </button>
-                </div>
+                <button
+                  onClick={() => navigate(section.link)}
+                  className="inline-flex items-center gap-2 bg-white/5 hover:bg-white/10 border border-white/10 hover:border-[#1CA4F4]/50 text-white px-6 py-3 rounded-full font-semibold transition-all duration-300"
+                >
+                  View Page
+                  <ArrowUpRight className="w-5 h-5" />
+                </button>
               </div>
 
-              <div
-                ref={(el) => (sliderRefs.current[sectionIndex] = el)}
-                onWheel={(e) => handleWheelScroll(e, sectionIndex)}
-                className="overflow-x-auto overflow-y-hidden scrollbar-hide scroll-smooth"
-              >
-                <div className="flex gap-7 min-w-max pb-3">
-                  {section.images.map((img, index) => (
+              <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+                {section.images.map((img, index) => (
+                  <div
+                    key={index}
+                    onClick={() => setSelectedImage(img)}
+                    className="group cursor-pointer rounded-[26px] overflow-hidden bg-[#101018] border border-white/10 hover:border-[#1CA4F4] hover:-translate-y-2 transition-all duration-300 shadow-xl hover:shadow-[0_0_55px_rgba(28,164,244,0.25)]"
+                  >
                     <div
-                      key={index}
-                      onClick={() => setSelectedImage(img)}
-                      className="group cursor-pointer relative w-[340px] aspect-[34/27] shrink-0 rounded-[30px] overflow-hidden bg-white/[0.03] border border-white/10 hover:border-accent-purple/40 transition-colors duration-300 hover:shadow-2xl hover:shadow-accent-purple/20 backdrop-blur-md"
+                      className={`w-full flex items-center justify-center ${
+                        section.title === "eBook Cover Design"
+                          ? "h-[300px] sm:h-[340px] md:h-[390px]"
+                          : "h-[250px] sm:h-[290px] md:h-[330px]"
+                      } ${
+                        section.contain
+                          ? "bg-white p-5"
+                          : "bg-black/30 p-0"
+                      }`}
                     >
-                      <ResponsiveImage
+                      <img
                         src={img}
                         alt={`${section.title} project ${index + 1}`}
                         loading="lazy"
-                        className={`w-full h-full transition-opacity duration-300 ${
-                          section.contain
-                            ? "object-contain p-5 bg-white"
-                            : "object-cover"
-                        }`}
-                        aspectRatio="1/1"
-                        sizes="(max-width: 640px) 100vw, (max-width: 1024px) 90vw, 340px"
                         decoding="async"
-                        width="340"
-                        height="270"
+                        className={`w-full h-full transition-transform duration-300 group-hover:scale-105 ${
+                          section.contain ? "object-contain" : "object-cover"
+                        }`}
                       />
+                    </div>
 
-                      <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition duration-500" />
-
-                      <div className="absolute bottom-5 left-5 right-5 flex justify-between items-center opacity-0 translate-y-4 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-500">
+                    <div className="p-5 bg-[#101018] border-t border-white/10">
+                      <div className="flex items-center justify-between gap-4">
                         <div>
-                          <p className="text-white font-semibold text-lg">
+                          <p className="text-white font-bold text-lg">
                             {section.title}
                           </p>
 
-                          <p className="text-sm text-gray-300">
+                          <p className="text-sm text-gray-400">
                             Optivax Global
                           </p>
                         </div>
@@ -226,21 +184,21 @@ const Portfolio = () => {
                             e.stopPropagation();
                             navigate(section.link);
                           }}
-                          className="bg-accent-purple/20 border border-accent-purple/30 backdrop-blur-sm p-3 rounded-full hover:bg-accent-purple transition-all duration-300"
+                          className="w-11 h-11 rounded-full bg-[#1CA4F4]/15 border border-[#1CA4F4]/30 flex items-center justify-center hover:bg-[#1CA4F4] transition-all duration-300"
                           aria-label={`Open ${section.title} page`}
                         >
                           <ArrowUpRight className="w-5 h-5 text-white" />
                         </button>
                       </div>
                     </div>
-                  ))}
-                </div>
+                  </div>
+                ))}
               </div>
             </div>
           ))}
         </div>
 
-        <div className="mt-20 text-center">
+        <div className="mt-24 text-center">
           <button
             onClick={() => navigate("/contact")}
             className="group inline-flex items-center justify-center gap-2 px-10 py-5 bg-gradient-to-r from-[#1BBCEF] to-[#004495] hover:from-[#004495] hover:to-[#1BBCEF] text-white font-semibold rounded-full shadow-lg shadow-[#1BBCEF]/25 hover:-translate-y-0.5 transition-all duration-300 border-0"
@@ -265,15 +223,13 @@ const Portfolio = () => {
           </button>
 
           <img
-  src={selectedImage}
-  alt="Selected Portfolio"
-  onClick={(e) => e.stopPropagation()}
-  width="1200"
-  height="900"
-  loading="lazy"
-  decoding="async"
-  className="max-w-[92vw] max-h-[88vh] w-auto h-auto object-contain rounded-2xl shadow-2xl"
-/>
+            src={selectedImage}
+            alt="Selected Portfolio"
+            onClick={(e) => e.stopPropagation()}
+            loading="lazy"
+            decoding="async"
+            className="max-w-[92vw] max-h-[88vh] w-auto h-auto object-contain rounded-2xl shadow-2xl"
+          />
         </div>
       )}
     </section>
