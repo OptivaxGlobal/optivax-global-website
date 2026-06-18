@@ -116,7 +116,7 @@ const portfolioSections = [
     subtitle:
       "Modern mobile app interfaces focused on clean user flow, clarity, and visual experience.",
     tag: "Product Design",
-    images: [ui1, ui2, ui3, ui4],
+    images: [ui1, ui2, ui4],
     contain: false,
     link: "/mobile-app-design",
   },
@@ -125,7 +125,7 @@ const portfolioSections = [
     subtitle:
       "Creative marketing visuals built to increase brand visibility, trust, and engagement.",
     tag: "Growth Creative",
-    images: [dm1, dm2, dm3, dm4],
+    images: [dm2, dm3, dm4],
     contain: false,
     link: "/digital-marketing",
   },
