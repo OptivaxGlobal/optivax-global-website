@@ -8,6 +8,8 @@ const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const [servicesOpen, setServicesOpen] = useState(false);
+  const [mobileServicesOpen, setMobileServicesOpen] = useState(false);
+
   const navigate = useNavigate();
 
   const servicesLinks = [
@@ -30,72 +32,92 @@ const Header = () => {
     { name: "Email Marketing", href: "/email-marketing" },
     { name: "Pay Per Click (PPC)", href: "/pay-per-click" },
     { name: "Search Engine Marketing", href: "/search-engine-marketing" },
-    { name: "Search Engine Optimization (SEO)", href: "/search-engine-optimization" },
+    {
+      name: "Search Engine Optimization (SEO)",
+      href: "/search-engine-optimization",
+    },
     { name: "Social Media Marketing", href: "/social-media-marketing" },
-    { name: "Corporate Presentation", href: "/corporate-presentation-design" },
+    {
+      name: "Corporate Presentation",
+      href: "/corporate-presentation-design",
+    },
   ];
 
   const navLinks = [
-  { name: "About", href: "/#about" },
-  { name: "Portfolio", href: "/#portfolio" },
-  { name: "Testimonials", href: "/#testimonials" },
-  { name: "FAQs", href: "/faqs" },  
-  { name: "Blog", href: "/blog" },
-];
+    { name: "About", href: "/#about" },
+    { name: "Portfolio", href: "/#portfolio" },
+    { name: "Testimonials", href: "/#testimonials" },
+    { name: "FAQs", href: "/faqs" },
+    { name: "Blog", href: "/blog" },
+  ];
 
   useEffect(() => {
     const handleScroll = () => setIsScrolled(window.scrollY > 10);
+
     handleScroll();
     window.addEventListener("scroll", handleScroll);
+
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const scrollToHome = () => {
-    navigate("/");
+  const closeMenus = () => {
     setIsOpen(false);
     setServicesOpen(false);
+    setMobileServicesOpen(false);
+  };
+
+  const scrollToHome = () => {
+    navigate("/");
+    closeMenus();
 
     setTimeout(() => {
       const hero = document.getElementById("hero");
-      if (hero) hero.scrollIntoView({ behavior: "smooth" });
-      else window.scrollTo({ top: 0, behavior: "smooth" });
+
+      if (hero) {
+        hero.scrollIntoView({ behavior: "smooth" });
+      } else {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      }
     }, 100);
   };
 
   const handleSmoothScroll = (e) => {
     e.preventDefault();
+
     const href = e.currentTarget.getAttribute("href");
     const [path, id] = href.split("#");
 
-    if (path === "/" && !id) return scrollToHome();
+    if (path === "/" && !id) {
+      scrollToHome();
+      return;
+    }
 
     if (path === "/" && id) {
       navigate("/");
-      setIsOpen(false);
-      setServicesOpen(false);
+      closeMenus();
 
       setTimeout(() => {
         const section = document.getElementById(id);
-        if (section) section.scrollIntoView({ behavior: "smooth" });
+
+        if (section) {
+          section.scrollIntoView({ behavior: "smooth" });
+        }
       }, 100);
 
       return;
     }
 
     navigate(href);
-    setIsOpen(false);
-    setServicesOpen(false);
+    closeMenus();
   };
 
   const handleServiceClick = () => {
-    setIsOpen(false);
-    setServicesOpen(false);
+    closeMenus();
   };
 
   const handleCTA = () => {
     navigate("/contact");
-    setIsOpen(false);
-    setServicesOpen(false);
+    closeMenus();
   };
 
   const LogoBlock = () => (
@@ -212,7 +234,10 @@ const Header = () => {
 
           <button
             type="button"
-            onClick={() => setIsOpen(true)}
+            onClick={() => {
+              setIsOpen(true);
+              setMobileServicesOpen(false);
+            }}
             className="md:hidden text-white p-2 rounded-full hover:bg-[#E9FBFF]/10 transition"
             aria-label="Open menu"
           >
@@ -231,12 +256,12 @@ const Header = () => {
             className="fixed inset-0 bg-[#031C33] z-50 md:hidden overflow-y-auto"
           >
             <div className="flex flex-col min-h-full px-6">
-              <div className="flex justify-between items-center h-20">
+              <div className="flex justify-between items-center h-20 shrink-0">
                 <LogoBlock />
 
                 <button
                   type="button"
-                  onClick={() => setIsOpen(false)}
+                  onClick={closeMenus}
                   className="text-white p-2 rounded-full hover:bg-[#E9FBFF]/10 transition"
                   aria-label="Close menu"
                 >
@@ -244,7 +269,7 @@ const Header = () => {
                 </button>
               </div>
 
-              <nav className="flex flex-col items-center justify-center flex-1 gap-4 py-10">
+              <nav className="flex flex-col items-center gap-4 py-8">
                 <a
                   href="/"
                   onClick={handleSmoothScroll}
@@ -253,23 +278,51 @@ const Header = () => {
                   Home
                 </a>
 
-                <div className="w-full text-center">
-                  <p className="text-[#38D9FF] text-sm uppercase tracking-[0.25em] mb-3">
+                <div className="w-full">
+                  <button
+                    type="button"
+                    onClick={() => setMobileServicesOpen((prev) => !prev)}
+                    className="w-full flex items-center justify-center gap-2 text-center text-2xl font-semibold text-[#E9FBFF] py-3 rounded-2xl bg-[#E9FBFF]/6 border border-[#E9FBFF]/10 hover:bg-[#1699F1]/18 hover:border-[#38D9FF]/35 transition-all duration-300"
+                    aria-expanded={mobileServicesOpen}
+                  >
                     Services
-                  </p>
+                    <ChevronDown
+                      className={`w-5 h-5 text-[#38D9FF] transition-transform duration-300 ${
+                        mobileServicesOpen ? "rotate-180" : ""
+                      }`}
+                    />
+                  </button>
 
-                  <div className="grid gap-3">
-                    {servicesLinks.map((service) => (
-                      <Link
-                        key={service.name}
-                        to={service.href}
-                        onClick={handleServiceClick}
-                        className="w-full text-center text-xl font-semibold text-[#E9FBFF]/86 py-3 rounded-2xl bg-[#E9FBFF]/6 border border-[#E9FBFF]/8 hover:bg-[#1699F1]/20 hover:border-[#38D9FF]/35 hover:text-white transition-all duration-300"
+                  <AnimatePresence>
+                    {mobileServicesOpen && (
+                      <motion.div
+                        initial={{ opacity: 0, height: 0, y: -8 }}
+                        animate={{ opacity: 1, height: "auto", y: 0 }}
+                        exit={{ opacity: 0, height: 0, y: -8 }}
+                        transition={{ duration: 0.28 }}
+                        className="overflow-hidden"
                       >
-                        {service.name}
-                      </Link>
-                    ))}
-                  </div>
+                        <div className="mt-4 rounded-3xl border border-[#E9FBFF]/10 bg-[#02182D]/70 p-3 max-h-[52vh] overflow-y-auto">
+                          <p className="text-[#38D9FF] text-xs uppercase tracking-[0.25em] mb-3 text-center">
+                            Select a Service
+                          </p>
+
+                          <div className="grid gap-3">
+                            {servicesLinks.map((service) => (
+                              <Link
+                                key={service.name}
+                                to={service.href}
+                                onClick={handleServiceClick}
+                                className="w-full text-center text-base font-semibold text-[#E9FBFF]/88 py-3 px-4 rounded-2xl bg-[#E9FBFF]/6 border border-[#E9FBFF]/8 hover:bg-[#1699F1]/20 hover:border-[#38D9FF]/35 hover:text-white transition-all duration-300"
+                              >
+                                {service.name}
+                              </Link>
+                            ))}
+                          </div>
+                        </div>
+                      </motion.div>
+                    )}
+                  </AnimatePresence>
                 </div>
 
                 {navLinks.map((link) => (
@@ -284,13 +337,13 @@ const Header = () => {
                 ))}
               </nav>
 
-              <div className="pb-10">
+              <div className="pb-10 mt-auto">
                 <button
                   type="button"
                   onClick={handleCTA}
                   className="w-full bg-gradient-to-r from-[#1BBCEF] to-[#004495] hover:from-[#004495] hover:to-[#1BBCEF] text-white py-4 rounded-full text-lg font-semibold shadow-lg shadow-[#1BBCEF]/25 transition-all duration-300"
                 >
-                  Contact Us 
+                  Contact Us
                 </button>
               </div>
             </div>

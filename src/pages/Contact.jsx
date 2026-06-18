@@ -63,68 +63,56 @@ const Contact = () => {
   ];
 
   const socialLinks = [
-    {
-      label: "Facebook",
-      icon: <FaFacebookF size={16} />,
-      link: "https://www.facebook.com/OptivaxGlobalSolution/",
-      className:
-        "bg-[#1877F2] border-[#1877F2] text-white hover:shadow-lg hover:shadow-[#1877F2]/40 hover:-translate-y-1",
-    },
-    {
-      label: "Instagram",
-      icon: <FaInstagram size={16} />,
-      link: "https://www.instagram.com/optivaxglobal/",
-      className:
-        "bg-[radial-gradient(circle_at_30%_107%,#fdf497_0%,#fdf497_5%,#fd5949_45%,#d6249f_60%,#285AEB_90%)] border-[#d6249f] text-white hover:shadow-lg hover:shadow-[#d6249f]/40 hover:-translate-y-1",
-    },
-    {
-      label: "LinkedIn",
-      icon: <FaLinkedinIn size={16} />,
-      link: "https://www.linkedin.com/company/115777328/",
-      className:
-        "bg-[#0A66C2] border-[#0A66C2] text-white hover:shadow-lg hover:shadow-[#0A66C2]/40 hover:-translate-y-1",
-    },
-    {
-      label: "YouTube",
-      icon: <FaYoutube size={16} />,
-      link: "https://www.youtube.com/@OptivaxGlobal",
-      className:
-        "bg-[#CC0000] border-[#CC0000] text-white hover:bg-[#B00000] hover:border-[#B00000] hover:shadow-lg hover:shadow-[#CC0000]/40 hover:-translate-y-1",
-    },
-    {
-      label: "Pinterest",
-      icon: <FaPinterestP size={16} />,
-      link: "https://www.pinterest.com/optivaxglobal/",
-      className:
-        "bg-[#E60023] border-[#E60023] text-white hover:shadow-lg hover:shadow-[#E60023]/40 hover:-translate-y-1",
-    },
-    {
-      label: "TikTok",
-      icon: (
-        <span className="relative flex items-center justify-center w-4 h-4 leading-none">
-          <FaTiktok
-            size={15}
-            className="absolute text-[#25F4EE] -translate-x-[1px] translate-y-[1px]"
-          />
-          <FaTiktok
-            size={15}
-            className="absolute text-[#FE2C55] translate-x-[1px] -translate-y-[1px]"
-          />
-          <FaTiktok size={15} className="relative text-white" />
-        </span>
-      ),
-      link: "https://www.tiktok.com/@optivaxglobal",
-      className:
-        "bg-black border-[#25F4EE] text-white hover:border-[#FE2C55] hover:shadow-lg hover:shadow-[#25F4EE]/30 hover:-translate-y-1",
-    },
-    {
-      label: "Threads",
-      icon: <RiThreadsFill size={16} />,
-      link: "https://www.threads.net/@optivaxglobal",
-      className:
-        "bg-black border-white/40 text-white hover:bg-white hover:text-black hover:border-white hover:shadow-lg hover:shadow-white/20 hover:-translate-y-1",
-    },
-  ];
+  {
+    label: "Facebook",
+    icon: <FaFacebookF size={16} />,
+    link: "https://www.facebook.com/OptivaxGlobalSolution/",
+    hover:
+      "hover:bg-[#1877F2] hover:border-[#1877F2] hover:text-white",
+  },
+  {
+    label: "Instagram",
+    icon: <FaInstagram size={16} />,
+    link: "https://www.instagram.com/optivaxglobal/",
+    hover:
+      "hover:bg-[radial-gradient(circle_at_30%_107%,#fdf497_0%,#fdf497_5%,#fd5949_45%,#d6249f_60%,#285AEB_90%)] hover:border-[#d6249f] hover:text-white",
+  },
+  {
+    label: "LinkedIn",
+    icon: <FaLinkedinIn size={16} />,
+    link: "https://www.linkedin.com/company/115777328/",
+    hover:
+      "hover:bg-[#0A66C2] hover:border-[#0A66C2] hover:text-white",
+  },
+  {
+    label: "YouTube",
+    icon: <FaYoutube size={16} />,
+    link: "https://www.youtube.com/@OptivaxGlobal",
+    hover:
+      "hover:bg-[#CC0000] hover:border-[#CC0000] hover:text-white",
+  },
+  {
+    label: "Pinterest",
+    icon: <FaPinterestP size={16} />,
+    link: "https://www.pinterest.com/optivaxglobal/",
+    hover:
+      "hover:bg-[#E60023] hover:border-[#E60023] hover:text-white",
+  },
+  {
+    label: "TikTok",
+    icon: <FaTiktok size={16} />,
+    link: "https://www.tiktok.com/@optivaxglobal",
+    hover:
+      "hover:bg-black hover:border-[#25F4EE] hover:text-white",
+  },
+  {
+    label: "Threads",
+    icon: <RiThreadsFill size={16} />,
+    link: "https://www.threads.net/@optivaxglobal",
+    hover:
+      "hover:bg-black hover:border-white hover:text-white",
+  },
+];
 
   const filteredServiceOptions = serviceOptions.filter((option) =>
     option.toLowerCase().includes(serviceSearch.toLowerCase())
@@ -505,19 +493,19 @@ const Contact = () => {
                   <p className="text-white font-semibold mb-4">Follow Us</p>
 
                   <div className="flex flex-wrap items-center gap-3">
-                    {socialLinks.map((social) => (
-                      <a
-                        key={social.label}
-                        href={social.link}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        aria-label={`Follow Optivax Global on ${social.label}`}
-                        className={`shrink-0 overflow-hidden w-11 h-11 rounded-full border flex items-center justify-center transition-all duration-300 hover:scale-110 ${social.className}`}
-                      >
-                        {social.icon}
-                      </a>
-                    ))}
-                  </div>
+  {socialLinks.map((social) => (
+    <a
+      key={social.label}
+      href={social.link}
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label={`Follow Optivax Global on ${social.label}`}
+      className={`shrink-0 w-11 h-11 rounded-full bg-white/[0.05] border border-white/10 flex items-center justify-center text-gray-300 transition-all duration-300 hover:scale-110 ${social.hover}`}
+    >
+      {social.icon}
+    </a>
+  ))}
+</div>
                 </div>
               </div>
             </motion.div>

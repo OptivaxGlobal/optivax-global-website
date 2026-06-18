@@ -1,13 +1,7 @@
 import React from "react";
 import { SITE } from "@/lib/siteConfig";
 import logo from "@/assets/logo.png";
-import {
-  Mail,
-  Phone,
-  MapPin,
-  ArrowRight,
-  Globe,
-} from "lucide-react";
+import { Mail, Phone, MapPin, ArrowRight } from "lucide-react";
 
 import {
   FaFacebookF,
@@ -78,56 +72,56 @@ const Footer = () => {
   ];
 
   const socialLinks = [
-  {
-    label: "Facebook",
-    icon: <FaFacebookF size={16} />,
-    link: "https://www.facebook.com/OptivaxGlobalSolution/",
-    color:
-      "bg-[#1877F2] border-[#1877F2] text-white hover:shadow-lg hover:shadow-[#1877F2]/40 hover:-translate-y-1",
-  },
-  {
-    label: "Instagram",
-    icon: <FaInstagram size={16} />,
-    link: "https://www.instagram.com/optivaxglobal/",
-    color:
-      "bg-[radial-gradient(circle_at_30%_107%,#fdf497_0%,#fdf497_5%,#fd5949_45%,#d6249f_60%,#285AEB_90%)] border-[#d6249f] text-white hover:shadow-lg hover:shadow-[#d6249f]/40 hover:-translate-y-1",
-  },
-  {
-    label: "LinkedIn",
-    icon: <FaLinkedinIn size={16} />,
-    link: "https://www.linkedin.com/company/115777328/",
-    color:
-      "bg-[#0A66C2] border-[#0A66C2] text-white hover:shadow-lg hover:shadow-[#0A66C2]/40 hover:-translate-y-1",
-  },
-  {
-    label: "YouTube",
-    icon: <FaYoutube size={16} />,
-    link: "https://www.youtube.com/@OptivaxGlobal",
-    color:
-      "bg-[#CC0000] border-[#CC0000] text-white hover:bg-[#B00000] hover:border-[#B00000] hover:shadow-lg hover:shadow-[#CC0000]/40 hover:-translate-y-1",
-  },
-  {
-    label: "Pinterest",
-    icon: <FaPinterestP size={16} />,
-    link: "https://www.pinterest.com/optivaxglobal/",
-    color:
-      "bg-[#E60023] border-[#E60023] text-white hover:shadow-lg hover:shadow-[#E60023]/40 hover:-translate-y-1",
-  },
-  {
-    label: "TikTok",
-    icon: <FaTiktok size={16} />,
-    link: "https://www.tiktok.com/@optivaxglobal",
-    color:
-      "bg-black border-[#25F4EE] text-white hover:border-[#FE2C55] hover:shadow-lg hover:shadow-[#FE2C55]/40 hover:-translate-y-1",
-  },
-  {
-    label: "Threads",
-    icon: <RiThreadsFill size={16} />,
-    link: "https://www.threads.net/@optivaxglobal",
-    color:
-      "bg-black border-white/40 text-white hover:bg-white hover:text-black hover:border-white hover:shadow-lg hover:shadow-white/20 hover:-translate-y-1",
-  },
-];
+    {
+      label: "Facebook",
+      icon: <FaFacebookF size={16} />,
+      link: "https://www.facebook.com/OptivaxGlobalSolution/",
+      hover:
+        "hover:bg-[#1877F2] hover:border-[#1877F2] hover:text-white hover:shadow-[#1877F2]/35",
+    },
+    {
+      label: "Instagram",
+      icon: <FaInstagram size={16} />,
+      link: "https://www.instagram.com/optivaxglobal/",
+      hover:
+        "hover:bg-[radial-gradient(circle_at_30%_107%,#fdf497_0%,#fdf497_5%,#fd5949_45%,#d6249f_60%,#285AEB_90%)] hover:border-[#d6249f] hover:text-white hover:shadow-[#d6249f]/35",
+    },
+    {
+      label: "LinkedIn",
+      icon: <FaLinkedinIn size={16} />,
+      link: "https://www.linkedin.com/company/115777328/",
+      hover:
+        "hover:bg-[#0A66C2] hover:border-[#0A66C2] hover:text-white hover:shadow-[#0A66C2]/35",
+    },
+    {
+      label: "YouTube",
+      icon: <FaYoutube size={16} />,
+      link: "https://www.youtube.com/@OptivaxGlobal",
+      hover:
+        "hover:bg-[#CC0000] hover:border-[#CC0000] hover:text-white hover:shadow-[#CC0000]/35",
+    },
+    {
+      label: "Pinterest",
+      icon: <FaPinterestP size={16} />,
+      link: "https://www.pinterest.com/optivaxglobal/",
+      hover:
+        "hover:bg-[#E60023] hover:border-[#E60023] hover:text-white hover:shadow-[#E60023]/35",
+    },
+    {
+      label: "TikTok",
+      icon: <FaTiktok size={16} />,
+      link: "https://www.tiktok.com/@optivaxglobal",
+      hover:
+        "hover:bg-black hover:border-[#25F4EE] hover:text-white hover:shadow-[#25F4EE]/25",
+    },
+    {
+      label: "Threads",
+      icon: <RiThreadsFill size={16} />,
+      link: "https://www.threads.net/@optivaxglobal",
+      hover:
+        "hover:bg-black hover:border-white hover:text-white hover:shadow-white/20",
+    },
+  ];
 
   const footerLinkClass =
     "relative inline-flex items-center w-fit text-sm font-semibold text-[#E9FBFF]/85 hover:text-white transition-all duration-300 group";
@@ -141,27 +135,27 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
           <div>
             <div className="mb-5">
-  <button
-    onClick={() => {
-      navigate("/");
+              <button
+                onClick={() => {
+                  navigate("/");
 
-      setTimeout(() => {
-        window.scrollTo({
-          top: 0,
-          behavior: "smooth",
-        });
-      }, 100);
-    }}
-    aria-label="Go to Optivax Global homepage"
-    className="group"
-  >
-    <img
-      src={logo}
-      alt="Optivax Global"
-      className="h-14 w-auto object-contain transition-all duration-300 group-hover:scale-105"
-    />
-  </button>
-</div>
+                  setTimeout(() => {
+                    window.scrollTo({
+                      top: 0,
+                      behavior: "smooth",
+                    });
+                  }, 100);
+                }}
+                aria-label="Go to Optivax Global homepage"
+                className="group"
+              >
+                <img
+                  src={logo}
+                  alt="Optivax Global"
+                  className="h-14 w-auto object-contain transition-all duration-300 group-hover:scale-105"
+                />
+              </button>
+            </div>
 
             <p className="text-gray-400 mb-6 leading-relaxed">
               We help businesses grow with high-performing websites, strategic
@@ -170,12 +164,12 @@ const Footer = () => {
             </p>
 
             <button
-  onClick={() => navigate("/contact")}
-  className="group inline-flex items-center gap-2 bg-gradient-to-r from-[#1BBCEF] to-[#004495] hover:from-[#004495] hover:to-[#1BBCEF] text-white px-5 py-3 rounded-full font-semibold shadow-lg shadow-[#1BBCEF]/25 hover:-translate-y-0.5 transition-all duration-300 border-0"
->
-  Get a Free Consultation
-  <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" />
-</button>
+              onClick={() => navigate("/contact")}
+              className="group inline-flex items-center gap-2 bg-gradient-to-r from-[#1BBCEF] to-[#004495] hover:from-[#004495] hover:to-[#1BBCEF] text-white px-5 py-3 rounded-full font-semibold shadow-lg shadow-[#1BBCEF]/25 hover:-translate-y-0.5 transition-all duration-300 border-0"
+            >
+              Get a Free Consultation
+              <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" />
+            </button>
           </div>
 
           {footerSections.map((section) => (
@@ -184,13 +178,7 @@ const Footer = () => {
                 {section.title}
               </h3>
 
-              <ul
-                className={
-                  section.title === "Services"
-                    ? "space-y-3"
-                    : "space-y-3"
-                }
-              >
+              <ul className="space-y-3">
                 {section.links.map((link) => (
                   <li key={link.name}>
                     <a
@@ -212,15 +200,15 @@ const Footer = () => {
 
             <div className="space-y-4 mb-6">
               <a
-  href="mailto:marketing@optivaxglobal.com"
-  className="flex items-center gap-3 text-gray-400 hover:text-white transition-all duration-300 group"
->
-  <Mail
-    size={18}
-    className="group-hover:text-[#38D9FF] transition"
-  />
-  <span>marketing@optivaxglobal.com</span>
-</a>
+                href="mailto:marketing@optivaxglobal.com"
+                className="flex items-center gap-3 text-gray-400 hover:text-white transition-all duration-300 group"
+              >
+                <Mail
+                  size={18}
+                  className="group-hover:text-[#38D9FF] transition"
+                />
+                <span>marketing@optivaxglobal.com</span>
+              </a>
 
               <a
                 href={`tel:${phoneHref}`}
@@ -240,28 +228,26 @@ const Footer = () => {
                 />
                 <span>{SITE.location}</span>
               </div>
-
-              
             </div>
 
             <h3 className="text-white font-semibold mb-4 text-lg">
               Follow Us
             </h3>
 
-            <div className="flex items-center justify-start gap-2 flex-nowrap">
-  {socialLinks.map((social) => (
-    <a
-      key={social.label}
-      href={social.link}
-      target="_blank"
-      rel="noopener noreferrer"
-      aria-label={`Follow Optivax Global on ${social.label}`}
-      className={`shrink-0 w-9 h-9 lg:w-10 lg:h-10 rounded-full border flex items-center justify-center transition-all duration-300 hover:scale-110 ${social.color}`}
-    >
-      {social.icon}
-    </a>
-  ))}
-</div>
+            <div className="flex flex-wrap items-center justify-start gap-3">
+              {socialLinks.map((social) => (
+                <a
+                  key={social.label}
+                  href={social.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label={`Follow Optivax Global on ${social.label}`}
+                  className={`shrink-0 w-10 h-10 rounded-full bg-white/[0.05] border border-white/10 flex items-center justify-center text-gray-300 transition-all duration-300 hover:scale-110 hover:shadow-lg ${social.hover}`}
+                >
+                  {social.icon}
+                </a>
+              ))}
+            </div>
           </div>
         </div>
 
@@ -280,7 +266,6 @@ const Footer = () => {
             </a>
           </p>
 
-
           <div className="flex gap-3">
             <a
               href="/privacy-policy"
@@ -291,11 +276,7 @@ const Footer = () => {
               <span className={footerUnderline} />
             </a>
 
-            <a
-              href="/terms"
-              onClick={handleNavClick}
-              className={footerLinkClass}
-            >
+            <a href="/terms" onClick={handleNavClick} className={footerLinkClass}>
               Terms
               <span className={footerUnderline} />
             </a>
