@@ -201,17 +201,18 @@ const Blog = () => {
             <h1 className="text-4xl md:text-6xl lg:text-7xl font-extrabold leading-tight mb-6">
               Read the Latest Insights for
               <span className="block text-accent-purple">
-                Websites, Branding and Digital Growth
+                Websites, Branding & <br /> Digital Growth
               </span>
             </h1>
 
             <p className="mx-auto text-lg md:text-xl text-gray-300 max-w-3xl leading-relaxed mb-10">
-              Explore practical articles on web design, SEO, logo design, branding, and digital marketing — written to help modern businesses build trust, improve visibility, and grow online.
+              Explore practical articles on web design, SEO, logo design, branding, and digital marketing written to help modern businesses build trust, <br /> improve visibility, and grow online.
             </p>
+            
 
             <a
               href="#featured"
-              className="inline-flex items-center justify-center gap-2 bg-gradient-to-r from-[#1BBCEF] to-[#004495] px-6 py-4 rounded-full font-semibold text-white shadow-lg shadow-[#1BBCEF]/20 hover:-translate-y-0.5 transition-all duration-300"
+              className="group inline-flex items-center justify-center gap-2 px-10 py-5 bg-gradient-to-r from-[#1BBCEF] to-[#004495] hover:from-[#004495] hover:to-[#1BBCEF] text-white font-semibold rounded-full shadow-lg shadow-[#1BBCEF]/25 hover:shadow-[#1BBCEF]/45 hover:-translate-y-0.5 transition-all duration-300 border-0"
             >
               Explore Featured Posts
               <ArrowRight className="w-4 h-4" />
@@ -364,7 +365,7 @@ const Blog = () => {
 
             <a
               href="/contact"
-              className="inline-flex items-center justify-center gap-2 bg-gradient-to-r from-[#1BBCEF] to-[#004495] px-8 py-4 rounded-full font-semibold text-white shadow-lg shadow-[#1BBCEF]/20 hover:-translate-y-0.5 transition-all duration-300"
+              className="group inline-flex items-center justify-center gap-2 px-10 py-5 bg-gradient-to-r from-[#1BBCEF] to-[#004495] hover:from-[#004495] hover:to-[#1BBCEF] text-white font-semibold rounded-full shadow-lg shadow-[#1BBCEF]/25 hover:shadow-[#1BBCEF]/45 hover:-translate-y-0.5 transition-all duration-300 border-0"
             >
               Talk to Our Team
               <ArrowRight className="w-4 h-4" />
