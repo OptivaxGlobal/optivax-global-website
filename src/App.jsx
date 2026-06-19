@@ -51,6 +51,8 @@ import StationeryDesignBlog from "./pages/blogs/StationeryDesignBlog";
 import UIUXDesignBlog from "./pages/blogs/UIUXDesignBlog";
 import EmailMarketingBlog from "./pages/blogs/EmailMarketingBlog";
 import SocialMediaMarketingBlog from "./pages/blogs/SocialMediaMarketingBlog";
+import BrandManagementBlog from "./pages/blogs/BrandManagementBlog";
+import WebDevelopmentMarketingBlog from "./pages/blogs/WebDevelopmentMarketingBlog";
 
 
 import AnalyticsTracker from "./components/AnalyticsTracker";
@@ -180,6 +182,14 @@ function App() {
 <Route
   path="/power-of-social-media-in-digital-landscape"
   element={<SocialMediaMarketingBlog />}
+/>
+<Route
+  path="/Strong-brand-management-business-growth"
+  element={<BrandManagementBlog />}
+/>
+<Route
+  path="/maximize-growth-modern-web-development"
+  element={<WebDevelopmentMarketingBlog />}
 />
 
 

@@ -19,18 +19,38 @@ import stationeryDesignBlogImg from "@/assets/blog-images/stationery-design-blog
 import uiUxBlogImg from "@/assets/blog-images/ui-ux-blog.webp";
 import emailMarketingBlogImg from "@/assets/blog-images/email-marketing-blog.webp";
 import socialMediaMarketingBlogImg from "@/assets/blog-images/social-media-marketing-blog.webp";
+import brandManagementBlogImg from "@/assets/blog-images/brand-management-blog.webp";
+import webDevelopmentMarketingBlogImg from "@/assets/blog-images/web-development-marketing-blog.webp";
 
 const blogPosts = [
-  
- {
-  title: "The Power of Social Media Marketing in Today's Digital Landscape",
+  {
+  title: "How Businesses Can Maximize Growth with Modern Web Development and Marketing",
   excerpt:
-    "Social media marketing helps businesses increase brand visibility, engage customers, build credibility, generate leads, and drive long-term business growth.",
-  category: "Social Media Marketing",
+    "Modern web development and digital marketing help businesses improve visibility, build trust, attract customers, and support sustainable business growth.",
+  category: "Web Development",
   date: "June 2026",
-  image: socialMediaMarketingBlogImg,
-  url: "/power-of-social-media-in-digital-landscape",
-}, 
+  image: webDevelopmentMarketingBlogImg,
+  url: "/maximize-growth-modern-web-development",
+},
+  {
+  title: "Creative Flyer Design Services That Get Your Business Noticed",
+  excerpt:
+    "Professional flyer design helps businesses attract attention, communicate value, improve engagement, strengthen branding, and generate better marketing results.",
+  category: "Flyer Design",
+  date: "June 2026",
+  image: flyerDesignBlogImg,
+  url: "/Creative-flyer-design-get-your-business-noticed",
+},
+{
+  title: "Why Strong Brand Management Is the Foundation of Business Growth",
+  excerpt:
+    "Strong brand management helps businesses build trust, improve recognition, strengthen customer loyalty, and create a foundation for sustainable growth.",
+  category: "Brand Management",
+  date: "June 2026",
+  image: brandManagementBlogImg,
+  url: "/Strong-brand-management-business-growth",
+},
+
 {
   title: "How Email Marketing Builds Stronger Customer Relationships",
   excerpt:
@@ -49,15 +69,16 @@ const blogPosts = [
   image: uiUxBlogImg,
   url: "/ui-ux-design-turns-into-loyal-customers",
 },
-  {
-  title: "Creative Flyer Design Services That Get Your Business Noticed",
+{
+  title: "The Power of Social Media Marketing in Today's Digital Landscape",
   excerpt:
-    "Professional flyer design helps businesses attract attention, communicate value, improve engagement, strengthen branding, and generate better marketing results.",
-  category: "Flyer Design",
+    "Social media marketing helps businesses increase brand visibility, engage customers, build credibility, generate leads, and drive long-term business growth.",
+  category: "Social Media Marketing",
   date: "June 2026",
-  image: flyerDesignBlogImg,
-  url: "/Creative-flyer-design-get-your-business-noticed",
+  image: socialMediaMarketingBlogImg,
+  url: "/power-of-social-media-in-digital-landscape",
 },
+  
 {
   title: "Why Branding Is Critical for Today's Businesses",
   excerpt:

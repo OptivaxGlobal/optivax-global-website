@@ -120,7 +120,7 @@ const WebsiteDesign = () => {
               </h2>
               <p className="text-gray-400 text-lg leading-relaxed">
                 A great website guides visitors, builds credibility, and makes
-                it easy for people to take the next step — whether that’s
+                it easy for people to take the next step whether that’s
                 contacting you, requesting a quote, or booking a service.
               </p>
             </div>
