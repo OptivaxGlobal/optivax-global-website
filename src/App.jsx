@@ -105,10 +105,6 @@ function App() {
             />
 
             <Route
-              path="app-ui-ux-design"
-              element={<UIUXDesign />}
-            />
-            <Route
               path="ui-ux-design"
               element={<UIUXDesign />}
             />
@@ -238,10 +234,7 @@ function App() {
               path="brand-management"
               element={<BrandManagement />}
             />
-            <Route
-              path="content-management"
-              element={<ContentManagement />}
-            />
+            
             <Route
               path="content-management-system"
               element={<ContentManagement />}
