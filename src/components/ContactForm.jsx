@@ -1,12 +1,148 @@
 import React, { useEffect, useRef, useState } from "react";
 import { Send } from "lucide-react";
-import { useNavigate } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import PhoneInput from "react-phone-input-2";
 import "react-phone-input-2/lib/style.css";
 import supabase from "@/lib/supabase";
 
+const serviceOptions = [
+  "Independence Day Campaign Design",
+  "Custom Patriotic Design",
+  "Patriotic Creative Design",
+  "Flyer Design",
+  "Social Media Design",
+  "Logo Design",
+  "Cover Design",
+  "Book Publishing",
+  "Promo Design",
+  "Ad Campaign Visuals",
+  "Flyers & Banners",
+
+  "Basic Logo Package",
+  "Start Up Logo Package",
+  "Professional Logo Package",
+  "Website Design",
+  "Start Up Website Package",
+  "Professional Website Package",
+  "Custom Website Package",
+  "Complete Branding Solution",
+  "Custom Package",
+  "Digital Growth Packages",
+
+  "Web Design",
+  "Web Development",
+  "Brand Design",
+  "Animation",
+  "Graphics Design",
+  "Brochure Design",
+  "Stationary Design",
+  "Mobile App Development",
+  "Mobile App Design",
+  "UI UX Design",
+  "Brand Management",
+  "Content Management System",
+  "Digital Marketing",
+  "Email Marketing",
+  "Pay Per Click (PPC)",
+  "Search Engine Marketing",
+  "Search Engine Optimization (SEO)",
+  "Social Media Marketing",
+  "Ebook Cover Design",
+  "Corporate Presentation",
+];
+
+const normalizeServiceName = (serviceName) => {
+  if (!serviceName) return "";
+
+  let decodedServiceName = serviceName;
+
+  try {
+    decodedServiceName = decodeURIComponent(serviceName);
+  } catch {
+    decodedServiceName = serviceName;
+  }
+
+  const formattedServiceName = decodedServiceName
+    .replace(/\+/g, " ")
+    .replace(/-/g, " ")
+    .replace(/\s+/g, " ")
+    .trim();
+
+  const serviceMap = {
+    "Independence Day Campaign Design": "Independence Day Campaign Design",
+    "Custom Patriotic Design": "Custom Patriotic Design",
+    "Patriotic Creative Design": "Patriotic Creative Design",
+    "USA Campaign Design": "Independence Day Campaign Design",
+    "Independence Day Design": "Independence Day Campaign Design",
+    "Independence Day Creative Design": "Independence Day Campaign Design",
+
+    "Flyer Design": "Flyer Design",
+    "Flyers & Banners": "Flyers & Banners",
+    "Social Media": "Social Media Design",
+    "Social Media Design": "Social Media Design",
+    "Social Media Creatives": "Social Media Design",
+    "Logo Design": "Logo Design",
+    "Cover Design": "Cover Design",
+    "Book Publishing": "Book Publishing",
+    "Promo Design": "Promo Design",
+    "Ad Campaign Visuals": "Ad Campaign Visuals",
+
+    "Basic Logo Package": "Basic Logo Package",
+    "Start Up Logo Package": "Start Up Logo Package",
+    "Startup Logo Package": "Start Up Logo Package",
+    "Professional Logo Package": "Professional Logo Package",
+    "Website Design": "Website Design",
+    "Start Up Website Package": "Start Up Website Package",
+    "Startup Website Package": "Start Up Website Package",
+    "Professional Website Package": "Professional Website Package",
+    "Custom Website Package": "Custom Website Package",
+    "Complete Branding Solution": "Complete Branding Solution",
+    "Complete Branding Package": "Complete Branding Solution",
+    "Custom Package": "Custom Package",
+    "Digital Growth Packages": "Digital Growth Packages",
+
+    "Brand Design": "Brand Design",
+    "Brochure Design": "Brochure Design",
+    "Graphics Design": "Graphics Design",
+    "Mobile App Design": "Mobile App Design",
+    "Mobile App Development": "Mobile App Development",
+    "Stationary Design": "Stationary Design",
+    "Stationery Design": "Stationary Design",
+    "UI UX Design": "UI UX Design",
+    "UI/UX Design": "UI UX Design",
+    "Web Design": "Web Design",
+    "Web Development": "Web Development",
+    Animation: "Animation",
+    "Animation Services": "Animation",
+    "Brand Management": "Brand Management",
+    "Content Management": "Content Management System",
+    "Content Management System": "Content Management System",
+    "Digital Marketing": "Digital Marketing",
+    "Email Marketing": "Email Marketing",
+    "Pay Per Click": "Pay Per Click (PPC)",
+    "Pay Per Click PPC": "Pay Per Click (PPC)",
+    "Pay Per Click (PPC)": "Pay Per Click (PPC)",
+    "Search Engine Marketing": "Search Engine Marketing",
+    "Search Engine Optimization": "Search Engine Optimization (SEO)",
+    "Search Engine Optimization SEO": "Search Engine Optimization (SEO)",
+    "Search Engine Optimization (SEO)": "Search Engine Optimization (SEO)",
+    "Social Media Marketing": "Social Media Marketing",
+    "Ebook Cover": "Ebook Cover Design",
+    "Ebook Cover Design": "Ebook Cover Design",
+    "Corporate Presentation": "Corporate Presentation",
+    "Corporate Presentation Design": "Corporate Presentation",
+  };
+
+  const matchedService = Object.entries(serviceMap).find(
+    ([key]) => key.toLowerCase() === formattedServiceName.toLowerCase()
+  );
+
+  return matchedService ? matchedService[1] : formattedServiceName;
+};
+
 const ContactForm = ({ onSubmitSuccess, redirectTo = "/thank-you" }) => {
   const navigate = useNavigate();
+  const location = useLocation();
 
   const [form, setForm] = useState({
     name: "",
@@ -22,72 +158,29 @@ const ContactForm = ({ onSubmitSuccess, redirectTo = "/thank-you" }) => {
 
   const dropdownRef = useRef(null);
 
-  const serviceOptions = [
-    "Web Design",
-    "Web Development",
-    "Logo Design",
-    "Brand Design",
-    "Animation",
-    "Graphics Design",
-    "Brochure Design",
-    "Flyer Design",
-    "Stationary Design",
-    "Mobile App Development",
-    "Mobile App Design",
-    "UI UX Design",
-    "Brand Management",
-    "Content Management System",
-    "Digital Marketing",
-    "Email Marketing",
-    "Pay Per Click (PPC)",
-    "Search Engine Marketing",
-    "Search Engine Optimization (SEO)",
-    "Social Media Marketing",
-    "Ebook Cover Design",
-    "Corporate Presentation",
-  ];
-
   const filteredServiceOptions = serviceOptions.filter((option) =>
     option.toLowerCase().includes(serviceSearch.toLowerCase())
   );
 
-  const normalizeServiceName = (serviceName) => {
-    if (!serviceName) return "";
+  useEffect(() => {
+    const params = new URLSearchParams(location.search);
+    const selectedService = params.get("service") || params.get("package");
 
-    const serviceMap = {
-      "Brand Design": "Brand Design",
-      "Brochure Design": "Brochure Design",
-      "Graphics Design": "Graphics Design",
-      "Logo Design": "Logo Design",
-      "Mobile App Design": "Mobile App Design",
-      "Mobile App Development": "Mobile App Development",
-      "Flyer Design": "Flyer Design",
-      "Stationary Design": "Stationary Design",
-      "UI UX Design": "UI UX Design",
-      "UI/UX Design": "UI UX Design",
-      "Web Design": "Web Design",
-      "Web Development": "Web Development",
-      Animation: "Animation",
-      "Animation Services": "Animation",
-      "Brand Management": "Brand Management",
-      "Content Management": "Content Management System",
-      "Content Management System": "Content Management System",
-      "Digital Marketing": "Digital Marketing",
-      "Email Marketing": "Email Marketing",
-      "Pay Per Click": "Pay Per Click (PPC)",
-      "Pay Per Click (PPC)": "Pay Per Click (PPC)",
-      "Search Engine Marketing": "Search Engine Marketing",
-      "Search Engine Optimization": "Search Engine Optimization (SEO)",
-      "Search Engine Optimization (SEO)": "Search Engine Optimization (SEO)",
-      "Social Media Marketing": "Social Media Marketing",
-      "Ebook Cover": "Ebook Cover Design",
-      "Ebook Cover Design": "Ebook Cover Design",
-      "Corporate Presentation": "Corporate Presentation",
-      "Corporate Presentation Design": "Corporate Presentation",
-    };
+    if (!selectedService) return;
 
-    return serviceMap[serviceName] || serviceName;
-  };
+    const normalizedService = normalizeServiceName(selectedService);
+
+    setForm((prev) => {
+      if (prev.service === normalizedService) return prev;
+
+      return {
+        ...prev,
+        service: normalizedService,
+      };
+    });
+
+    setServiceSearch("");
+  }, [location.search]);
 
   useEffect(() => {
     const handleClickOutside = (event) => {
@@ -103,6 +196,7 @@ const ContactForm = ({ onSubmitSuccess, redirectTo = "/thank-you" }) => {
 
     if (servicesOpen) {
       document.addEventListener("mousedown", handleClickOutside);
+
       return () => document.removeEventListener("mousedown", handleClickOutside);
     }
   }, [servicesOpen]);
@@ -179,11 +273,9 @@ const ContactForm = ({ onSubmitSuccess, redirectTo = "/thank-you" }) => {
 
         setServiceSearch("");
 
-        // Call the onSubmitSuccess callback if provided
         if (onSubmitSuccess) {
           onSubmitSuccess(finalFormData);
         } else {
-          // Default: redirect to /thank-you
           navigate(redirectTo);
         }
       } else {
@@ -394,7 +486,10 @@ const ContactForm = ({ onSubmitSuccess, redirectTo = "/thank-you" }) => {
             country="us"
             value={form.phone}
             onChange={(phone) =>
-              setForm((prev) => ({ ...prev, phone }))
+              setForm((prev) => ({
+                ...prev,
+                phone,
+              }))
             }
             enableSearch={true}
             disableSearchIcon={true}
@@ -419,9 +514,7 @@ const ContactForm = ({ onSubmitSuccess, redirectTo = "/thank-you" }) => {
               }}
               className="w-full p-4 rounded-2xl bg-[#10131F] border border-white/10 text-left text-white outline-none focus:border-[#1BBCEF] focus:shadow-[0_0_0_4px_rgba(27,188,239,0.12)] hover:border-white/20 transition-all duration-300 flex items-center justify-between"
             >
-              <span
-                className={form.service ? "text-white" : "text-gray-400"}
-              >
+              <span className={form.service ? "text-white" : "text-gray-400"}>
                 {form.service || "Select Service"}
               </span>
 

@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { Helmet } from 'react-helmet';
 
 import Hero from '@/components/Hero';
@@ -10,34 +10,8 @@ import Testimonials from '@/components/Testimonials';
 import Stats from '@/components/Stats';
 import CTA from '@/components/CTA';
 import SectionAnimator from '@/components/SectionAnimator';
-import HomeLeadPopup from '@/components/HomeLeadPopup';
 
 const Home = () => {
-  const [isPopupOpen, setIsPopupOpen] = useState(false);
-
-  useEffect(() => {
-    // Check if popup has been shown or closed in this session
-    const popupShownInSession = sessionStorage.getItem('homePopupShown');
-
-    if (popupShownInSession) {
-      return; // Don't show popup if already shown/closed in this session
-    }
-
-    // Set random delay between 9-10 seconds
-    const delay = Math.random() * 1000 + 9000; // 9000-10000ms
-
-    const timer = setTimeout(() => {
-      setIsPopupOpen(true);
-      // Mark that popup has been shown in this session
-      sessionStorage.setItem('homePopupShown', 'true');
-    }, delay);
-
-    return () => clearTimeout(timer);
-  }, []);
-
-  const handleClosePopup = () => {
-    setIsPopupOpen(false);
-  };
   const organizationSchema = {
     "@context": "https://schema.org",
     "@type": "Organization",
@@ -172,9 +146,6 @@ const Home = () => {
           <CTA />
         </SectionAnimator>
       </main>
-
-      {/* Lead Generation Popup */}
-      <HomeLeadPopup isOpen={isPopupOpen} onClose={handleClosePopup} />
     </>
   );
 };

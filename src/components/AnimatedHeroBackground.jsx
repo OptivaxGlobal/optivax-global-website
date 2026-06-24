@@ -1,12 +1,13 @@
 import React from "react";
 import { motion } from "framer-motion";
-
-const imageUrl =
-  "https://horizons-cdn.hostinger.com/c43e6596-ab28-43b9-ad53-b1a7341229e7/71f6723b117af5fb7e36d829dfcd6b7f.jpg";
+import backgroundImage from "../assets/Animated-background/BACKGROUND IMAGE.webp";
 
 const AnimatedHeroBackground = () => {
   return (
-    <div className="absolute inset-0 overflow-hidden" aria-hidden="true">
+    <div
+      className="absolute inset-0 z-0 overflow-hidden pointer-events-none"
+      aria-hidden="true"
+    >
       <motion.div
         className="absolute inset-0"
         animate={{
@@ -21,7 +22,7 @@ const AnimatedHeroBackground = () => {
         }}
       >
         <img
-          src={imageUrl}
+          src={backgroundImage}
           alt=""
           width="1920"
           height="1080"

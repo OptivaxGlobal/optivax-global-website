@@ -1,48 +1,40 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-
-const imageUrl = 'https://horizons-cdn.hostinger.com/c43e6596-ab28-43b9-ad53-b1a7341229e7/71f6723b117af5fb7e36d829dfcd6b7f.jpg';
-
-const layers = [
-  {
-    initial: { x: '-5%', y: '5%', scale: 1.15 },
-    animate: { x: '5%', y: '-5%' },
-    transition: { duration: 22, repeat: Infinity, repeatType: 'mirror', ease: 'easeInOut' },
-    opacity: 0.7,
-  },
-  {
-    initial: { x: '5%', y: '-5%', scale: 1.25 },
-    animate: { x: '-5%', y: '5%' },
-    transition: { duration: 28, repeat: Infinity, repeatType: 'mirror', ease: 'easeInOut' },
-    opacity: 0.5,
-  },
-  {
-    initial: { x: '2%', y: '-8%', scale: 1.1 },
-    animate: { x: '-2%', y: '8%' },
-    transition: { duration: 35, repeat: Infinity, repeatType: 'mirror', ease: 'easeInOut' },
-    opacity: 1,
-  },
-];
+import React from "react";
+import { motion } from "framer-motion";
+import backgroundImage from "../assets/Animated-background/BACKGROUND IMAGE.webp";
 
 const AnimatedCtaBackground = () => {
   return (
-    <div className="absolute inset-0 w-full h-full overflow-hidden">
-      {layers.map((layer, index) => (
-        <motion.div
-          key={index}
-          className="absolute inset-0 w-full h-full"
-          initial={layer.initial}
-          animate={layer.animate}
-          transition={layer.transition}
+    <div
+      className="absolute inset-0 z-0 overflow-hidden pointer-events-none"
+      aria-hidden="true"
+    >
+      <motion.div
+        className="absolute inset-0"
+        animate={{
+          scale: [1.05, 1.15, 1.05],
+          x: ["0%", "2%", "0%"],
+          y: ["0%", "-2%", "0%"],
+        }}
+        transition={{
+          duration: 12,
+          repeat: Infinity,
+          ease: "easeInOut",
+        }}
+      >
+        <img
+          src={backgroundImage}
+          alt=""
+          width="1920"
+          height="1080"
+          fetchPriority="high"
+          loading="eager"
+          decoding="async"
+          className="w-full h-full object-cover"
           style={{
-            backgroundImage: `url(${imageUrl})`,
-            backgroundSize: 'cover',
-            backgroundPosition: 'center',
-            opacity: layer.opacity,
             filter: "brightness(0.45) contrast(1.1)",
           }}
         />
-      ))}
+      </motion.div>
     </div>
   );
 };

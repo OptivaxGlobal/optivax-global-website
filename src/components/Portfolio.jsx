@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { ArrowUpRight, ArrowRight, X, Sparkles } from "lucide-react";
 import { useNavigate } from "react-router-dom";
+import backgroundImage from "../assets/Animated-background/BACKGROUND IMAGE.webp";
 
 /* LOGOS */
 import logo2 from "@/assets/logo-showcase/burgera.webp";
@@ -37,36 +38,39 @@ import dm2 from "@/assets/digital-marketing-showcase/digital-marketing-2.webp";
 import dm3 from "@/assets/digital-marketing-showcase/digital-marketing-3.webp";
 import dm4 from "@/assets/digital-marketing-showcase/digital-marketing-4.webp";
 
-const portfolioBgImage =
-  "https://horizons-cdn.hostinger.com/c43e6596-ab28-43b9-ad53-b1a7341229e7/71f6723b117af5fb7e36d829dfcd6b7f.jpg";
-
 const PortfolioBackground = () => {
   return (
     <div
-      className="absolute inset-0 overflow-hidden pointer-events-none"
+      className="absolute inset-0 z-0 overflow-hidden pointer-events-none"
       aria-hidden="true"
     >
       <motion.div
-        className="absolute -inset-[8%]"
+        className="absolute inset-0"
         animate={{
-          scale: [1.05, 1.12, 1.05],
+          scale: [1.05, 1.15, 1.05],
           x: ["0%", "2%", "0%"],
-          y: ["0%", "-1.5%", "0%"],
-          backgroundPosition: ["center 0px", "center -140px", "center 0px"],
+          y: ["0%", "-2%", "0%"],
         }}
         transition={{
           duration: 12,
           repeat: Infinity,
           ease: "easeInOut",
         }}
-        style={{
-          backgroundImage: `url(${portfolioBgImage})`,
-          backgroundRepeat: "repeat-y",
-          backgroundSize: "100vw 100vh",
-          backgroundPosition: "center top",
-          filter: "brightness(0.45) contrast(1.1)",
-        }}
-      />
+      >
+        <img
+          src={backgroundImage}
+          alt=""
+          width="1920"
+          height="1080"
+          fetchPriority="high"
+          loading="eager"
+          decoding="async"
+          className="w-full h-full object-cover"
+          style={{
+            filter: "brightness(0.45) contrast(1.1)",
+          }}
+        />
+      </motion.div>
 
       <div className="absolute inset-0 bg-[#020B16]/82" />
 

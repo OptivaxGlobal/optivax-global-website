@@ -21,8 +21,38 @@ import emailMarketingBlogImg from "@/assets/blog-images/email-marketing-blog.web
 import socialMediaMarketingBlogImg from "@/assets/blog-images/social-media-marketing-blog.webp";
 import brandManagementBlogImg from "@/assets/blog-images/brand-management-blog.webp";
 import webDevelopmentMarketingBlogImg from "@/assets/blog-images/web-development-marketing-blog.webp";
+import mobileAppDevelopmentBlogImg from "@/assets/blog-images/mobile-app-development-blog.webp";
+import animationBlogImg from "@/assets/blog-images/animation-blog.webp";
+import digitalMarketingBlogImg from "@/assets/blog-images/digital-marketing-blog.webp";
 
 const blogPosts = [
+  {
+  title: "Why Consistent Digital Marketing Produces Long-Term Results",
+  excerpt:
+    "Consistent digital marketing helps businesses build recognition, stay visible, grow trust, improve messaging, and produce stronger long-term results.",
+  category: "Digital Marketing",
+  date: "June 2026",
+  image: digitalMarketingBlogImg,
+  url: "/digital-marketing-produce-long-term-result",
+},
+  {
+  title: "The Growing Importance of Animation in Digital Marketing",
+  excerpt:
+    "Animation helps businesses capture attention, explain ideas clearly, improve brand storytelling, strengthen engagement, and stand out in digital marketing.",
+  category: "Animation",
+  date: "June 2026",
+  image: animationBlogImg,
+  url: "/important-of-animation-in-digital-marketing",
+},
+  {
+  title: "Why Mobile Apps Development Have Become a Business Growth Necessity",
+  excerpt:
+    "Mobile app development helps businesses improve accessibility, customer experience, engagement, conversions, and long-term business growth.",
+  category: "Mobile App Development",
+  date: "June 2026",
+  image: mobileAppDevelopmentBlogImg,
+  url: "/mobile-app-development-business-growth-necessity",
+},
   {
   title: "How Businesses Can Maximize Growth with Modern Web Development and Marketing",
   excerpt:
@@ -32,15 +62,7 @@ const blogPosts = [
   image: webDevelopmentMarketingBlogImg,
   url: "/maximize-growth-modern-web-development",
 },
-  {
-  title: "Creative Flyer Design Services That Get Your Business Noticed",
-  excerpt:
-    "Professional flyer design helps businesses attract attention, communicate value, improve engagement, strengthen branding, and generate better marketing results.",
-  category: "Flyer Design",
-  date: "June 2026",
-  image: flyerDesignBlogImg,
-  url: "/Creative-flyer-design-get-your-business-noticed",
-},
+  
 {
   title: "Why Strong Brand Management Is the Foundation of Business Growth",
   excerpt:

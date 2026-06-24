@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import { Routes, Route, useLocation } from "react-router-dom";
 import { AnimatePresence } from "framer-motion";
 
@@ -31,6 +31,8 @@ import SocialMediaMarketing from "./pages/SocialMediaMarketing";
 import Animation from "./pages/Animation";
 import EbookCover from "./pages/EbookCover";
 import CorporatePresentation from "./pages/CorporatePresentation";
+import HappyIndependenceDayUSA from "./pages/HappyIndependenceDayUSA";
+import HomeLeadPopup from "./components/HomeLeadPopup";
 
 import Faqs from "./pages/Faqs";
 import NotFound from "./pages/NotFound";
@@ -53,11 +55,15 @@ import EmailMarketingBlog from "./pages/blogs/EmailMarketingBlog";
 import SocialMediaMarketingBlog from "./pages/blogs/SocialMediaMarketingBlog";
 import BrandManagementBlog from "./pages/blogs/BrandManagementBlog";
 import WebDevelopmentMarketingBlog from "./pages/blogs/WebDevelopmentMarketingBlog";
+import MobileAppDevelopmentBlog from "./pages/blogs/MobileAppDevelopmentBlog";
+import AnimationMarketingBlog from "./pages/blogs/AnimationMarketingBlog";
+import DigitalMarketingResultsBlog from "./pages/blogs/DigitalMarketingResultsBlog";
 
 
 import AnalyticsTracker from "./components/AnalyticsTracker";
 import PaymentForm from "@/pages/PaymentForm";
 import PaymentSuccessful from "@/pages/PaymentSuccessful";
+import PackagesPage from "./pages/PackagesPage";
 
 
 function MetaPixelPageView() {
@@ -74,6 +80,28 @@ function MetaPixelPageView() {
 
 function App() {
   const location = useLocation();
+  const [isLeadPopupOpen, setIsLeadPopupOpen] = useState(false);
+
+  useEffect(() => {
+    const leadPopupShown =
+      sessionStorage.getItem("leadPopupShown") ||
+      sessionStorage.getItem("homePopupShown");
+
+    if (leadPopupShown || isLeadPopupOpen) {
+      return;
+    }
+
+    const timer = window.setTimeout(() => {
+      setIsLeadPopupOpen(true);
+    }, 9500);
+
+    return () => window.clearTimeout(timer);
+  }, [location.pathname, isLeadPopupOpen]);
+
+  const handleCloseLeadPopup = () => {
+    setIsLeadPopupOpen(false);
+    sessionStorage.setItem("leadPopupShown", "true");
+  };
 
   return (
     <>
@@ -187,6 +215,19 @@ function App() {
   path="/maximize-growth-modern-web-development"
   element={<WebDevelopmentMarketingBlog />}
 />
+<Route
+  path="/mobile-app-development-business-growth-necessity"
+  element={<MobileAppDevelopmentBlog />}
+/>
+<Route
+  path="/important-of-animation-in-digital-marketing"
+  element={<AnimationMarketingBlog />}
+/>
+<Route
+  path="/digital-marketing-produce-long-term-result"
+  element={<DigitalMarketingResultsBlog />}
+/>
+
 
 
 <Route path="/payment-form" element={<PaymentForm />} />
@@ -275,6 +316,13 @@ function App() {
             />
 
             <Route
+              path="happy-independence-day-usa"
+              element={<HappyIndependenceDayUSA />}
+            />
+
+            <Route path="digital-growth-packages" element={<PackagesPage />} />
+
+            <Route
               path="privacy-policy"
               element={<PrivacyPolicy />}
             />
@@ -297,6 +345,8 @@ function App() {
           </Route>
         </Routes>
       </AnimatePresence>
+      <HomeLeadPopup isOpen={isLeadPopupOpen} onClose={handleCloseLeadPopup} />
+      
     </>
   );
 }
