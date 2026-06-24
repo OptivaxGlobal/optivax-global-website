@@ -31,6 +31,7 @@ import SocialMediaMarketing from "./pages/SocialMediaMarketing";
 import Animation from "./pages/Animation";
 import EbookCover from "./pages/EbookCover";
 import CorporatePresentation from "./pages/CorporatePresentation";
+import ComicArts from "./pages/ComicArts";
 import HappyIndependenceDayUSA from "./pages/HappyIndependenceDayUSA";
 import HomeLeadPopup from "./components/HomeLeadPopup";
 
@@ -313,6 +314,11 @@ function App() {
             <Route
               path="corporate-presentation-design"
               element={<CorporatePresentation />}
+            />
+
+            <Route
+              path="comic-arts"
+              element={<ComicArts />}
             />
 
             <Route

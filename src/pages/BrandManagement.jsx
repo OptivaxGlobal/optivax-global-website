@@ -20,7 +20,6 @@ const BrandManagement = () => {
     "Campaign brand direction",
     "Professional brand positioning",
   ];
-
   const contentSections = [
     {
       title: "Protect Your Brand Image",
