@@ -24,8 +24,18 @@ import webDevelopmentMarketingBlogImg from "@/assets/blog-images/web-development
 import mobileAppDevelopmentBlogImg from "@/assets/blog-images/mobile-app-development-blog.webp";
 import animationBlogImg from "@/assets/blog-images/animation-blog.webp";
 import digitalMarketingBlogImg from "@/assets/blog-images/digital-marketing-blog.webp";
+import corporatePresentationBlogImg from "@/assets/blog-images/corporate-presentation-blog.webp";
 
 const blogPosts = [
+  {
+  title: "From Slides to Strategy: The Impact of Corporate Presentation Design",
+  excerpt:
+    "Corporate presentation design helps businesses communicate clearly, build trust, explain data effectively, and turn ideas into stronger business decisions.",
+  category: "Corporate Presentation",
+  date: "June 2026",
+  image: corporatePresentationBlogImg,
+  url: "/impact-of-corporate-design",
+},
   {
   title: "Why Consistent Digital Marketing Produces Long-Term Results",
   excerpt:

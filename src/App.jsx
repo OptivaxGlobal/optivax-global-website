@@ -59,6 +59,7 @@ import WebDevelopmentMarketingBlog from "./pages/blogs/WebDevelopmentMarketingBl
 import MobileAppDevelopmentBlog from "./pages/blogs/MobileAppDevelopmentBlog";
 import AnimationMarketingBlog from "./pages/blogs/AnimationMarketingBlog";
 import DigitalMarketingResultsBlog from "./pages/blogs/DigitalMarketingResultsBlog";
+import CorporatePresentationBlog from "./pages/blogs/CorporatePresentationBlog";
 
 
 import AnalyticsTracker from "./components/AnalyticsTracker";
@@ -227,6 +228,10 @@ function App() {
 <Route
   path="/digital-marketing-produce-long-term-result"
   element={<DigitalMarketingResultsBlog />}
+/>
+<Route
+  path="/impact-of-corporate-design"
+  element={<CorporatePresentationBlog />}
 />
 
 
