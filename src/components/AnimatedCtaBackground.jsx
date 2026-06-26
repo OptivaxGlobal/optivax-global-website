@@ -1,6 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
-import backgroundImage from "../assets/Animated-background/BACKGROUND IMAGE.webp";
+//import backgroundImage from "../assets/Animated-background/BACKGROUND IMAGE.webp";
+import backgroundImage from "@/assets/independence-day/independence-hero-bg.webp";
 
 const AnimatedCtaBackground = () => {
   return (

@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { Suspense, useEffect, useState } from "react";
 import { Helmet } from "react-helmet";
 import { Link } from "react-router-dom";
 import {
@@ -8,14 +8,11 @@ import {
   Clock,
   Sparkles,
   Image as ImageIcon,
-  CheckCircle2,
   Star,
   Flag,
   Zap,
   BadgeCheck,
 } from "lucide-react";
-import AnimatedHeroBackground from "@/components/AnimatedHeroBackground";
-import AnimatedCtaBackground from "@/components/AnimatedCtaBackground";
 
 import Image01 from "@/assets/independence-day/01.webp";
 import Image02 from "@/assets/independence-day/02.webp";
@@ -23,106 +20,77 @@ import Image03 from "@/assets/independence-day/03.webp";
 import Image04 from "@/assets/independence-day/04.webp";
 import Image05 from "@/assets/independence-day/05.webp";
 
+import HeroRightImage from "@/assets/independence-day/hero-250-flag.webp";
+import PremiumGalleryBg from "@/assets/independence-day/premium-gallery-bg.webp";
+
+const AnimatedHeroBackground = React.lazy(() =>
+  import("@/components/AnimatedHeroBackground")
+);
+
+const AnimatedCtaBackground = React.lazy(() =>
+  import("@/components/AnimatedCtaBackground")
+);
+
 const getContactLink = (selectedService) =>
   `/contact?service=${encodeURIComponent(selectedService)}`;
 
 const galleryItems = [
   {
     src: Image01,
-    alt: "Happy Independence Day USA Flyer Design",
+    alt: "250th Anniversary USA Flyer Design",
     service: "Flyer Design",
     contactService: "Flyer Design",
   },
   {
     src: Image02,
-    alt: "Happy Independence Day USA Social Media Design",
+    alt: "250th Anniversary USA Social Media Design",
     service: "Social Media Design",
     contactService: "Social Media Design",
   },
   {
     src: Image03,
-    alt: "Happy Independence Day USA Logo Design",
+    alt: "250th Anniversary USA Logo Design",
     service: "Logo Design",
     contactService: "Logo Design",
   },
   {
     src: Image04,
-    alt: "Happy Independence Day USA Cover Design",
+    alt: "250th Anniversary USA Cover Design",
     service: "Cover Design",
     contactService: "Cover Design",
   },
   {
     src: Image05,
-    alt: "Happy Independence Day USA Book Publishing Design",
+    alt: "250th Anniversary USA Book Publishing Design",
     service: "Book Publishing",
     contactService: "Book Publishing",
   },
   {
     src: null,
-    alt: "Happy Independence Day USA Promo Design",
+    alt: "250th Anniversary USA Promo Design",
     service: "Promo Design",
     contactService: "Promo Design",
   },
 ];
 
 const mainHighlights = [
-  {
-    title: "Limited Offer",
-    icon: Clock,
-    featured: true,
-  },
-  {
-    title: "250th Anniversary Special",
-    icon: Star,
-    featured: true,
-  },
-  {
-    title: "Patriotic Design",
-    icon: Flag,
-    featured: false,
-  },
-  {
-    title: "Fast Delivery",
-    icon: Zap,
-    featured: false,
-  },
-  {
-    title: "Ad Ready",
-    icon: BadgeCheck,
-    featured: false,
-  },
-];
-
-const heroStats = [
-  { value: "250th", label: "Years" },
-  { value: "$25", label: "Starting" },
-  { value: "2026", label: "USA" },
-];
-
-const packageItems = [
-  "Custom Social Media Posts",
-  "Campaign Flyers & Banners",
-  "Ad-Ready Visual Designs",
+  { title: "Limited Offer", icon: Clock, featured: true },
+  { title: "250th Anniversary Special", icon: Star, featured: true },
+  { title: "Patriotic Design", icon: Flag, featured: false },
+  { title: "Fast Delivery", icon: Zap, featured: false },
+  { title: "Ad Ready", icon: BadgeCheck, featured: false },
 ];
 
 const ctaPoints = [
-  {
-    label: "Social Media Creatives",
-    contactService: "Social Media Design",
-  },
-  {
-    label: "Flyers & Banners",
-    contactService: "Flyer Design",
-  },
-  {
-    label: "Ad Campaign Visuals",
-    contactService: "Promo Design",
-  },
+  { label: "Social Media Creatives", contactService: "Social Media Design" },
+  { label: "Flyers & Banners", contactService: "Flyer Design" },
+  { label: "Ad Campaign Visuals", contactService: "Promo Design" },
 ];
 
 const HappyIndependenceDayUSA = () => {
   const [selectedImage, setSelectedImage] = useState(null);
   const [brokenImages, setBrokenImages] = useState({});
+  const [showAnimatedBg, setShowAnimatedBg] = useState(false);
 
   const openImage = (item, index) => {
     if (!item?.src || brokenImages[index]) return;
@@ -139,6 +107,24 @@ const HappyIndependenceDayUSA = () => {
       [index]: true,
     }));
   };
+
+  useEffect(() => {
+    const loadBg = () => {
+      setShowAnimatedBg(true);
+    };
+
+    if ("requestIdleCallback" in window) {
+      const idleId = window.requestIdleCallback(loadBg, { timeout: 1200 });
+
+      return () => {
+        window.cancelIdleCallback(idleId);
+      };
+    }
+
+    const timer = window.setTimeout(loadBg, 700);
+
+    return () => window.clearTimeout(timer);
+  }, []);
 
   useEffect(() => {
     if (!selectedImage) return;
@@ -161,104 +147,97 @@ const HappyIndependenceDayUSA = () => {
   return (
     <>
       <Helmet>
-        <title>
-          Happy Independence Day USA | Celebrating 250th Anniversary | Optivax
-          Global
-        </title>
+        <title>250th Anniversary Celebrate America - Optivax Global</title>
 
         <meta
           name="description"
-          content="Celebrate America’s 250th Anniversary with premium Happy Independence Day USA creative designs by Optivax Global."
+          content="Celebrate America’s 250th Anniversary with premium patriotic campaign designs, social media creatives, flyers, ads, branding visuals, and promotional graphics by Optivax Global."
         />
 
         <meta
           name="keywords"
-          content="Happy Independence Day USA, Celebrating 250th Anniversary, 250th Years USA, 4th of July 2026, USA Independence Day design, patriotic creative design, Optivax Global"
+          content="250th Anniversary Celebrate America, 250th Anniversary USA, America 250th Anniversary, USA Independence Day design, patriotic campaign design, 4th of July 2026, Optivax Global"
         />
 
         <meta
           property="og:title"
-          content="Happy Independence Day USA | Celebrating 250th Anniversary"
+          content="250th Anniversary Celebrate America - Optivax Global"
         />
 
         <meta
           property="og:description"
-          content="Premium patriotic creative designs for America’s 250th Anniversary celebration."
+          content="Premium patriotic creative designs for America’s 250th Anniversary celebration by Optivax Global."
         />
 
         <meta property="og:type" content="website" />
 
         <link
           rel="canonical"
-          href="https://optivaxglobal.com/happy-independence-day-usa"
+          href="https://optivaxglobal.com/250-anniversary-usa"
         />
       </Helmet>
 
       <main className="overflow-hidden bg-[#020817] text-white">
         {/* HERO SECTION */}
-        <section className="relative overflow-hidden px-4 pt-32 pb-20 sm:px-6 lg:pt-36 lg:pb-28">
-          <AnimatedHeroBackground />
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_78%_18%,rgba(255,255,255,0.14),transparent_26%),radial-gradient(circle_at_18%_18%,rgba(240,0,0,0.22),transparent_30%),linear-gradient(135deg,#020817_0%,#031426_38%,#06265A_74%,#020817_100%)]" />
+        <section className="relative isolate overflow-hidden px-4 pt-32 pb-20 sm:px-6 lg:min-h-[calc(100vh-90px)] lg:pt-36 lg:pb-24">
+          <div className="absolute inset-0 bg-[#020817]" />
 
-          <div
-            className="absolute inset-0 opacity-[0.16]"
-            style={{
-              backgroundImage:
-                "radial-gradient(circle at 24px 24px, rgba(255,255,255,0.75) 0 1px, transparent 2px)",
-              backgroundSize: "54px 54px",
-            }}
-          />
+          {showAnimatedBg && (
+            <Suspense fallback={null}>
+              <AnimatedHeroBackground />
+            </Suspense>
+          )}
 
-          <div
-            className="absolute inset-0 opacity-[0.08]"
-            style={{
-              backgroundImage:
-                "linear-gradient(115deg, transparent 0%, transparent 42%, rgba(255,255,255,0.9) 42%, rgba(255,255,255,0.9) 43%, transparent 43%, transparent 52%, rgba(240,0,0,0.9) 52%, rgba(240,0,0,0.9) 53%, transparent 53%)",
-            }}
-          />
+          <div className="absolute inset-0 bg-[#020B16]/82" />
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(14,165,233,0.14),transparent_24%),radial-gradient(circle_at_bottom_right,rgba(0,68,149,0.22),transparent_32%)]" />
+          <div className="absolute inset-0 bg-gradient-to-r from-[#020817]/95 via-[#031426]/80 to-[#06265A]/46" />
+          <div className="absolute inset-y-0 left-0 w-full lg:w-[58%] bg-gradient-to-r from-[#020817]/88 via-[#020817]/44 to-transparent" />
+          <div className="pointer-events-none absolute left-0 right-0 top-0 z-[1] h-32 bg-gradient-to-b from-black/60 via-black/18 to-transparent" />
 
-          <div className="pointer-events-none absolute left-0 right-0 top-0 z-[1] h-36 bg-gradient-to-b from-black/80 via-black/25 to-transparent" />
+          <div className="absolute -left-32 top-28 h-[360px] w-[360px] rounded-full bg-[#F00000]/14 blur-[120px]" />
+          <div className="absolute right-10 top-28 h-[320px] w-[320px] rounded-full bg-[#2DA8FF]/12 blur-[120px]" />
+          <div className="absolute bottom-0 left-1/2 h-[260px] w-[620px] -translate-x-1/2 rounded-full bg-white/5 blur-[130px]" />
 
-          <div className="absolute -left-40 top-28 h-[460px] w-[460px] rounded-full bg-[#F00000]/16 blur-[120px]" />
-          <div className="absolute -right-44 top-14 h-[620px] w-[620px] rounded-full bg-white/10 blur-[140px]" />
-          <div className="absolute bottom-0 left-1/2 h-[360px] w-[720px] -translate-x-1/2 rounded-full bg-[#168CFF]/12 blur-[130px]" />
-
-          <div className="relative z-10 mx-auto grid max-w-7xl items-center gap-16 lg:grid-cols-[1.05fr_0.95fr]">
-            <div className="max-w-4xl">
-              <div className="mb-8">
-                <div className="mb-6 inline-flex items-center gap-2 rounded-full bg-white px-5 py-2 text-[10px] font-black uppercase tracking-[0.22em] text-[#F00000] shadow-xl shadow-white/10 sm:text-xs">
+          <div className="relative z-10 mx-auto grid max-w-7xl items-center gap-12 lg:grid-cols-[0.9fr_1.1fr]">
+            <div className="max-w-3xl">
+              <div className="mb-6">
+                <div className="mb-5 inline-flex items-center gap-2 rounded-full bg-white px-4 py-2 text-[10px] font-black uppercase tracking-[0.18em] text-[#F00000] shadow-lg shadow-white/10 sm:text-xs">
                   <Sparkles className="h-4 w-4" />
                   Celebrating America’s 250th Anniversary
                 </div>
 
-                <div className="relative inline-flex flex-wrap items-end gap-4">
-                  <Star className="absolute -left-5 -top-5 h-5 w-5 fill-white text-white opacity-90" />
-                  <Sparkles className="absolute -right-8 top-1 h-7 w-7 text-white drop-shadow-[0_0_16px_rgba(255,255,255,0.9)]" />
-                  <Star className="absolute -bottom-1 right-14 h-4 w-4 fill-[#F00000] text-[#F00000]" />
-
-                  <span className="text-[82px] font-black leading-[0.78] tracking-[-0.08em] text-white drop-shadow-[0_14px_42px_rgba(255,255,255,0.16)] sm:text-[126px] md:text-[154px]">
+                <div className="relative inline-flex flex-wrap items-end gap-3">
+                  <span
+                    className="inline-block text-[62px] font-black leading-[0.85] tracking-[-0.055em] text-white sm:text-[86px] md:text-[106px]"
+                    style={{
+                      WebkitTextStroke: "0.35px #ffffff",
+                      transform: "scaleX(1.03)",
+                      textRendering: "geometricPrecision",
+                    }}
+                  >
                     250th
                   </span>
 
-                  <span className="mb-3 rounded-full bg-white px-5 py-3 text-sm font-black uppercase tracking-[0.18em] text-[#F00000] shadow-xl shadow-white/10 sm:text-base">
+                  <span className="mb-2 rounded-full bg-white px-4 py-2 text-xs font-black uppercase tracking-[0.14em] text-[#F00000] shadow-lg shadow-white/10 sm:text-sm">
                     Years
                   </span>
                 </div>
               </div>
 
-              <h1 className="max-w-full text-[clamp(2.4rem,10vw,6.6rem)] font-black uppercase leading-[0.9] tracking-[-0.055em] text-[#F00000]">
-                Happy
-                <span className="block text-white">Independence</span>
-                <span className="block text-[#F00000]">Day USA</span>
+              <h1 className="relative max-w-full text-[clamp(2.25rem,5.8vw,4.55rem)] font-black uppercase leading-[0.96] tracking-[-0.025em]">
+                <span className="block text-[#F00000] drop-shadow-[0_10px_30px_rgba(240,0,0,0.24)]">
+                  Independence
+                </span>
+
+                <span className="mt-1 block text-white">Day</span>
               </h1>
 
-              <p className="mt-7 max-w-2xl text-sm font-semibold leading-relaxed text-white/78 sm:text-lg">
+              <p className="mt-5 max-w-2xl text-sm font-semibold leading-relaxed text-white/88 sm:text-base md:text-lg">
                 Celebrate America’s 250th Anniversary with premium patriotic
                 visuals for social media, flyers, paid ads, branding, and
                 promotional campaigns designed for powerful visibility.
               </p>
 
-              {/* Main Points - Top 2 + Bottom 3 In One Row */}
               <div className="mt-8 max-w-4xl space-y-3">
                 <div className="grid grid-cols-1 gap-3 sm:grid-cols-2">
                   {mainHighlights.slice(0, 2).map((item) => {
@@ -267,10 +246,10 @@ const HappyIndependenceDayUSA = () => {
                     return (
                       <div
                         key={item.title}
-                        className="group flex min-h-[76px] items-center justify-center gap-4 rounded-2xl bg-white px-5 py-4 text-center text-sm font-black uppercase tracking-[0.08em] text-[#F00000] shadow-xl shadow-white/10 transition-all duration-300 hover:-translate-y-1 sm:text-base"
+                        className="group flex min-h-[68px] items-center justify-center gap-4 rounded-2xl bg-white px-5 py-4 text-center text-xs font-black uppercase tracking-[0.08em] text-[#F00000] shadow-[0_18px_60px_rgba(255,255,255,0.08)] transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_24px_70px_rgba(255,255,255,0.13)] sm:text-sm"
                       >
-                        <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-[#F00000] text-white">
-                          <Icon className="h-5 w-5" />
+                        <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-[#F00000] text-white shadow-lg shadow-red-950/20">
+                          <Icon className="h-4 w-4" />
                         </span>
 
                         <span>{item.title}</span>
@@ -286,10 +265,10 @@ const HappyIndependenceDayUSA = () => {
                     return (
                       <div
                         key={item.title}
-                        className="group flex min-h-[76px] items-center justify-center gap-4 rounded-2xl bg-white/10 px-5 py-4 text-center text-sm font-black uppercase tracking-[0.08em] text-white shadow-xl ring-1 ring-white/10 backdrop-blur-md transition-all duration-300 hover:-translate-y-1 hover:bg-white/15 sm:text-base"
+                        className="group flex min-h-[68px] items-center justify-center gap-4 rounded-2xl border border-white/10 bg-white/[0.09] px-5 py-4 text-center text-xs font-black uppercase tracking-[0.08em] text-white shadow-lg backdrop-blur-md transition-all duration-300 hover:-translate-y-1 hover:border-white/20 hover:bg-white/[0.14] sm:text-sm"
                       >
-                        <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-white text-[#F00000]">
-                          <Icon className="h-5 w-5" />
+                        <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-white text-[#F00000] shadow-lg shadow-black/10">
+                          <Icon className="h-4 w-4" />
                         </span>
 
                         <span>{item.title}</span>
@@ -299,10 +278,10 @@ const HappyIndependenceDayUSA = () => {
                 </div>
               </div>
 
-              <div className="mt-9 flex flex-col gap-4 sm:flex-row">
+              <div className="mt-8 flex flex-col gap-4 sm:flex-row">
                 <a
                   href="#gallery"
-                  className="group inline-flex items-center justify-center gap-2 rounded-full bg-white px-8 py-4 text-xs font-black uppercase tracking-[0.04em] text-[#F00000] shadow-2xl shadow-white/10 transition-all duration-300 hover:-translate-y-1 hover:bg-[#F00000] hover:text-white sm:px-9 sm:text-sm"
+                  className="group inline-flex items-center justify-center gap-2 rounded-full bg-white px-7 py-3.5 text-[11px] font-black uppercase tracking-[0.04em] text-[#F00000] shadow-xl shadow-white/10 transition-all duration-300 hover:-translate-y-1 hover:bg-[#F00000] hover:text-white sm:px-8 sm:text-xs"
                 >
                   View Designs
                   <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
@@ -310,7 +289,7 @@ const HappyIndependenceDayUSA = () => {
 
                 <Link
                   to={getContactLink("Custom Patriotic Design")}
-                  className="group inline-flex items-center justify-center gap-2 rounded-full bg-white/10 px-8 py-4 text-xs font-black uppercase tracking-[0.04em] text-white shadow-xl ring-1 ring-white/15 backdrop-blur-md transition-all duration-300 hover:-translate-y-1 hover:bg-white hover:text-[#F00000] sm:px-9 sm:text-sm"
+                  className="group inline-flex items-center justify-center gap-2 rounded-full border border-white/15 bg-white/[0.09] px-7 py-3.5 text-[11px] font-black uppercase tracking-[0.04em] text-white shadow-xl backdrop-blur-md transition-all duration-300 hover:-translate-y-1 hover:bg-white hover:text-[#F00000] sm:px-8 sm:text-xs"
                 >
                   Get Custom Design
                   <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
@@ -318,114 +297,22 @@ const HappyIndependenceDayUSA = () => {
               </div>
             </div>
 
-            {/* HERO PREMIUM CARD */}
-            <div className="relative mx-auto w-full max-w-[620px] lg:ml-auto">
-              <div className="absolute -right-10 -top-10 h-80 w-80 rounded-full bg-white/12 blur-[90px]" />
-              <div className="absolute -left-10 bottom-6 h-64 w-64 rounded-full bg-[#F00000]/20 blur-[95px]" />
+            <div className="relative mx-auto flex w-full items-center justify-center lg:justify-end">
+              <div className="absolute right-8 top-1/2 h-[360px] w-[360px] -translate-y-1/2 rounded-full bg-[#2DA8FF]/12 blur-[120px]" />
+              <div className="absolute bottom-8 left-8 h-[260px] w-[260px] rounded-full bg-[#F00000]/12 blur-[110px]" />
 
-              <div className="relative rounded-[46px] bg-white/10 p-2 shadow-[0_34px_120px_rgba(0,0,0,0.45)] ring-1 ring-white/12 backdrop-blur-xl">
-                <div className="relative overflow-hidden rounded-[40px] bg-[#020817] p-6 ring-1 ring-white/10">
-                  <div
-                    className="absolute inset-0 opacity-[0.16]"
-                    style={{
-                      backgroundImage:
-                        "radial-gradient(circle at 18px 18px, rgba(255,255,255,0.75) 0 1px, transparent 2px)",
-                      backgroundSize: "42px 42px",
-                    }}
-                  />
-
-                  <div className="absolute -right-16 -top-16 h-56 w-56 rounded-full bg-[#F00000]/24 blur-[70px]" />
-                  <div className="absolute -bottom-20 -left-16 h-56 w-56 rounded-full bg-white/12 blur-[80px]" />
-
-                  <div className="relative z-10">
-                    <div className="flex flex-wrap items-center justify-between gap-3">
-                      <div className="inline-flex items-center gap-2 rounded-full bg-white px-4 py-2 text-[10px] font-black uppercase tracking-[0.18em] text-[#F00000]">
-                        <Sparkles className="h-4 w-4" />
-                        Premium Campaign Pack
-                      </div>
-
-                      <div className="inline-flex items-center gap-2 rounded-full bg-white/10 px-4 py-2 text-[10px] font-black uppercase tracking-[0.18em] text-white ring-1 ring-white/15">
-                        <Clock className="h-4 w-4" />
-                        Limited Slots
-                      </div>
-                    </div>
-
-                    <div className="mt-8 overflow-hidden rounded-[34px] bg-white text-[#031426] shadow-2xl shadow-black/35">
-                      <div className="relative p-6">
-                        <div className="absolute right-0 top-0 h-28 w-28 rounded-bl-[70px] bg-[#F00000]" />
-
-                        <Star className="absolute left-4 top-4 h-5 w-5 fill-[#F00000] text-[#F00000]" />
-                        <Sparkles className="absolute right-6 top-6 z-10 h-7 w-7 text-white" />
-
-                        <p className="mt-8 text-xs font-black uppercase tracking-[0.22em] text-[#F00000]">
-                          Celebrating
-                        </p>
-
-                        <h2 className="mt-3 text-[clamp(2.8rem,7vw,5rem)] font-black uppercase leading-[0.82] tracking-[-0.08em] text-[#F00000]">
-                          250th
-                          <span className="block text-[#06265A]">Years</span>
-                        </h2>
-
-                        <p className="mt-5 max-w-md text-sm font-bold leading-relaxed text-[#34445C] sm:text-base">
-                          Optivax Global creates high-impact designs, websites,
-                          branding, SEO, and digital marketing campaigns that
-                          help businesses stand out and grow online.
-                        </p>
-                      </div>
-
-                      <div className="grid grid-cols-1 border-t border-[#06265A]/10 sm:grid-cols-3">
-                        {packageItems.map((item) => (
-                          <div
-                            key={item}
-                            className="border-[#06265A]/10 px-5 py-4 text-xs font-black uppercase tracking-[0.08em] text-[#06265A] sm:border-r last:sm:border-r-0"
-                          >
-                            <CheckCircle2 className="mb-2 h-5 w-5 text-[#F00000]" />
-                            {item}
-                          </div>
-                        ))}
-                      </div>
-                    </div>
-
-                    <div className="mt-5 grid grid-cols-3 gap-3">
-                      {heroStats.map((item, index) => (
-                        <div
-                          key={item.label}
-                          className={`rounded-[24px] px-3 py-4 text-center shadow-xl ${
-                            index === 1
-                              ? "bg-[#F00000] text-white shadow-red-950/25"
-                              : "bg-white/10 text-white ring-1 ring-white/10"
-                          }`}
-                        >
-                          <p className="text-2xl font-black leading-none tracking-[-0.05em] sm:text-3xl">
-                            {item.value}
-                          </p>
-                          <p className="mt-2 text-[9px] font-black uppercase tracking-[0.15em] text-white/75">
-                            {item.label}
-                          </p>
-                        </div>
-                      ))}
-                    </div>
-
-                    <div className="mt-5 flex flex-wrap items-center justify-between gap-3 rounded-[26px] bg-white p-4 shadow-xl">
-                      <div>
-                        <p className="text-xs font-black uppercase tracking-[0.2em] text-[#F00000]">
-                          Independence Day Package
-                        </p>
-                        <p className="mt-1 text-lg font-black uppercase leading-tight text-[#06265A]">
-                          Starting From $25
-                        </p>
-                      </div>
-
-                      <Link
-                        to={getContactLink("Custom Patriotic Design")}
-                        className="inline-flex items-center gap-2 rounded-full bg-[#F00000] px-5 py-3 text-xs font-black uppercase text-white transition hover:bg-[#06265A]"
-                      >
-                        Order Style
-                        <ArrowRight className="h-4 w-4" />
-                      </Link>
-                    </div>
-                  </div>
-                </div>
+              <div className="relative w-full max-w-[500px] overflow-hidden rounded-[34px] border border-white/12 bg-white/[0.04] p-2 shadow-[0_32px_100px_rgba(0,0,0,0.42)] backdrop-blur-sm sm:max-w-[540px] lg:max-w-[500px] xl:max-w-[540px]">
+                <img
+                  src={HeroRightImage}
+                  alt="250 Years of Freedom and Pride"
+                  width="1080"
+                  height="1350"
+                  loading="lazy"
+                  decoding="async"
+                  fetchPriority="low"
+                  sizes="(max-width: 640px) 92vw, (max-width: 1024px) 540px, 500px"
+                  className="h-auto w-full rounded-[28px] object-contain"
+                />
               </div>
             </div>
           </div>
@@ -434,38 +321,56 @@ const HappyIndependenceDayUSA = () => {
         {/* GALLERY SECTION */}
         <section
           id="gallery"
-          className="relative overflow-hidden bg-[#06265A] px-4 py-20 sm:px-6 lg:py-28"
+          className="relative isolate overflow-hidden px-4 py-20 sm:px-6 lg:py-28"
+          style={{
+            contentVisibility: "auto",
+            containIntrinsicSize: "1px 1500px",
+          }}
         >
-          <div
-            className="absolute inset-0 opacity-[0.16]"
-            style={{
-              backgroundImage:
-                "radial-gradient(circle at 22px 22px, rgba(255,255,255,0.75) 0 1px, transparent 2px), linear-gradient(135deg, rgba(255,255,255,0.14) 1px, transparent 1px)",
-              backgroundSize: "54px 54px, 34px 34px",
-            }}
-          />
+          <div className="absolute inset-0">
+            <img
+              src={PremiumGalleryBg}
+              alt=""
+              width="1024"
+              height="1450"
+              loading="lazy"
+              decoding="async"
+              fetchPriority="low"
+              className="h-full w-full object-cover object-center"
+              style={{
+                opacity: 0.5,
+                filter: "brightness(0.95) saturate(0.95)",
+              }}
+            />
+          </div>
+
+          <div className="absolute inset-0 bg-[#04173E]/84" />
+          <div className="absolute inset-0 bg-gradient-to-b from-[#06265A]/86 via-[#052255]/91 to-[#031426]/96" />
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_0%,rgba(255,255,255,0.13),transparent_35%)]" />
 
           <div className="absolute -left-36 top-10 h-[420px] w-[420px] rounded-full bg-white/10 blur-[110px]" />
-          <div className="absolute -right-36 bottom-10 h-[420px] w-[420px] rounded-full bg-[#F00000]/20 blur-[110px]" />
+          <div className="absolute -right-36 bottom-10 h-[420px] w-[420px] rounded-full bg-[#F00000]/18 blur-[110px]" />
+          <div className="absolute left-1/2 top-1/2 h-[460px] w-[760px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-[#2DA8FF]/8 blur-[150px]" />
 
           <div className="relative z-10 mx-auto max-w-7xl">
-            <div className="mx-auto mb-14 max-w-4xl text-center">
+            <div className="mx-auto mb-16 max-w-4xl text-center">
               <p className="mb-4 inline-flex items-center justify-center rounded-full bg-white px-5 py-2 text-[10px] font-black uppercase tracking-[0.25em] text-[#F00000] shadow-lg shadow-black/20 sm:text-xs">
                 Patriotic Gallery
               </p>
 
-              <h2 className="text-4xl font-black uppercase leading-tight tracking-[-0.03em] text-[#F00000] sm:text-5xl md:text-6xl">
+              <h2 className="text-4xl font-black uppercase leading-tight tracking-[-0.02em] text-[#F00000] sm:text-5xl md:text-6xl">
                 Premium USA
                 <span className="block text-white">Campaign Designs</span>
               </h2>
 
-              <p className="mx-auto mt-5 max-w-2xl text-sm font-medium leading-relaxed text-white/78 md:text-lg">
-  Explore our Independence Day creative collection designed for brands that
-  want to stand out with powerful patriotic visuals. From flyers and social
-  media posts to logos, covers, book publishing graphics, and promo designs,
-  every creative is built with bold typography, premium styling, and
-  campaign-ready impact.
-</p>
+              <p className="mx-auto mt-5 max-w-2xl text-sm font-semibold leading-relaxed text-white/82 md:text-lg">
+                Explore our Independence Day creative collection designed for
+                brands that want to stand out with powerful patriotic visuals.
+                From flyers and social media posts to logos, covers, book
+                publishing graphics, and promo designs, every creative is built
+                with bold typography, premium styling, and campaign-ready
+                impact.
+              </p>
             </div>
 
             <div className="grid grid-cols-1 gap-8 md:grid-cols-2 xl:grid-cols-3">
@@ -475,17 +380,19 @@ const HappyIndependenceDayUSA = () => {
                 return (
                   <article
                     key={`${item.service}-${index}`}
-                    className="group overflow-hidden rounded-[32px] bg-white/10 p-2.5 text-left shadow-[0_22px_80px_rgba(0,0,0,0.38)] ring-1 ring-white/15 backdrop-blur-md transition-all duration-500 hover:-translate-y-2 hover:bg-white/15 hover:shadow-[0_34px_100px_rgba(0,0,0,0.46)]"
+                    className="group overflow-hidden rounded-[34px] bg-white/[0.08] p-2.5 text-left shadow-[0_24px_85px_rgba(0,0,0,0.4)] ring-1 ring-white/15 backdrop-blur-md transition-all duration-500 hover:-translate-y-2 hover:bg-white/[0.12] hover:ring-white/25 hover:shadow-[0_38px_110px_rgba(0,0,0,0.5)]"
                   >
                     <button
                       type="button"
                       onClick={() => openImage(item, index)}
                       disabled={!hasImage}
-                      className={`relative aspect-square w-full overflow-hidden rounded-[24px] bg-[#020817] ${
+                      className={`relative aspect-square w-full overflow-hidden rounded-[26px] bg-[#020817] ${
                         hasImage ? "cursor-pointer" : "cursor-default"
                       }`}
                       aria-label={
-                        hasImage ? `Open ${item.alt}` : `${item.service} preview`
+                        hasImage
+                          ? `Open ${item.alt}`
+                          : `${item.service} preview`
                       }
                     >
                       {hasImage ? (
@@ -497,11 +404,13 @@ const HappyIndependenceDayUSA = () => {
                             height="1080"
                             loading="lazy"
                             decoding="async"
+                            fetchPriority="low"
+                            sizes="(max-width: 768px) 92vw, (max-width: 1280px) 45vw, 390px"
                             onError={() => handleImageError(index)}
                             className="h-full w-full object-cover transition duration-700 group-hover:scale-105"
                           />
 
-                          <div className="absolute inset-0 bg-gradient-to-t from-[#020817]/85 via-transparent to-transparent opacity-0 transition duration-500 group-hover:opacity-100" />
+                          <div className="absolute inset-0 bg-gradient-to-t from-[#020817]/90 via-transparent to-transparent opacity-0 transition duration-500 group-hover:opacity-100" />
 
                           <div className="absolute right-4 top-4 inline-flex h-11 w-11 items-center justify-center rounded-full bg-white text-[#F00000] opacity-0 shadow-xl transition duration-300 group-hover:opacity-100">
                             <Maximize2 className="h-5 w-5" />
@@ -562,7 +471,7 @@ const HappyIndependenceDayUSA = () => {
                       )}
                     </button>
 
-                    <div className="relative mt-3 overflow-hidden rounded-[24px] bg-[#020817] px-5 py-5 ring-1 ring-white/10">
+                    <div className="relative mt-3 overflow-hidden rounded-[26px] bg-[#020817]/94 px-5 py-5 ring-1 ring-white/10">
                       <div
                         className="absolute inset-0 opacity-[0.12]"
                         style={{
@@ -604,18 +513,25 @@ const HappyIndependenceDayUSA = () => {
         </section>
 
         {/* CTA SECTION */}
-        <section className="relative overflow-hidden bg-[#020817] px-4 py-20 sm:px-6 lg:py-28">
-          <AnimatedCtaBackground />
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_18%,rgba(255,255,255,0.14),transparent_28%),radial-gradient(circle_at_18%_28%,rgba(240,0,0,0.20),transparent_30%),linear-gradient(135deg,#020817_0%,#031426_45%,#06265A_100%)]" />
+        <section
+          className="relative isolate overflow-hidden border-t border-white/5 px-4 py-20 sm:px-6 lg:py-28"
+          style={{
+            contentVisibility: "auto",
+            containIntrinsicSize: "1px 900px",
+          }}
+        >
+          {showAnimatedBg && (
+            <Suspense fallback={null}>
+              <AnimatedCtaBackground />
+            </Suspense>
+          )}
 
-          <div
-            className="absolute inset-0 opacity-[0.14]"
-            style={{
-              backgroundImage:
-                "radial-gradient(circle at 24px 24px, rgba(255,255,255,0.75) 0 1px, transparent 2px)",
-              backgroundSize: "54px 54px",
-            }}
-          />
+          <div className="absolute inset-0 bg-[#020B16]/82" />
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(14,165,233,0.14),transparent_24%),radial-gradient(circle_at_bottom_right,rgba(0,68,149,0.22),transparent_32%)]" />
+          <div className="absolute inset-0 bg-gradient-to-b from-[#020B16]/25 via-[#031C33]/65 to-[#020B16]" />
+
+          <div className="absolute -left-32 top-28 h-[360px] w-[360px] rounded-full bg-[#F00000]/14 blur-[120px]" />
+          <div className="absolute -right-28 bottom-20 h-[360px] w-[360px] rounded-full bg-[#2DA8FF]/12 blur-[120px]" />
 
           <div className="relative z-10 mx-auto grid max-w-7xl items-center gap-12 lg:grid-cols-[1fr_0.82fr]">
             <div>
@@ -623,13 +539,13 @@ const HappyIndependenceDayUSA = () => {
                 Limited Creative Offer
               </p>
 
-              <h2 className="max-w-4xl text-[clamp(2.35rem,7vw,4.6rem)] font-black uppercase leading-[1.04] tracking-[-0.035em] text-[#F00000]">
+              <h2 className="max-w-4xl text-[clamp(2.2rem,6.4vw,4.2rem)] font-black uppercase leading-[1.02] tracking-[-0.02em] text-[#F00000]">
                 Let’s Create a
                 <span className="block text-white">Patriotic Campaign</span>
                 <span className="block text-[#F00000]">For Your Brand.</span>
               </h2>
 
-              <p className="mt-6 max-w-2xl text-sm font-semibold leading-relaxed text-white/78 sm:text-lg">
+              <p className="mt-6 max-w-2xl text-sm font-semibold leading-relaxed text-white/82 sm:text-lg">
                 Optivax Global can design complete Independence Day campaigns,
                 social media creatives, flyers, ads, banners, and branding
                 visuals with a premium business-focused style.
@@ -644,7 +560,7 @@ const HappyIndependenceDayUSA = () => {
               </Link>
             </div>
 
-            <div className="relative overflow-hidden rounded-[40px] bg-white/10 p-6 shadow-[0_25px_90px_rgba(0,0,0,0.42)] ring-1 ring-white/15 backdrop-blur-md sm:p-8">
+            <div className="relative overflow-hidden rounded-[40px] bg-white/[0.09] p-6 shadow-[0_25px_90px_rgba(0,0,0,0.42)] ring-1 ring-white/15 backdrop-blur-md sm:p-8">
               <div
                 className="absolute inset-0 opacity-[0.14]"
                 style={{
@@ -673,7 +589,6 @@ const HappyIndependenceDayUSA = () => {
                   </span>
                 </div>
 
-                {/* CTA Points - Arrows Removed + Correct Icons */}
                 <div className="grid grid-cols-1 gap-3">
                   {mainHighlights.map((item) => {
                     const Icon = item.icon;
@@ -724,7 +639,6 @@ const HappyIndependenceDayUSA = () => {
         </section>
       </main>
 
-      {/* IMAGE POPUP */}
       {selectedImage && (
         <div
           className="fixed inset-0 z-[9999] flex items-center justify-center bg-black/90 px-4 py-6 backdrop-blur-md"

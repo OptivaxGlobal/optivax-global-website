@@ -327,7 +327,7 @@ function App() {
             />
 
             <Route
-              path="happy-independence-day-usa"
+              path="250-anniversary-usa"
               element={<HappyIndependenceDayUSA />}
             />
 
