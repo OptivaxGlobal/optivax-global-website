@@ -25,17 +25,28 @@ import mobileAppDevelopmentBlogImg from "@/assets/blog-images/mobile-app-develop
 import animationBlogImg from "@/assets/blog-images/animation-blog.webp";
 import digitalMarketingBlogImg from "@/assets/blog-images/digital-marketing-blog.webp";
 import corporatePresentationBlogImg from "@/assets/blog-images/corporate-presentation-blog.webp";
+import semBlogImg from "@/assets/blog-images/sem-blog.webp";
 
 const blogPosts = [
   {
-  title: "From Slides to Strategy: The Impact of Corporate Presentation Design",
+  title: "How Search Engine Marketing Turns Searches Into Sales",
   excerpt:
-    "Corporate presentation design helps businesses communicate clearly, build trust, explain data effectively, and turn ideas into stronger business decisions.",
-  category: "Corporate Presentation",
+    "Search Engine Marketing helps businesses reach high-intent customers, improve visibility, drive qualified traffic, and convert online searches into real sales.",
+  category: "Search Engine Marketing",
   date: "June 2026",
-  image: corporatePresentationBlogImg,
-  url: "/impact-of-corporate-design",
+  image: semBlogImg,
+  url: "/sem-turns-searches-into-sales",
 },
+{
+  title: "How Email Marketing Builds Stronger Customer Relationships",
+  excerpt:
+    "Email marketing helps businesses build trust, strengthen customer relationships, improve engagement, and encourage long-term customer loyalty.",
+  category: "Email Marketing",
+  date: "June 2026",
+  image: emailMarketingBlogImg,
+  url: "/stronge-email-marketing-to-build-relationship",
+},
+  
   {
   title: "Why Consistent Digital Marketing Produces Long-Term Results",
   excerpt:
@@ -82,16 +93,16 @@ const blogPosts = [
   image: brandManagementBlogImg,
   url: "/Strong-brand-management-business-growth",
 },
-
 {
-  title: "How Email Marketing Builds Stronger Customer Relationships",
+  title: "From Slides to Strategy: The Impact of Corporate Presentation Design",
   excerpt:
-    "Email marketing helps businesses build trust, strengthen customer relationships, improve engagement, and encourage long-term customer loyalty.",
-  category: "Email Marketing",
+    "Corporate presentation design helps businesses communicate clearly, build trust, explain data effectively, and turn ideas into stronger business decisions.",
+  category: "Corporate Presentation",
   date: "June 2026",
-  image: emailMarketingBlogImg,
-  url: "/stronge-email-marketing-to-build-relationship",
+  image: corporatePresentationBlogImg,
+  url: "/impact-of-corporate-design",
 },
+
   {
   title: "How Great UI/UX Design Turns Visitors into Loyal Customers",
   excerpt:

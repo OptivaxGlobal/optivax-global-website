@@ -60,6 +60,7 @@ import MobileAppDevelopmentBlog from "./pages/blogs/MobileAppDevelopmentBlog";
 import AnimationMarketingBlog from "./pages/blogs/AnimationMarketingBlog";
 import DigitalMarketingResultsBlog from "./pages/blogs/DigitalMarketingResultsBlog";
 import CorporatePresentationBlog from "./pages/blogs/CorporatePresentationBlog";
+import SEMMarketingBlog from "./pages/blogs/SEMMarketingBlog";
 
 
 import AnalyticsTracker from "./components/AnalyticsTracker";
@@ -233,6 +234,11 @@ function App() {
   path="/impact-of-corporate-design"
   element={<CorporatePresentationBlog />}
 />
+<Route
+  path="/sem-turns-searches-into-sales"
+  element={<SEMMarketingBlog />}
+/>
+
 
 
 

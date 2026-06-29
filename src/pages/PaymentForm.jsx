@@ -376,7 +376,7 @@ const PaymentForm = () => {
 
                 <div>
                   <label className="block mb-2 text-sm font-medium text-[#1BBCEF]">
-                    Advance Percentage
+                    Advance Percentage %
                   </label>
 
                   <div className="relative">
