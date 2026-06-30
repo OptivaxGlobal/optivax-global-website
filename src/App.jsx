@@ -61,6 +61,7 @@ import AnimationMarketingBlog from "./pages/blogs/AnimationMarketingBlog";
 import DigitalMarketingResultsBlog from "./pages/blogs/DigitalMarketingResultsBlog";
 import CorporatePresentationBlog from "./pages/blogs/CorporatePresentationBlog";
 import SEMMarketingBlog from "./pages/blogs/SEMMarketingBlog";
+import America250Blog from "./pages/blogs/America250Blog";
 
 
 import AnalyticsTracker from "./components/AnalyticsTracker";
@@ -237,6 +238,10 @@ function App() {
 <Route
   path="/sem-turns-searches-into-sales"
   element={<SEMMarketingBlog />}
+/>
+<Route
+  path="/celebrating-americas-250th-anniversary"
+  element={<America250Blog />}
 />
 
 

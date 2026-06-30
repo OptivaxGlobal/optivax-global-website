@@ -26,8 +26,10 @@ import animationBlogImg from "@/assets/blog-images/animation-blog.webp";
 import digitalMarketingBlogImg from "@/assets/blog-images/digital-marketing-blog.webp";
 import corporatePresentationBlogImg from "@/assets/blog-images/corporate-presentation-blog.webp";
 import semBlogImg from "@/assets/blog-images/sem-blog.webp";
+import america250BlogImg from "@/assets/blog-images/america-250-blog.webp";
 
 const blogPosts = [
+  
   {
   title: "How Search Engine Marketing Turns Searches Into Sales",
   excerpt:
@@ -56,6 +58,7 @@ const blogPosts = [
   image: digitalMarketingBlogImg,
   url: "/digital-marketing-produce-long-term-result",
 },
+
   {
   title: "The Growing Importance of Animation in Digital Marketing",
   excerpt:
@@ -65,6 +68,7 @@ const blogPosts = [
   image: animationBlogImg,
   url: "/important-of-animation-in-digital-marketing",
 },
+
   {
   title: "Why Mobile Apps Development Have Become a Business Growth Necessity",
   excerpt:
@@ -214,6 +218,15 @@ const blogPosts = [
   url: "/important-of-graphic-design-bussiness",
 },
 {
+  title: "Creative Flyer Design Services That Get Your Business Noticed",
+  excerpt:
+    "Professional flyer design helps businesses attract attention, communicate their message clearly, strengthen brand awareness, and achieve better marketing results.",
+  category: "Flyer Design",
+  date: "June 2026",
+  image: flyerDesignBlogImg,
+  url: "/Creative-flyer-design-get-your-business-noticed",
+},
+{
   title: "Why Professional Logo Design Matters for Modern Businesses",
   excerpt:
     "A professional logo is more than a graphic. It builds trust, improves recognition, and creates a powerful first impression across every platform.",
@@ -222,7 +235,17 @@ const blogPosts = [
   image: logoBlogImg,
   url: "/importance-of-professional-logo-design-businesses",
 },
+
+
 ];
+const specialBlogPost = {
+  title: "250th Anniversary Celebrate America",
+  excerpt:
+    "The year 2026 marks a historic moment for the United States: the 250th anniversary of American independence, honoring freedom, unity, progress, and America’s historic journey.",
+  category: "USA 250th Anniversary",
+  image: america250BlogImg,
+  url: "/celebrating-americas-250th-anniversary",
+};
 
 const categories = [
   { label: "Web Design", href: "/web-design" },
@@ -283,6 +306,139 @@ const Blog = () => {
             </a>
           </div>
         </section>
+
+
+        <section className="relative py-24 border-t border-white/10 bg-[#06111F] overflow-hidden">
+  {/* Background Effects */}
+  <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(27,188,239,0.16),transparent_34%),radial-gradient(circle_at_bottom_right,rgba(0,68,149,0.20),transparent_38%),linear-gradient(180deg,#06111F_0%,#04101D_100%)]"></div>
+
+  <div className="absolute inset-0 opacity-[0.05] bg-[linear-gradient(rgba(255,255,255,0.08)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.08)_1px,transparent_1px)] bg-[size:42px_42px]"></div>
+
+  <div className="relative z-10 max-w-7xl mx-auto px-6">
+    {/* Section Heading */}
+    <div className="mb-12 text-center">
+      <p className="text-[#7DD3FC] uppercase tracking-[0.35em] text-xs md:text-sm font-semibold mb-4">
+        Special Featured Blog
+      </p>
+
+      <h2 className="text-3xl md:text-5xl font-extrabold leading-tight text-white">
+        Celebrating America’s{" "}
+        <span className="bg-gradient-to-r from-[#38BDF8] via-white to-[#60A5FA] bg-clip-text text-transparent">
+          250th Anniversary
+        </span>
+      </h2>
+
+      <p className="max-w-3xl mx-auto mt-5 text-gray-400 text-sm md:text-base leading-7">
+        A premium featured story highlighting America’s historic 250th Anniversary
+        with powerful insights into patriotic branding, digital storytelling,
+        and campaign inspiration.
+      </p>
+    </div>
+
+    {/* Featured Blog Card */}
+    <a
+      href={specialBlogPost.url}
+      className="group relative block"
+      aria-label={`Read featured blog: ${specialBlogPost.title}`}
+    >
+      {/* Premium Outer Glow */}
+      <div className="absolute -inset-[1px] rounded-[34px] bg-gradient-to-r from-[#1BBCEF]/45 via-white/10 to-[#1BBCEF]/35 blur-sm opacity-80 group-hover:opacity-100 transition duration-500"></div>
+
+      <div className="relative overflow-hidden rounded-[34px] border border-white/10 bg-[#0B1625]/95 shadow-[0_20px_80px_rgba(0,0,0,0.45)] backdrop-blur-xl transition-all duration-500 group-hover:-translate-y-1 group-hover:shadow-[0_28px_100px_rgba(27,188,239,0.12)]">
+        
+        {/* CLEAN IMAGE AREA - NO TEXT OVERLAY */}
+        <div className="relative overflow-hidden h-[280px] sm:h-[340px] md:h-[430px] lg:h-[520px] bg-[#08111E]">
+          <img
+            src={specialBlogPost.image}
+            alt={specialBlogPost.title}
+            className="w-full h-full object-cover object-center transition duration-700 ease-out group-hover:scale-[1.04]"
+          />
+
+          {/* Only visual overlay, no text */}
+          <div className="absolute inset-0 bg-gradient-to-t from-[#08111E]/45 via-transparent to-transparent"></div>
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(255,255,255,0.08),transparent_28%),radial-gradient(circle_at_bottom_right,rgba(27,188,239,0.10),transparent_30%)]"></div>
+        </div>
+
+        {/* CONTENT BELOW IMAGE */}
+        <div className="relative p-6 md:p-8 lg:p-10 xl:p-12">
+          {/* Top Meta Row */}
+          <div className="flex flex-wrap items-center justify-between gap-4 mb-6">
+            <div className="flex flex-wrap items-center gap-3">
+              <span className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-[#A5F3FC]/10 px-4 py-2 text-[11px] md:text-xs font-semibold uppercase tracking-[0.22em] text-[#A5F3FC]">
+                <span className="inline-flex h-8 w-8 items-center justify-center rounded-full bg-[#A5F3FC]/10 text-[#A5F3FC] border border-[#A5F3FC]/10">
+                  <BookOpen className="w-4 h-4" />
+                </span>
+                {specialBlogPost.category}
+              </span>
+
+              <span className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/[0.04] px-4 py-2 text-[11px] md:text-xs font-medium text-white/80">
+                <span className="h-2 w-2 rounded-full bg-[#1BBCEF] shadow-[0_0_10px_#1BBCEF]"></span>
+                Featured Article
+              </span>
+            </div>
+
+            <span className="text-gray-400 text-sm">
+              {specialBlogPost.date}
+            </span>
+          </div>
+
+          {/* Title */}
+          <h3 className="text-2xl sm:text-3xl md:text-5xl lg:text-6xl font-extrabold leading-[1.06] text-white mb-6 group-hover:text-[#BFEFFF] transition duration-300">
+            {specialBlogPost.title}
+          </h3>
+
+          {/* Decorative Line */}
+          <div className="mb-6 flex items-center gap-3">
+            <span className="h-[2px] w-14 rounded-full bg-gradient-to-r from-[#1BBCEF] to-[#004495]"></span>
+            <span className="text-xs uppercase tracking-[0.25em] text-[#8EDFF8]">
+              Premium Insight
+            </span>
+          </div>
+
+          {/* Excerpt */}
+          <p className="text-gray-300 text-base md:text-lg leading-8 max-w-5xl mb-8">
+            {specialBlogPost.excerpt}
+          </p>
+
+          {/* Tags */}
+          <div className="flex flex-wrap items-center gap-3 mb-8">
+            <span className="rounded-full border border-white/10 bg-white/[0.04] px-4 py-2 text-xs text-gray-300">
+              USA Campaigns
+            </span>
+            <span className="rounded-full border border-white/10 bg-white/[0.04] px-4 py-2 text-xs text-gray-300">
+              Branding
+            </span>
+            <span className="rounded-full border border-white/10 bg-white/[0.04] px-4 py-2 text-xs text-gray-300">
+              Digital Growth
+            </span>
+            <span className="rounded-full border border-white/10 bg-white/[0.04] px-4 py-2 text-xs text-gray-300">
+              Patriotic Storytelling
+            </span>
+          </div>
+
+          {/* Bottom CTA Row */}
+          <div className="pt-6 border-t border-white/10 flex flex-col md:flex-row md:items-center md:justify-between gap-5">
+            <div>
+              <p className="text-white text-sm md:text-base font-semibold">
+                Explore the full story behind America’s milestone celebration
+              </p>
+              <p className="text-gray-400 text-sm mt-1">
+                Read insights, ideas, and premium digital inspiration for modern campaigns.
+              </p>
+            </div>
+
+            <span className="inline-flex items-center justify-center gap-2 rounded-full bg-gradient-to-r from-[#1BBCEF] via-[#1489C9] to-[#004495] px-7 py-3.5 text-sm font-bold text-white shadow-lg shadow-[#1BBCEF]/20 group-hover:shadow-[#1BBCEF]/40 group-hover:translate-x-1 transition duration-300 whitespace-nowrap">
+              Read Full Blog
+              <ArrowRight className="w-4 h-4" />
+            </span>
+          </div>
+        </div>
+      </div>
+    </a>
+  </div>
+</section>
+
+
 
         <section id="featured" className="py-20 border-t border-white/10">
           <div className="max-w-7xl mx-auto px-6">
