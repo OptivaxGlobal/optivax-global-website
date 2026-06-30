@@ -440,63 +440,112 @@ const Blog = () => {
 
 
 
-        <section id="featured" className="py-20 border-t border-white/10">
-          <div className="max-w-7xl mx-auto px-6">
-            <div className="mb-12">
-              <p className="text-accent-purple uppercase tracking-[0.35em] text-sm mb-3">
-                Featured Articles
+        <section
+  id="featured"
+  className="relative py-24 border-t border-white/10 bg-[#050B14] overflow-hidden"
+>
+  {/* Dark Premium Background */}
+  <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(27,188,239,0.12),transparent_34%),radial-gradient(circle_at_bottom_right,rgba(0,68,149,0.16),transparent_40%),linear-gradient(180deg,#050B14_0%,#07121F_50%,#050B14_100%)]"></div>
+
+  {/* Subtle Grid Texture */}
+  <div className="absolute inset-0 opacity-[0.04] bg-[linear-gradient(rgba(255,255,255,0.08)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.08)_1px,transparent_1px)] bg-[size:44px_44px]"></div>
+
+  {/* Soft Glow Effects */}
+  <div className="absolute top-20 left-8 h-56 w-56 rounded-full bg-[#1BBCEF]/10 blur-[100px]"></div>
+  <div className="absolute bottom-20 right-8 h-72 w-72 rounded-full bg-[#004495]/18 blur-[120px]"></div>
+
+  <div className="relative z-10 max-w-7xl mx-auto px-6">
+    {/* Section Heading */}
+    <div className="mb-14">
+      <div className="mb-4 inline-flex items-center gap-3">
+        <span className="h-[2px] w-12 rounded-full bg-gradient-to-r from-[#1BBCEF] to-[#004495]"></span>
+
+        <p className="text-[#7DD3FC] uppercase tracking-[0.35em] text-xs md:text-sm font-semibold">
+          Featured Articles
+        </p>
+      </div>
+
+      <h2 className="text-3xl md:text-5xl font-extrabold leading-tight text-white">
+        Practical Insights For{" "}
+        <span className="bg-gradient-to-r from-[#38BDF8] via-white to-[#60A5FA] bg-clip-text text-transparent">
+          Custom Service Brands.
+        </span>
+      </h2>
+    </div>
+
+    {/* Blog Cards */}
+    <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-stretch">
+      {blogPosts.map((post, index) => (
+        <a
+          key={`${post.title}-${index}`}
+          href={post.url}
+          className="group relative h-full block"
+        >
+          {/* Hover Glow Border */}
+          <div className="absolute -inset-[1px] rounded-[32px] bg-gradient-to-r from-[#1BBCEF]/35 via-white/5 to-[#004495]/35 opacity-0 blur-sm transition duration-500 group-hover:opacity-100"></div>
+
+          <article className="relative h-full rounded-[32px] bg-[#0B1625]/92 border border-white/10 p-5 md:p-6 shadow-[0_18px_60px_rgba(0,0,0,0.35)] backdrop-blur-xl hover:border-[#1BBCEF]/45 hover:-translate-y-2 hover:shadow-[0_26px_90px_rgba(27,188,239,0.13)] transition-all duration-500 flex flex-col overflow-hidden">
+            
+            {/* Image Area - Same Border Radius */}
+            <div className="relative overflow-hidden rounded-3xl border border-white/10 bg-[#07121F] h-[230px]">
+              <img
+                src={post.image}
+                alt={post.title}
+                className="w-full h-full object-contain mx-auto transition duration-700 ease-out group-hover:scale-[1.04]"
+              />
+
+              {/* Image Premium Hover Effects */}
+              <div className="absolute inset-0 bg-gradient-to-t from-[#07121F]/45 via-transparent to-transparent opacity-70"></div>
+
+              <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(255,255,255,0.08),transparent_28%),radial-gradient(circle_at_bottom_right,rgba(27,188,239,0.10),transparent_32%)] opacity-0 group-hover:opacity-100 transition duration-500"></div>
+
+              <div className="absolute inset-0 translate-x-[-120%] bg-gradient-to-r from-transparent via-white/[0.07] to-transparent transition duration-700 group-hover:translate-x-[120%]"></div>
+            </div>
+
+            {/* Content Area */}
+            <div className="pt-6 flex flex-col flex-1">
+              {/* Category */}
+              <div className="mb-4 inline-flex w-fit items-center gap-2 rounded-full border border-[#A5F3FC]/15 bg-[#A5F3FC]/10 px-4 py-2 text-[11px] md:text-xs uppercase tracking-[0.22em] text-[#A5F3FC]">
+                <span className="inline-flex h-9 w-9 items-center justify-center rounded-full bg-[#A5F3FC]/10 text-[#A5F3FC] border border-[#A5F3FC]/10">
+                  <BookOpen className="w-4 h-4" />
+                </span>
+                {post.category}
+              </div>
+
+              {/* Title */}
+              <h3 className="text-2xl md:text-3xl font-extrabold leading-tight mb-5 min-h-[86px] text-white transition duration-300 group-hover:text-[#BFEFFF]">
+                {post.title}
+              </h3>
+
+              {/* Small Premium Divider */}
+              <div className="mb-5 flex items-center gap-3">
+                <span className="h-[2px] w-12 rounded-full bg-gradient-to-r from-[#1BBCEF] to-[#004495]"></span>
+                <span className="h-[2px] w-2 rounded-full bg-[#1BBCEF]/60"></span>
+              </div>
+
+              {/* Excerpt */}
+              <p className="text-gray-300 leading-7 mb-8 text-base min-h-[92px]">
+                {post.excerpt}
               </p>
 
-              <h2 className="text-3xl md:text-5xl font-extrabold">
-                Practical Insights For{" "}
-                <span className="text-accent-purple">Custom Service Brands.</span>
-              </h2>
+              {/* Bottom Row */}
+              <div className="mt-auto pt-5 border-t border-white/10 flex items-center justify-between gap-4">
+                <span className="inline-flex rounded-full border border-white/10 bg-white/[0.04] px-4 py-2 text-xs text-gray-400">
+                  {post.date}
+                </span>
+
+                <span className="inline-flex items-center gap-2 rounded-full px-4 py-2 text-sm font-semibold text-[#A5F3FC] transition duration-300 group-hover:bg-[#1BBCEF]/10 group-hover:text-white group-hover:translate-x-1">
+                  Read Full Blog
+                  <ArrowRight className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" />
+                </span>
+              </div>
             </div>
-
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-stretch">
-              {blogPosts.map((post, index) => (
-                <a
-                  key={`${post.title}-${index}`}
-                  href={post.url}
-                  className="group h-full rounded-[32px] bg-[#141828]/90 border border-[#1BBCEF]/20 p-5 md:p-6 hover:border-accent-purple/50 hover:-translate-y-1 transition-all duration-300 flex flex-col"
-                >
-                  <div className="relative overflow-hidden rounded-3xl border border-white/10 bg-[#0B1120] h-[230px]">
-                    <img
-                      src={post.image}
-                      alt={post.title}
-                      className="w-full h-full object-contain mx-auto group-hover:scale-[1.02] transition duration-500"
-                    />
-                  </div>
-
-                  <div className="pt-6 flex flex-col flex-1">
-                    <div className="mb-4 inline-flex items-center gap-2 text-xs uppercase tracking-[0.25em] text-[#A5F3FC]">
-                      <span className="inline-flex h-9 w-9 items-center justify-center rounded-full bg-[#A5F3FC]/10 text-[#A5F3FC]">
-                        <BookOpen className="w-4 h-4" />
-                      </span>
-                      {post.category}
-                    </div>
-
-                    <h3 className="text-2xl md:text-3xl font-extrabold leading-tight mb-5 min-h-[86px] group-hover:text-accent-purple transition">
-                      {post.title}
-                    </h3>
-
-                    <p className="text-gray-300 leading-7 mb-8 text-base min-h-[92px]">
-                      {post.excerpt}
-                    </p>
-
-                    <div className="mt-auto pt-5 border-t border-white/10 flex items-center justify-between text-sm text-gray-400">
-                      <span>{post.date}</span>
-                      <span className="inline-flex items-center gap-2 text-[#A5F3FC] group-hover:text-white transition font-semibold">
-                        Read Full Blog
-                        <ArrowRight className="w-4 h-4" />
-                      </span>
-                    </div>
-                  </div>
-                </a>
-              ))}
-            </div>
-          </div>
-        </section>
+          </article>
+        </a>
+      ))}
+    </div>
+  </div>
+</section>
 
         <section className="py-20 border-t border-white/10 bg-[#07121F]">
           <div className="max-w-7xl mx-auto px-6">
