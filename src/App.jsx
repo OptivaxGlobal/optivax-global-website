@@ -85,8 +85,13 @@ function MetaPixelPageView() {
 function App() {
   const location = useLocation();
   const [isLeadPopupOpen, setIsLeadPopupOpen] = useState(false);
+  const shouldShowLeadPopup = location.pathname !== "/payment-form";
 
   useEffect(() => {
+    if (location.pathname === "/payment-form") {
+      return;
+    }
+
     const leadPopupShown =
       sessionStorage.getItem("leadPopupShown") ||
       sessionStorage.getItem("homePopupShown");
@@ -367,8 +372,9 @@ function App() {
           </Route>
         </Routes>
       </AnimatePresence>
-      <HomeLeadPopup isOpen={isLeadPopupOpen} onClose={handleCloseLeadPopup} />
-      
+      {shouldShowLeadPopup && (
+        <HomeLeadPopup isOpen={isLeadPopupOpen} onClose={handleCloseLeadPopup} />
+      )}
     </>
   );
 }
