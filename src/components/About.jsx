@@ -1,7 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { CheckCircle2, Target, Lightbulb, TrendingUp } from "lucide-react";
-import AnimatedAboutBackground from "@/components/AnimatedAboutBackground";
+import AnimatedBackground from "@/components/AnimatedBackground";
 import ResponsiveImage from "@/components/ResponsiveImage";
 import AboutImage from "@/assets/about-images/001.webp";
 
@@ -39,9 +39,9 @@ const About = () => {
   return (
     <section
       id="about"
-      className="relative py-24 bg-[#0C0D0D] overflow-hidden"
+      className="relative py-24 overflow-hidden"
     >
-      <AnimatedAboutBackground />
+      <AnimatedBackground variant="about" overlay />
 
       <div className="container mx-auto px-6 relative z-10">
         <div className="grid lg:grid-cols-2 gap-16 items-center">

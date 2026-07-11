@@ -14,7 +14,7 @@ import {
 } from "react-icons/fa";
 import { RiThreadsFill } from "react-icons/ri";
 
-import AnimatedContactBackground from "@/components/AnimatedContactBackground";
+import AnimatedBackground from "@/components/AnimatedBackground";
 import ContactForm from "@/components/ContactForm";
 
 const Contact = () => {
@@ -130,8 +130,8 @@ const Contact = () => {
         />
       </Helmet>
 
-      <section className="relative bg-[#0C0D0D] text-white py-28 overflow-hidden">
-        <AnimatedContactBackground />
+      <section className="relative text-white py-28 overflow-hidden">
+        <AnimatedBackground variant="contact" overlay />
 
         <div className="max-w-7xl mx-auto px-6 relative z-10">
           <div className="grid lg:grid-cols-2 gap-16">

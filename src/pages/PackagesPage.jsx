@@ -15,6 +15,7 @@ import {
   ChevronDown,
   ChevronUp,
   Layers,
+  CreditCard,
 } from "lucide-react";
 import AnimatedHeroBackground from "@/components/AnimatedHeroBackground";
 import AnimatedCtaBackground from "@/components/AnimatedCtaBackground";
@@ -971,6 +972,17 @@ const PackagesPage = () => {
                   Get Custom Package
                   <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
                 </Link>
+
+                <div className="mt-4">
+                  <Link
+                    to="/payment-form"
+                    className="inline-flex items-center justify-center gap-2 rounded-full bg-white/[0.03] px-4 py-2 text-sm font-semibold text-white transition hover:bg-white/[0.08]"
+                    aria-label="Open payment form"
+                  >
+                    <CreditCard className="h-4 w-4 text-accent-purple" />
+                    Payment Form
+                  </Link>
+                </div>
               </div>
 
               <div className="grid gap-4 sm:grid-cols-2">

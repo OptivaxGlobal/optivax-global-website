@@ -382,8 +382,6 @@ const Header = () => {
 
   const navigate = useNavigate();
 
-  const anniversaryUrl = "/250-anniversary-usa";
-
   const servicesLinks = [
     { name: "Web Design", href: "/web-design" },
     { name: "Web Development", href: "/web-development" },
@@ -507,108 +505,6 @@ const Header = () => {
     </button>
   );
 
-  const USFlagIcon = () => (
-    <span className="relative block h-[18px] w-[30px] overflow-hidden rounded-[4px] ring-1 ring-white/45 shadow-[0_0_12px_rgba(255,255,255,0.28)]">
-      <span
-        className="absolute inset-0"
-        style={{
-          background:
-            "repeating-linear-gradient(to bottom, #B22234 0 2px, #FFFFFF 2px 4px)",
-        }}
-      />
-      <span className="absolute left-0 top-0 h-[10px] w-[13px] bg-[#3C3B6E]">
-        <span className="absolute left-[2px] top-[2px] h-[2px] w-[2px] rounded-full bg-white shadow-[4px_0_0_white,8px_0_0_white,2px_3px_0_white,6px_3px_0_white,10px_3px_0_white,4px_6px_0_white,8px_6px_0_white]" />
-      </span>
-    </span>
-  );
-
-  const AnniversaryButton = ({ mobile = false }) => (
-    <motion.a
-  href={anniversaryUrl}
-  onClick={closeMenus}
-  whileHover={{ y: -2, scale: 1.03 }}
-  whileTap={{ scale: 0.97 }}
-  className={`relative isolate overflow-hidden rounded-full flex items-center gap-2 font-bold text-white border border-[#E9FBFF]/18 bg-[#031C33] transition-all duration-300 group/usa ${
-    mobile
-      ? "w-full justify-center py-4 text-base shadow-[0_0_35px_rgba(27,188,239,0.38)]"
-      : "px-4 py-2.5 text-sm shadow-[0_0_26px_rgba(27,188,239,0.36)] hover:shadow-[0_0_38px_rgba(27,188,239,0.62)]"
-  }`}
-  aria-label="Visit 250th Anniversary USA page"
->
-      <motion.span
-        className="absolute inset-0 -z-30"
-        style={{
-          background:
-            "linear-gradient(120deg, #031C33 0%, #004495 34%, #1BBCEF 50%, #B22234 72%, #031C33 100%)",
-          backgroundSize: "240% 240%",
-        }}
-        animate={{
-          backgroundPosition: ["0% 50%", "100% 50%", "0% 50%"],
-        }}
-        transition={{
-          duration: 5,
-          repeat: Infinity,
-          ease: "easeInOut",
-        }}
-      />
-
-      <motion.span
-        className="absolute -inset-2 -z-20 rounded-full blur-xl"
-        style={{
-          background:
-            "radial-gradient(circle at 25% 50%, rgba(56,217,255,0.52), transparent 35%), radial-gradient(circle at 78% 50%, rgba(178,34,52,0.42), transparent 38%)",
-        }}
-        animate={{
-          opacity: [0.45, 0.95, 0.45],
-          scale: [1, 1.08, 1],
-        }}
-        transition={{
-          duration: 2.4,
-          repeat: Infinity,
-          ease: "easeInOut",
-        }}
-      />
-
-      <motion.span
-        className="absolute top-0 left-[-45%] h-full w-[45%] -z-10 skew-x-[-20deg] bg-gradient-to-r from-transparent via-white/45 to-transparent"
-        animate={{
-          x: ["0%", "330%"],
-        }}
-        transition={{
-          duration: 2.8,
-          repeat: Infinity,
-          ease: "easeInOut",
-          repeatDelay: 0.35,
-        }}
-      />
-
-      <motion.span
-        animate={{
-          rotate: [-3, 3, -3],
-          scale: [1, 1.08, 1],
-        }}
-        transition={{
-          duration: 1.8,
-          repeat: Infinity,
-          ease: "easeInOut",
-        }}
-        className="shrink-0"
-      >
-        <USFlagIcon />
-      </motion.span>
-
-      <span className="relative tracking-[0.08em] drop-shadow-[0_0_10px_rgba(255,255,255,0.45)]">
-        250th
-      </span>
-
-      <span className="hidden lg:inline text-xs font-semibold text-white/82 tracking-wide">
-        Anniversary
-      </span>
-
-      <ArrowRight className="w-4 h-4 text-white group-hover/usa:translate-x-1 transition-transform duration-300" />
-    </motion.a>
-  );
-
   const navItemClass =
     "relative px-3 py-2 rounded-full text-sm font-medium text-[#E9FBFF]/85 hover:text-white hover:bg-[#E9FBFF]/10 transition-all duration-300 group";
 
@@ -696,7 +592,7 @@ const Header = () => {
           </nav>
 
           <div className="hidden md:flex items-center gap-3">
-            <AnniversaryButton />
+            
             <button
               type="button"
               onClick={handleCTA}
@@ -823,7 +719,6 @@ const Header = () => {
                   Contact Us
                 </button>
 
-                <AnniversaryButton mobile />
               </div>
             </div>
           </motion.div>
