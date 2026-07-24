@@ -15,6 +15,8 @@ import DigitalMarketing from "./pages/DigitalMarketing";
 import MobileAppDesign from "./pages/MobileAppDesign";
 import MobileAppDevelopment from "./pages/MobileAppDevelopment";
 import WebDevelopment from "./pages/WebDevelopment";
+import GameDevelopment from "./pages/GameDevelopment";
+import SoftwareDevelopment from "./pages/SoftwareDevelopment";
 import UIUXDesign from "./pages/UIUXDesign";
 import BrandDesign from "./pages/BrandDesign";
 import BrochureDesign from "./pages/BrochureDesign";
@@ -139,6 +141,14 @@ function App() {
             <Route
               path="web-development"
               element={<WebDevelopment />}
+            />
+            <Route
+              path="game-development"
+              element={<GameDevelopment />}
+            />
+            <Route
+              path="software-development"
+              element={<SoftwareDevelopment />}
             />
 
             <Route

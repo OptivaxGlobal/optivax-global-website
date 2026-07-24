@@ -66,6 +66,32 @@ const services = [
     ],
   },
   {
+    title: "Game Development",
+    slug: "/game-development",
+    icon: Globe,
+    description:
+      "We create custom games for mobile, PC, console, and emerging platforms with clear gameplay, immersive visuals, and a dependable build process.",
+    points: [
+      { title: "Unity & Unreal", link: "/game-development", highlight: true },
+      { title: "Multiplayer Games" },
+      { title: "AR & VR" },
+      { title: "Game UI/UX" },
+    ],
+  },
+  {
+    title: "Software Development",
+    slug: "/software-development",
+    icon: Globe,
+    description:
+      "We build custom software for web platforms, internal operations, SaaS products, and business systems that need to be reliable from day one.",
+    points: [
+      { title: "Custom Software", link: "/software-development", highlight: true },
+      { title: "API Integration" },
+      { title: "CRM & ERP" },
+      { title: "Software Maintenance" },
+    ],
+  },
+  {
     title: "eBook Cover Design",
     slug: "/ebook-cover-design",
     icon: BookOpen,
