@@ -64,7 +64,11 @@ import DigitalMarketingResultsBlog from "./pages/blogs/DigitalMarketingResultsBl
 import CorporatePresentationBlog from "./pages/blogs/CorporatePresentationBlog";
 import SEMMarketingBlog from "./pages/blogs/SEMMarketingBlog";
 import America250Blog from "./pages/blogs/America250Blog";
-
+import SmallBusinessWebsiteResultsBlog from "./pages/blogs/SmallBusinessWebsiteResultsBlog";
+import LogoDesignSoftwareBlog from "./pages/blogs/LogoDesignSoftwareBlog";
+import UIUXDesignExplainedBlog from "./pages/blogs/UIUXDesignExplainedBlog";
+import EbookCoverDesignTipsBlog from "./pages/blogs/EbookCoverDesignTipsBlog";
+import WebDesignAgencyVsDIYBlog from "./pages/blogs/WebDesignAgencyVsDIYBlog";
 
 import AnalyticsTracker from "./components/AnalyticsTracker";
 import PaymentForm from "@/pages/PaymentForm";
@@ -257,6 +261,26 @@ function App() {
 <Route
   path="/celebrating-americas-250th-anniversary"
   element={<America250Blog />}
+/>
+<Route
+  path="/compare-logo-design-for-popular-business-software"
+  element={<LogoDesignSoftwareBlog />}
+/>
+<Route
+  path="/small-business-websites-that-get-results"
+  element={<SmallBusinessWebsiteResultsBlog />}
+/>
+<Route
+  path="/explain-business-for-ui-ux-design"
+  element={<UIUXDesignExplainedBlog />}
+/>
+<Route
+  path="/ebook-cover-design-tip-for-author"
+  element={<EbookCoverDesignTipsBlog />}
+/>
+<Route
+  path="/diy-builder-vs-web-design-agency"
+  element={<WebDesignAgencyVsDIYBlog />}
 />
 
 

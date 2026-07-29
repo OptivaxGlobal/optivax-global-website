@@ -28,9 +28,51 @@ import digitalMarketingBlogImg from "@/assets/blog-images/digital-marketing-blog
 import corporatePresentationBlogImg from "@/assets/blog-images/corporate-presentation-blog.webp";
 import semBlogImg from "@/assets/blog-images/sem-blog.webp";
 import america250BlogImg from "@/assets/blog-images/america-250-blog.webp";
+import logoSoftwareBlogImg from "@/assets/blog-images/logo-software-blog.webp";
+import smallBusinessWebsiteBlogImg from "@/assets/blog-images/small-business-website-results-blog.webp";
+import uiuxDesignBlogImg from "@/assets/blog-images/uiux-design-blog.webp";
+import ebookCoverTipsBlogImg from "@/assets/blog-images/ebook-cover-tips-blog.webp";
+import webDesignAgencyVsDiyBlogImg from "@/assets/blog-images/web-design-agency-vs-diy-blog.webp";
 
 const blogPosts = [
+  {
+  title: "Web Design Agency vs DIY Website Builder: Which Is Better?",
+  excerpt:
+    "Compare DIY website builders and professional web design agencies based on cost, customization, branding, SEO, performance, conversions, and long-term growth.",
+  category: "Web Design",
+  date: "July 2026",
+  image: webDesignAgencyVsDiyBlogImg,
+  url: "/diy-builder-vs-web-design-agency",
+},
+  {
+  title: "Ebook Cover Design Tips to Make Your Book Stand Out",
+  excerpt:
+    "Learn how genre, typography, colors, imagery, visual hierarchy, thumbnail testing, and series branding help authors create professional ebook covers.",
+  category: "Ebook Cover Design",
+  date: "July 2026",
+  image: ebookCoverTipsBlogImg,
+  url: "/ebook-cover-design-tip-for-author",
+},
+  {
+  title: "UI UX Design Explained for Better Digital Experiences",
+  excerpt:
+    "Learn how UI and UX design improve usability, user experience, mobile responsiveness, accessibility, trust, and business growth through better digital experiences.",
+  category: "UI/UX Design",
+  date: "July 2026",
+  image: uiuxDesignBlogImg,
+  url: "/explain-business-for-ui-ux-design",
+},
 
+  {
+  title: "How Small Business Websites Help Brands Look Professional",
+  excerpt:
+    "Learn how professional design, mobile responsiveness, fast speed, strong service pages, trust signals, clear calls to action, and SEO help small business websites generate better results.",
+  category: "Web Design",
+  date: "July 2026",
+  image: smallBusinessWebsiteBlogImg,
+  url: "/small-business-websites-that-get-results",
+},
+  
   {
   title: "250th Anniversary Celebrate America",
   excerpt:
@@ -40,6 +82,16 @@ const blogPosts = [
   image: america250BlogImg,
   url: "/celebrating-americas-250th-anniversary",
 },
+{
+  title: "Compare Popular Logo Design Software Features",
+  excerpt:
+    "Compare popular logo design tools based on ease of use, templates, customization, brand kit features, AI options, and export quality.",
+  category: "Logo Design",
+  date: "July 2026",
+  image: logoSoftwareBlogImg,
+  url: "/compare-logo-design-for-popular-business-software",
+},
+
   {
   title: "How Search Engine Marketing Turns Searches Into Sales",
   excerpt:

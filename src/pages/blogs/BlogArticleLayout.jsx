@@ -5,7 +5,6 @@ import {
   ArrowRight,
   CalendarDays,
   Clock,
-  Sparkles,
 } from "lucide-react";
 import AnimatedHeroBackground from "@/components/AnimatedHeroBackground";
 
@@ -70,22 +69,6 @@ const BlogArticleLayout = ({
 
                   <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/45 via-transparent to-white/5" />
                   <div className="pointer-events-none absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-[#040B12]/70 to-transparent" />
-                </div>
-
-                {/* Image Floating Badge */}
-                <div className="absolute left-5 top-5 hidden rounded-2xl border border-white/12 bg-[#06111F]/75 px-5 py-4 shadow-[0_18px_55px_rgba(0,0,0,0.45)] backdrop-blur-xl md:flex md:items-center md:gap-3">
-                  <span className="flex h-11 w-11 items-center justify-center rounded-full bg-[#1BBCEF]/15 text-[#A5F3FC]">
-                    <Sparkles className="h-5 w-5" />
-                  </span>
-
-                  <div>
-                    <p className="text-sm font-black text-white">
-                      Featured Article
-                    </p>
-                    <p className="text-xs font-medium text-gray-400">
-                      Optivax Global Insights
-                    </p>
-                  </div>
                 </div>
               </div>
             </div>
