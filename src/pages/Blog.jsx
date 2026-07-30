@@ -33,17 +33,39 @@ import smallBusinessWebsiteBlogImg from "@/assets/blog-images/small-business-web
 import uiuxDesignBlogImg from "@/assets/blog-images/uiux-design-blog.webp";
 import ebookCoverTipsBlogImg from "@/assets/blog-images/ebook-cover-tips-blog.webp";
 import webDesignAgencyVsDiyBlogImg from "@/assets/blog-images/web-design-agency-vs-diy-blog.webp";
+import graphicDesignBusinessBlogImg from "@/assets/blog-images/graphic-design-business-blog.webp";
+import creativePackagingBlogImg from "@/assets/blog-images/creative-packaging-design-blog.webp";
 
-const blogPosts = [
+
+export const blogPosts = [
   {
-  title: "Web Design Agency vs DIY Website Builder: Which Is Better?",
+  title: "Creative Packaging Design Services for Better Product Appeal",
   excerpt:
-    "Compare DIY website builders and professional web design agencies based on cost, customization, branding, SEO, performance, conversions, and long-term growth.",
+    "Learn how professional packaging design improves product appeal, strengthens branding, builds trust, supports online sales, and creates a better unboxing experience.",
+  category: "Packaging Design",
+  date: "July 2026",
+  image: creativePackagingBlogImg,
+  url: "/creative-packaging-design-better-product-appeal",
+},
+  {
+  title: "Why Graphic Design Matters for Business Success",
+  excerpt:
+    "Discover how professional graphic design improves branding, builds trust, strengthens marketing, enhances customer experience, and helps businesses grow.",
+  category: "Graphic Design",
+  date: "July 2026",
+  image: graphicDesignBusinessBlogImg,
+  url: "/graphic-design-matters-for-business-success",
+},
+{
+  title: "How Small Business Websites Help Brands Look Professional",
+  excerpt:
+    "Learn how professional design, mobile responsiveness, fast speed, strong service pages, trust signals, clear calls to action, and SEO help small business websites generate better results.",
   category: "Web Design",
   date: "July 2026",
-  image: webDesignAgencyVsDiyBlogImg,
-  url: "/diy-builder-vs-web-design-agency",
+  image: smallBusinessWebsiteBlogImg,
+  url: "/small-business-websites-that-get-results",
 },
+  
   {
   title: "Ebook Cover Design Tips to Make Your Book Stand Out",
   excerpt:
@@ -62,15 +84,14 @@ const blogPosts = [
   image: uiuxDesignBlogImg,
   url: "/explain-business-for-ui-ux-design",
 },
-
-  {
-  title: "How Small Business Websites Help Brands Look Professional",
+{
+  title: "Web Design Agency vs DIY Website Builder: Which Is Better?",
   excerpt:
-    "Learn how professional design, mobile responsiveness, fast speed, strong service pages, trust signals, clear calls to action, and SEO help small business websites generate better results.",
+    "Compare DIY website builders and professional web design agencies based on cost, customization, branding, SEO, performance, conversions, and long-term growth.",
   category: "Web Design",
   date: "July 2026",
-  image: smallBusinessWebsiteBlogImg,
-  url: "/small-business-websites-that-get-results",
+  image: webDesignAgencyVsDiyBlogImg,
+  url: "/diy-builder-vs-web-design-agency",
 },
   
   {

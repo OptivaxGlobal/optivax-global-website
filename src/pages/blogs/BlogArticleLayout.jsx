@@ -1,5 +1,6 @@
 import React from "react";
 import { Helmet } from "react-helmet";
+import { useLocation } from "react-router-dom";
 import {
   ArrowLeft,
   ArrowRight,
@@ -7,6 +8,10 @@ import {
   Clock,
 } from "lucide-react";
 import AnimatedHeroBackground from "@/components/AnimatedHeroBackground";
+import BlogNavigation from "@/components/BlogNavigation";
+import { blogPosts } from "@/pages/Blog";
+
+const normalizeBlogPath = (path) => (path.startsWith("/") ? path : `/${path}`);
 
 const BlogArticleLayout = ({
   title,
@@ -24,6 +29,17 @@ const BlogArticleLayout = ({
       .toLowerCase()
       .replace(/[^a-z0-9]+/g, "-")
       .replace(/(^-|-$)/g, "");
+
+  const location = useLocation();
+  const currentBlogIndex = blogPosts.findIndex(
+    (post) => normalizeBlogPath(post.url) === location.pathname
+  );
+  const previousBlog =
+    currentBlogIndex > 0 ? blogPosts[currentBlogIndex - 1] : null;
+  const nextBlog =
+    currentBlogIndex !== -1 && currentBlogIndex < blogPosts.length - 1
+      ? blogPosts[currentBlogIndex + 1]
+      : null;
 
   return (
     <>
@@ -241,6 +257,8 @@ const BlogArticleLayout = ({
                   <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
                 </a>
               </div>
+
+              <BlogNavigation previousBlog={previousBlog} nextBlog={nextBlog} />
             </article>
           </div>
         </section>

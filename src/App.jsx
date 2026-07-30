@@ -36,6 +36,7 @@ import CorporatePresentation from "./pages/CorporatePresentation";
 import ComicArts from "./pages/ComicArts";
 import HappyIndependenceDayUSA from "./pages/HappyIndependenceDayUSA";
 import HomeLeadPopup from "./components/HomeLeadPopup";
+import CreativePackagingDesignBlog from "./pages/blogs/CreativePackagingDesignBlog";
 
 import Faqs from "./pages/Faqs";
 import NotFound from "./pages/NotFound";
@@ -69,6 +70,7 @@ import LogoDesignSoftwareBlog from "./pages/blogs/LogoDesignSoftwareBlog";
 import UIUXDesignExplainedBlog from "./pages/blogs/UIUXDesignExplainedBlog";
 import EbookCoverDesignTipsBlog from "./pages/blogs/EbookCoverDesignTipsBlog";
 import WebDesignAgencyVsDIYBlog from "./pages/blogs/WebDesignAgencyVsDIYBlog";
+import GraphicDesignBusinessSuccessBlog from "./pages/blogs/GraphicDesignBusinessSuccessBlog";
 
 import AnalyticsTracker from "./components/AnalyticsTracker";
 import PaymentForm from "@/pages/PaymentForm";
@@ -281,6 +283,14 @@ function App() {
 <Route
   path="/diy-builder-vs-web-design-agency"
   element={<WebDesignAgencyVsDIYBlog />}
+/>
+<Route
+  path="/graphic-design-matters-for-business-success"
+  element={<GraphicDesignBusinessSuccessBlog />}
+/>
+<Route
+  path="/creative-packaging-design-better-product-appeal"
+  element={<CreativePackagingDesignBlog />}
 />
 
 
