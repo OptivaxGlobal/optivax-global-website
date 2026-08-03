@@ -71,6 +71,10 @@ import UIUXDesignExplainedBlog from "./pages/blogs/UIUXDesignExplainedBlog";
 import EbookCoverDesignTipsBlog from "./pages/blogs/EbookCoverDesignTipsBlog";
 import WebDesignAgencyVsDIYBlog from "./pages/blogs/WebDesignAgencyVsDIYBlog";
 import GraphicDesignBusinessSuccessBlog from "./pages/blogs/GraphicDesignBusinessSuccessBlog";
+import CreativeLogoGraphicDesignBlog from "./pages/blogs/CreativeLogoGraphicDesignBlog";
+import GraphicDesignModernBrandsBlog from "./pages/blogs/GraphicDesignModernBrandsBlog";
+import EffectiveBusinessLogoDesignElementsBlog from "./pages/blogs/EffectiveBusinessLogoDesignElementsBlog";
+
 
 import AnalyticsTracker from "./components/AnalyticsTracker";
 import PaymentForm from "@/pages/PaymentForm";
@@ -291,6 +295,18 @@ function App() {
 <Route
   path="/creative-packaging-design-better-product-appeal"
   element={<CreativePackagingDesignBlog />}
+/>
+<Route
+  path="/creative-logo-and-graphic-design-modern-brands"
+  element={<CreativeLogoGraphicDesignBlog />}
+/>
+<Route
+  path="/graphic-design-service-for-modern-brands"
+  element={<GraphicDesignModernBrandsBlog />}
+/>
+<Route
+  path="/effective-business-logo-design-elements"
+  element={<EffectiveBusinessLogoDesignElementsBlog />}
 />
 
 

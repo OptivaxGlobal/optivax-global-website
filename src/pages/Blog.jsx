@@ -35,9 +35,39 @@ import ebookCoverTipsBlogImg from "@/assets/blog-images/ebook-cover-tips-blog.we
 import webDesignAgencyVsDiyBlogImg from "@/assets/blog-images/web-design-agency-vs-diy-blog.webp";
 import graphicDesignBusinessBlogImg from "@/assets/blog-images/graphic-design-business-blog.webp";
 import creativePackagingBlogImg from "@/assets/blog-images/creative-packaging-design-blog.webp";
+import creativeLogoGraphicBlogImg from "@/assets/blog-images/creative-logo-graphic-design-blog.webp";
+import graphicDesignModernBrandsImg from "@/assets/blog-images/graphic-design-modern-brands.webp";
+import effectiveBusinessLogoImg from "@/assets/blog-images/effective-business-logo-design-elements.webp";
 
 
 export const blogPosts = [
+  {
+  title: "Effective Business Logo Design Elements Every Brand Should Know",
+  excerpt:
+    "Discover the essential logo design elements that help businesses build recognition, communicate their personality, and create a professional brand identity.",
+  category: "Logo Design",
+  date: "August 2026",
+  image: effectiveBusinessLogoImg,
+  url: "/effective-business-logo-design-elements",
+},
+  {
+  title: "Creative Graphic Design Services That Help Brands Stand Out",
+  excerpt:
+    "Discover how professional graphic design improves brand visibility, strengthens identity, supports marketing, builds trust, and helps modern businesses stand out.",
+  category: "Graphic Design",
+  date: "August 2026",
+  image: graphicDesignModernBrandsImg,
+  url: "/graphic-design-service-for-modern-brands",
+},
+  {
+  title: "Creative Logo and Graphic Design Services for Modern Brands",
+  excerpt:
+    "Learn how professional logo and graphic design services strengthen branding, improve recognition, build customer trust, and support long-term business growth.",
+  category: "Graphic Design",
+  date: "July 2026",
+  image: creativeLogoGraphicBlogImg,
+  url: "/creative-logo-and-graphic-design-modern-brands",
+},
   {
   title: "Creative Packaging Design Services for Better Product Appeal",
   excerpt:
