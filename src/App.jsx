@@ -74,6 +74,12 @@ import GraphicDesignBusinessSuccessBlog from "./pages/blogs/GraphicDesignBusines
 import CreativeLogoGraphicDesignBlog from "./pages/blogs/CreativeLogoGraphicDesignBlog";
 import GraphicDesignModernBrandsBlog from "./pages/blogs/GraphicDesignModernBrandsBlog";
 import EffectiveBusinessLogoDesignElementsBlog from "./pages/blogs/EffectiveBusinessLogoDesignElementsBlog";
+import MarketingDesignIdeasBrandVisibilityBlog from "./pages/blogs/MarketingDesignIdeasBrandVisibilityBlog";
+import BrandIdentityDesignGuideBlog from "./pages/blogs/BrandIdentityDesignGuideBlog";
+import RankOnGoogleWithoutPaidAdsBlog from "./pages/blogs/RankOnGoogleWithoutPaidAdsBlog";
+import ShopifySolutionsSmallBusinessBlog from "./pages/blogs/ShopifySolutionsSmallBusinessBlog";
+import SmallBusinessWebsiteCostBlog from "./pages/blogs/SmallBusinessWebsiteCostBlog";
+import BrandIdentityDesignStartupBlog from "./pages/blogs/BrandIdentityDesignStartupBlog";
 
 
 import AnalyticsTracker from "./components/AnalyticsTracker";
@@ -308,7 +314,30 @@ function App() {
   path="/effective-business-logo-design-elements"
   element={<EffectiveBusinessLogoDesignElementsBlog />}
 />
-
+<Route
+  path="/marketing-design-ideas-brands-visibility"
+  element={<MarketingDesignIdeasBrandVisibilityBlog />}
+/>
+<Route
+  path="/brand-identity-design-guide-for-business"
+  element={<BrandIdentityDesignGuideBlog />}
+/>
+<Route
+  path="/rank-on-google-without-paid-ads"
+  element={<RankOnGoogleWithoutPaidAdsBlog />}
+/>
+<Route
+  path="/shopify-solution-for-small-business"
+  element={<ShopifySolutionsSmallBusinessBlog />}
+/>
+<Route
+  path="/small-business-websites-cost"
+  element={<SmallBusinessWebsiteCostBlog />}
+/>
+<Route
+  path="/brand-identity-design-for-business-startup"
+  element={<BrandIdentityDesignStartupBlog />}
+/>
 
 
 

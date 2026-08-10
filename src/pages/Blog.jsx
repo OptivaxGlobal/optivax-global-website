@@ -38,17 +38,58 @@ import creativePackagingBlogImg from "@/assets/blog-images/creative-packaging-de
 import creativeLogoGraphicBlogImg from "@/assets/blog-images/creative-logo-graphic-design-blog.webp";
 import graphicDesignModernBrandsImg from "@/assets/blog-images/graphic-design-modern-brands.webp";
 import effectiveBusinessLogoImg from "@/assets/blog-images/effective-business-logo-design-elements.webp";
-
+import marketingDesignIdeasImg from "@/assets/blog-images/marketing-design-ideas-brand-visibility.webp";
+import brandIdentityGuideImg from "@/assets/blog-images/brand-identity-design-guide-business.webp";
+import rankGoogleWithoutAdsImg from "@/assets/blog-images/rank-google-without-paid-ads.webp";
+import shopifySmallBusinessImg from "@/assets/blog-images/shopify-solution-small-business.webp";
+import smallBusinessWebsiteCostImg from "@/assets/blog-images/small-business-website-cost.webp";
+import startupBrandIdentityImg from "@/assets/blog-images/brand-identity-design-business-startup.webp";
 
 export const blogPosts = [
   {
-  title: "Effective Business Logo Design Elements Every Brand Should Know",
+  title: "Why Every Startup Needs Brand Identity Design",
   excerpt:
-    "Discover the essential logo design elements that help businesses build recognition, communicate their personality, and create a professional brand identity.",
-  category: "Logo Design",
+    "Learn how professional brand identity design helps startups build recognition, maintain consistency, communicate positioning, and appear more established.",
+  category: "Brand Design",
   date: "August 2026",
-  image: effectiveBusinessLogoImg,
-  url: "/effective-business-logo-design-elements",
+  image: startupBrandIdentityImg,
+  url: "/brand-identity-design-for-business-startup",
+},
+  {
+  title: "How Much Does a Small Business Website Cost?",
+  excerpt:
+    "Learn how design complexity, page count, custom features, eCommerce functionality, SEO, content, and maintenance affect small business website costs.",
+  category: "Web Development",
+  date: "August 2026",
+  image: smallBusinessWebsiteCostImg,
+  url: "/small-business-websites-cost",
+},
+  {
+  title: "How Shopify Makes Online Selling Easier for Small Business Owners",
+  excerpt:
+    "Discover how Shopify simplifies online selling through easy store setup, product management, payment options, marketing tools, and inventory management.",
+  category: "Shopify Development",
+  date: "August 2026",
+  image: shopifySmallBusinessImg,
+  url: "/shopify-solution-for-small-business",
+},
+  {
+  title: "How to Rank Higher on Google Without Paid Ads",
+  excerpt:
+    "Learn practical ways to improve your Google rankings through useful content, on-page SEO, website speed, internal links, backlinks, and a better user experience.",
+  category: "SEO",
+  date: "August 2026",
+  image: rankGoogleWithoutAdsImg,
+  url: "/rank-on-google-without-paid-ads",
+},
+  {
+  title: "Brand Identity Design Guide for Small Businesses",
+  excerpt:
+    "Learn how a consistent brand identity helps small businesses build customer trust, improve recognition, stand out from competitors, and support long-term growth.",
+  category: "Brand Design",
+  date: "August 2026",
+  image: brandIdentityGuideImg,
+  url: "/brand-identity-design-guide-for-business",
 },
   {
   title: "Creative Graphic Design Services That Help Brands Stand Out",
@@ -59,6 +100,25 @@ export const blogPosts = [
   image: graphicDesignModernBrandsImg,
   url: "/graphic-design-service-for-modern-brands",
 },
+  {
+  title: "Effective Business Logo Design Elements Every Brand Should Know",
+  excerpt:
+    "Discover the essential logo design elements that help businesses build recognition, communicate their personality, and create a professional brand identity.",
+  category: "Logo Design",
+  date: "August 2026",
+  image: effectiveBusinessLogoImg,
+  url: "/effective-business-logo-design-elements",
+},
+{
+  title: "Marketing Material Design Ideas for Better Brand Visibility",
+  excerpt:
+    "Explore practical marketing material design ideas that strengthen brand consistency, improve visibility, and make your business easier to recognize.",
+  category: "Graphic Design",
+  date: "August 2026",
+  image: marketingDesignIdeasImg,
+  url: "/marketing-design-ideas-brands-visibility",
+},
+  
   {
   title: "Creative Logo and Graphic Design Services for Modern Brands",
   excerpt:

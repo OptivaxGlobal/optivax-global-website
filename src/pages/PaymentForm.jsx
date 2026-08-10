@@ -1,550 +1,1290 @@
 import React, { useState } from "react";
 import { Helmet } from "react-helmet";
 import {
-  Upload,
+  AlertCircle,
   CheckCircle2,
   CreditCard,
+  ExternalLink,
   ShieldCheck,
-  FileText,
+  Upload,
 } from "lucide-react";
-import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
+
 import supabase from "@/lib/supabase";
 import AnimatedHeroBackground from "@/components/AnimatedHeroBackground";
 
-const services = {
-  "Web Design":
-    "Professional website design with modern UI, responsive layout, and business-focused structure.",
-  "Web Development":
-    "Custom website development with responsive pages, forms, integrations, and optimized performance.",
-  "Logo Design":
-    "Professional logo design with clean branding, multiple concepts, and final files.",
-  "Brand Design":
-    "Complete brand identity design including logo style, colors, typography, and visual direction.",
-  Animation:
-    "Creative animation services for business promotion, social media, and digital branding.",
-  "Comic Art":
-    "Premium comic art and illustration services for comic books, graphic novels, manga-style artwork, character design, storyboards, and custom visual storytelling for print, digital publishing, and promotional projects.",
-  "Graphics Design":
-    "Professional graphics for social media, marketing campaigns, ads, and business promotion.",
-  "Brochure Design":
-    "Modern brochure design for company profiles, services, products, and marketing use.",
-  "Flyer Design":
-    "Attractive flyer design for promotions, campaigns, events, and business offers.",
-  "Stationary Design":
-    "Business stationery design including letterhead, business card, envelope, and branding material.",
-  "Mobile App Development":
-    "Custom mobile app development with user-friendly features and responsive app flow.",
-  "Mobile App Design":
-    "Modern mobile app UI design with clean screens, smooth user experience, and professional layout.",
-  "UI UX Design":
-    "User interface and user experience design focused on usability, conversion, and modern visuals.",
-  "Brand Management":
-    "Brand strategy and management support to improve consistency, trust, and online presence.",
-  "Content Management System":
-    "CMS setup for easy website content updates, pages, blogs, and business information.",
-  "Digital Marketing":
-    "Digital marketing support including campaigns, content planning, ads, and online growth strategy.",
-  "Email Marketing":
-    "Email campaign design and setup for promotions, lead nurturing, and customer communication.",
-  "Pay Per Click (PPC)":
-    "Paid ads campaign setup and optimization for leads, traffic, and better conversions.",
-  "Search Engine Marketing":
-    "Search engine advertising strategy to promote your services and increase visibility.",
-  "Search Engine Optimization (SEO)":
-    "SEO optimization for better rankings, organic traffic, and long-term online growth.",
-  "Social Media Marketing":
-    "Social media marketing content, strategy, and campaigns for better engagement and leads.",
-  "Ebook Cover Design":
-    "Premium ebook cover design for Amazon KDP, Kindle, publishing, and marketing platforms.",
-  "Corporate Presentation":
-    "Professional corporate presentation design for business proposals, meetings, and investor decks.",
-};
+/* =========================================================
+   STRIPE PAYMENT LINK
+========================================================= */
 
-const paymentMethods = [
-  {
-    name: "Proceed To Checkout",
-    icon: <CreditCard size={22} />,
-    link: "https://buy.stripe.com/6oU6oHdpJgDq8Ed60yfMA01",
-  },
+const STRIPE_PAYMENT_LINK =
+  "https://buy.stripe.com/6oU6oHdpJgDq8Ed60yfMA01";
+
+/* =========================================================
+   SERVICES
+========================================================= */
+
+const services = [
+  "Web Design",
+  "Web Development",
+  "Logo Design",
+  "Brand Design",
+  "Animation",
+  "Comic Art",
+  "Graphics Design",
+  "Brochure Design",
+  "Flyer Design",
+  "Stationary Design",
+  "Mobile App Development",
+  "Mobile App Design",
+  "UI UX Design",
+  "Brand Management",
+  "Content Management System",
+  "Digital Marketing",
+  "Email Marketing",
+  "Pay Per Click (PPC)",
+  "Search Engine Marketing",
+  "Search Engine Optimization (SEO)",
+  "Social Media Marketing",
+  "Ebook Cover Design",
+  "Corporate Presentation",
 ];
+
+/* =========================================================
+   SCREENSHOT SETTINGS
+========================================================= */
+
+const ALLOWED_FILE_TYPES = [
+  "image/jpeg",
+  "image/png",
+  "image/webp",
+];
+
+const MAX_FILE_SIZE = 5 * 1024 * 1024;
+
+/* =========================================================
+   PAYMENT FORM
+========================================================= */
 
 const PaymentForm = () => {
   const navigate = useNavigate();
+
+  /* =======================================================
+     FORM STATE
+  ======================================================= */
 
   const [form, setForm] = useState({
     name: "",
     email: "",
     contact: "",
     service: "",
-    total_payment: "",
-    advance_percentage: "",
-    advance_payment: "",
-    remaining_payment: "",
-    payment_method: "",
+    amount: "",
   });
 
   const [file, setFile] = useState(null);
+
   const [loading, setLoading] = useState(false);
 
-  const serviceDetails = form.service ? services[form.service] : "";
+  const [errorMessage, setErrorMessage] = useState("");
+
+  const [fieldErrors, setFieldErrors] = useState({
+    name: "",
+    email: "",
+    contact: "",
+    service: "",
+    amount: "",
+  });
+
+  /* =======================================================
+     VALIDATION FUNCTIONS
+  ======================================================= */
+
+  const validateName = (name) => {
+    const value = name.trim();
+
+    if (!value) {
+      return "Client full name is required.";
+    }
+
+    if (value.length < 2) {
+      return "Please enter a valid client name.";
+    }
+
+    return "";
+  };
+
+  const validateEmail = (email) => {
+    const value = email.trim();
+
+    if (!value) {
+      return "Client email is required.";
+    }
+
+    const emailRegex =
+      /^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$/;
+
+    if (!emailRegex.test(value)) {
+      return "Please enter a valid email address.";
+    }
+
+    return "";
+  };
+
+  const validateContact = (contact) => {
+    const value = contact.trim();
+
+    if (!value) {
+      return "Contact number is required.";
+    }
+
+    const allowedCharacters = /^[0-9+\-()\s]+$/;
+
+    if (!allowedCharacters.test(value)) {
+      return "Please enter a valid contact number.";
+    }
+
+    const digits = value.replace(/\D/g, "");
+
+    if (digits.length < 7) {
+      return "Contact number must contain at least 7 digits.";
+    }
+
+    if (digits.length > 15) {
+      return "Contact number cannot contain more than 15 digits.";
+    }
+
+    return "";
+  };
+
+  const validateService = (service) => {
+    if (!service) {
+      return "Please select a service.";
+    }
+
+    return "";
+  };
+
+  const validateAmount = (amount) => {
+    if (!amount) {
+      return "Payment amount is required.";
+    }
+
+    const numericAmount = Number(amount);
+
+    if (
+      !Number.isFinite(numericAmount) ||
+      numericAmount <= 0
+    ) {
+      return "Please enter a valid payment amount.";
+    }
+
+    return "";
+  };
+
+  /* =======================================================
+     NORMAL INPUT CHANGE
+  ======================================================= */
 
   const handleChange = (e) => {
     const { name, value } = e.target;
 
-    if (name === "total_payment" || name === "advance_percentage") {
-      const total =
-        name === "total_payment" ? Number(value) : Number(form.total_payment);
+    setForm((prev) => ({
+      ...prev,
+      [name]: value,
+    }));
 
-      const percentage =
-        name === "advance_percentage"
-          ? Number(value)
-          : Number(form.advance_percentage);
+    if (errorMessage) {
+      setErrorMessage("");
+    }
 
-      const advanceAmount =
-        total && percentage ? ((total * percentage) / 100).toFixed(2) : "";
+    if (name === "name") {
+      setFieldErrors((prev) => ({
+        ...prev,
+        name: value ? validateName(value) : "",
+      }));
+    }
 
-      const remainingAmount =
-        total && percentage ? (total - Number(advanceAmount)).toFixed(2) : "";
+    if (name === "email") {
+      setFieldErrors((prev) => ({
+        ...prev,
+        email: value ? validateEmail(value) : "",
+      }));
+    }
 
-      setForm({
-        ...form,
-        [name]: value,
-        advance_payment: advanceAmount,
-        remaining_payment: remainingAmount,
-      });
+    if (name === "service") {
+      setFieldErrors((prev) => ({
+        ...prev,
+        service: validateService(value),
+      }));
+    }
+
+    if (name === "amount") {
+      setFieldErrors((prev) => ({
+        ...prev,
+        amount: value ? validateAmount(value) : "",
+      }));
+    }
+  };
+
+  /* =======================================================
+     CONTACT NUMBER CHANGE
+  ======================================================= */
+
+  const handleContactChange = (e) => {
+    /*
+      Only allow:
+      Numbers
+      +
+      -
+      Spaces
+      Parentheses
+    */
+
+    const cleanedValue = e.target.value.replace(
+      /[^0-9+\-()\s]/g,
+      ""
+    );
+
+    setForm((prev) => ({
+      ...prev,
+      contact: cleanedValue,
+    }));
+
+    setFieldErrors((prev) => ({
+      ...prev,
+      contact: cleanedValue
+        ? validateContact(cleanedValue)
+        : "",
+    }));
+
+    if (errorMessage) {
+      setErrorMessage("");
+    }
+  };
+
+  /* =======================================================
+     SCREENSHOT VALIDATION
+  ======================================================= */
+
+  const handleFileChange = (e) => {
+    const selectedFile = e.target.files?.[0];
+
+    setErrorMessage("");
+
+    if (!selectedFile) {
+      setFile(null);
+      return;
+    }
+
+    if (!ALLOWED_FILE_TYPES.includes(selectedFile.type)) {
+      setFile(null);
+
+      e.target.value = "";
+
+      setErrorMessage(
+        "Please upload your payment screenshot in JPG, PNG, or WEBP format."
+      );
 
       return;
     }
 
-    setForm({ ...form, [name]: value });
+    if (selectedFile.size > MAX_FILE_SIZE) {
+      setFile(null);
+
+      e.target.value = "";
+
+      setErrorMessage(
+        "Payment screenshot must be smaller than 5 MB."
+      );
+
+      return;
+    }
+
+    setFile(selectedFile);
   };
 
+  /* =======================================================
+     UPLOAD SCREENSHOT
+  ======================================================= */
+
   const uploadScreenshot = async () => {
-    if (!file) return "";
+    if (!file) {
+      throw new Error(
+        "Payment screenshot is required before submission."
+      );
+    }
 
-    const fileName = `${Date.now()}-${file.name}`;
+    const extension =
+      file.name.split(".").pop()?.toLowerCase() || "jpg";
 
-    const { error } = await supabase.storage
+    const uniqueId =
+      typeof crypto !== "undefined" &&
+      crypto.randomUUID
+        ? crypto.randomUUID()
+        : `${Date.now()}-${Math.random()
+            .toString(36)
+            .slice(2)}`;
+
+    const filePath = `payments/${Date.now()}-${uniqueId}.${extension}`;
+
+    const { error: uploadError } = await supabase.storage
       .from("payment-screenshots")
-      .upload(fileName, file);
+      .upload(filePath, file, {
+        cacheControl: "3600",
+        contentType: file.type,
+        upsert: false,
+      });
 
-    if (error) throw error;
+    if (uploadError) {
+      throw uploadError;
+    }
 
     const { data } = supabase.storage
       .from("payment-screenshots")
-      .getPublicUrl(fileName);
+      .getPublicUrl(filePath);
+
+    if (!data?.publicUrl) {
+      throw new Error(
+        "Unable to generate payment screenshot URL."
+      );
+    }
 
     return data.publicUrl;
   };
 
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    setLoading(true);
+  /* =======================================================
+     EMAIL NOTIFICATION
+  ======================================================= */
 
+  const sendPaymentNotification = async (
+    screenshotUrl
+  ) => {
     try {
-      const screenshotUrl = await uploadScreenshot();
-
-      const dataToSave = {
-        name: form.name,
-        email: form.email,
-        contact: form.contact,
-        service: form.service,
-        service_details: serviceDetails,
-        total_payment: Number(form.total_payment),
-        advance_payment: Number(form.advance_payment),
-        remaining_payment: Number(form.remaining_payment),
-        payment_method: form.payment_method,
-        screenshot_url: screenshotUrl,
-      };
-
-      const { error } = await supabase
-        .from("payment_forms")
-        .insert([dataToSave]);
-
-      if (error) throw error;
-
-      const web3FormData = new FormData();
-
-      web3FormData.append(
-        "access_key",
-        "85750fd3-5c99-4b7a-9887-e0d21806b53a"
-      );
-
-      web3FormData.append("name", form.name);
-      web3FormData.append("email", form.email);
-      web3FormData.append("contact", form.contact);
-      web3FormData.append("service", form.service);
-      web3FormData.append("service_details", serviceDetails);
-      web3FormData.append("total_payment", form.total_payment);
-      web3FormData.append("advance_percentage", form.advance_percentage);
-      web3FormData.append("advance_payment", form.advance_payment);
-      web3FormData.append("remaining_payment", form.remaining_payment);
-      web3FormData.append("payment_method", form.payment_method);
-      web3FormData.append("screenshot_url", screenshotUrl);
-      web3FormData.append("subject", "Payment Confirmation - Optivax Global");
-
-      await fetch("https://api.web3forms.com/submit", {
-        method: "POST",
-        body: web3FormData,
-      });
-
-      const emailResponse = await fetch(
+      const response = await fetch(
         "https://wdaaadhohvixycyrnlax.supabase.co/functions/v1/send-payment-email",
         {
           method: "POST",
+
           headers: {
             "Content-Type": "application/json",
-            apikey: import.meta.env.VITE_SUPABASE_ANON_KEY,
-            Authorization: `Bearer ${import.meta.env.VITE_SUPABASE_ANON_KEY}`,
+
+            apikey:
+              import.meta.env.VITE_SUPABASE_ANON_KEY,
+
+            Authorization: `Bearer ${
+              import.meta.env.VITE_SUPABASE_ANON_KEY
+            }`,
           },
+
           body: JSON.stringify({
-            name: form.name,
-            email: form.email,
-            contact: form.contact,
+            name: form.name.trim(),
+
+            email: form.email
+              .trim()
+              .toLowerCase(),
+
+            contact: form.contact.trim(),
+
             service: form.service,
-            service_details: serviceDetails,
-            total_payment: form.total_payment,
-            advance_percentage: form.advance_percentage,
-            advance_payment: form.advance_payment,
-            remaining_payment: form.remaining_payment,
-            payment_method: form.payment_method,
+
+            total_payment: Number(form.amount),
+
+            payment_method: "Stripe Payment Link",
+
             screenshot_url: screenshotUrl,
           }),
         }
       );
 
-      const emailResult = await emailResponse.json();
-      console.log("EMAIL RESULT:", emailResult);
+      if (!response.ok) {
+        const errorText = await response.text();
 
-      navigate("/payment-successful");
-    } catch (err) {
-      alert(err.message || "Something went wrong");
+        console.error(
+          "Payment email notification failed:",
+          errorText
+        );
+      }
+    } catch (error) {
+      console.error(
+        "Payment email notification error:",
+        error
+      );
+    }
+  };
+
+  /* =======================================================
+     FORM SUBMISSION
+  ======================================================= */
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    setErrorMessage("");
+
+    /* -----------------------------------------------------
+       FINAL FIELD VALIDATION
+    ----------------------------------------------------- */
+
+    const nameError = validateName(form.name);
+
+    const emailError = validateEmail(form.email);
+
+    const contactError = validateContact(
+      form.contact
+    );
+
+    const serviceError = validateService(
+      form.service
+    );
+
+    const amountError = validateAmount(
+      form.amount
+    );
+
+    setFieldErrors({
+      name: nameError,
+      email: emailError,
+      contact: contactError,
+      service: serviceError,
+      amount: amountError,
+    });
+
+    if (
+      nameError ||
+      emailError ||
+      contactError ||
+      serviceError ||
+      amountError
+    ) {
+      setErrorMessage(
+        "Please correct the highlighted fields before submitting your payment confirmation."
+      );
+
+      return;
     }
 
-    setLoading(false);
+    /* -----------------------------------------------------
+       SCREENSHOT REQUIRED
+    ----------------------------------------------------- */
+
+    if (!file) {
+      setErrorMessage(
+        "Payment screenshot is required. Please upload your payment screenshot before submitting."
+      );
+
+      return;
+    }
+
+    const numericAmount = Number(form.amount);
+
+    setLoading(true);
+
+    try {
+      /* ---------------------------------------------------
+         UPLOAD SCREENSHOT
+      --------------------------------------------------- */
+
+      const screenshotUrl =
+        await uploadScreenshot();
+
+      /* ---------------------------------------------------
+         PAYMENT RECORD
+      --------------------------------------------------- */
+
+      const paymentRecord = {
+        name: form.name.trim(),
+
+        email: form.email
+          .trim()
+          .toLowerCase(),
+
+        contact: form.contact.trim(),
+
+        service: form.service,
+
+        total_payment: numericAmount,
+
+        payment_method: "Stripe Payment Link",
+
+        screenshot_url: screenshotUrl,
+      };
+
+      /* ---------------------------------------------------
+         SAVE TO SUPABASE
+      --------------------------------------------------- */
+
+      const { error: insertError } =
+        await supabase
+          .from("payment_forms")
+          .insert([paymentRecord]);
+
+      if (insertError) {
+        throw insertError;
+      }
+
+      /* ---------------------------------------------------
+         EMAIL NOTIFICATION
+      --------------------------------------------------- */
+
+      await sendPaymentNotification(
+        screenshotUrl
+      );
+
+      /* ---------------------------------------------------
+         SUCCESS PAGE
+      --------------------------------------------------- */
+
+      navigate("/payment-successful");
+    } catch (error) {
+      console.error(
+        "Payment Confirmation Error:",
+        error
+      );
+
+      setErrorMessage(
+        error?.message ||
+          "Something went wrong while submitting your payment confirmation. Please try again."
+      );
+    } finally {
+      setLoading(false);
+    }
   };
+
+  /* =======================================================
+     INPUT CLASSES
+  ======================================================= */
+
+  const normalInputClass =
+    "w-full rounded-xl border border-white/10 bg-[#020817]/60 px-4 py-3.5 text-white placeholder:text-slate-500 outline-none transition-all duration-300 focus:border-[#1BBCEF]/70 focus:ring-4 focus:ring-[#1BBCEF]/10";
+
+  const getInputClass = (hasError) =>
+    `w-full rounded-xl border bg-[#020817]/60 px-4 py-3.5 text-white placeholder:text-slate-500 outline-none transition-all duration-300 ${
+      hasError
+        ? "border-red-400/70 focus:border-red-400 focus:ring-4 focus:ring-red-400/10"
+        : "border-white/10 focus:border-[#1BBCEF]/70 focus:ring-4 focus:ring-[#1BBCEF]/10"
+    }`;
+
+  /* =======================================================
+     PAGE
+  ======================================================= */
 
   return (
     <>
+      {/* ===================================================
+          SEO
+      =================================================== */}
+
       <Helmet>
-        <title>Payment Confirmation | Optivax Global</title>
+        <title>
+          Secure Payment Confirmation | Optivax Global
+        </title>
+
         <meta
           name="description"
-          content="Submit your payment confirmation details to Optivax Global."
+          content="Complete your Optivax Global payment securely through Stripe and submit your payment confirmation."
         />
       </Helmet>
 
-      <section className="relative min-h-screen overflow-hidden bg-[#020817] text-white px-6 py-28">
+      {/* ===================================================
+          PAGE WRAPPER
+      =================================================== */}
+
+      <main className="relative min-h-screen overflow-hidden bg-[#020817] px-4 py-24 text-white sm:px-6">
+
+        {/* =================================================
+            ANIMATED WEBSITE BACKGROUND
+        ================================================= */}
+
         <AnimatedHeroBackground />
 
-        <div className="absolute inset-0 bg-[#020817]/70 z-[1]" />
-        <div className="absolute top-[-180px] left-[-120px] w-[420px] h-[420px] bg-[#1BBCEF]/10 rounded-full blur-[120px] z-[1]" />
-        <div className="absolute bottom-[-180px] right-[-120px] w-[420px] h-[420px] bg-[#004495]/20 rounded-full blur-[120px] z-[1]" />
+        {/* =================================================
+            DARK OVERLAY
+        ================================================= */}
 
-        <div className="relative z-10 max-w-5xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 28 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.55 }}
-            className="text-center mb-10"
-          >
-            <span className="inline-block text-[#1BBCEF] font-semibold uppercase tracking-[0.25em] mb-4">
+        <div className="pointer-events-none absolute inset-0 z-[1] bg-[#020817]/70" />
+
+        {/* =================================================
+            BACKGROUND GLOW
+        ================================================= */}
+
+        <div className="pointer-events-none absolute left-[-180px] top-[-180px] z-[1] h-[450px] w-[450px] rounded-full bg-[#1BBCEF]/10 blur-[130px]" />
+
+        <div className="pointer-events-none absolute bottom-[-180px] right-[-180px] z-[1] h-[450px] w-[450px] rounded-full bg-[#004495]/20 blur-[130px]" />
+
+        {/* =================================================
+            CONTENT
+        ================================================= */}
+
+        <div className="relative z-10 mx-auto w-full max-w-3xl">
+
+          {/* ===============================================
+              PAGE HEADING
+          =============================================== */}
+
+          <div className="mb-9 text-center">
+
+            <div className="mx-auto mb-4 flex h-14 w-14 items-center justify-center rounded-2xl border border-[#1BBCEF]/25 bg-[#1BBCEF]/10 backdrop-blur-md">
+
+              <ShieldCheck className="h-7 w-7 text-[#1BBCEF]" />
+
+            </div>
+
+            <p className="mb-3 text-xs font-bold uppercase tracking-[0.24em] text-[#1BBCEF]">
               Secure Payment
-            </span>
+            </p>
 
-            <h1 className="text-4xl md:text-6xl font-extrabold leading-tight">
-              Payment
-              <span className="block bg-gradient-to-r from-[#1BBCEF] to-[#004495] bg-clip-text text-transparent">
-                Confirmation Form
-              </span>
+            <h1 className="text-3xl font-extrabold tracking-tight text-white sm:text-4xl md:text-5xl">
+              Payment Confirmation
             </h1>
 
-            <p className="text-gray-300 mt-5 text-lg max-w-2xl mx-auto">
-              Fill your details, complete payment, upload screenshot, and submit
-              your confirmation to Optivax Global.
+            <p className="mx-auto mt-4 max-w-xl text-sm leading-6 text-slate-400 sm:text-base">
+              Enter your details, complete your payment
+              securely through Stripe, and upload your
+              payment screenshot for verification.
             </p>
-          </motion.div>
 
-          <motion.form
+          </div>
+
+          {/* ===============================================
+              PAYMENT FORM
+          =============================================== */}
+
+          <form
             onSubmit={handleSubmit}
-            initial={{ opacity: 0, y: 35 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.65 }}
-            className="relative bg-white/5 border border-white/10 rounded-[2rem] p-6 md:p-10 shadow-2xl shadow-[#1BBCEF]/10 overflow-hidden backdrop-blur-xl space-y-6"
+            noValidate
+            className="overflow-hidden rounded-[28px] border border-white/10 bg-[#06111f]/85 shadow-2xl shadow-black/40 backdrop-blur-xl"
           >
-            <div className="absolute inset-0 bg-gradient-to-br from-[#1BBCEF]/10 via-transparent to-[#004495]/10 pointer-events-none" />
 
-            <div className="relative z-10 space-y-6">
-              <div className="grid md:grid-cols-3 gap-5">
-                <div>
-                  <label className="block mb-2 text-sm font-medium text-[#1BBCEF]">
-                    Client Name
-                  </label>
+            {/* TOP LINE */}
 
-                  <input
-                    name="name"
-                    value={form.name}
-                    onChange={handleChange}
-                    required
-                    className="w-full p-4 rounded-2xl bg-[#020817]/45 border border-white/10 outline-none text-white focus:border-[#1BBCEF]/60 focus:shadow-[0_0_0_4px_rgba(27,188,239,0.12)] transition"
-                  />
-                </div>
+            <div className="h-[2px] w-full bg-gradient-to-r from-transparent via-[#1BBCEF] to-transparent opacity-70" />
 
-                <div>
-                  <label className="block mb-2 text-sm font-medium text-[#1BBCEF]">
-                    Client Email
-                  </label>
+            <div className="space-y-7 p-5 sm:p-8 md:p-10">
 
-                  <input
-                    name="email"
-                    type="email"
-                    value={form.email}
-                    onChange={handleChange}
-                    required
-                    className="w-full p-4 rounded-2xl bg-[#020817]/45 border border-white/10 outline-none text-white focus:border-[#1BBCEF]/60 focus:shadow-[0_0_0_4px_rgba(27,188,239,0.12)] transition"
-                  />
-                </div>
+              {/* ===========================================
+                  CLIENT DETAILS
+              =========================================== */}
 
-                <div>
-                  <label className="block mb-2 text-sm font-medium text-[#1BBCEF]">
-                    Contact Number
-                  </label>
+              <section>
 
-                  <input
-                    name="contact"
-                    value={form.contact}
-                    onChange={handleChange}
-                    required
-                    className="w-full p-4 rounded-2xl bg-[#020817]/45 border border-white/10 outline-none text-white focus:border-[#1BBCEF]/60 focus:shadow-[0_0_0_4px_rgba(27,188,239,0.12)] transition"
-                  />
-                </div>
-              </div>
+                <div className="mb-5">
 
-              <select
-                name="service"
-                value={form.service}
-                onChange={handleChange}
-                required
-                className="w-full p-4 rounded-2xl bg-[#020817]/80 border border-white/10 outline-none text-white focus:border-[#1BBCEF]/60 focus:shadow-[0_0_0_4px_rgba(27,188,239,0.12)] transition"
-              >
-                <option value="">Select Service</option>
-                {Object.keys(services).map((service) => (
-                  <option key={service} value={service}>
-                    {service}
-                  </option>
-                ))}
-              </select>
+                  <h2 className="text-lg font-bold text-white">
+                    Client Details
+                  </h2>
 
-              {serviceDetails && (
-                <motion.div
-                  initial={{ opacity: 0, y: 12 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  className="bg-[#020817]/45 border border-[#1BBCEF]/25 p-5 rounded-2xl shadow-lg shadow-[#1BBCEF]/5"
-                >
-                  <div className="flex items-center gap-3 mb-2">
-                    <FileText className="w-5 h-5 text-[#1BBCEF]" />
-                    <h3 className="font-bold text-xl">Service Details</h3>
-                  </div>
-                  <p className="text-gray-300 leading-relaxed">
-                    {serviceDetails}
+                  <p className="mt-1 text-sm text-slate-500">
+                    Please provide the details associated
+                    with your project.
                   </p>
-                </motion.div>
-              )}
 
-              <div className="grid md:grid-cols-4 gap-5">
-                <div>
-                  <label className="block mb-2 text-sm font-medium text-[#1BBCEF]">
-                    Total Payment
-                  </label>
-
-                  <div className="relative">
-                    <span className="absolute left-4 top-1/2 -translate-y-1/2 text-[#1BBCEF] font-bold">
-                      $
-                    </span>
-
-                    <input
-                      name="total_payment"
-                      type="number"
-                      value={form.total_payment}
-                      onChange={handleChange}
-                      required
-                      className="w-full p-4 pl-10 rounded-2xl bg-[#020817]/45 border border-white/10 outline-none text-white focus:border-[#1BBCEF]/60"
-                    />
-                  </div>
                 </div>
 
-                <div>
-                  <label className="block mb-2 text-sm font-medium text-[#1BBCEF]">
-                    Advance Percentage %
-                  </label>
+                <div className="grid gap-5 sm:grid-cols-2">
 
-                  <div className="relative">
-                    <span className="absolute right-4 top-1/2 -translate-y-1/2 text-[#1BBCEF] font-bold">
-                      %
-                    </span>
+                  {/* =======================================
+                      CLIENT FULL NAME
+                  ======================================= */}
 
-                    <input
-                      name="advance_percentage"
-                      type="number"
-                      value={form.advance_percentage}
-                      onChange={handleChange}
-                      required
-                      className="w-full p-4 pr-10 rounded-2xl bg-[#020817]/45 border border-white/10 outline-none text-white focus:border-[#1BBCEF]/60"
-                    />
-                  </div>
-                </div>
+                  <div>
 
-                <div>
-                  <label className="block mb-2 text-sm font-medium text-[#1BBCEF]">
-                    Advance Payment
-                  </label>
-
-                  <div className="relative">
-                    <span className="absolute left-4 top-1/2 -translate-y-1/2 text-[#1BBCEF] font-bold">
-                      $
-                    </span>
-
-                    <input
-                      name="advance_payment"
-                      type="number"
-                      value={form.advance_payment}
-                      readOnly
-                      className="w-full p-4 pl-10 rounded-2xl bg-[#020817]/45 border border-white/10 outline-none text-white"
-                    />
-                  </div>
-                </div>
-
-                <div>
-                  <label className="block mb-2 text-sm font-medium text-[#1BBCEF]">
-                    Remaining Payment
-                  </label>
-
-                  <div className="relative">
-                    <span className="absolute left-4 top-1/2 -translate-y-1/2 text-[#1BBCEF] font-bold">
-                      $
-                    </span>
-
-                    <input
-                      name="remaining_payment"
-                      type="number"
-                      value={form.remaining_payment}
-                      readOnly
-                      className="w-full p-4 pl-10 rounded-2xl bg-[#020817]/45 border border-white/10 outline-none text-white"
-                    />
-                  </div>
-                </div>
-              </div>
-
-              <div className="bg-yellow-500/10 border border-yellow-500/30 rounded-xl p-3 mt-4">
-                <p className="text-yellow-300 text-sm">
-                  Please enter all amounts in USD ($).
-                </p>
-              </div>
-
-              <div>
-                <div className="flex items-center gap-3 mb-4">
-                  <CreditCard className="w-5 h-5 text-[#1BBCEF]" />
-                  <h3 className="font-bold text-xl">
-                    Stripe Payment Methods
-                  </h3>
-                </div>
-
-                <div className="grid md:grid-cols-3 gap-4">
-                  {paymentMethods.map((method) => (
-                    <a
-                      key={method.name}
-                      href={method.link}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      onClick={() =>
-                        setForm({ ...form, payment_method: method.name })
-                      }
-                      className="group relative overflow-hidden border border-[#1BBCEF]/25 bg-white/5 backdrop-blur-md text-white p-5 rounded-2xl flex items-center justify-center gap-3 font-bold transition-all duration-300 hover:border-[#1BBCEF] hover:-translate-y-1"
+                    <label
+                      htmlFor="name"
+                      className="mb-2 block text-sm font-medium text-slate-200"
                     >
-                      <span className="absolute inset-0 translate-x-full group-hover:translate-x-0 transition-transform duration-500 bg-gradient-to-l from-[#1BBCEF]/20 to-transparent" />
-                      <span className="relative z-10 text-2xl">
-                        {method.icon}
+                      Client Full Name
+
+                      <span className="ml-1 text-[#1BBCEF]">
+                        *
                       </span>
-                      <span className="relative z-10">{method.name}</span>
-                    </a>
-                  ))}
-                </div>
+                    </label>
 
-                <div className="mt-3 space-y-2">
-                  <p className="text-gray-400 text-sm">
-                    After payment, come back to this page and upload your
-                    payment screenshot.
-                  </p>
+                    <input
+                      id="name"
+                      name="name"
+                      type="text"
+                      autoComplete="name"
+                      value={form.name}
+                      onChange={handleChange}
+                      onBlur={() =>
+                        setFieldErrors(
+                          (prev) => ({
+                            ...prev,
 
-                  <div className="bg-[#1BBCEF]/10 border border-[#1BBCEF]/25 rounded-xl p-3">
-                    <p className="text-[#1BBCEF] text-sm font-medium">
-                      Important: Please enter the same payment amount on the
-                      Stripe checkout page that was agreed upon with your
-                      project manager.
-                    </p>
+                            name: validateName(
+                              form.name
+                            ),
+                          })
+                        )
+                      }
+                      placeholder="Enter your full name"
+                      maxLength={100}
+                      required
+                      aria-invalid={Boolean(
+                        fieldErrors.name
+                      )}
+                      className={getInputClass(
+                        fieldErrors.name
+                      )}
+                    />
+
+                    {fieldErrors.name && (
+                      <div className="mt-2 flex items-start gap-2 text-xs font-medium text-red-300">
+
+                        <AlertCircle className="mt-[1px] h-4 w-4 shrink-0" />
+
+                        <span>
+                          {fieldErrors.name}
+                        </span>
+
+                      </div>
+                    )}
+
                   </div>
-                </div>
-              </div>
 
-              <div>
-                <label className="flex items-center gap-2 font-bold mb-3">
-                  <Upload className="w-5 h-5 text-[#1BBCEF]" />
-                  Upload Payment Screenshot
+                  {/* =======================================
+                      CLIENT EMAIL
+                  ======================================= */}
+
+                  <div>
+
+                    <label
+                      htmlFor="email"
+                      className="mb-2 block text-sm font-medium text-slate-200"
+                    >
+                      Client Email
+
+                      <span className="ml-1 text-[#1BBCEF]">
+                        *
+                      </span>
+                    </label>
+
+                    <input
+                      id="email"
+                      name="email"
+                      type="email"
+                      inputMode="email"
+                      autoComplete="email"
+                      value={form.email}
+                      onChange={handleChange}
+                      onBlur={() =>
+                        setFieldErrors(
+                          (prev) => ({
+                            ...prev,
+
+                            email:
+                              validateEmail(
+                                form.email
+                              ),
+                          })
+                        )
+                      }
+                      placeholder="client@example.com"
+                      maxLength={254}
+                      required
+                      aria-invalid={Boolean(
+                        fieldErrors.email
+                      )}
+                      className={getInputClass(
+                        fieldErrors.email
+                      )}
+                    />
+
+                    {fieldErrors.email && (
+                      <div className="mt-2 flex items-start gap-2 text-xs font-medium text-red-300">
+
+                        <AlertCircle className="mt-[1px] h-4 w-4 shrink-0" />
+
+                        <span>
+                          {fieldErrors.email}
+                        </span>
+
+                      </div>
+                    )}
+
+                  </div>
+
+                  {/* =======================================
+                      CONTACT NUMBER
+                  ======================================= */}
+
+                  <div>
+
+                    <label
+                      htmlFor="contact"
+                      className="mb-2 block text-sm font-medium text-slate-200"
+                    >
+                      Contact Number
+
+                      <span className="ml-1 text-[#1BBCEF]">
+                        *
+                      </span>
+                    </label>
+
+                    <input
+                      id="contact"
+                      name="contact"
+                      type="tel"
+                      inputMode="tel"
+                      autoComplete="tel"
+                      value={form.contact}
+                      onChange={
+                        handleContactChange
+                      }
+                      onBlur={() =>
+                        setFieldErrors(
+                          (prev) => ({
+                            ...prev,
+
+                            contact:
+                              validateContact(
+                                form.contact
+                              ),
+                          })
+                        )
+                      }
+                      placeholder="+1 234 567 8900"
+                      maxLength={25}
+                      required
+                      aria-invalid={Boolean(
+                        fieldErrors.contact
+                      )}
+                      className={getInputClass(
+                        fieldErrors.contact
+                      )}
+                    />
+
+                    {fieldErrors.contact && (
+                      <div className="mt-2 flex items-start gap-2 text-xs font-medium text-red-300">
+
+                        <AlertCircle className="mt-[1px] h-4 w-4 shrink-0" />
+
+                        <span>
+                          {fieldErrors.contact}
+                        </span>
+
+                      </div>
+                    )}
+
+                  </div>
+
+                  {/* =======================================
+                      SERVICE
+                  ======================================= */}
+
+                  <div>
+
+                    <label
+                      htmlFor="service"
+                      className="mb-2 block text-sm font-medium text-slate-200"
+                    >
+                      Select Service
+
+                      <span className="ml-1 text-[#1BBCEF]">
+                        *
+                      </span>
+                    </label>
+
+                    <select
+                      id="service"
+                      name="service"
+                      value={form.service}
+                      onChange={handleChange}
+                      onBlur={() =>
+                        setFieldErrors(
+                          (prev) => ({
+                            ...prev,
+
+                            service:
+                              validateService(
+                                form.service
+                              ),
+                          })
+                        )
+                      }
+                      required
+                      aria-invalid={Boolean(
+                        fieldErrors.service
+                      )}
+                      className={`${getInputClass(
+                        fieldErrors.service
+                      )} cursor-pointer`}
+                    >
+
+                      <option value="">
+                        Select Service
+                      </option>
+
+                      {services.map(
+                        (service) => (
+                          <option
+                            key={service}
+                            value={service}
+                          >
+                            {service}
+                          </option>
+                        )
+                      )}
+
+                    </select>
+
+                    {fieldErrors.service && (
+                      <div className="mt-2 flex items-start gap-2 text-xs font-medium text-red-300">
+
+                        <AlertCircle className="mt-[1px] h-4 w-4 shrink-0" />
+
+                        <span>
+                          {fieldErrors.service}
+                        </span>
+
+                      </div>
+                    )}
+
+                  </div>
+
+                </div>
+
+              </section>
+
+              {/* ===========================================
+                  AMOUNT
+              =========================================== */}
+
+              <section>
+
+                <label
+                  htmlFor="amount"
+                  className="mb-2 block text-sm font-medium text-slate-200"
+                >
+                  Amount (USD)
+
+                  <span className="ml-1 text-[#1BBCEF]">
+                    *
+                  </span>
                 </label>
 
-                <label className="flex items-center justify-center gap-3 border-2 border-dashed border-[#1BBCEF]/25 rounded-2xl p-8 cursor-pointer bg-[#020817]/35 hover:bg-white/5 hover:border-[#1BBCEF]/60 transition">
-                  <Upload size={22} className="text-[#1BBCEF]" />
-                  <span className="text-gray-300">
-                    {file ? file.name : "Choose Screenshot"}
+                <div className="relative">
+
+                  <span className="pointer-events-none absolute left-4 top-1/2 -translate-y-1/2 text-lg font-bold text-[#1BBCEF]">
+                    $
                   </span>
 
                   <input
-                    type="file"
-                    accept="image/*,.pdf"
-                    onChange={(e) => setFile(e.target.files[0])}
+                    id="amount"
+                    name="amount"
+                    type="number"
+                    inputMode="decimal"
+                    min="0.01"
+                    step="0.01"
+                    value={form.amount}
+                    onChange={handleChange}
+                    onBlur={() =>
+                      setFieldErrors(
+                        (prev) => ({
+                          ...prev,
+
+                          amount:
+                            validateAmount(
+                              form.amount
+                            ),
+                        })
+                      )
+                    }
+                    placeholder="0.00"
                     required
-                    className="hidden"
+                    aria-invalid={Boolean(
+                      fieldErrors.amount
+                    )}
+                    className={`${getInputClass(
+                      fieldErrors.amount
+                    )} pl-10 text-lg font-semibold`}
                   />
+
+                </div>
+
+                {fieldErrors.amount ? (
+                  <div className="mt-2 flex items-start gap-2 text-xs font-medium text-red-300">
+
+                    <AlertCircle className="mt-[1px] h-4 w-4 shrink-0" />
+
+                    <span>
+                      {fieldErrors.amount}
+                    </span>
+
+                  </div>
+                ) : (
+                  <p className="mt-2 text-xs text-slate-500">
+                    Enter the payment amount
+                    agreed with your project
+                    manager.
+                  </p>
+                )}
+
+              </section>
+
+              {/* ===========================================
+                  STRIPE PAYMENT
+              =========================================== */}
+
+              <section className="rounded-2xl border border-[#1BBCEF]/25 bg-[#1BBCEF]/[0.06] p-5 sm:p-6">
+
+                <div className="mb-5 flex items-start gap-3">
+
+                  <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl border border-[#1BBCEF]/20 bg-[#1BBCEF]/10">
+
+                    <CreditCard className="h-5 w-5 text-[#1BBCEF]" />
+
+                  </div>
+
+                  <div>
+
+                    <h2 className="text-lg font-bold text-white">
+                      Stripe Payment Methods
+                    </h2>
+
+                    <p className="mt-1 text-sm leading-6 text-slate-400">
+                      Complete your payment
+                      securely using our Stripe
+                      checkout.
+                    </p>
+
+                  </div>
+
+                </div>
+
+                {/* =========================================
+                    STRIPE BUTTON
+                ========================================= */}
+
+                <a
+                  href={STRIPE_PAYMENT_LINK}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="group flex w-full items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-[#1BBCEF] to-[#168ac7] px-5 py-4 text-base font-bold text-white shadow-lg shadow-[#1BBCEF]/15 transition-all duration-300 hover:-translate-y-0.5 hover:shadow-[#1BBCEF]/30 focus:outline-none focus:ring-4 focus:ring-[#1BBCEF]/20"
+                >
+
+                  <CreditCard className="h-5 w-5" />
+
+                  Proceed To Checkout
+
+                  <ExternalLink className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />
+
+                </a>
+
+                {/* STRIPE NOTICE */}
+
+                <div className="mt-4 rounded-xl border border-white/[0.07] bg-[#020817]/40 px-4 py-3">
+
+                  <p className="text-center text-xs leading-5 text-slate-400">
+                    Please enter the same payment
+                    amount on Stripe that was agreed
+                    upon with your project manager.
+                  </p>
+
+                </div>
+
+              </section>
+
+              {/* ===========================================
+                  SCREENSHOT
+              =========================================== */}
+
+              <section className="relative overflow-hidden rounded-2xl border-2 border-amber-400/60 bg-amber-400/[0.07] p-5 shadow-lg shadow-amber-400/5 sm:p-6">
+
+                {/* REQUIRED BADGE */}
+
+                <div className="absolute right-0 top-0 rounded-bl-xl bg-amber-400 px-4 py-2 text-[10px] font-black uppercase tracking-[0.15em] text-[#181100]">
+                  Required
+                </div>
+
+                {/* TITLE */}
+
+                <div className="mb-5 pr-20">
+
+                  <div className="mb-2 flex items-center gap-2">
+
+                    <Upload className="h-5 w-5 shrink-0 text-amber-300" />
+
+                    <h2 className="text-lg font-extrabold text-amber-100">
+                      Upload Payment Screenshot
+                    </h2>
+
+                  </div>
+
+                  <p className="text-sm font-medium leading-6 text-amber-100/75">
+                    After completing your Stripe
+                    payment, upload your payment
+                    screenshot below.
+                  </p>
+
+                </div>
+
+                {/* IMPORTANT */}
+
+                <div className="mb-4 flex items-start gap-3 rounded-xl border border-amber-400/20 bg-amber-400/10 px-4 py-3">
+
+                  <AlertCircle className="mt-0.5 h-5 w-5 shrink-0 text-amber-300" />
+
+                  <p className="text-sm font-semibold leading-5 text-amber-100">
+                    Payment screenshot is
+                    mandatory. You cannot submit
+                    this form without uploading
+                    your payment proof.
+                  </p>
+
+                </div>
+
+                {/* =========================================
+                    UPLOAD BOX
+                ========================================= */}
+
+                <label
+                  htmlFor="payment-screenshot"
+                  className="group flex min-h-[155px] cursor-pointer flex-col items-center justify-center rounded-xl border-2 border-dashed border-amber-300/40 bg-[#020817]/25 px-5 py-6 text-center transition-all duration-300 hover:border-amber-300 hover:bg-amber-300/[0.04]"
+                >
+
+                  {file ? (
+                    <>
+                      <div className="mb-3 flex h-12 w-12 items-center justify-center rounded-full bg-emerald-400/10">
+
+                        <CheckCircle2 className="h-7 w-7 text-emerald-400" />
+
+                      </div>
+
+                      <span className="max-w-full break-all text-sm font-bold text-white">
+                        {file.name}
+                      </span>
+
+                      <span className="mt-1 text-xs font-medium text-emerald-300">
+                        Screenshot selected
+                        successfully
+                      </span>
+
+                      <span className="mt-3 text-xs text-slate-500">
+                        Click here to replace the
+                        screenshot
+                      </span>
+                    </>
+                  ) : (
+                    <>
+                      <div className="mb-3 flex h-12 w-12 items-center justify-center rounded-full bg-amber-300/10 transition-transform group-hover:scale-105">
+
+                        <Upload className="h-6 w-6 text-amber-300" />
+
+                      </div>
+
+                      <span className="text-sm font-bold text-amber-100">
+                        Click To Upload Payment
+                        Screenshot
+                      </span>
+
+                      <span className="mt-2 text-xs text-amber-100/55">
+                        JPG, PNG or WEBP • Maximum
+                        5 MB
+                      </span>
+                    </>
+                  )}
+
+                  <input
+                    id="payment-screenshot"
+                    type="file"
+                    accept="image/jpeg,image/png,image/webp"
+                    onChange={handleFileChange}
+                    required
+                    className="sr-only"
+                  />
+
                 </label>
-              </div>
 
-              <div className="grid md:grid-cols-2 gap-4">
-                <div className="bg-[#020817]/45 border border-white/10 rounded-2xl p-5">
-                  <h3 className="font-bold text-white mb-2 flex items-center gap-2">
-                    <ShieldCheck className="w-5 h-5 text-[#1BBCEF]" />
-                    Secure Submission
-                  </h3>
-                  <p className="text-sm text-gray-400">
-                    Your payment information will be submitted to our team for
-                    verification.
-                  </p>
-                </div>
+              </section>
 
-                <div className="bg-[#020817]/45 border border-white/10 rounded-2xl p-5">
-                  <h3 className="font-bold text-white mb-2 flex items-center gap-2">
-                    <CheckCircle2 className="w-5 h-5 text-[#1BBCEF]" />
-                    Fast Verification
-                  </h3>
-                  <p className="text-sm text-gray-400">
-                    Our billing team will review your screenshot and contact you
-                    shortly.
-                  </p>
+              {/* ===========================================
+                  MAIN ERROR
+              =========================================== */}
+
+              {errorMessage && (
+                <div
+                  role="alert"
+                  className="flex items-start gap-3 rounded-xl border border-red-400/30 bg-red-400/10 px-4 py-3 text-sm text-red-200"
+                >
+
+                  <AlertCircle className="mt-0.5 h-5 w-5 shrink-0" />
+
+                  <span className="leading-5">
+                    {errorMessage}
+                  </span>
+
                 </div>
-              </div>
+              )}
+
+              {/* ===========================================
+                  SUBMIT BUTTON
+              =========================================== */}
 
               <button
                 type="submit"
                 disabled={loading}
-                className="w-full bg-gradient-to-r from-[#1BBCEF] to-[#004495] hover:from-[#004495] hover:to-[#1BBCEF] text-[#E9FBFF] py-4 rounded-full font-semibold flex items-center justify-center gap-2 shadow-lg shadow-[#1BBCEF]/25 hover:shadow-[#1BBCEF]/45 hover:-translate-y-0.5 transition-all duration-300 disabled:opacity-70 disabled:cursor-not-allowed"
+                className="flex w-full items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-[#1BBCEF] to-[#0876c9] px-5 py-4 text-base font-bold text-white shadow-lg shadow-[#1BBCEF]/15 transition-all duration-300 hover:-translate-y-0.5 hover:shadow-[#1BBCEF]/30 disabled:cursor-not-allowed disabled:opacity-60 disabled:hover:translate-y-0"
               >
-                {loading ? "Submitting..." : "Payment Done"}
-                {!loading && <CheckCircle2 size={20} />}
+
+                {loading ? (
+                  <>
+                    <svg
+                      className="h-5 w-5 animate-spin"
+                      viewBox="0 0 24 24"
+                    >
+                      <circle
+                        className="opacity-25"
+                        cx="12"
+                        cy="12"
+                        r="10"
+                        stroke="currentColor"
+                        strokeWidth="4"
+                        fill="none"
+                      />
+
+                      <path
+                        className="opacity-75"
+                        fill="currentColor"
+                        d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4z"
+                      />
+                    </svg>
+
+                    Submitting Confirmation...
+                  </>
+                ) : (
+                  <>
+                    <CheckCircle2 className="h-5 w-5" />
+
+                    Submit Payment Confirmation
+                  </>
+                )}
+
               </button>
+
+              {/* ===========================================
+                  SECURE MESSAGE
+              =========================================== */}
+
+              <div className="flex items-center justify-center gap-2 text-center">
+
+                <ShieldCheck className="h-4 w-4 shrink-0 text-[#1BBCEF]" />
+
+                <p className="text-xs leading-5 text-slate-500">
+                  Your payment confirmation will
+                  be securely submitted to the
+                  Optivax Global billing team.
+                </p>
+
+              </div>
+
             </div>
-          </motion.form>
+
+          </form>
+
         </div>
-      </section>
+
+      </main>
     </>
   );
 };
