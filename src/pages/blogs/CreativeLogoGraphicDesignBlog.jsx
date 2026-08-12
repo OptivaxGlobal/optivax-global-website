@@ -37,7 +37,7 @@ const sections = [
   },
   {
     heading: "Final Thoughts",
-    text: "Creative logo and graphic design services help businesses create stronger first impressions, improve brand recognition, support marketing efforts, and build long-term customer trust. Professional design is more than visual decoration—it is a strategic business investment that strengthens branding and supports sustainable growth. Optivax Global helps businesses create creative logo and graphic design solutions that build memorable brands and professional digital experiences.",
+    text: "Creative logo and graphic design services help businesses create stronger first impressions, improve brand recognition, support marketing efforts, and build long-term customer trust. Professional design is more than visual decoration it is a strategic business investment that strengthens branding and supports sustainable growth. Optivax Global helps businesses create creative logo and graphic design solutions that build memorable brands and professional digital experiences.",
   },
 ];
 

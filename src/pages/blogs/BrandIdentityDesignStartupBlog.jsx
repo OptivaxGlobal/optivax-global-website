@@ -17,7 +17,7 @@ const sections = [
   },
   {
     heading: "Recognition Matters in Crowded Markets",
-    text: "Most startups enter markets where customers already have alternatives. Your brand may appear beside competitors in Google results, social media feeds, marketplaces, directories, emails, and advertisements. Being visually recognizable can therefore become extremely valuable. Research into distinctive brand assets emphasizes the importance of creating recognizable elements—such as colors, shapes, logos, and other visual cues—that customers begin associating with a particular company.",
+    text: "Most startups enter markets where customers already have alternatives. Your brand may appear beside competitors in Google results, social media feeds, marketplaces, directories, emails, and advertisements. Being visually recognizable can therefore become extremely valuable. Research into distinctive brand assets emphasizes the importance of creating recognizable elements such as colors, shapes, logos, and other visual cues that customers begin associating with a particular company.",
   },
   {
     heading: "Create a Clear and Memorable Identity",

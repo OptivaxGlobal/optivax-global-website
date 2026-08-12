@@ -26,19 +26,19 @@ const ComicArts = () => {
   const contentSections = [
     {
       title: "Comic Art That Tells Your Story",
-      text: "Comics are more than just drawings—they're a unique way to tell stories that grab readers and keep them turning pages. Whether you're creating a graphic novel, comic series, marketing comic, or narrative art project, we design visuals that make every moment count. Our comic art combines expressive character work, dynamic panel layouts, and compelling visual storytelling that brings your ideas to life in ways that feel fresh, engaging, and impossible to put down.",
+      text: "Comics are more than just drawings they're a unique way to tell stories that grab readers and keep them turning pages. Whether you're creating a graphic novel, comic series, marketing comic, or narrative art project, we design visuals that make every moment count. Our comic art combines expressive character work, dynamic panel layouts, and compelling visual storytelling that brings your ideas to life in ways that feel fresh, engaging, and impossible to put down.",
     },
     {
       title: "Characters That Readers Remember",
-      text: "The heart of any great comic is unforgettable characters. We design characters with personality built into every line—from their shape language to their expressions to the way they move. Each character we create has a distinct visual identity that makes them instantly recognizable and emotionally real. Your readers won't just follow the story; they'll care about the people in it.",
+      text: "The heart of any great comic is unforgettable characters. We design characters with personality built into every line from their shape language to their expressions to the way they move. Each character we create has a distinct visual identity that makes them instantly recognizable and emotionally real. Your readers won't just follow the story; they'll care about the people in it.",
     },
     {
       title: "Panel Layouts Built for Impact",
-      text: "Great comic art isn't just pretty pictures—it's carefully structured visual choreography. We design panel compositions, pacing, and transitions that guide readers through your story with perfect rhythm. Action feels punchy. Emotions land harder. Dramatic moments breathe. Every panel flows naturally to the next, creating a reading experience that feels intentional and immersive.",
+      text: "Great comic art isn't just pretty pictures it's carefully structured visual choreography. We design panel compositions, pacing, and transitions that guide readers through your story with perfect rhythm. Action feels punchy. Emotions land harder. Dramatic moments breathe. Every panel flows naturally to the next, creating a reading experience that feels intentional and immersive.",
     },
     {
       title: "Worlds That Feel Real",
-      text: "Whether your story is set in a bustling city, a fantasy realm, or outer space, we create environments that feel lived-in and authentic. Detailed backgrounds, consistent lighting, and thoughtful design choices make your world feel believable—and make your characters feel like they genuinely belong there.",
+      text: "Whether your story is set in a bustling city, a fantasy realm, or outer space, we create environments that feel lived-in and authentic. Detailed backgrounds, consistent lighting, and thoughtful design choices make your world feel believable and make your characters feel like they genuinely belong there.",
     },
     {
       title: "Flexible Styles for Every Story",

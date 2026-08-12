@@ -57,7 +57,7 @@ const sections = [
   },
   {
     heading: "Final Thoughts",
-    text: "Graphic design plays a major role in business success by improving first impressions, strengthening brand recognition, supporting marketing, building trust, and creating better customer experiences. Professional design is more than decoration—it is a strategic business asset that helps companies communicate clearly and grow with confidence. Optivax Global helps businesses create impactful graphic design solutions that support branding, marketing, and long-term business growth.",
+    text: "Graphic design plays a major role in business success by improving first impressions, strengthening brand recognition, supporting marketing, building trust, and creating better customer experiences. Professional design is more than decoration it is a strategic business asset that helps companies communicate clearly and grow with confidence. Optivax Global helps businesses create impactful graphic design solutions that support branding, marketing, and long-term business growth.",
   },
 ];
 

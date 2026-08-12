@@ -41,7 +41,7 @@ const PrivacyPolicy = () => {
               a project inquiry.
             </p>
 
-            <p className="text-gray-500 mt-4">Last updated: April 2026</p>
+            <p className="text-gray-500 mt-4">Last updated: August 2026</p>
           </div>
 
           <div className="bg-[#1E1E2A] border border-white/10 rounded-3xl p-8 md:p-10 space-y-8">
@@ -50,7 +50,10 @@ const PrivacyPolicy = () => {
               <p className="text-gray-400 leading-relaxed">
                 We may collect your name, email address, phone number, selected
                 service, project details, and any information you submit through
-                our contact form.
+                our contact form. If you choose to opt in to SMS / text message
+                communications, we also collect your text messaging consent
+                separately from your phone number, as described in Section 6
+                below.
               </p>
             </section>
 
@@ -91,7 +94,39 @@ const PrivacyPolicy = () => {
             </section>
 
             <section>
-              <h2 className="text-2xl font-bold mb-3">6. Your Rights</h2>
+              <h2 className="text-2xl font-bold mb-3">
+                6. SMS / Text Messaging Consent
+              </h2>
+
+              <p className="text-gray-400 leading-relaxed mb-4">
+                If you choose to opt in to SMS / text messaging communications
+                from Optivax Global (for example, through a checkbox on our
+                contact or payment forms), we may use your phone number to
+                send you text messages related to your inquiry, project, or
+                account. This SMS consent is completely voluntary and is
+                separate from simply providing your phone number to us. You
+                can submit a form and provide your phone number without
+                opting in to SMS messaging, and doing so will not enroll you
+                in any text messaging program.
+              </p>
+
+              <p className="text-gray-400 leading-relaxed mb-4">
+                No mobile information will be shared with third parties/affiliates
+                for marketing/promotional purposes. All the above categories
+                exclude text messaging originator opt-in data and consent; this
+                information will not be shared with any third parties.
+              </p>
+
+              <p className="text-gray-400 leading-relaxed">
+                You may opt out of SMS communications at any time by replying
+                STOP to any message you receive, or by contacting us directly
+                using the details below. For help, reply HELP or contact us at
+                any time.
+              </p>
+            </section>
+
+            <section>
+              <h2 className="text-2xl font-bold mb-3">7. Your Rights</h2>
               <p className="text-gray-400 leading-relaxed">
                 You may request access, correction, or deletion of your personal
                 information by contacting us through the details below.
@@ -99,7 +134,7 @@ const PrivacyPolicy = () => {
             </section>
 
             <section>
-              <h2 className="text-2xl font-bold mb-4">7. Contact Us</h2>
+              <h2 className="text-2xl font-bold mb-4">8. Contact Us</h2>
 
               <div className="grid md:grid-cols-3 gap-4">
                 <a href={`mailto:${SITE.email}`} className="bg-[#0C0D0D]/25 border border-white/10 rounded-2xl p-5 hover:border-accent-purple/40 transition">

@@ -19,6 +19,7 @@ const Header = () => {
     { name: "Game Development", href: "/game-development" },
     { name: "Software Development", href: "/software-development" },
     { name: "Ebook Cover Design", href: "/ebook-cover-design" },
+    { name: "eBook Publishing", href: "/ebook-publishing" },
     { name: "Logo Design", href: "/logo-design" },
     { name: "Brand Design", href: "/brand-design" },
     { name: "Animation", href: "/animation" },
@@ -167,20 +168,31 @@ const Header = () => {
               onMouseEnter={() => setServicesOpen(true)}
               onMouseLeave={() => setServicesOpen(false)}
             >
-              <button
-                type="button"
-                onClick={() => setServicesOpen((prev) => !prev)}
-                className="relative px-3 py-2 rounded-full flex items-center gap-1 text-sm font-medium text-[#E9FBFF]/85 hover:text-white hover:bg-[#E9FBFF]/10 transition-all duration-300 group"
-                aria-expanded={servicesOpen}
-              >
-                Services
-                <ChevronDown
-                  className={`w-4 h-4 transition-transform duration-300 ${
-                    servicesOpen ? "rotate-180" : ""
-                  }`}
-                />
+              <div className="relative flex items-center rounded-full text-sm font-medium text-[#E9FBFF]/85 hover:text-white hover:bg-[#E9FBFF]/10 transition-all duration-300 group">
+                <Link
+                  to="/services"
+                  onClick={() => {
+                    closeMenus();
+                  }}
+                  className="pl-3 pr-1 py-2 rounded-l-full"
+                >
+                  Services
+                </Link>
+                <button
+                  type="button"
+                  onClick={() => setServicesOpen((prev) => !prev)}
+                  className="pr-3 pl-1 py-2 rounded-r-full"
+                  aria-expanded={servicesOpen}
+                  aria-label="Toggle services menu"
+                >
+                  <ChevronDown
+                    className={`w-4 h-4 transition-transform duration-300 ${
+                      servicesOpen ? "rotate-180" : ""
+                    }`}
+                  />
+                </button>
                 <span className={navUnderline} />
-              </button>
+              </div>
 
               <AnimatePresence>
                 {servicesOpen && (
@@ -282,19 +294,29 @@ const Header = () => {
                 </a>
 
                 <div className="w-full">
-                  <button
-                    type="button"
-                    onClick={() => setMobileServicesOpen((prev) => !prev)}
-                    className="w-full flex items-center justify-center gap-2 text-center text-2xl font-semibold text-[#E9FBFF] py-3 rounded-2xl bg-[#E9FBFF]/6 border border-[#E9FBFF]/10 hover:bg-[#1699F1]/18 hover:border-[#38D9FF]/35 transition-all duration-300"
-                    aria-expanded={mobileServicesOpen}
-                  >
-                    Services
-                    <ChevronDown
-                      className={`w-5 h-5 text-[#38D9FF] transition-transform duration-300 ${
-                        mobileServicesOpen ? "rotate-180" : ""
-                      }`}
-                    />
-                  </button>
+                  <div className="w-full flex items-center rounded-2xl bg-[#E9FBFF]/6 border border-[#E9FBFF]/10 overflow-hidden hover:border-[#38D9FF]/35 transition-all duration-300">
+                    <Link
+                      to="/services"
+                      onClick={closeMenus}
+                      className="flex-1 text-center text-2xl font-semibold text-[#E9FBFF] py-3 hover:bg-[#1699F1]/18 transition-all duration-300"
+                    >
+                      Services
+                    </Link>
+
+                    <button
+                      type="button"
+                      onClick={() => setMobileServicesOpen((prev) => !prev)}
+                      className="px-5 py-3 border-l border-[#E9FBFF]/10 hover:bg-[#1699F1]/18 transition-all duration-300"
+                      aria-expanded={mobileServicesOpen}
+                      aria-label="Toggle services menu"
+                    >
+                      <ChevronDown
+                        className={`w-5 h-5 text-[#38D9FF] transition-transform duration-300 ${
+                          mobileServicesOpen ? "rotate-180" : ""
+                        }`}
+                      />
+                    </button>
+                  </div>
 
                   <AnimatePresence>
                     {mobileServicesOpen && (
@@ -390,6 +412,7 @@ const Header = () => {
     //{ name: "Game Development", href: "/game-development" },
     //{ name: "Software Development", href: "/software-development" },
     { name: "Ebook Cover Design", href: "/ebook-cover-design" },
+    { name: "eBook Publishing", href: "/ebook-publishing" },
     { name: "Logo Design", href: "/logo-design" },
     { name: "Brand Design", href: "/brand-design" },
     { name: "Animation", href: "/animation" },
@@ -538,20 +561,31 @@ const Header = () => {
               onMouseEnter={() => setServicesOpen(true)}
               onMouseLeave={() => setServicesOpen(false)}
             >
-              <button
-                type="button"
-                onClick={() => setServicesOpen((prev) => !prev)}
-                className="relative px-3 py-2 rounded-full flex items-center gap-1 text-sm font-medium text-[#E9FBFF]/85 hover:text-white hover:bg-[#E9FBFF]/10 transition-all duration-300 group"
-                aria-expanded={servicesOpen}
-              >
-                Services
-                <ChevronDown
-                  className={`w-4 h-4 transition-transform duration-300 ${
-                    servicesOpen ? "rotate-180" : ""
-                  }`}
-                />
+              <div className="relative flex items-center rounded-full text-sm font-medium text-[#E9FBFF]/85 hover:text-white hover:bg-[#E9FBFF]/10 transition-all duration-300 group">
+                <Link
+                  to="/services"
+                  onClick={() => {
+                    closeMenus();
+                  }}
+                  className="pl-3 pr-1 py-2 rounded-l-full"
+                >
+                  Services
+                </Link>
+                <button
+                  type="button"
+                  onClick={() => setServicesOpen((prev) => !prev)}
+                  className="pr-3 pl-1 py-2 rounded-r-full"
+                  aria-expanded={servicesOpen}
+                  aria-label="Toggle services menu"
+                >
+                  <ChevronDown
+                    className={`w-4 h-4 transition-transform duration-300 ${
+                      servicesOpen ? "rotate-180" : ""
+                    }`}
+                  />
+                </button>
                 <span className={navUnderline} />
-              </button>
+              </div>
 
               <AnimatePresence>
                 {servicesOpen && (
@@ -656,19 +690,29 @@ const Header = () => {
                 </a>
 
                 <div className="w-full">
-                  <button
-                    type="button"
-                    onClick={() => setMobileServicesOpen((prev) => !prev)}
-                    className="w-full flex items-center justify-center gap-2 text-center text-2xl font-semibold text-[#E9FBFF] py-3 rounded-2xl bg-[#E9FBFF]/6 border border-[#E9FBFF]/10 hover:bg-[#1699F1]/18 hover:border-[#38D9FF]/35 transition-all duration-300"
-                    aria-expanded={mobileServicesOpen}
-                  >
-                    Services
-                    <ChevronDown
-                      className={`w-5 h-5 text-[#38D9FF] transition-transform duration-300 ${
-                        mobileServicesOpen ? "rotate-180" : ""
-                      }`}
-                    />
-                  </button>
+                  <div className="w-full flex items-center rounded-2xl bg-[#E9FBFF]/6 border border-[#E9FBFF]/10 overflow-hidden hover:border-[#38D9FF]/35 transition-all duration-300">
+                    <Link
+                      to="/services"
+                      onClick={closeMenus}
+                      className="flex-1 text-center text-2xl font-semibold text-[#E9FBFF] py-3 hover:bg-[#1699F1]/18 transition-all duration-300"
+                    >
+                      Services
+                    </Link>
+
+                    <button
+                      type="button"
+                      onClick={() => setMobileServicesOpen((prev) => !prev)}
+                      className="px-5 py-3 border-l border-[#E9FBFF]/10 hover:bg-[#1699F1]/18 transition-all duration-300"
+                      aria-expanded={mobileServicesOpen}
+                      aria-label="Toggle services menu"
+                    >
+                      <ChevronDown
+                        className={`w-5 h-5 text-[#38D9FF] transition-transform duration-300 ${
+                          mobileServicesOpen ? "rotate-180" : ""
+                        }`}
+                      />
+                    </button>
+                  </div>
 
                   <AnimatePresence>
                     {mobileServicesOpen && (

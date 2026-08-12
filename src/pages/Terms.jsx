@@ -40,7 +40,7 @@ const Terms = () => {
               Optivax Global’s website and services.
             </p>
 
-            <p className="text-gray-500 mt-4">Last updated: April 2026</p>
+            <p className="text-gray-500 mt-4">Last updated: August 2026</p>
           </div>
 
           <div className="bg-[#1E1E2A] border border-white/10 rounded-3xl p-8 md:p-10 space-y-8">
@@ -99,7 +99,45 @@ const Terms = () => {
             </section>
 
             <section>
-              <h2 className="text-2xl font-bold mb-3">7. Changes to Terms</h2>
+              <h2 className="text-2xl font-bold mb-3">
+                7. SMS Communications
+              </h2>
+
+              <p className="text-gray-400 leading-relaxed mb-4">
+                Optivax Global may offer SMS / text messaging communications
+                to users who actively opt in through a clearly labeled
+                consent checkbox on our forms. SMS messages are only sent to
+                users who provide this active opt-in. Simply providing your
+                phone number on a form does not, by itself, constitute
+                consent to receive SMS messages from Optivax Global.
+              </p>
+
+              <ul className="list-disc list-inside space-y-2 text-gray-400 leading-relaxed">
+                <li>Message frequency may vary depending on your inquiry or project.</li>
+                <li>Message and data rates may apply, depending on your mobile carrier and plan.</li>
+                <li>You can cancel SMS messages at any time by replying STOP.</li>
+                <li>For assistance, reply HELP or contact us using the details below.</li>
+                <li>
+                  Carriers are not liable for delayed or undelivered
+                  messages.
+                </li>
+              </ul>
+
+              <p className="text-gray-400 leading-relaxed mt-4">
+                For more information about how we handle your phone number
+                and SMS consent, please see our{" "}
+                <a
+                  href="/privacy-policy"
+                  className="text-accent-purple hover:text-white underline underline-offset-2 transition-colors"
+                >
+                  Privacy Policy
+                </a>
+                .
+              </p>
+            </section>
+
+            <section>
+              <h2 className="text-2xl font-bold mb-3">8. Changes to Terms</h2>
               <p className="text-gray-400 leading-relaxed">
                 We may update these Terms from time to time. Continued use of
                 our website means you accept the updated terms.
@@ -107,7 +145,7 @@ const Terms = () => {
             </section>
 
             <section>
-              <h2 className="text-2xl font-bold mb-4">8. Contact Us</h2>
+              <h2 className="text-2xl font-bold mb-4">9. Contact Us</h2>
 
               <div className="grid md:grid-cols-3 gap-4">
                 <a href={`mailto:${SITE.email}`} className="bg-[#0C0D0D]/25 border border-white/10 rounded-2xl p-5 hover:border-accent-purple/40 transition">

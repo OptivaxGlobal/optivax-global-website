@@ -5,7 +5,7 @@ import effectiveBusinessLogoImg from "@/assets/blog-images/effective-business-lo
 const sections = [
   {
     heading: "Introduction",
-    text: "A business logo is often the first visual element customers notice about a brand. It appears on websites, social media profiles, packaging, advertisements, business cards, and countless other touchpoints. A well-designed logo does more than make a company look professional—it helps communicate the brand’s personality, values, and identity in just a few seconds. Whether you are launching a new company or refreshing an existing brand, understanding the most important business logo design elements can help you create a logo that remains memorable, recognizable, and effective across different platforms.",
+    text: "A business logo is often the first visual element customers notice about a brand. It appears on websites, social media profiles, packaging, advertisements, business cards, and countless other touchpoints. A well-designed logo does more than make a company look professional it helps communicate the brand’s personality, values, and identity in just a few seconds. Whether you are launching a new company or refreshing an existing brand, understanding the most important business logo design elements can help you create a logo that remains memorable, recognizable, and effective across different platforms.",
   },
   {
     heading: "Why Is an Effective Business Logo Important?",
@@ -65,7 +65,7 @@ const sections = [
   },
   {
     heading: "Final Thoughts",
-    text: "Effective business logo design combines creativity with strategy. Every element—from typography and color to spacing, scalability, and originality—should support the overall identity of the business. The most successful logos are usually simple enough to recognize quickly, distinctive enough to remember, and flexible enough to work across multiple platforms. Instead of viewing a logo as just a decorative graphic, businesses should consider it a long-term branding asset. By focusing on the right business logo design elements from the beginning, brands can create professional and recognizable identities that remain relevant as the business continues to grow. Optivax Global helps businesses develop strategic logo designs and complete visual identities that support brand recognition, credibility, and long-term growth.",
+    text: "Effective business logo design combines creativity with strategy. Every element from typography and color to spacing, scalability, and originality should support the overall identity of the business. The most successful logos are usually simple enough to recognize quickly, distinctive enough to remember, and flexible enough to work across multiple platforms. Instead of viewing a logo as just a decorative graphic, businesses should consider it a long-term branding asset. By focusing on the right business logo design elements from the beginning, brands can create professional and recognizable identities that remain relevant as the business continues to grow. Optivax Global helps businesses develop strategic logo designs and complete visual identities that support brand recognition, credibility, and long-term growth.",
   },
 ];
 

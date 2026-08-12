@@ -44,8 +44,48 @@ import rankGoogleWithoutAdsImg from "@/assets/blog-images/rank-google-without-pa
 import shopifySmallBusinessImg from "@/assets/blog-images/shopify-solution-small-business.webp";
 import smallBusinessWebsiteCostImg from "@/assets/blog-images/small-business-website-cost.webp";
 import startupBrandIdentityImg from "@/assets/blog-images/brand-identity-design-business-startup.webp";
+import socialMediaGraphicsImg from "@/assets/blog-images/social-media-graphics-design-tips.webp";
+import businessAppFeaturesImg from "@/assets/blog-images/essential-business-app-features.webp";
+import digitalMarketingMistakesImg from "@/assets/blog-images/digital-marketing-mistakes-avoid.webp";
+import startupBrandingServicesImg from "@/assets/blog-images/best-branding-services-startups.webp";
 
 export const blogPosts = [
+  {
+  title: "Best Branding Services for Startups That Want to Stand Out",
+  excerpt:
+    "Explore the branding services startups need to create a clear strategy, memorable identity, consistent messaging, and recognizable customer experience.",
+  category: "Brand Design",
+  date: "August 2026",
+  image: startupBrandingServicesImg,
+  url: "/startup-for-best-branding-services",
+},
+  {
+  title: "Common Digital Marketing Mistakes Businesses Should Avoid",
+  excerpt:
+    "Learn which digital marketing mistakes can waste your budget, weaken campaigns, reduce conversions, and prevent different channels from working together.",
+  category: "Digital Marketing",
+  date: "August 2026",
+  image: digitalMarketingMistakesImg,
+  url: "/digital-marketing-mistakes-avoid",
+},
+  {
+  title: "Essential Features Every Business App Needs",
+  excerpt:
+    "Explore the essential features that help business apps provide intuitive, secure, accessible, reliable, and customer-focused digital experiences.",
+  category: "App Development",
+  date: "August 2026",
+  image: businessAppFeaturesImg,
+  url: "/essential-feature-for-business-needs",
+},
+  {
+  title: "Social Media Graphic Design for Businesses",
+  excerpt:
+    "Learn how reusable design systems, adaptable templates, typography rules, approved assets, and responsive formats improve business social media graphics.",
+  category: "Graphic Design",
+  date: "August 2026",
+  image: socialMediaGraphicsImg,
+  url: "/social-media-graphics-design-tips",
+},
   {
   title: "Why Every Startup Needs Brand Identity Design",
   excerpt:

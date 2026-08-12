@@ -47,7 +47,7 @@ const Footer = () => {
       title: "Quick Links",
       links: [
         { name: "Home", href: "/" },
-        { name: "Services", href: "/#services" },
+        { name: "Services", href: "/services" },
         { name: "Portfolio", href: "/#portfolio" },
         { name: "About", href: "/#about" },
         { name: "Packages", href: "/digital-growth-packages" },
@@ -63,6 +63,7 @@ const Footer = () => {
         { name: "Mobile App Design", href: "/mobile-app-design" },
         { name: "Digital Marketing", href: "/digital-marketing" },
         { name: "Ebook Cover Design", href: "/ebook-cover-design" },
+        { name: "eBook Publishing", href: "/ebook-publishing" },
         {
           name: "Corporate Presentation",
           href: "/corporate-presentation-design",

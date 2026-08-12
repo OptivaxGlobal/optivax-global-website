@@ -10,6 +10,8 @@ import {
   BookOpen,
   Presentation,
   ArrowUpRight,
+  Gamepad2,
+  Terminal,
 } from "lucide-react";
 
 const services = [
@@ -68,7 +70,7 @@ const services = [
   {
     title: "Game Development",
     slug: "/game-development",
-    icon: Globe,
+    icon: Gamepad2,
     description:
       "We create custom games for mobile, PC, console, and emerging platforms with clear gameplay, immersive visuals, and a dependable build process.",
     points: [
@@ -81,7 +83,7 @@ const services = [
   {
     title: "Software Development",
     slug: "/software-development",
-    icon: Globe,
+    icon: Terminal,
     description:
       "We build custom software for web platforms, internal operations, SaaS products, and business systems that need to be reliable from day one.",
     points: [
@@ -98,6 +100,7 @@ const services = [
     description:
       "A great cover can make readers stop, look, and click. We design professional eBook covers that match your story, build trust, and help your book stand out on Amazon KDP and other platforms.",
     points: [
+      { title: "eBook Publishing", link: "/ebook-publishing", highlight: true },
       { title: "KDP Covers" },
       { title: "Book Branding" },
       { title: "Creative Concepts" },

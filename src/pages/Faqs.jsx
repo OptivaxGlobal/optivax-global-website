@@ -13,6 +13,7 @@ import {
   Layers3,
   Users,
   BadgeCheck,
+  Briefcase,
 } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { useNavigate } from "react-router-dom";
@@ -367,7 +368,7 @@ const Faqs = () => {
                 text: "Upgrade your digital presence with better design, better user experience, and stronger marketing direction.",
               },
               {
-                icon: ShieldCheck,
+                icon: Briefcase,
                 title: "For Professional Teams",
                 text: "Build trust with polished visuals, clear messaging, and digital solutions that support long-term growth.",
               },

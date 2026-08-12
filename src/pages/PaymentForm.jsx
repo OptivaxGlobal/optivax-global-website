@@ -8,7 +8,7 @@ import {
   ShieldCheck,
   Upload,
 } from "lucide-react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 
 import supabase from "@/lib/supabase";
 import AnimatedHeroBackground from "@/components/AnimatedHeroBackground";
@@ -47,6 +47,7 @@ const services = [
   "Search Engine Optimization (SEO)",
   "Social Media Marketing",
   "Ebook Cover Design",
+  "eBook Publishing",
   "Corporate Presentation",
 ];
 
@@ -79,6 +80,7 @@ const PaymentForm = () => {
     contact: "",
     service: "",
     amount: "",
+    smsConsent: false,
   });
 
   const [file, setFile] = useState(null);
@@ -392,6 +394,8 @@ const PaymentForm = () => {
             payment_method: "Stripe Payment Link",
 
             screenshot_url: screenshotUrl,
+
+            sms_consent: form.smsConsent,
           }),
         }
       );
@@ -507,6 +511,8 @@ const PaymentForm = () => {
         payment_method: "Stripe Payment Link",
 
         screenshot_url: screenshotUrl,
+
+        sms_consent: form.smsConsent,
       };
 
       /* ---------------------------------------------------
@@ -519,7 +525,22 @@ const PaymentForm = () => {
           .insert([paymentRecord]);
 
       if (insertError) {
-        throw insertError;
+        // The payment_forms table may not have an sms_consent column
+        // yet   retry without it so a real, already-paid submission
+        // is never blocked by a missing column.
+        if (/sms_consent/i.test(insertError.message || "")) {
+          const { sms_consent, ...fallbackRecord } = paymentRecord;
+
+          const { error: fallbackError } = await supabase
+            .from("payment_forms")
+            .insert([fallbackRecord]);
+
+          if (fallbackError) {
+            throw fallbackError;
+          }
+        } else {
+          throw insertError;
+        }
       }
 
       /* ---------------------------------------------------
@@ -943,6 +964,51 @@ const PaymentForm = () => {
                   </div>
 
                 </div>
+
+                {/* =======================================
+                    SMS CONSENT
+                ======================================= */}
+
+                <label className="mt-5 flex items-start gap-3 rounded-xl border border-white/10 bg-[#020817]/40 p-4 cursor-pointer hover:border-[#1BBCEF]/40 transition-all duration-300">
+
+                  <input
+                    type="checkbox"
+                    name="smsConsent"
+                    checked={form.smsConsent}
+                    onChange={(e) =>
+                      setForm((prev) => ({
+                        ...prev,
+                        smsConsent: e.target.checked,
+                      }))
+                    }
+                    className="mt-0.5 h-5 w-5 shrink-0 rounded border-white/20 bg-[#020817] text-[#1BBCEF] accent-[#1BBCEF] focus:ring-2 focus:ring-[#1BBCEF]/50 cursor-pointer"
+                  />
+
+                  <span className="text-xs leading-5 text-slate-400">
+                    I agree to receive text messages from Optivax Global at
+                    the phone number provided. Message frequency may vary.
+                    Message &amp; data rates may apply. Reply STOP to
+                    cancel or HELP for help.{" "}
+                    <Link
+                      to="/privacy-policy"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-[#1BBCEF] hover:text-white underline underline-offset-2 transition-colors"
+                    >
+                      Privacy Policy
+                    </Link>{" "}
+                    &amp;{" "}
+                    <Link
+                      to="/terms"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-[#1BBCEF] hover:text-white underline underline-offset-2 transition-colors"
+                    >
+                      Terms of Service
+                    </Link>
+                  </span>
+
+                </label>
 
               </section>
 

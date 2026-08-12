@@ -61,6 +61,11 @@ const Home = () => {
     },
     {
       "@type": "Service",
+      "name": "eBook Publishing",
+      "url": "https://optivaxglobal.com/ebook-publishing"
+    },
+    {
+      "@type": "Service",
       "name": "Corporate Presentation Design",
       "url": "https://optivaxglobal.com/corporate-presentation-design"
     }

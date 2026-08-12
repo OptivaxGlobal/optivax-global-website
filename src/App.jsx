@@ -7,6 +7,7 @@ import Terms from "./pages/Terms";
 import Layout from "./components/Layout";
 import Home from "./pages/Home";
 import Contact from "./pages/Contact";
+import ServicesPage from "./pages/ServicesPage";
 import Project from "./pages/Project";
 import WebDesign from "./pages/WebDesign";
 import ThankYou from "./pages/ThankYou";
@@ -32,6 +33,7 @@ import SearchEngineOptimization from "./pages/SearchEngineOptimization";
 import SocialMediaMarketing from "./pages/SocialMediaMarketing";
 import Animation from "./pages/Animation";
 import EbookCover from "./pages/EbookCover";
+import EbookPublishing from "./pages/EbookPublishing";
 import CorporatePresentation from "./pages/CorporatePresentation";
 import ComicArts from "./pages/ComicArts";
 import HappyIndependenceDayUSA from "./pages/HappyIndependenceDayUSA";
@@ -80,12 +82,16 @@ import RankOnGoogleWithoutPaidAdsBlog from "./pages/blogs/RankOnGoogleWithoutPai
 import ShopifySolutionsSmallBusinessBlog from "./pages/blogs/ShopifySolutionsSmallBusinessBlog";
 import SmallBusinessWebsiteCostBlog from "./pages/blogs/SmallBusinessWebsiteCostBlog";
 import BrandIdentityDesignStartupBlog from "./pages/blogs/BrandIdentityDesignStartupBlog";
-
+import SocialMediaGraphicDesignTipsBlog from "./pages/blogs/SocialMediaGraphicDesignTipsBlog";
+import EssentialBusinessAppFeaturesBlog from "./pages/blogs/EssentialBusinessAppFeaturesBlog";
+import DigitalMarketingMistakesBlog from "./pages/blogs/DigitalMarketingMistakesBlog";
+import BestBrandingServicesStartupsBlog from "./pages/blogs/BestBrandingServicesStartupsBlog";
 
 import AnalyticsTracker from "./components/AnalyticsTracker";
 import PaymentForm from "@/pages/PaymentForm";
 import PaymentSuccessful from "@/pages/PaymentSuccessful";
 import PackagesPage from "./pages/PackagesPage";
+
 
 
 function MetaPixelPageView() {
@@ -144,6 +150,8 @@ function App() {
             <Route index element={<Home />} />
 
             <Route path="contact" element={<Contact />} />
+
+            <Route path="services" element={<ServicesPage />} />
 
             <Route
               path="project/:projectId"
@@ -338,7 +346,22 @@ function App() {
   path="/brand-identity-design-for-business-startup"
   element={<BrandIdentityDesignStartupBlog />}
 />
-
+<Route
+  path="/social-media-graphics-design-tips"
+  element={<SocialMediaGraphicDesignTipsBlog />}
+/>
+<Route
+  path="/essential-feature-for-business-needs"
+  element={<EssentialBusinessAppFeaturesBlog />}
+/>
+<Route
+  path="/digital-marketing-mistakes-avoid"
+  element={<DigitalMarketingMistakesBlog />}
+/>
+<Route
+  path="/startup-for-best-branding-services"
+  element={<BestBrandingServicesStartupsBlog />}
+/>
 
 
 <Route path="/payment-form" element={<PaymentForm />} />
@@ -419,6 +442,11 @@ function App() {
             <Route
               path="ebook-cover-design"
               element={<EbookCover />}
+            />
+
+            <Route
+              path="ebook-publishing"
+              element={<EbookPublishing />}
             />
 
             <Route

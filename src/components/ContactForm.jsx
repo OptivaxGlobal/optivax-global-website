@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
 import { Send } from "lucide-react";
-import { useLocation, useNavigate } from "react-router-dom";
+import { useLocation, useNavigate, Link } from "react-router-dom";
 import PhoneInput from "react-phone-input-2";
 import "react-phone-input-2/lib/style.css";
 import supabase from "@/lib/supabase";
@@ -48,6 +48,7 @@ const serviceOptions = [
   "Search Engine Optimization (SEO)",
   "Social Media Marketing",
   "Ebook Cover Design",
+  "eBook Publishing",
   "Corporate Presentation",
 ];
 
@@ -129,6 +130,8 @@ const normalizeServiceName = (serviceName) => {
     "Social Media Marketing": "Social Media Marketing",
     "Ebook Cover": "Ebook Cover Design",
     "Ebook Cover Design": "Ebook Cover Design",
+    "eBook Publishing": "eBook Publishing",
+    "Ebook Publishing": "eBook Publishing",
     "Corporate Presentation": "Corporate Presentation",
     "Corporate Presentation Design": "Corporate Presentation",
   };
@@ -150,6 +153,7 @@ const ContactForm = ({ onSubmitSuccess, redirectTo = "/thank-you" }) => {
     phone: "",
     service: "",
     message: "",
+    smsConsent: false,
   });
 
   const [loading, setLoading] = useState(false);
@@ -223,9 +227,12 @@ const ContactForm = ({ onSubmitSuccess, redirectTo = "/thank-you" }) => {
 
     setLoading(true);
 
+    const { smsConsent, ...restForm } = form;
+
     const finalFormData = {
-      ...form,
+      ...restForm,
       phone: `+${phoneDigits}`,
+      sms_consent: smsConsent,
     };
 
     try {
@@ -235,6 +242,20 @@ const ContactForm = ({ onSubmitSuccess, redirectTo = "/thank-you" }) => {
 
       if (error) {
         console.error("Supabase Error:", error.message);
+
+        // The contact_messages table may not have an sms_consent column
+        // yet   retry without it so lead capture keeps working.
+        if (/sms_consent/i.test(error.message || "")) {
+          const { sms_consent, ...fallbackData } = finalFormData;
+
+          const { error: fallbackError } = await supabase
+            .from("contact_messages")
+            .insert([fallbackData]);
+
+          if (fallbackError) {
+            console.error("Supabase Fallback Error:", fallbackError.message);
+          }
+        }
       }
 
       const web3FormData = new FormData();
@@ -249,6 +270,10 @@ const ContactForm = ({ onSubmitSuccess, redirectTo = "/thank-you" }) => {
       web3FormData.append("phone", finalFormData.phone);
       web3FormData.append("service", finalFormData.service);
       web3FormData.append("message", finalFormData.message);
+      web3FormData.append(
+        "sms_consent",
+        finalFormData.sms_consent ? "Yes" : "No"
+      );
 
       web3FormData.append(
         "subject",
@@ -269,6 +294,7 @@ const ContactForm = ({ onSubmitSuccess, redirectTo = "/thank-you" }) => {
           phone: "",
           service: "",
           message: "",
+          smsConsent: false,
         });
 
         setServiceSearch("");
@@ -573,6 +599,44 @@ const ContactForm = ({ onSubmitSuccess, redirectTo = "/thank-you" }) => {
             onChange={handleChange}
             className="w-full p-4 rounded-xl bg-[#0C0D0D]/30 border border-white/10 text-white outline-none focus:border-accent-purple/50 transition placeholder:text-gray-400"
           ></textarea>
+
+          <label className="flex items-start gap-3 p-4 rounded-xl bg-[#0C0D0D]/30 border border-white/10 cursor-pointer hover:border-accent-purple/40 transition-all duration-300">
+            <input
+              type="checkbox"
+              name="smsConsent"
+              checked={form.smsConsent}
+              onChange={(e) =>
+                setForm((prev) => ({
+                  ...prev,
+                  smsConsent: e.target.checked,
+                }))
+              }
+              className="mt-0.5 w-5 h-5 shrink-0 rounded border-white/20 bg-[#0C0D0D] text-accent-purple accent-accent-purple focus:ring-2 focus:ring-accent-purple/50 cursor-pointer"
+            />
+            <span className="text-sm text-gray-400 leading-relaxed">
+              I agree to receive text messages from Optivax Global at the
+              phone number provided. Message frequency may vary. Message
+              &amp; data rates may apply. Reply STOP to cancel or HELP for
+              help.{" "}
+              <Link
+                to="/privacy-policy"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-accent-purple hover:text-white underline underline-offset-2 transition-colors"
+              >
+                Privacy Policy
+              </Link>{" "}
+              &amp;{" "}
+              <Link
+                to="/terms"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-accent-purple hover:text-white underline underline-offset-2 transition-colors"
+              >
+                Terms of Service
+              </Link>
+            </span>
+          </label>
 
           <button
             type="submit"
