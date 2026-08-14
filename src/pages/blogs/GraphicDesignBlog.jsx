@@ -21,7 +21,7 @@ const sections = [
   },
   {
     heading: "Modern Marketing Depends on Visual Communication",
-    text: "In today's digital world, businesses compete for attention every day. Effective graphic design helps brands communicate their message quickly and clearly across websites, social media, advertisements, and marketing campaigns.",
+    text: "In today's digital world, businesses compete for attention every day. Effective graphic design helps brands communicate their message quickly and clearly across websites, social media, advertisements, and promotional campaigns.",
   },
   {
     heading: "Final Thoughts",

@@ -5,7 +5,7 @@ import seoBlogImg from "@/assets/blog-images/seo-blog.webp";
 const sections = [
   {
     heading: "Introduction",
-    text: "SEO has become one of the most powerful tools for service businesses that want to improve visibility, attract customers, and grow online organically.",
+    text: "Search visibility has become one of the most powerful tools for service businesses that want to improve visibility, attract customers, and grow online organically.",
   },
 
   {
@@ -14,37 +14,37 @@ const sections = [
   },
 
   {
-    heading: "SEO Builds Visibility",
+    heading: "Search Visibility Builds Trust",
     text: "A well-optimized website helps businesses appear in search results when customers search for related services online.",
   },
 
   {
-    heading: "Better Quality Leads",
-    text: "SEO places businesses in front of people who are already searching for their services, which usually results in better quality leads and stronger conversions.",
+    heading: "Better Quality Customer Inquiries",
+    text: "Strong search visibility places businesses in front of people who are already searching for their services, which usually results in better quality inquiries and stronger conversions.",
   },
 
   {
-    heading: "Local SEO Matters",
-    text: "Many customers search using terms like “near me” or “best service provider.” Local SEO helps businesses appear in these searches and attract nearby customers.",
+    heading: "Local Search Visibility Matters",
+    text: "Many customers search using terms like “near me” or “best service provider.” Local search visibility helps businesses appear in these searches and attract nearby customers.",
   },
 
   {
     heading: "Final Thoughts",
-    text: "At Optivax Global, SEO is focused on visibility, trust, and long-term growth. Modern SEO strategies help businesses become easier to find, easier to trust, and easier to choose.",
+    text: "At Optivax Global, search visibility is focused on trust and long-term growth. Modern search visibility strategies help businesses become easier to find, easier to trust, and easier to choose.",
   },
 ];
 
 const SeoBlog = () => {
   return (
     <BlogArticleLayout
-      title="Why SEO Services Are Important for Small Businesses"
-      metaTitle="Importance of Small Businesses SEO Services - Optivax Global"
-      metaDescription="Learn why SEO helps service businesses improve online visibility, build trust, attract quality leads, and grow organically."
+      title="Why Search Visibility Matters for Small Businesses"
+      metaTitle="Why Search Visibility Matters for Small Businesses - Optivax Global"
+      metaDescription="Learn why search visibility helps service businesses improve online presence, build trust, attract the right customers, and grow organically."
       canonicalUrl="https://optivaxglobal.com/importance-of-small-businesses-seo-services"
-      category="SEO"
+      category="Search Visibility"
       date="April 2026"
       image={seoBlogImg}
-      imageAlt="SEO for service businesses blog by Optivax Global"
+      imageAlt="Search visibility for service businesses blog by Optivax Global"
       sections={sections}
     />
   );

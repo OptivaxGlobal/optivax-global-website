@@ -25,7 +25,7 @@ const sections = [
   },
   {
     heading: "Good Design Improves Marketing",
-    text: "Marketing campaigns become more effective when supported by professional visuals. Well-designed advertisements, social media graphics, brochures, landing pages, and promotional materials communicate information more clearly and encourage customers to take action.",
+    text: "Promotional campaigns become more effective when supported by professional visuals. Well-designed advertisements, social media graphics, brochures, landing pages, and promotional materials communicate information more clearly and encourage customers to take action.",
   },
   {
     heading: "Logo and Graphic Design Work Together",
@@ -33,7 +33,7 @@ const sections = [
   },
   {
     heading: "Professional Design Supports Long-Term Growth",
-    text: "As businesses expand, maintaining visual consistency becomes increasingly important. Professional logo and graphic design services create flexible branding systems that remain effective across websites, mobile apps, packaging, print materials, social media, and future marketing campaigns.",
+    text: "As businesses expand, maintaining visual consistency becomes increasingly important. Professional logo and graphic design services create flexible branding systems that remain effective across websites, mobile apps, packaging, print materials, social media, and future promotional campaigns.",
   },
   {
     heading: "Final Thoughts",

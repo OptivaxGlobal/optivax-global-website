@@ -15,7 +15,7 @@ const ContentManagement = () => {
     "Page and blog content structure",
     "Social content guidance",
     "Content calendar recommendations",
-    "SEO-friendly content direction",
+    "Search-friendly content direction",
     "Publishing process support",
     "Consistent brand voice",
     "Ongoing content improvement advice",

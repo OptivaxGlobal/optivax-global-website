@@ -23,7 +23,7 @@ const services = [
       "Your website is often the first place people meet your brand. We design and develop clean, fast, and responsive websites that look professional, feel easy to use, and help turn visitors into real customers.",
     points: [
       { title: "Mobile App Design", link: "/mobile-app-design", highlight: true },
-      { title: "SEO Optimization", link: "/search-engine-optimization", highlight: true },
+      { title: "Search Visibility", link: "/search-engine-optimization", highlight: true },
       { title: "Responsive Design" },
       { title: "Landing Pages" },
     ],
@@ -55,16 +55,16 @@ const services = [
     ],
   },
   {
-    title: "Digital Marketing",
+    title: "Digital Growth",
     slug: "/digital-marketing",
     icon: Megaphone,
     description:
-      "We help your brand get seen by the right people. From SEO and social media to smart campaign planning, our marketing approach is focused on visibility, engagement, and better business results.",
+      "We help your brand get seen by the right people. From search visibility and social presence to content strategy, our approach is focused on visibility, engagement, and better business results.",
     points: [
-      { title: "SEO Optimization", link: "/search-engine-optimization", highlight: true },
-      { title: "Social Media Marketing", link: "/social-media-marketing", highlight: true },
-      { title: "Lead Generation" },
-      { title: "Campaign Strategy" },
+      { title: "Search Visibility", link: "/search-engine-optimization", highlight: true },
+      { title: "Social Media Management", link: "/social-media-marketing", highlight: true },
+      { title: "Audience Engagement" },
+      { title: "Content Strategy" },
     ],
   },
   {
@@ -126,7 +126,7 @@ const filterTags = [
   "Web Design",
   "Branding",
   "UI/UX Design",
-  "Marketing",
+  "Growth",
   "eBook Covers",
 ];
 
@@ -134,7 +134,7 @@ const tagLinks = {
   "Web Design": "/web-design",
   Branding: "/brand-design",
   "UI/UX Design": "/ui-ux-design",
-  Marketing: "/digital-marketing",
+  Growth: "/digital-marketing",
   "eBook Covers": "/ebook-cover-design",
 };
 

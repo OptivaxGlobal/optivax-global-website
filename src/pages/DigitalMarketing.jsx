@@ -21,14 +21,14 @@ const DigitalMarketing = () => {
   const navigate = useNavigate();
 
   const deliverables = [
-    "Digital marketing strategy",
-    "SEO-focused growth planning",
-    "Social media campaign direction",
+    "Digital growth strategy",
+    "Search visibility planning",
+    "Social media content direction",
     "Content planning and positioning",
-    "Lead generation strategy",
+    "Audience engagement strategy",
     "Audience targeting",
     "Brand awareness planning",
-    "Performance-focused campaign structure",
+    "Performance-focused content structure",
   ];
 
   const features = [
@@ -40,17 +40,17 @@ const DigitalMarketing = () => {
     {
       icon: Users,
       title: "Right Audience Focus",
-      text: "Your marketing should reach people who actually need your service, not just random viewers.",
+      text: "Your outreach should reach people who actually need your service, not just random viewers.",
     },
     {
       icon: BarChart3,
-      title: "Lead-Focused Planning",
-      text: "Every campaign direction is built to support enquiries, engagement, and real business growth.",
+      title: "Results-Focused Planning",
+      text: "Every strategy is built to support inquiries, engagement, and real business growth.",
     },
     {
       icon: Target,
-      title: "Smarter Campaign Direction",
-      text: "We plan content and campaigns around your goals, audience behavior, and service value.",
+      title: "Smarter Growth Direction",
+      text: "We plan content and outreach around your goals, audience behavior, and service value.",
     },
   ];
 
@@ -60,11 +60,11 @@ const DigitalMarketing = () => {
     <>
       <Helmet>
         <title>
-          Custom Digital Marketing Solutions in Wyoming USA - Optivax Global
+          Custom Digital Growth Solutions in Wyoming USA - Optivax Global
         </title>
         <meta
           name="description"
-          content="Optivax Global provides digital marketing services, SEO strategy, content planning, social media marketing, lead generation, and growth-focused campaigns for modern businesses."
+          content="Optivax Global provides digital growth services including search visibility planning, content strategy, social media presence, and audience engagement support for modern businesses."
         />
         <link
           rel="canonical"
@@ -80,30 +80,30 @@ const DigitalMarketing = () => {
           <div className="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-14 items-center relative z-10">
             <div>
               <span className="inline-block text-accent-purple font-semibold uppercase tracking-[0.25em] mb-5">
-                Digital Marketing Services
+                Digital Growth Services
               </span>
 
               <h1 className="text-4xl md:text-6xl lg:text-7xl font-extrabold leading-tight mb-6">
-                Digital Marketing
+                Digital Growth
                 <span className="block text-accent-purple">
-                  That Turns Attention Into Leads
+                  That Turns Visibility Into Real Results
                 </span>
               </h1>
 
               <p className="text-lg md:text-xl text-gray-300 leading-relaxed max-w-2xl mb-8">
-                We position your business where people are already looking, then turn that visibility into dependable enquiries. From search and content planning to social and ads, everything is built to feel clear, useful, and aligned with your goals.
+                We help position your business where people are already looking, then support that visibility with clear content, an active social presence, and messaging aligned with your goals.
               </p>
 
               <div className="flex flex-col sm:flex-row gap-4">
                 <button
                   onClick={() =>
   navigate("/contact", {
-    state: { service: "Digital Marketing" },
+    state: { service: "Digital Growth" },
   })
 }
                   className="inline-flex items-center justify-center gap-2 bg-gradient-to-r from-[#1BBCEF] to-[#004495] hover:from-[#004495] hover:to-[#1BBCEF] text-white px-7 py-4 rounded-full font-bold transition-all duration-300 group shadow-lg shadow-[#1BBCEF]/20"
                 >
-                  Get Marketing Plan
+                  Get Growth Plan
                   <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                 </button>
 
@@ -136,11 +136,11 @@ const DigitalMarketing = () => {
         <section className="py-20 border-t border-white/10">
           <div className="max-w-7xl mx-auto px-6">
             <h2 className="text-3xl md:text-5xl font-extrabold mb-5">
-              Marketing That Feels Clear, Useful, and Built for Action
+              A Growth Approach That Feels Clear, Useful, and Built for Action
             </h2>
 
             <p className="text-gray-300 text-lg leading-relaxed max-w-3xl mb-12">
-              Good marketing is not just posting content. It is about
+              Good growth strategy is not just posting content. It's about
               understanding your audience, presenting your offer clearly, and
               creating a path that moves people from interest to action.
             </p>
@@ -174,12 +174,12 @@ const DigitalMarketing = () => {
           <div className="max-w-7xl mx-auto px-6">
             <div className="max-w-4xl mb-12">
               <h2 className="text-3xl md:text-5xl font-extrabold mb-5">
-                Digital Marketing Showcase
+                Digital Growth Showcase
               </h2>
 
               <p className="text-gray-300 text-lg leading-relaxed">
-                A look at creative campaign visuals, social media concepts,
-                brand-focused designs, and digital content built to make
+                A look at creative visuals, social media concepts,
+                brand-focused designs, and digital content built to help
                 businesses look active, professional, and easy to trust.
               </p>
             </div>
@@ -192,7 +192,7 @@ const DigitalMarketing = () => {
                 >
                   <img
                     src={img}
-                    alt={`Digital marketing campaign showcase ${index + 1}`}
+                    alt={`Digital growth showcase ${index + 1}`}
                     loading="lazy"
                     className="w-full h-72 md:h-80 object-cover group-hover:scale-105 transition-transform duration-500"
                   />
@@ -210,20 +210,20 @@ const DigitalMarketing = () => {
 
             <p>
               People cannot choose a business they cannot find or understand. A
-              strong digital marketing strategy helps your brand become visible,
+              strong digital growth strategy helps your brand become visible,
               explain its value clearly, and stay in front of the customers who
               are most likely to need your services.
             </p>
 
             <h2 className="text-3xl md:text-4xl font-extrabold text-white">
-              A Strategy-Focused Marketing Process
+              A Strategy-Focused Growth Process
             </h2>
 
             <p>
               We start by understanding your business, your audience, and your
-              goals. Then we shape the message, content direction, and campaign
-              structure so your marketing feels clear, professional, and focused
-              on real business results.
+              goals. Then we shape the message, content direction, and overall
+              structure so your growth strategy feels clear, professional, and
+              focused on real business results.
             </p>
           </div>
         </section>
@@ -234,24 +234,24 @@ const DigitalMarketing = () => {
 
           <div className="max-w-5xl mx-auto px-6 relative z-10">
             <h2 className="text-4xl md:text-6xl font-extrabold mb-6">
-              Ready to Make Your Marketing Work Better?
+              Ready to Make Your Digital Presence Work Better?
             </h2>
 
             <p className="text-gray-300 text-lg max-w-2xl mx-auto mb-8 leading-relaxed">
-              Let’s create a marketing direction that helps your business look
-              more professional, reach better customers, and turn attention into
-              real leads.
+              Let’s create a growth direction that helps your business look
+              more professional, reach better customers, and turn visibility
+              into real business results.
             </p>
 
             <button
               onClick={() =>
   navigate("/contact", {
-    state: { service: "Digital Marketing" },
+    state: { service: "Digital Growth" },
   })
 }
               className="inline-flex items-center gap-2 bg-gradient-to-r from-[#1BBCEF] to-[#004495] hover:from-[#004495] hover:to-[#1BBCEF] px-8 py-4 rounded-full font-bold transition-all duration-300 shadow-lg shadow-[#1BBCEF]/20"
             >
-              Start Marketing Project
+              Start Growth Project
               <ArrowRight className="w-5 h-5" />
             </button>
           </div>

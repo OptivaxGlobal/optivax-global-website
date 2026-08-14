@@ -39,7 +39,6 @@ const Layout = () => {
 
       {/* Floating Buttons */}
       <TawkToWidget />
-      <WhatsAppButton />
     </div>
   );
 };

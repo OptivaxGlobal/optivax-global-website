@@ -60,10 +60,10 @@ export const blogPosts = [
   url: "/startup-for-best-branding-services",
 },
   {
-  title: "Common Digital Marketing Mistakes Businesses Should Avoid",
+  title: "Common Digital Growth Mistakes Businesses Should Avoid",
   excerpt:
     "Learn which digital marketing mistakes can waste your budget, weaken campaigns, reduce conversions, and prevent different channels from working together.",
-  category: "Digital Marketing",
+  category: "Digital Growth",
   date: "August 2026",
   image: digitalMarketingMistakesImg,
   url: "/digital-marketing-mistakes-avoid",
@@ -98,7 +98,7 @@ export const blogPosts = [
   {
   title: "How Much Does a Small Business Website Cost?",
   excerpt:
-    "Learn how design complexity, page count, custom features, eCommerce functionality, SEO, content, and maintenance affect small business website costs.",
+    "Learn how design complexity, page count, custom features, eCommerce functionality, search visibility, content, and maintenance affect small business website costs.",
   category: "Web Development",
   date: "August 2026",
   image: smallBusinessWebsiteCostImg,
@@ -116,8 +116,8 @@ export const blogPosts = [
   {
   title: "How to Rank Higher on Google Without Paid Ads",
   excerpt:
-    "Learn practical ways to improve your Google rankings through useful content, on-page SEO, website speed, internal links, backlinks, and a better user experience.",
-  category: "SEO",
+    "Learn practical ways to improve your Google rankings through useful content, on-page optimization, website speed, internal links, backlinks, and a better user experience.",
+  category: "Search Visibility",
   date: "August 2026",
   image: rankGoogleWithoutAdsImg,
   url: "/rank-on-google-without-paid-ads",
@@ -189,7 +189,7 @@ export const blogPosts = [
 {
   title: "How Small Business Websites Help Brands Look Professional",
   excerpt:
-    "Learn how professional design, mobile responsiveness, fast speed, strong service pages, trust signals, clear calls to action, and SEO help small business websites generate better results.",
+    "Learn how professional design, mobile responsiveness, fast speed, strong service pages, trust signals, clear calls to action, and search visibility help small business websites generate better results.",
   category: "Web Design",
   date: "July 2026",
   image: smallBusinessWebsiteBlogImg,
@@ -217,7 +217,7 @@ export const blogPosts = [
 {
   title: "Web Design Agency vs DIY Website Builder: Which Is Better?",
   excerpt:
-    "Compare DIY website builders and professional web design agencies based on cost, customization, branding, SEO, performance, conversions, and long-term growth.",
+    "Compare DIY website builders and professional web design agencies based on cost, customization, branding, search visibility, performance, conversions, and long-term growth.",
   category: "Web Design",
   date: "July 2026",
   image: webDesignAgencyVsDiyBlogImg,
@@ -244,36 +244,36 @@ export const blogPosts = [
 },
 
   {
-  title: "How Search Engine Marketing Turns Searches Into Sales",
+  title: "How Search Visibility Strategy Turns Searches Into Sales",
   excerpt:
-    "Search Engine Marketing helps businesses reach high-intent customers, improve visibility, drive qualified traffic, and convert online searches into real sales.",
-  category: "Search Engine Marketing",
+    "A search visibility strategy helps businesses reach high-intent customers, improve visibility, drive relevant traffic, and convert online searches into real sales.",
+  category: "Search Visibility Strategy",
   date: "June 2026",
   image: semBlogImg,
   url: "/sem-turns-searches-into-sales",
 },
 {
-  title: "How Email Marketing Builds Stronger Customer Relationships",
+  title: "How Email Communication Builds Stronger Customer Relationships",
   excerpt:
     "Email marketing helps businesses build trust, strengthen customer relationships, improve engagement, and encourage long-term customer loyalty.",
-  category: "Email Marketing",
+  category: "Email Communication Strategy",
   date: "June 2026",
   image: emailMarketingBlogImg,
   url: "/stronge-email-marketing-to-build-relationship",
 },
   
   {
-  title: "Why Consistent Digital Marketing Produces Long-Term Results",
+  title: "Why Consistent Digital Growth Produces Long-Term Results",
   excerpt:
     "Consistent digital marketing helps businesses build recognition, stay visible, grow trust, improve messaging, and produce stronger long-term results.",
-  category: "Digital Marketing",
+  category: "Digital Growth",
   date: "June 2026",
   image: digitalMarketingBlogImg,
   url: "/digital-marketing-produce-long-term-result",
 },
 
   {
-  title: "The Growing Importance of Animation in Digital Marketing",
+  title: "The Growing Importance of Animation in Digital Growth",
   excerpt:
     "Animation helps businesses capture attention, explain ideas clearly, improve brand storytelling, strengthen engagement, and stand out in digital marketing.",
   category: "Animation",
@@ -330,10 +330,10 @@ export const blogPosts = [
   url: "/ui-ux-design-turns-into-loyal-customers",
 },
 {
-  title: "The Power of Social Media Marketing in Today's Digital Landscape",
+  title: "The Power of Social Media Management in Today's Digital Landscape",
   excerpt:
-    "Social media marketing helps businesses increase brand visibility, engage customers, build credibility, generate leads, and drive long-term business growth.",
-  category: "Social Media Marketing",
+    "Social media strategy helps businesses increase brand visibility, engage customers, build credibility, encourage customer inquiries, and drive long-term business growth.",
+  category: "Social Media Management",
   date: "June 2026",
   image: socialMediaMarketingBlogImg,
   url: "/power-of-social-media-in-digital-landscape",
@@ -367,10 +367,10 @@ export const blogPosts = [
   url: "/important-of-ebook-design-for-competitive-market",
 }, 
 {
-  title: "How PPC Advertising Helps Businesses Generate Faster Results",
+  title: "How Paid Search Support Helps Businesses Generate Faster Results",
   excerpt:
-    "PPC advertising helps businesses reach high-intent customers, increase visibility, generate qualified leads, and achieve measurable marketing results faster.",
-  category: "PPC Advertising",
+    "Paid search advertising helps businesses reach high-intent customers, increase visibility, encourage more customer inquiries, and achieve measurable results faster.",
+  category: "Paid Search Support",
   date: "June 2026",
   image: ppcBlogImg,
   url: "/ppc-advertising-help-to-generate-results",
@@ -413,10 +413,10 @@ export const blogPosts = [
   url: "/importance-of-modern-web-design",
 },
 {
-  title: "Why SEO Services Are Important for Small Businesses",
+  title: "Why Search Visibility Matters for Small Businesses",
   excerpt:
-    "SEO helps small businesses improve visibility, attract quality leads, build credibility, and grow consistently in competitive markets.",
-  category: "SEO",
+    "Search visibility helps small businesses improve visibility, attract the right customers, build credibility, and grow consistently in competitive markets.",
+  category: "Search Visibility",
   date: "April 2026",
   image: seoBlogImg,
   url: "/importance-of-small-businesses-seo-services",
@@ -460,8 +460,8 @@ const categories = [
   { label: "Animation", href: "/animation" },
   { label: "Mobile App Development", href: "/mobile-app-development" },
   { label: "Brand Management", href: "/brand-management" },
-  { label: "Search Engine Optimization (SEO)", href: "/search-engine-optimization" },
-  { label: "Social Media Marketing", href: "/social-media-marketing" },
+  { label: "Search Visibility Optimization", href: "/search-engine-optimization" },
+  { label: "Social Media Management", href: "/social-media-marketing" },
 ];
 
 const BLOGS_PER_PAGE = 10;
@@ -527,14 +527,14 @@ const Blog = () => {
   return (
     <>
       <Helmet>
-        <title>Optivax Global Blog | Web Design, SEO, Branding & Digital Marketing Insights</title>
+        <title>Optivax Global Blog | Web Design, Search Visibility, Branding & Digital Growth Insights</title>
         <meta
           name="description"
-          content="Read Optivax Global blogs about web design, SEO, logo design, branding, and digital marketing for modern businesses."
+          content="Read Optivax Global blogs about web design, search visibility, logo design, branding, and digital growth for modern businesses."
         />
         <meta
           name="keywords"
-          content="Optivax Global blog, web design blog, SEO blog, logo design blog, branding blog, digital marketing blog"
+          content="Optivax Global blog, web design blog, search visibility blog, logo design blog, branding blog, digital growth blog"
         />
         <link rel="canonical" href="https://optivaxglobal.com/blog" />
       </Helmet>
@@ -557,7 +557,7 @@ const Blog = () => {
             </h1>
 
             <p className="mx-auto text-lg md:text-xl text-gray-300 max-w-3xl leading-relaxed mb-10">
-              Explore practical articles on web design, SEO, logo design, branding, and digital marketing written to help modern businesses build trust, <br /> improve visibility, and grow online.
+              Explore practical articles on web design, search visibility, logo design, branding, and digital growth written to help modern businesses build trust, <br /> improve visibility, and grow online.
             </p>
             
 
@@ -752,7 +752,7 @@ const Blog = () => {
                 </h2>
 
                 <p className="text-gray-300 leading-relaxed mb-8">
-                  Our blog is built for business owners, startups, and service brands that want clear, practical guidance on websites, SEO, branding, and digital marketing. Every article is written to be easy to understand and useful for real business growth.
+                  Our blog is built for business owners, startups, and service brands that want clear, practical guidance on websites, search visibility, branding, and digital growth. Every article is written to be easy to understand and useful for real business growth.
                 </p>
 
                 <div className="grid sm:grid-cols-2 gap-6">
@@ -760,7 +760,7 @@ const Blog = () => {
                     {
                       icon: <Search className="w-6 h-6" />,
                       title: "Practical topics",
-                      text: "Helpful articles focused on websites, SEO, branding, content, and business growth.",
+                      text: "Helpful articles focused on websites, search visibility, branding, content, and business growth.",
                     },
                     {
                       icon: <Layers className="w-6 h-6" />,
@@ -824,7 +824,7 @@ const Blog = () => {
             </h2>
 
             <p className="text-gray-300 text-lg leading-relaxed max-w-2xl mx-auto mb-10">
-              From websites and SEO to branding and digital strategy, Optivax Global helps businesses create stronger online experiences.
+              From websites and search visibility to branding and digital strategy, Optivax Global helps businesses create stronger online experiences.
             </p>
 
             <a

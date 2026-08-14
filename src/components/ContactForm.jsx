@@ -41,12 +41,12 @@ const serviceOptions = [
   "UI UX Design",
   "Brand Management",
   "Content Management System",
-  "Digital Marketing",
-  "Email Marketing",
-  "Pay Per Click (PPC)",
-  "Search Engine Marketing",
-  "Search Engine Optimization (SEO)",
-  "Social Media Marketing",
+  "Digital Growth",
+  "Email Communication Strategy",
+  "Paid Search Support",
+  "Search Visibility Strategy",
+  "Search Visibility Optimization",
+  "Social Media Management",
   "Ebook Cover Design",
   "eBook Publishing",
   "Corporate Presentation",
@@ -118,16 +118,24 @@ const normalizeServiceName = (serviceName) => {
     "Brand Management": "Brand Management",
     "Content Management": "Content Management System",
     "Content Management System": "Content Management System",
-    "Digital Marketing": "Digital Marketing",
-    "Email Marketing": "Email Marketing",
-    "Pay Per Click": "Pay Per Click (PPC)",
-    "Pay Per Click PPC": "Pay Per Click (PPC)",
-    "Pay Per Click (PPC)": "Pay Per Click (PPC)",
-    "Search Engine Marketing": "Search Engine Marketing",
-    "Search Engine Optimization": "Search Engine Optimization (SEO)",
-    "Search Engine Optimization SEO": "Search Engine Optimization (SEO)",
-    "Search Engine Optimization (SEO)": "Search Engine Optimization (SEO)",
-    "Social Media Marketing": "Social Media Marketing",
+    "Digital Marketing": "Digital Growth",
+    "Digital Growth": "Digital Growth",
+    "Email Marketing": "Email Communication Strategy",
+    "Email Engagement": "Email Communication Strategy",
+    "Email Communication Strategy": "Email Communication Strategy",
+    "Pay Per Click": "Paid Search Support",
+    "Pay Per Click PPC": "Paid Search Support",
+    "Pay Per Click (PPC)": "Paid Search Support",
+    "Paid Search Support": "Paid Search Support",
+    "Search Engine Marketing": "Search Visibility Strategy",
+    "Search Visibility Strategy": "Search Visibility Strategy",
+    "Search Engine Optimization": "Search Visibility Optimization",
+    "Search Engine Optimization SEO": "Search Visibility Optimization",
+    "Search Engine Optimization (SEO)": "Search Visibility Optimization",
+    "Search Visibility Optimization": "Search Visibility Optimization",
+    "Social Media Marketing": "Social Media Management",
+    "Social Media Growth": "Social Media Management",
+    "Social Media Management": "Social Media Management",
     "Ebook Cover": "Ebook Cover Design",
     "Ebook Cover Design": "Ebook Cover Design",
     "eBook Publishing": "eBook Publishing",
@@ -233,7 +241,15 @@ const ContactForm = ({ onSubmitSuccess, redirectTo = "/thank-you" }) => {
       ...restForm,
       phone: `+${phoneDigits}`,
       sms_consent: smsConsent,
+      sms_consent_timestamp: smsConsent ? new Date().toISOString() : null,
+      consent_source: "/contact",
     };
+
+    const consentFields = [
+      "sms_consent",
+      "sms_consent_timestamp",
+      "consent_source",
+    ];
 
     try {
       const { error } = await supabase
@@ -243,10 +259,11 @@ const ContactForm = ({ onSubmitSuccess, redirectTo = "/thank-you" }) => {
       if (error) {
         console.error("Supabase Error:", error.message);
 
-        // The contact_messages table may not have an sms_consent column
-        // yet   retry without it so lead capture keeps working.
-        if (/sms_consent/i.test(error.message || "")) {
-          const { sms_consent, ...fallbackData } = finalFormData;
+        // The contact_messages table may not have the SMS consent columns
+        // yet   retry without them so lead capture keeps working.
+        if (/sms_consent|consent_source/i.test(error.message || "")) {
+          const fallbackData = { ...finalFormData };
+          consentFields.forEach((field) => delete fallbackData[field]);
 
           const { error: fallbackError } = await supabase
             .from("contact_messages")
@@ -274,6 +291,11 @@ const ContactForm = ({ onSubmitSuccess, redirectTo = "/thank-you" }) => {
         "sms_consent",
         finalFormData.sms_consent ? "Yes" : "No"
       );
+      web3FormData.append(
+        "sms_consent_timestamp",
+        finalFormData.sms_consent_timestamp || ""
+      );
+      web3FormData.append("consent_source", finalFormData.consent_source);
 
       web3FormData.append(
         "subject",
@@ -600,8 +622,12 @@ const ContactForm = ({ onSubmitSuccess, redirectTo = "/thank-you" }) => {
             className="w-full p-4 rounded-xl bg-[#0C0D0D]/30 border border-white/10 text-white outline-none focus:border-accent-purple/50 transition placeholder:text-gray-400"
           ></textarea>
 
-          <label className="flex items-start gap-3 p-4 rounded-xl bg-[#0C0D0D]/30 border border-white/10 cursor-pointer hover:border-accent-purple/40 transition-all duration-300">
+          <label
+            htmlFor="contact-sms-consent"
+            className="flex items-start gap-3 p-4 rounded-xl bg-[#0C0D0D]/30 border border-white/10 cursor-pointer hover:border-accent-purple/40 transition-all duration-300"
+          >
             <input
+              id="contact-sms-consent"
               type="checkbox"
               name="smsConsent"
               checked={form.smsConsent}
@@ -611,13 +637,17 @@ const ContactForm = ({ onSubmitSuccess, redirectTo = "/thank-you" }) => {
                   smsConsent: e.target.checked,
                 }))
               }
+              aria-describedby="contact-sms-consent-text"
               className="mt-0.5 w-5 h-5 shrink-0 rounded border-white/20 bg-[#0C0D0D] text-accent-purple accent-accent-purple focus:ring-2 focus:ring-accent-purple/50 cursor-pointer"
             />
-            <span className="text-sm text-gray-400 leading-relaxed">
-              I agree to receive text messages from Optivax Global at the
-              phone number provided. Message frequency may vary. Message
-              &amp; data rates may apply. Reply STOP to cancel or HELP for
-              help.{" "}
+            <span
+              id="contact-sms-consent-text"
+              className="text-sm text-gray-400 leading-relaxed"
+            >
+              I agree to receive service-related and inquiry follow-up text
+              messages from Optivax Global at the phone number provided.
+              Message frequency may vary. Message &amp; data rates may
+              apply. Reply STOP to unsubscribe or HELP for help.{" "}
               <Link
                 to="/privacy-policy"
                 target="_blank"

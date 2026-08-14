@@ -45,7 +45,7 @@ const sections = [
   },
   {
     heading: "Prioritize Branding Services by Startup Stage",
-    text: "A pre-launch company does not necessarily need an extensive brand manual. Services should be prioritized according to the business stage. An early startup may begin with strategy, naming validation, logo design, visual identity, messaging, and basic guidelines. As it grows, the company can expand into website systems, social templates, marketing campaigns, packaging, sales collateral, and more detailed documentation.",
+    text: "A pre-launch company does not necessarily need an extensive brand manual. Services should be prioritized according to the business stage. An early startup may begin with strategy, naming validation, logo design, visual identity, messaging, and basic guidelines. As it grows, the company can expand into website systems, social templates, promotional campaigns, packaging, sales collateral, and more detailed documentation.",
   },
   {
     heading: "What to Look for in a Branding Partner",

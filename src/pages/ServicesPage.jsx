@@ -119,42 +119,42 @@ const serviceCategories = [
     ],
   },
   {
-    category: "Marketing & SEO",
+    category: "Search Visibility & Digital Growth",
     items: [
       {
         icon: Megaphone,
-        title: "Digital Marketing",
-        text: "A growth strategy built around search, social, and content, designed to bring the right people to your business.",
+        title: "Digital Growth",
+        text: "A growth strategy built around search, social, and content, designed to connect the right people with your business.",
         href: "/digital-marketing",
       },
       {
         icon: Mail,
-        title: "Email Marketing",
-        text: "Campaigns built to nurture leads and stay in front of your audience, without feeling like spam.",
+        title: "Email Communication Strategy",
+        text: "Email communication built to stay in front of your audience and support ongoing customer relationships, without feeling like spam.",
         href: "/email-marketing",
       },
       {
         icon: Target,
-        title: "Pay Per Click (PPC)",
-        text: "Targeted ad campaigns managed to bring in qualified traffic, not just clicks.",
+        title: "Paid Search Support",
+        text: "Targeted paid search advertising managed to bring in relevant traffic, not just clicks.",
         href: "/pay-per-click",
       },
       {
         icon: TrendingUp,
-        title: "Search Engine Marketing",
+        title: "Search Visibility Strategy",
         text: "We help your business show up when people are actively searching for what you offer.",
         href: "/search-engine-marketing",
       },
       {
         icon: SearchCheck,
-        title: "Search Engine Optimization (SEO)",
-        text: "SEO-focused site structure and ongoing optimization support to help your business rank and get found.",
+        title: "Search Visibility Optimization",
+        text: "Ongoing site structure and content optimization support to help your business get found in search results.",
         href: "/search-engine-optimization",
       },
       {
         icon: Share2,
-        title: "Social Media Marketing",
-        text: "Strategy, content planning, and campaign direction built to create real engagement, not just impressions.",
+        title: "Social Media Management",
+        text: "Strategy, content planning, and consistent posting built to create real engagement, not just impressions.",
         href: "/social-media-marketing",
       },
     ],
@@ -224,14 +224,14 @@ const ServicesPage = () => {
         <title>Professional Digital Services | Optivax Global</title>
         <meta
           name="description"
-          content="Explore Optivax Global services including web design, development, branding, SEO, digital marketing, mobile apps, eBook design, publishing and more."
+          content="Explore Optivax Global services including web design, development, branding, search visibility, digital growth, mobile apps, eBook design, publishing and more."
         />
         <link rel="canonical" href="https://optivaxglobal.com/services" />
 
         <meta property="og:title" content="Professional Digital Services | Optivax Global" />
         <meta
           property="og:description"
-          content="Explore Optivax Global services including web design, development, branding, SEO, digital marketing, mobile apps, eBook design, publishing and more."
+          content="Explore Optivax Global services including web design, development, branding, search visibility, digital growth, mobile apps, eBook design, publishing and more."
         />
         <meta property="og:url" content="https://optivaxglobal.com/services" />
         <meta property="og:type" content="website" />

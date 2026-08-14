@@ -25,7 +25,7 @@ const sections = [
   },
   {
     heading: "Data Helps Businesses Make Smarter Decisions",
-    text: "Mobile apps also help businesses understand customer behavior. Businesses can learn what customers view, what they buy, how often they return, and which features they use the most. This data can help improve services, marketing campaigns, product offers, and customer support. Instead of guessing what customers want, businesses can make better decisions based on real user activity.",
+    text: "Mobile apps also help businesses understand customer behavior. Businesses can learn what customers view, what they buy, how often they return, and which features they use the most. This data can help improve services, promotional campaigns, product offers, and customer support. Instead of guessing what customers want, businesses can make better decisions based on real user activity.",
   },
   {
     heading: "Final Thoughts",

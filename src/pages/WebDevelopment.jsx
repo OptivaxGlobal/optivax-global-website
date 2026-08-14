@@ -31,7 +31,7 @@ const WebDevelopment = () => {
     "Responsive website build",
     "Page speed optimization",
     "CMS or contact form integration",
-    "SEO-friendly markup",
+    "Search-friendly markup",
     "Cross-browser compatibility",
     "Analytics and tracking setup",
     "Launch-ready website delivery",
@@ -55,7 +55,7 @@ const WebDevelopment = () => {
   return (
     <ServiceTemplate
       pageTitle="Professional Web Development Services in Wyoming USA - Optivax Global"
-      metaDescription="Optivax Global offers web development services to build fast, responsive, and launch-ready websites with clean code, SEO-friendly structure, and reliable performance."
+      metaDescription="Optivax Global offers web development services to build fast, responsive, and launch-ready websites with clean code, search-friendly structure, and reliable performance."
       metaKeywords="web development services, website development, responsive web development, frontend development, performance optimization"
       canonicalUrl="https://optivaxglobal.com/web-development"
       serviceLabel="Web Development Services"

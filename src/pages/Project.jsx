@@ -112,39 +112,39 @@ const projectData = {
     }]
   },
   'digital-marketing-agency-site': {
-    title: 'Digital Marketing Agency Site',
+    title: 'Digital Growth Agency Site',
     category: 'Web Development',
-    description: 'A cutting-edge website for a digital marketing agency, designed to convert visitors into leads. The site showcases their services, portfolio, and expertise through a dynamic and engaging user experience.',
+    description: 'A cutting-edge website for a digital growth agency, designed to turn visitors into customer inquiries. The site showcases their services, portfolio, and expertise through a dynamic and engaging user experience.',
     challenge: 'The challenge was to stand out in a crowded market. The website needed to be visually stunning, incredibly fast, and optimized for search engines to rank high for competitive keywords, all while clearly communicating the agency\'s value proposition.',
-    solution: 'We built a statically generated site for unparalleled performance and SEO. Interactive case studies and a dynamic service calculator were developed to engage users and provide immediate value. A/B testing on call-to-action buttons and headlines led to a significant increase in conversion rates.',
+    solution: 'We built a statically generated site for unparalleled performance and search visibility. Interactive case studies and a dynamic service calculator were developed to engage users and provide immediate value. A/B testing on call-to-action buttons and headlines led to a significant increase in conversion rates.',
     images: {
       hero: {
-        alt: 'Homepage of a digital marketing agency website',
+        alt: 'Homepage of a digital growth agency website',
         key: 'digital marketing agency website homepage'
       },
       gallery: [{
-        alt: 'Portfolio section of the marketing agency site',
+        alt: 'Portfolio section of the growth agency site',
         key: 'marketing agency portfolio section'
       }, {
-        alt: 'Contact form and map on the marketing agency site',
+        alt: 'Contact form and map on the growth agency site',
         key: 'marketing agency contact form'
       }, {
-        alt: 'Team page of the marketing agency',
+        alt: 'Team page of the growth agency',
         key: 'marketing agency team page'
       }],
       gallery2: [{
-        alt: 'Blog section of the marketing agency website',
+        alt: 'Blog section of the growth agency website',
         key: 'marketing agency blog section'
       }, {
-        alt: 'Services page of the marketing agency',
+        alt: 'Services page of the growth agency',
         key: 'marketing agency services page'
       }]
     },
     stats: [{
       value: 60,
       suffix: '%',
-      label: 'Lead Increase',
-      description: 'Increase in qualified leads within the first three months.'
+      label: 'Inquiry Increase',
+      description: 'Increase in qualified inquiries within the first three months.'
     }, {
       value: 1.2,
       suffix: 's',

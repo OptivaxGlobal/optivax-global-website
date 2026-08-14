@@ -40,12 +40,12 @@ const services = [
   "UI UX Design",
   "Brand Management",
   "Content Management System",
-  "Digital Marketing",
-  "Email Marketing",
-  "Pay Per Click (PPC)",
-  "Search Engine Marketing",
-  "Search Engine Optimization (SEO)",
-  "Social Media Marketing",
+  "Digital Growth",
+  "Email Communication Strategy",
+  "Paid Search Support",
+  "Search Visibility Strategy",
+  "Search Visibility Optimization",
+  "Social Media Management",
   "Ebook Cover Design",
   "eBook Publishing",
   "Corporate Presentation",
@@ -396,6 +396,12 @@ const PaymentForm = () => {
             screenshot_url: screenshotUrl,
 
             sms_consent: form.smsConsent,
+
+            sms_consent_timestamp: form.smsConsent
+              ? new Date().toISOString()
+              : null,
+
+            consent_source: "/payment-form",
           }),
         }
       );
@@ -513,7 +519,19 @@ const PaymentForm = () => {
         screenshot_url: screenshotUrl,
 
         sms_consent: form.smsConsent,
+
+        sms_consent_timestamp: form.smsConsent
+          ? new Date().toISOString()
+          : null,
+
+        consent_source: "/payment-form",
       };
+
+      const consentFields = [
+        "sms_consent",
+        "sms_consent_timestamp",
+        "consent_source",
+      ];
 
       /* ---------------------------------------------------
          SAVE TO SUPABASE
@@ -525,11 +543,12 @@ const PaymentForm = () => {
           .insert([paymentRecord]);
 
       if (insertError) {
-        // The payment_forms table may not have an sms_consent column
-        // yet   retry without it so a real, already-paid submission
+        // The payment_forms table may not have the SMS consent columns
+        // yet   retry without them so a real, already-paid submission
         // is never blocked by a missing column.
-        if (/sms_consent/i.test(insertError.message || "")) {
-          const { sms_consent, ...fallbackRecord } = paymentRecord;
+        if (/sms_consent|consent_source/i.test(insertError.message || "")) {
+          const fallbackRecord = { ...paymentRecord };
+          consentFields.forEach((field) => delete fallbackRecord[field]);
 
           const { error: fallbackError } = await supabase
             .from("payment_forms")
@@ -592,7 +611,7 @@ const PaymentForm = () => {
   return (
     <>
       {/* ===================================================
-          SEO
+          PAGE METADATA
       =================================================== */}
 
       <Helmet>
@@ -969,9 +988,13 @@ const PaymentForm = () => {
                     SMS CONSENT
                 ======================================= */}
 
-                <label className="mt-5 flex items-start gap-3 rounded-xl border border-white/10 bg-[#020817]/40 p-4 cursor-pointer hover:border-[#1BBCEF]/40 transition-all duration-300">
+                <label
+                  htmlFor="payment-sms-consent"
+                  className="mt-5 flex items-start gap-3 rounded-xl border border-white/10 bg-[#020817]/40 p-4 cursor-pointer hover:border-[#1BBCEF]/40 transition-all duration-300"
+                >
 
                   <input
+                    id="payment-sms-consent"
                     type="checkbox"
                     name="smsConsent"
                     checked={form.smsConsent}
@@ -981,14 +1004,19 @@ const PaymentForm = () => {
                         smsConsent: e.target.checked,
                       }))
                     }
+                    aria-describedby="payment-sms-consent-text"
                     className="mt-0.5 h-5 w-5 shrink-0 rounded border-white/20 bg-[#020817] text-[#1BBCEF] accent-[#1BBCEF] focus:ring-2 focus:ring-[#1BBCEF]/50 cursor-pointer"
                   />
 
-                  <span className="text-xs leading-5 text-slate-400">
-                    I agree to receive text messages from Optivax Global at
-                    the phone number provided. Message frequency may vary.
+                  <span
+                    id="payment-sms-consent-text"
+                    className="text-xs leading-5 text-slate-400"
+                  >
+                    I agree to receive service-related and inquiry
+                    follow-up text messages from Optivax Global at the
+                    phone number provided. Message frequency may vary.
                     Message &amp; data rates may apply. Reply STOP to
-                    cancel or HELP for help.{" "}
+                    unsubscribe or HELP for help.{" "}
                     <Link
                       to="/privacy-policy"
                       target="_blank"

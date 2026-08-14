@@ -11,6 +11,7 @@ import {
   FaPinterestP,
   FaTiktok,
 } from "react-icons/fa";
+import { FaXTwitter } from "react-icons/fa6";
 
 import { RiThreadsFill } from "react-icons/ri";
 import { useNavigate } from "react-router-dom";
@@ -61,7 +62,7 @@ const Footer = () => {
         { name: "Website Design", href: "/web-design" },
         { name: "Logo Design", href: "/logo-design" },
         { name: "Mobile App Design", href: "/mobile-app-design" },
-        { name: "Digital Marketing", href: "/digital-marketing" },
+        { name: "Digital Growth", href: "/digital-marketing" },
         { name: "Ebook Cover Design", href: "/ebook-cover-design" },
         { name: "eBook Publishing", href: "/ebook-publishing" },
         {
@@ -116,6 +117,13 @@ const Footer = () => {
         "hover:bg-black hover:border-[#25F4EE] hover:text-white hover:shadow-[#25F4EE]/25",
     },
     {
+      label: "X",
+      icon: <FaXTwitter size={16} />,
+      link: "https://x.com/OptivaxGlobal",
+      hover:
+        "hover:bg-black hover:border-white hover:text-white hover:shadow-white/20",
+    },
+    {
       label: "Threads",
       icon: <RiThreadsFill size={16} />,
       link: "https://www.threads.net/@optivaxglobal",
@@ -161,7 +169,7 @@ const Footer = () => {
             <p className="text-gray-400 mb-6 leading-relaxed">
               We help businesses grow with high-performing websites, strategic
               branding, app UI/UX design, professional presentations, eBook
-              covers, and digital marketing solutions.
+              services, and digital growth solutions.
             </p>
 
             <button
@@ -278,7 +286,7 @@ const Footer = () => {
             </a>
 
             <a href="/terms" onClick={handleNavClick} className={footerLinkClass}>
-              Terms
+              Terms and Conditions
               <span className={footerUnderline} />
             </a>
           </div>

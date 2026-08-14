@@ -18,11 +18,12 @@ const Home = () => {
     "name": "Optivax Global",
     "url": "https://optivaxglobal.com/",
     "logo": "https://optivaxglobal.com/logo.png",
-    "description": "Optivax Global is a digital service provider offering website design, app UI/UX design, Logo & Branding, ebook cover design, digital marketing, and brand strategy services.",
+    "description": "Optivax Global is a digital service provider offering website design, app UI/UX design, Logo & Branding, ebook cover design, digital growth support, and brand strategy services.",
     "sameAs": [
   "https://www.facebook.com/OptivaxGlobalSolution/",
   "https://www.instagram.com/optivaxglobal/",
   "https://www.linkedin.com/company/115777328/",
+  "https://x.com/OptivaxGlobal",
   "https://www.youtube.com/@OptivaxGlobal",
   "https://www.pinterest.com/optivaxglobal/",
   "https://www.tiktok.com/@optivaxglobal"
@@ -46,7 +47,7 @@ const Home = () => {
     },
     {
       "@type": "Service",
-      "name": "Digital Marketing",
+      "name": "Digital Growth Solutions",
       "url": "https://optivaxglobal.com/digital-marketing"
     },
     {
@@ -81,12 +82,12 @@ const Home = () => {
 
         <meta
           name="description"
-          content="Custom website design services by professional web development company in USA. Get digital marketing services from our expert team at Optivax Global"
+          content="Professional website design and development services in the USA, backed by branding, UI/UX, and digital growth support from the Optivax Global team."
         />
 
         <meta
           name="keywords"
-          content="Optivax Global, website design agency, digital marketing agency, Logo & Branding services, app UI UX design, ebook cover design, branding agency, web development services"
+          content="Optivax Global, website design agency, digital growth agency, Logo & Branding services, app UI UX design, ebook cover design, branding agency, web development services"
         />
 
         <meta name="author" content="Optivax Global" />
@@ -97,7 +98,7 @@ const Home = () => {
         <meta property="og:title" content="Optivax Global | Digital Services Provider" />
         <meta
           property="og:description"
-          content="Grow your business with professional websites, branding, Logo & Branding, app UI/UX, ebook covers, and digital marketing solutions."
+          content="Grow your business with professional websites, branding, Logo & Branding, app UI/UX, ebook covers, and digital growth solutions."
         />
         <meta property="og:url" content="https://optivaxglobal.com/" />
         <meta property="og:type" content="website" />
@@ -105,7 +106,7 @@ const Home = () => {
 
         {/* Twitter Card */}
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Optivax Global | Website & Digital Marketing Agency" />
+        <meta name="twitter:title" content="Optivax Global | Website Design & Digital Growth Agency" />
         <meta
           name="twitter:description"
           content="Professional digital services for businesses, authors, startups, and brands."

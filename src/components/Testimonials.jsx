@@ -27,7 +27,7 @@ const testimonials = [
     name: "Ethan Walker",
     role: "Marketing Assistant, GrowthCo",
     content:
-      "Their team made digital marketing feel simple and effective. Everything was explained clearly, and the strategies genuinely helped us improve engagement and build a much stronger online presence.",
+      "Their team made growing our online presence feel simple and effective. Everything was explained clearly, and the strategies genuinely helped us improve engagement and build a much stronger brand.",
     avatar: Avatar01,
   },
   {

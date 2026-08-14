@@ -41,7 +41,7 @@ const sections = [
   },
   {
     heading: "Speed and Performance Improve UX",
-    text: "User experience also depends on website performance. Fast loading speeds, responsive interactions, and stable page layouts help reduce frustration, improve engagement, and support stronger SEO performance.",
+    text: "User experience also depends on website performance. Fast loading speeds, responsive interactions, and stable page layouts help reduce frustration, improve engagement, and support stronger search visibility performance.",
   },
   {
     heading: "Accessibility Makes Digital Products Better",

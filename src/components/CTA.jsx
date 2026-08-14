@@ -37,8 +37,8 @@ const CTA = () => {
 
           <p className="text-lg md:text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
             Let’s build a professional website, brand identity, app UI/UX,
-            eBook cover, or digital marketing strategy that helps your business
-            look premium, earn trust, and generate more leads.
+            eBook cover, or digital growth strategy that helps your business
+            look premium, earn trust, and connect with more customers.
           </p>
 
           <div className="flex flex-wrap justify-center gap-4 mb-12 text-gray-200">

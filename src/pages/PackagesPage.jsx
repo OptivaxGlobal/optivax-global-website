@@ -114,7 +114,7 @@ const servicesPackages = [
           "Free Google Friendly Sitemap",
           "WordPress + Elementor",
           "Unique Interface",
-          "SEO Friendly Design",
+          "Search-Friendly Design",
           "Add on: $50 for 24 Hours Rush Delivery",
         ],
         suitable:
@@ -143,7 +143,7 @@ const servicesPackages = [
           "Testing And Deployment",
           "Cross Browser Compatible",
           "Unique Interface",
-          "SEO Friendly Design",
+          "Search-Friendly Design",
           "Add on: $50 for 24 Hours Rush Delivery",
         ],
         suitable:
@@ -159,7 +159,7 @@ const servicesPackages = [
           "WordPress + Elementor or Custom Development",
           "Advanced Forms & Integrations",
           "Mobile Responsive Layout",
-          "SEO Friendly Structure",
+          "Search-Friendly Structure",
           "Testing And Deployment",
           "Cross Browser Compatible",
           "Dedicated Project Direction",
@@ -172,7 +172,7 @@ const servicesPackages = [
     ],
   },
   {
-  service: "Social Media Marketing",
+  service: "Social Media Management",
   icon: Sparkles,
   description:
     "Monthly social media packages for brands that need consistent content, platform presence, and professional social growth.",
@@ -292,7 +292,7 @@ const brandingSections = [
       "Testing And Deployment",
       "Cross Browser Compatible",
       "Unique Interface",
-      "SEO Friendly Design",
+      "Search-Friendly Design",
     ],
   },
   {

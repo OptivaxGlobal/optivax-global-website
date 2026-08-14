@@ -66,9 +66,9 @@ const Hero = () => {
             transition={{ duration: 0.7, delay: 0.3 }}
             className="text-lg md:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed"
           >
-            Optivax Global helps businesses grow with modern websites, 
-            strategic branding, UI/UX design, eBook design, SEO, and digital 
-            marketing solutions built to create trust, visibility, and long-term growth.
+            Optivax Global helps businesses grow with modern websites,
+            strategic branding, UI/UX design, eBook design, and digital
+            growth solutions built to create trust, visibility, and long-term success.
           </motion.p>
 
           <motion.div
@@ -98,7 +98,7 @@ const Hero = () => {
               className="flex items-center gap-2 hover:text-accent-purple transition"
             >
               <CheckCircle2 className="w-5 h-5 text-accent-purple" />
-              <span>Digital Marketing</span>
+              <span>Digital Growth</span>
             </Link>
 
             <Link

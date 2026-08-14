@@ -5,11 +5,11 @@ import digitalMarketingMistakesImg from "@/assets/blog-images/digital-marketing-
 const sections = [
   {
     heading: "Introduction",
-    text: "Digital marketing gives businesses more ways to reach customers than ever before, but this advantage can also create a common problem. Companies begin running advertisements, publishing blogs, posting across multiple social networks, sending emails, optimizing for search, creating videos, and monitoring dozens of metrics. Activity increases without necessarily producing better results. The problem is often not a lack of effort but the absence of a clear strategy connecting those activities.",
+    text: "A digital growth strategy gives businesses more ways to reach customers than ever before, but this advantage can also create a common problem. Companies begin running advertisements, publishing blogs, posting across multiple social networks, sending emails, optimizing for search, creating videos, and monitoring dozens of metrics. Activity increases without necessarily producing better results. The problem is often not a lack of effort but the absence of a clear strategy connecting those activities.",
   },
   {
     heading: "Marketing Without a Defined Goal",
-    text: "Getting more traffic is not a complete marketing objective. Businesses need to decide what that traffic should accomplish. A campaign may aim to generate qualified leads, online purchases, consultation bookings, newsletter subscriptions, app installations, or brand awareness. These outcomes require different messages, channels, landing pages, and measurement strategies. Start with the desired result and then choose the appropriate channel.",
+    text: "Getting more traffic is not a complete marketing objective. Businesses need to decide what that traffic should accomplish. A campaign may aim to encourage customer inquiries, online purchases, consultation bookings, newsletter subscriptions, app installations, or brand awareness. These outcomes require different messages, channels, landing pages, and measurement strategies. Start with the desired result and then choose the appropriate channel.",
   },
   {
     heading: "Trying to Reach Everyone",
@@ -21,7 +21,7 @@ const sections = [
   },
   {
     heading: "Publishing Content Only for Search Engines",
-    text: "SEO is important, but content created only to manipulate search rankings usually provides a poor reading experience. Google recommends producing helpful, reliable, people-first content. Start with genuine customer questions, problems, and search intent. Create useful answers and then optimize headings, titles, URLs, metadata, links, and page structure so search engines can understand the content.",
+    text: "Search visibility is important, but content created only to manipulate search rankings usually provides a poor reading experience. Google recommends producing helpful, reliable, people-first content. Start with genuine customer questions, problems, and search intent. Create useful answers and then optimize headings, titles, URLs, metadata, links, and page structure so search engines can understand the content.",
   },
   {
     heading: "Keyword Stuffing",
@@ -41,15 +41,15 @@ const sections = [
   },
   {
     heading: "Measuring Vanity Metrics Instead of Outcomes",
-    text: "Likes, views, impressions, and visits can provide useful context, but they do not automatically demonstrate business growth. A campaign generating thousands of views without qualified inquiries may be less valuable than a smaller campaign producing strong leads. Connect marketing activity to registrations, purchases, bookings, calls, form submissions, and other meaningful conversions. Define success before launching the campaign.",
+    text: "Likes, views, impressions, and visits can provide useful context, but they do not automatically demonstrate business growth. A campaign generating thousands of views without relevant inquiries may be less valuable than a smaller campaign producing strong results. Connect marketing activity to registrations, purchases, bookings, calls, form submissions, and other meaningful conversions. Define success before launching the campaign.",
   },
   {
     heading: "Ignoring Existing Customers",
-    text: "Digital marketing is often treated entirely as a customer-acquisition activity, overlooking people who already know the company. Email communication, helpful content, appropriate remarketing, loyalty programs, customer education, product updates, and relevant offers can help businesses maintain valuable relationships. Not every campaign needs to introduce the company to a stranger.",
+    text: "A digital growth strategy is often treated entirely as a customer-acquisition activity, overlooking people who already know the company. Email communication, helpful content, appropriate remarketing, loyalty programs, customer education, product updates, and relevant offers can help businesses maintain valuable relationships. Not every campaign needs to introduce the company to a stranger.",
   },
   {
     heading: "Using Misleading Claims or Testimonials",
-    text: "Aggressive marketing can create reputational and legal problems. Advertising claims should be truthful, evidence-based where required, and not deceptive. Businesses should avoid fabricated reviews, fake scarcity, unrealistic guarantees, misleading before-and-after comparisons, and endorsements without appropriate disclosure. Trust generally takes much longer to build than a marketing campaign takes to launch.",
+    text: "Aggressive marketing can create reputational and legal problems. Advertising claims should be truthful, evidence-based where required, and not deceptive. Businesses should avoid fabricated reviews, fake scarcity, unrealistic guarantees, misleading before-and-after comparisons, and endorsements without appropriate disclosure. Trust generally takes much longer to build than a campaign takes to launch.",
   },
   {
     heading: "Changing the Strategy Every Week",
@@ -57,21 +57,21 @@ const sections = [
   },
   {
     heading: "Final Thoughts",
-    text: "Most digital marketing problems are not solved by adding another platform. They are addressed through better alignment. Understand the audience, define the objective, choose suitable channels, create genuinely useful content, apply SEO naturally, build focused landing pages, track meaningful conversions, test campaigns carefully, and keep advertising transparent. Digital marketing performs best when search, content, social media, advertising, analytics, and the website support one connected customer journey. More activity is not always better marketing; greater clarity usually is.",
+    text: "Most digital growth problems are not solved by adding another platform. They are addressed through better alignment. Understand the audience, define the objective, choose suitable channels, create genuinely useful content, apply search visibility practices naturally, build focused landing pages, track meaningful conversions, test campaigns carefully, and keep advertising transparent. A digital growth strategy performs best when search, content, social media, advertising, analytics, and the website support one connected customer journey. More activity is not always better; greater clarity usually is.",
   },
 ];
 
 const DigitalMarketingMistakesBlog = () => {
   return (
     <BlogArticleLayout
-      title="Common Digital Marketing Mistakes Businesses Should Avoid"
-      metaTitle="Digital Marketing Mistakes to Avoid"
-      metaDescription="Discover common digital marketing mistakes businesses should avoid, from unclear goals and weak landing pages to keyword stuffing and vanity metrics."
+      title="Common Digital Growth Mistakes Businesses Should Avoid"
+      metaTitle="Digital Growth Mistakes to Avoid - Optivax Global"
+      metaDescription="Discover common digital growth mistakes businesses should avoid, from unclear goals and weak landing pages to keyword stuffing and vanity metrics."
       canonicalUrl="https://optivaxglobal.com/digital-marketing-mistakes-avoid"
-      category="Digital Marketing"
+      category="Digital Growth"
       date="August 2026"
       image={digitalMarketingMistakesImg}
-      imageAlt="Common digital marketing mistakes businesses should avoid"
+      imageAlt="Common digital growth mistakes businesses should avoid"
       sections={sections}
     />
   );

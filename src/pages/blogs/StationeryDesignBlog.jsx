@@ -5,7 +5,7 @@ import stationeryDesignBlogImg from "@/assets/blog-images/stationery-design-blog
 const sections = [
   {
     heading: "Introduction",
-    text: "In a competitive business environment, first impressions matter more than ever. While digital marketing plays a significant role in business growth, professionally designed stationery continues to be an important part of building trust and credibility. From business cards and letterheads to envelopes and presentation folders, custom stationery reflects a company’s professionalism and attention to detail.",
+    text: "In a competitive business environment, first impressions matter more than ever. While a strong digital presence plays a significant role in business growth, professionally designed stationery continues to be an important part of building trust and credibility. From business cards and letterheads to envelopes and presentation folders, custom stationery reflects a company’s professionalism and attention to detail.",
   },
   {
     heading: "Professional Branding Creates Lasting Impressions",

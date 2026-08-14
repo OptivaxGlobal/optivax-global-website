@@ -4,14 +4,14 @@ import { Mail, Sparkles, Target, Layers } from "lucide-react";
 
 const EmailMarketing = () => {
   const features = [
-    { icon: <Mail size={24} />, title: "Campaign Strategy", text: "Email campaigns built to deliver the right message to the right people at the right time." },
+    { icon: <Mail size={24} />, title: "Email Strategy", text: "Email communication built to deliver the right message to the right people at the right time." },
     { icon: <Target size={24} />, title: "Audience Focus", text: "Segmentation and targeting help your emails reach customers who are most likely to act." },
     { icon: <Sparkles size={24} />, title: "Engaging Creative", text: "Email layouts and messaging designed to feel professional and encourage clicks." },
     { icon: <Layers size={24} />, title: "Performance Tracking", text: "We help structure your email content for better open rates, engagement, and conversions." },
   ];
 
   const deliverables = [
-    "Email campaign design",
+    "Email design",
     "Newsletter layout and content",
     "Automated email series guidance",
     "Promotional email visuals",
@@ -24,7 +24,7 @@ const EmailMarketing = () => {
   const contentSections = [
     {
       title: "Emails That Feel Valuable",
-      text: "The best email campaigns deliver real value, not noise. We help you send messages people actually want to open.",
+      text: "The best email communication delivers real value, not noise. We help you send messages people actually want to open.",
     },
     {
       title: "Designed for Engagement",
@@ -38,16 +38,16 @@ const EmailMarketing = () => {
 
   return (
     <ServiceTemplate
-      pageTitle="Smart Email Marketing Services in Wyoming USA - Optivax Global"
-      metaDescription="Optivax Global offers email marketing services to create campaign strategy, newsletter design, automated email sequences, and performance-focused email content."
-      metaKeywords="email marketing services, newsletter design, email campaign design, email automation, email strategy"
+      pageTitle="Email Communication Strategy Services in Wyoming USA - Optivax Global"
+      metaDescription="Optivax Global offers email communication strategy services including messaging strategy, newsletter design, automated email sequences, and performance-focused email content."
+      metaKeywords="email communication strategy, newsletter design, email design, email automation, email strategy"
       canonicalUrl="https://optivaxglobal.com/email-marketing"
-      serviceLabel="Email Marketing Services"
-      heroHeadline="Email Marketing"
+      serviceLabel="Email Communication Strategy"
+      heroHeadline="Email Communication Strategy"
       heroSubheadline="That Connects with Customers"
-      heroText="Email is the direct channel for people who already know your business. We craft messages that feel helpful, clear, and worth opening." 
-      buttonText="Start Email Marketing"
-      contactServiceName="Email Marketing"
+      heroText="Email is the direct channel for people who already know your business. We craft messages that feel helpful, clear, and worth opening."
+      buttonText="Start Email Communication"
+      contactServiceName="Email Communication Strategy"
       features={features}
       deliverables={deliverables}
       contentSections={contentSections}

@@ -50,10 +50,12 @@ const PrivacyPolicy = () => {
               <p className="text-gray-400 leading-relaxed">
                 We may collect your name, email address, phone number, selected
                 service, project details, and any information you submit through
-                our contact form. If you choose to opt in to SMS / text message
-                communications, we also collect your text messaging consent
-                separately from your phone number, as described in Section 6
-                below.
+                our contact form. Your phone number is collected so our team can
+                reach you about your inquiry or project by phone or, if you
+                separately opt in, by text message. If you choose to opt in to
+                SMS / text message communications, we also collect your text
+                messaging consent separately from your phone number, as
+                described in Section 6 below.
               </p>
             </section>
 
@@ -80,7 +82,10 @@ const PrivacyPolicy = () => {
               <p className="text-gray-400 leading-relaxed">
                 We may use third-party tools such as hosting providers, analytics
                 services, form databases, and communication tools to operate our
-                website and manage inquiries.
+                website and manage inquiries. These are operational service
+                providers that help us run our business; they are separate from,
+                and more limited than, how we handle SMS opt-in and consent
+                data, which is described in Section 6 below.
               </p>
             </section>
 
@@ -88,8 +93,11 @@ const PrivacyPolicy = () => {
               <h2 className="text-2xl font-bold mb-3">5. Sharing of Information</h2>
               <p className="text-gray-400 leading-relaxed">
                 We do not sell your personal information. We may share necessary
-                information only with trusted service providers when required to
-                complete your request or comply with legal obligations.
+                information only with trusted operational service providers
+                (such as those described in Section 4) when required to
+                complete your request or comply with legal obligations. Text
+                messaging originator opt-in data and consent are never included
+                in this sharing, as explained in Section 6.
               </p>
             </section>
 
@@ -115,6 +123,12 @@ const PrivacyPolicy = () => {
                 for marketing/promotional purposes. All the above categories
                 exclude text messaging originator opt-in data and consent; this
                 information will not be shared with any third parties.
+              </p>
+
+              <p className="text-gray-400 leading-relaxed mb-4">
+                Message frequency may vary depending on your inquiry or project.
+                Message and data rates may apply, depending on your mobile
+                carrier and plan.
               </p>
 
               <p className="text-gray-400 leading-relaxed">

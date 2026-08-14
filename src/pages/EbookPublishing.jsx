@@ -142,8 +142,8 @@ const whyChooseUs = [
   },
   {
     icon: Megaphone,
-    title: "Digital Marketing Support",
-    text: "Once your book is live, our digital marketing team is available to help you build visibility and reach more readers.",
+    title: "Digital Growth Support",
+    text: "Once your book is live, our digital growth team is available to help you build visibility and reach more readers.",
   },
 ];
 
@@ -154,19 +154,14 @@ const platforms = [
     text: "The most widely used platform for self-published eBooks and print-on-demand titles.",
   },
   {
-    icon: SiApple,
-    name: "Apple Books",
-    text: "Puts your eBook in front of readers directly through Apple's dedicated reading app.",
-  },
-  {
     icon: SiRakutenkobo,
     name: "Kobo",
     text: "A strong option for reaching international readers and independent bookstore audiences.",
   },
   {
-    icon: SiGoogleplay,
-    name: "Google Play Books",
-    text: "Extends your book's reach across Android devices and the web.",
+    icon: Network,
+    name: "IngramSpark",
+    text: "A distribution platform used for wider retail and library reach. We can help prepare publishing-ready files and provide setup guidance where applicable.",
   },
   {
     icon: Library,
@@ -174,15 +169,21 @@ const platforms = [
     text: "Publishes your eBook directly to the Barnes & Noble NOOK marketplace.",
   },
   {
-    icon: Network,
-    name: "IngramSpark",
-    text: "A distribution platform used for wider retail and library reach. We can help prepare publishing-ready files and provide setup guidance where applicable.",
+    icon: SiGoogleplay,
+    name: "Google Play Books",
+    text: "Extends your book's reach across Android devices and the web.",
+  },
+  
+  {
+    icon: SiApple,
+    name: "Apple Books",
+    text: "Puts your eBook in front of readers directly through Apple's dedicated reading app.",
   },
 ];
 
 const relatedServices = [
   { name: "eBook Cover Design", href: "/ebook-cover-design" },
-  { name: "Digital Marketing", href: "/digital-marketing" },
+  { name: "Digital Growth", href: "/digital-marketing" },
   { name: "Web Design", href: "/web-design" },
 ];
 
@@ -376,35 +377,7 @@ const EbookPublishing = () => {
           </div>
         </section>
 
-        {/* ABOUT THE SERVICE */}
-        <SectionAnimator>
-          <section className="py-20 border-t border-white/10">
-            <div className="max-w-4xl mx-auto px-6">
-              <h2 className="text-3xl md:text-5xl font-extrabold mb-6">
-                Take Your Manuscript From Draft to Published eBook
-              </h2>
-
-              <div className="space-y-5 text-gray-300 text-lg leading-relaxed">
-                <p>
-                  A great book deserves more than a good manuscript. It needs
-                  the right formatting, a cover that fits its genre, and a
-                  publishing setup that meets each platform's requirements.
-                  That's usually where independent authors get stuck, and
-                  it's exactly where we come in.
-                </p>
-
-                <p>
-                  We work directly with your manuscript at every stage:
-                  preparing it for editing, formatting it for digital
-                  reading, coordinating your cover design, and setting up
-                  your files for Amazon KDP and other platforms, so the
-                  finished eBook looks and reads like it came from a
-                  professional publishing team.
-                </p>
-              </div>
-            </div>
-          </section>
-        </SectionAnimator>
+        
 
         {/* WHAT'S INCLUDED */}
         <SectionAnimator>
@@ -600,6 +573,7 @@ const EbookPublishing = () => {
           </section>
         </SectionAnimator>
 
+
         {/* RELATED SERVICES */}
         <section className="py-16 border-t border-white/10 bg-[#0C0D0D]">
           <div className="max-w-7xl mx-auto px-6">
@@ -627,6 +601,35 @@ const EbookPublishing = () => {
             </div>
           </div>
         </section>
+        {/* ABOUT THE SERVICE */}
+        <SectionAnimator>
+          <section className="py-20 border-t border-white/10">
+            <div className="max-w-4xl mx-auto px-6">
+              <h2 className="text-3xl md:text-5xl font-extrabold mb-6">
+                Take Your Manuscript From Draft to Published eBook
+              </h2>
+
+              <div className="space-y-5 text-gray-300 text-lg leading-relaxed">
+                <p>
+                  A great book deserves more than a good manuscript. It needs
+                  the right formatting, a cover that fits its genre, and a
+                  publishing setup that meets each platform's requirements.
+                  That's usually where independent authors get stuck, and
+                  it's exactly where we come in.
+                </p>
+
+                <p>
+                  We work directly with your manuscript at every stage:
+                  preparing it for editing, formatting it for digital
+                  reading, coordinating your cover design, and setting up
+                  your files for Amazon KDP and other platforms, so the
+                  finished eBook looks and reads like it came from a
+                  professional publishing team.
+                </p>
+              </div>
+            </div>
+          </section>
+        </SectionAnimator>
 
         {/* FAQ */}
         <SectionAnimator>

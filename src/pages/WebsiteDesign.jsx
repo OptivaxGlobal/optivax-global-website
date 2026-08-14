@@ -11,7 +11,7 @@ const WebsiteDesign = () => {
   const features = [
     { icon: Globe, title: "Professional Business Website", text: "Modern website design built to create trust and present your brand professionally." },
     { icon: Smartphone, title: "Mobile Responsive Design", text: "Your website will look clean and work smoothly on mobile, tablet, and desktop." },
-    { icon: Search, title: "SEO-Ready Structure", text: "Clean heading structure, optimized content flow, and search-friendly page layout." },
+    { icon: Search, title: "Search-Ready Structure", text: "Clean heading structure, optimized content flow, and search-friendly page layout." },
     { icon: Zap, title: "Fast Loading Experience", text: "Optimized layouts focused on speed, smooth browsing, and better user experience." }
   ];
 
@@ -22,14 +22,14 @@ const WebsiteDesign = () => {
     "Service page structure",
     "CTA sections",
     "Contact form setup",
-    "SEO-friendly content structure",
+    "Search-friendly content structure",
     "Brand and style direction"
   ];
 
   const faqs = [
     { question: "Do you design websites for small businesses?", answer: "Yes. We create professional websites for startups, small businesses, agencies, authors, and service-based brands." },
     { question: "Will my website be mobile responsive?", answer: "Yes. Every website is designed to work properly on mobile, tablet, laptop, and desktop screens." },
-    { question: "Can you add SEO to my website?", answer: "Yes. We structure pages with proper titles, descriptions, headings, keywords, and user-focused content." }
+    { question: "Can you help my website show up better in search results?", answer: "Yes. We structure pages with proper titles, descriptions, headings, keywords, and user-focused content." }
   ];
 
   return (
@@ -38,7 +38,7 @@ const WebsiteDesign = () => {
         <title>Professional Web Design Services in Wyoming USA - Optivax Global</title>
         <meta
           name="description"
-          content="Optivax Global offers professional website design services for businesses, startups, and brands. Get a modern, mobile responsive, SEO-ready website built to generate leads."
+          content="Optivax Global offers professional website design services for businesses, startups, and brands. Get a modern, mobile-responsive website built to attract and engage more customers."
         />
         <meta
           name="keywords"
@@ -148,7 +148,7 @@ const WebsiteDesign = () => {
           </div>
         </section>
 
-        {/* SEO CONTENT */}
+        {/* SEARCH VISIBILITY CONTENT */}
         <section className="py-20 border-t border-white/10">
           <div className="max-w-4xl mx-auto px-6 space-y-8 text-gray-300 leading-relaxed">
             <h2 className="text-3xl md:text-4xl font-extrabold text-white">
@@ -216,7 +216,7 @@ const WebsiteDesign = () => {
 
             <p className="text-gray-400 text-lg max-w-2xl mx-auto mb-8">
               Let’s create a professional website that makes your business look
-              premium, builds trust, and helps you generate more leads.
+              premium, builds trust, and helps you connect with more customers.
             </p>
 
             <button

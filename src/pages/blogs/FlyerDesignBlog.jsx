@@ -21,7 +21,7 @@ text: "Eye-catching graphics, professional typography, and strategic use of colo
 },
 {
 heading: "Flyer Design Supports Brand Awareness",
-text: "Consistent flyer design strengthens brand recognition by maintaining the same visual identity across marketing campaigns. This helps customers remember businesses and builds trust over time.",
+text: "Consistent flyer design strengthens brand recognition by maintaining the same visual identity across promotional campaigns. This helps customers remember businesses and builds trust over time.",
 },
 {
 heading: "Final Thoughts",

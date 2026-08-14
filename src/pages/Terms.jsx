@@ -57,8 +57,9 @@ const Terms = () => {
               <h2 className="text-2xl font-bold mb-3">2. Our Services</h2>
               <p className="text-gray-400 leading-relaxed">
                 Optivax Global provides digital services including website
-                design, Logo & Branding, app UI/UX, ebook cover design, corporate
-                presentations, branding, and digital marketing.
+                design, Logo & Branding, app UI/UX, eBook services, corporate
+                presentations, branding, content strategy, and digital growth
+                solutions.
               </p>
             </section>
 
@@ -105,23 +106,33 @@ const Terms = () => {
 
               <p className="text-gray-400 leading-relaxed mb-4">
                 Optivax Global may offer SMS / text messaging communications
-                to users who actively opt in through a clearly labeled
-                consent checkbox on our forms. SMS messages are only sent to
-                users who provide this active opt-in. Simply providing your
-                phone number on a form does not, by itself, constitute
-                consent to receive SMS messages from Optivax Global.
+                to users who actively opt in through a clearly labeled,
+                standalone consent checkbox on our forms. This checkbox is
+                separate from, and not bundled with, your acceptance of
+                these Terms of Service. SMS messages are only sent to users
+                who provide this active opt-in. Simply providing your phone
+                number on a form does not, by itself, constitute consent to
+                receive SMS messages from Optivax Global.
               </p>
 
               <ul className="list-disc list-inside space-y-2 text-gray-400 leading-relaxed">
                 <li>Message frequency may vary depending on your inquiry or project.</li>
                 <li>Message and data rates may apply, depending on your mobile carrier and plan.</li>
-                <li>You can cancel SMS messages at any time by replying STOP.</li>
-                <li>For assistance, reply HELP or contact us using the details below.</li>
+                <li>Reply STOP to unsubscribe or cancel at any time.</li>
+                <li>Reply HELP for assistance, or contact us using the details below.</li>
                 <li>
                   Carriers are not liable for delayed or undelivered
                   messages.
                 </li>
               </ul>
+
+              <p className="text-gray-400 leading-relaxed mt-4">
+                This SMS consent is given specifically to Optivax Global and
+                applies only to messages sent by Optivax Global. It is not
+                transferable or assignable to any third party or affiliate,
+                and we do not share your SMS opt-in status or consent with
+                any third party or affiliate for their own marketing purposes.
+              </p>
 
               <p className="text-gray-400 leading-relaxed mt-4">
                 For more information about how we handle your phone number

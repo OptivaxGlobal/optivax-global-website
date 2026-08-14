@@ -21,7 +21,7 @@ const sections = [
   },
   {
     heading: "Content Management Supports Long-Term Growth",
-    text: "A strong content management approach helps businesses maximize the value of their digital assets. From improving customer experiences to supporting SEO performance and brand visibility, effective content management contributes to sustainable business growth and long-term marketing success.",
+    text: "A strong content management approach helps businesses maximize the value of their digital assets. From improving customer experiences to supporting search visibility performance and brand visibility, effective content management contributes to sustainable business growth and long-term success.",
   },
   {
     heading: "Final Thoughts",

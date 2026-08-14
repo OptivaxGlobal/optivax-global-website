@@ -30,7 +30,7 @@ const faqs = [
   {
     question: "What does Optivax Global do?",
     answer:
-      "We are a full-service digital solutions company providing website design and development, UI/UX design, logo and brand identity design, mobile app design, SEO, digital marketing, ebook cover design, publishing support, and creative business solutions for modern brands.",
+      "We are a full-service digital solutions company providing website design and development, UI/UX design, logo and brand identity design, mobile app design, ebook cover design, publishing support, digital growth solutions, and creative business solutions for modern brands.",
   },
   {
     question: "Can you create a custom website for my business?",
@@ -53,9 +53,9 @@ const faqs = [
       "Yes. Branding is more than just a logo. We help businesses build trust, improve brand recognition, create a consistent visual identity, and make a stronger impression online.",
   },
   {
-    question: "What kind of SEO services do you offer?",
+    question: "How do you help improve my website's search visibility?",
     answer:
-      "We create SEO-friendly website structures and also provide optimization support to help improve your visibility, search ranking potential, and overall online presence.",
+      "We create search-friendly website structures and also provide optimization support to help improve your visibility, search ranking potential, and overall online presence.",
   },
   {
     question: "How long does a project take?",
@@ -92,7 +92,7 @@ const benefits = [
   },
   {
     icon: SearchCheck,
-    title: "SEO-Friendly Structure",
+    title: "Search-Friendly Structure",
     text: "We build clean digital experiences that support visibility and long-term growth.",
   },
   {
@@ -128,7 +128,7 @@ const Faqs = () => {
         <title>FAQs | Optivax Global Digital Agency</title>
         <meta
           name="description"
-          content="Find answers about Optivax Global services including website design, branding, UI/UX design, SEO, digital marketing, app design, and creative digital solutions."
+          content="Find answers about Optivax Global services including website design, branding, UI/UX design, digital growth solutions, app design, and creative digital solutions."
         />
         <link rel="canonical" href="https://optivaxglobal.com/faqs" />
       </Helmet>
@@ -157,8 +157,8 @@ const Faqs = () => {
 
               <p className="text-lg md:text-xl text-gray-300 leading-relaxed max-w-2xl mb-8">
                 Learn how Optivax Global helps modern businesses grow through
-                website design, branding, UI/UX, SEO, digital marketing, app
-                design, and creative digital solutions.
+                website design, branding, UI/UX, search visibility, digital
+                growth, app design, and creative digital solutions.
               </p>
 
               <div className="flex flex-col sm:flex-row gap-4">
@@ -196,16 +196,17 @@ const Faqs = () => {
               </h2>
 
               <p className="text-gray-300 leading-relaxed mb-6">
-                From project timelines to website ownership, SEO, branding, and
-                revisions, this page answers the most common questions clients
-                ask before starting a project with Optivax Global.
+                From project timelines to website ownership, search visibility,
+                branding, and revisions, this page answers the most common
+                questions clients ask before starting a project with Optivax
+                Global.
               </p>
 
               <div className="grid gap-4">
                 {[
                   "Website design & development",
                   "Branding and logo design",
-                  "SEO and digital marketing",
+                  "Search visibility and digital growth",
                   "Project process and support",
                 ].map((item) => (
                   <div key={item} className="flex items-center gap-3">
@@ -403,9 +404,9 @@ const Faqs = () => {
             </h2>
 
             <p className="text-gray-300 text-lg max-w-2xl mx-auto mb-8 leading-relaxed">
-              Whether you need a new website, a rebrand, SEO, marketing, or a
-              complete digital solution, Optivax Global is ready to help you
-              move forward with confidence.
+              Whether you need a new website, a rebrand, better search
+              visibility, or a complete digital solution, Optivax Global is
+              ready to help you move forward with confidence.
             </p>
 
             <button

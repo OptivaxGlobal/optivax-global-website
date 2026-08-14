@@ -4,50 +4,50 @@ import { Search, ShieldCheck, Layers, LineChart } from "lucide-react";
 
 const SearchEngineOptimization = () => {
   const features = [
-    { icon: <Search size={24} />, title: "SEO-Friendly Pages", text: "We optimize page structure, headings, and copy to help search engines understand your services." },
-    { icon: <ShieldCheck size={24} />, title: "Technical SEO Stability", text: "Clean site structure and page performance help your website rank more reliably." },
-    { icon: <Layers size={24} />, title: "Content Optimization", text: "We shape your content so it answers customer questions and supports your target keywords." },
-    { icon: <LineChart size={24} />, title: "Long-Term Ranking Growth", text: "SEO efforts are built to improve your search visibility over time with consistent progress." },
+    { icon: <Search size={24} />, title: "Clear Page Structure", text: "We organize your page structure, headings, and copy so both visitors and search engines can quickly understand what you offer." },
+    { icon: <ShieldCheck size={24} />, title: "Technical Site Health", text: "A clean site structure and strong page performance help your website perform more reliably in search results." },
+    { icon: <Layers size={24} />, title: "Content Optimization", text: "We shape your content so it answers customer questions clearly and reflects the terms people actually search for." },
+    { icon: <LineChart size={24} />, title: "Long-Term Visibility Growth", text: "Our approach is built to improve your search visibility over time through consistent, steady progress." },
   ];
 
   const deliverables = [
-    "On-page SEO guidance",
+    "On-page optimization guidance",
     "Keyword-focused page structure",
     "Meta title and description support",
     "Content clarity and relevance",
-    "Technical SEO recommendations",
+    "Technical optimization recommendations",
     "Search visibility planning",
     "Performance and mobile readiness",
-    "Conversion-focused SEO advice",
+    "Conversion-focused visibility advice",
   ];
 
   const contentSections = [
     {
-      title: "SEO Built for People and Search Engines",
-      text: "Search engine optimization works best when your content is clear, useful, and easy to navigate. We help shape pages that customers and search engines both understand.",
+      title: "Built for People and Search Engines",
+      text: "Website visibility works best when your content is clear, useful, and easy to navigate. We help shape pages that customers and search engines both understand.",
     },
     {
-      title: "Stronger, More Stable Rankings",
-      text: "SEO is a long-term effort. We improve your page structure, content, and technical setup so your website can earn more stable visibility over time.",
+      title: "Stronger, More Stable Search Performance",
+      text: "Improving your search visibility is a long-term effort. We refine your page structure, content, and technical setup so your website can earn steadier visibility over time.",
     },
     {
       title: "Visibility That Supports Growth",
-      text: "Higher search visibility means more people finding your services. We help your website connect with the keywords your customers are searching for.",
+      text: "Stronger search visibility means more people finding your services. We help your website align with the terms your customers are actually searching for.",
     },
   ];
 
   return (
     <ServiceTemplate
-      pageTitle="Professional SEO Services in Wyoming USA - Optivax Global"
-      metaDescription="Optivax Global provides search engine optimization services to improve website visibility, SEO-friendly content, page structure, and long-term search performance."
-      metaKeywords="search engine optimization, seo services, on-page seo, website seo, seo agency"
+      pageTitle="Search Visibility Optimization Services in Wyoming USA - Optivax Global"
+      metaDescription="Optivax Global helps businesses improve website visibility through clear content structure, technical optimization, and long-term search performance support."
+      metaKeywords="website visibility, search visibility optimization, on-page optimization, website structure, online presence services"
       canonicalUrl="https://optivaxglobal.com/search-engine-optimization"
-      serviceLabel="Search Engine Optimization"
-      heroHeadline="Search Engine Optimization"
-      heroSubheadline="That Helps Your Site Be Found"
-      heroText="We shape your website so people and search engines both understand what your business offers." 
-      buttonText="Start SEO"
-      contactServiceName="Search Engine Optimization"
+      serviceLabel="Search Visibility Optimization"
+      heroHeadline="Website Visibility"
+      heroSubheadline="That Helps Customers Find You"
+      heroText="We structure your website so it's clear, easy to navigate, and easy for people to find when they're searching for what you offer."
+      buttonText="Get Visibility Support"
+      contactServiceName="Search Visibility Optimization"
       features={features}
       deliverables={deliverables}
       contentSections={contentSections}

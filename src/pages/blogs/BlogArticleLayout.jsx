@@ -225,7 +225,7 @@ const BlogArticleLayout = ({
                     </h2>
 
                     <p className="mt-5 max-w-3xl text-base leading-8 text-gray-300 md:text-lg">
-                      Optivax Global helps businesses build professional websites, stronger branding, better SEO visibility, and digital experiences that support real growth.
+                      Optivax Global helps businesses build professional websites, stronger branding, improved search visibility, and digital experiences that support sustainable growth.
                     </p>
                   </div>
 

@@ -27,7 +27,7 @@ const BrandManagement = () => {
     },
     {
       title: "Align Every Touchpoint",
-      text: "From website content to social posts and marketing campaigns, consistent branding creates trust. We make sure every asset supports the same brand story.",
+      text: "From website content to social posts and marketing materials, consistent branding creates trust. We make sure every asset supports the same brand story.",
     },
     {
       title: "Brand Strategy That Scales",

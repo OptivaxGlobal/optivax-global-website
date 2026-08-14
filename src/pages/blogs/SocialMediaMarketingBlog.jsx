@@ -21,7 +21,7 @@ const sections = [
   },
   {
     heading: "Social Media Supports Customer Acquisition",
-    text: "Social media marketing helps businesses attract potential customers by showcasing products, services, expertise, and brand values. Strategic campaigns, targeted advertising, and engaging content can drive traffic, generate leads, and create new business opportunities.",
+    text: "Social media strategy helps businesses attract potential customers by showcasing products, services, expertise, and brand values. Strategic content, targeted advertising, and engaging posts can drive traffic, encourage customer inquiries, and create new business opportunities.",
   },
   {
     heading: "Strong Engagement Drives Business Growth",
@@ -29,25 +29,25 @@ const sections = [
   },
   {
     heading: "Final Thoughts",
-    text: "At Optivax Global, social media marketing is viewed as more than a content-sharing platform. It is a strategic growth tool that helps businesses increase visibility, strengthen customer relationships, and build a strong digital presence in today's competitive marketplace.",
+    text: "At Optivax Global, social media management is viewed as more than a content-sharing platform. It is a strategic growth tool that helps businesses increase visibility, strengthen customer relationships, and build a strong digital presence in today's competitive marketplace.",
   },
   {
     heading: "Ready to Improve Your Digital Presence?",
-    text: "Optivax Global helps businesses develop effective social media marketing strategies, increase audience engagement, strengthen brand awareness, and create digital experiences that drive measurable business growth.",
+    text: "Optivax Global helps businesses develop effective social media strategies, increase audience engagement, strengthen brand awareness, and create digital experiences that drive measurable business growth.",
   },
 ];
 
 const SocialMediaMarketingBlog = () => {
   return (
     <BlogArticleLayout
-      title="The Power of Social Media Marketing in Today's Digital Landscape"
-      metaTitle="Power Of Social Media in Digital Landscape - Optivax Global"
-      metaDescription="Discover how social media marketing helps businesses increase visibility, engage audiences, build brand credibility, generate leads, and drive sustainable growth."
+      title="The Power of Social Media Management in Today's Digital Landscape"
+      metaTitle="The Power of Social Media Management - Optivax Global"
+      metaDescription="Discover how social media strategy helps businesses increase visibility, engage audiences, build brand credibility, encourage customer inquiries, and drive sustainable growth."
       canonicalUrl="https://optivaxglobal.com/power-of-social-media-in-digital-landscape"
-      category="Social Media Marketing"
+      category="Social Media Management"
       date="June 2026"
       image={socialMediaMarketingBlogImg}
-      imageAlt="Social media marketing blog by Optivax Global"
+      imageAlt="Social media management blog by Optivax Global"
       sections={sections}
     />
   );

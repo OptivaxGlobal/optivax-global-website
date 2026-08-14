@@ -9,7 +9,7 @@ const About = () => {
   const strengths = [
     "Business digital strategies",
     "A modern, easy to use design",
-    "SEO-optimized website structure",
+    "Search-optimized website structure",
     "Conversion Layouts & Content",
   ];
 
@@ -99,8 +99,8 @@ const About = () => {
             <p className="text-lg md:text-xl text-gray-300 leading-relaxed mb-8">
               Optivax Global helps businesses, startups and modern brands to
               build a stronger online presence with professional website design,
-              branding, UI/UX design, SEO, publishing support and results-driven
-              digital marketing.
+              branding, UI/UX design, publishing support and results-driven
+              digital growth solutions.
               <br />
               <br />
               We’re all about creating digital experiences that are modern and

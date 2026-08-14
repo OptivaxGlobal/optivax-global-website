@@ -39,7 +39,7 @@ const Animation = () => {
   return (
     <ServiceTemplate
       pageTitle="Custom Animation Services in Wyoming USA - Optivax Global"
-      metaDescription="Optivax Global delivers custom animation services for web, social, and marketing campaigns with branded motion graphics and engaging visuals."
+      metaDescription="Optivax Global delivers custom animation services for web, social, and digital content with branded motion graphics and engaging visuals."
       metaKeywords="animation services, motion graphics, explainer animation, custom animation, animation agency"
       canonicalUrl="https://optivaxglobal.com/animation"
       serviceLabel="Animation Services"

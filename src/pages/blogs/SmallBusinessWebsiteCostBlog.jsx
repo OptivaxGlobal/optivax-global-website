@@ -13,11 +13,11 @@ const sections = [
   },
   {
     heading: "A Basic Small Business Website",
-    text: "A simple business website usually includes a homepage, About page, service pages, contact page, inquiry form, mobile-responsive design, and basic SEO setup. This type of website works well for consultants, contractors, agencies, professional service providers, and local businesses that mainly need a credible online presence and an effective way to generate inquiries.",
+    text: "A simple business website usually includes a homepage, About page, service pages, contact page, inquiry form, mobile-responsive design, and basic search visibility setup. This type of website works well for consultants, contractors, agencies, professional service providers, and local businesses that mainly need a credible online presence and an effective way to generate inquiries.",
   },
   {
     heading: "Website Builders and Do-It-Yourself Costs",
-    text: "Using a website builder can reduce the initial cost because these platforms generally charge monthly subscriptions instead of large upfront development fees. However, building a website yourself also requires investing your time in design, content creation, SEO, troubleshooting, testing, and ongoing maintenance. The cheapest upfront option is not automatically the least expensive once the value of your time and the possibility of technical mistakes are considered.",
+    text: "Using a website builder can reduce the initial cost because these platforms generally charge monthly subscriptions instead of large upfront development fees. However, building a website yourself also requires investing your time in design, content creation, search visibility, troubleshooting, testing, and ongoing maintenance. The cheapest upfront option is not automatically the least expensive once the value of your time and the possibility of technical mistakes are considered.",
   },
   {
     heading: "Custom Website Design Costs More",
@@ -25,7 +25,7 @@ const sections = [
   },
   {
     heading: "What Professional Website Services Include",
-    text: "Professional agencies may include discovery, competitor research, UI and UX planning, responsive design, content structure, quality assurance, technical optimization, SEO foundations, launch preparation, and post-launch support. Businesses are therefore paying for much more than somebody simply creating a collection of pages. A professional project should produce a website that supports the company’s goals, communicates clearly, and delivers a reliable customer experience.",
+    text: "Professional agencies may include discovery, competitor research, UI and UX planning, responsive design, content structure, quality assurance, technical optimization, search visibility foundations, launch preparation, and post-launch support. Businesses are therefore paying for much more than somebody simply creating a collection of pages. A professional project should produce a website that supports the company’s goals, communicates clearly, and delivers a reliable customer experience.",
   },
   {
     heading: "Number of Website Pages",
@@ -44,16 +44,16 @@ const sections = [
     text: "Attractive design cannot compensate for weak or unclear messaging. Professional website copywriting can increase the initial project budget, but it can also make the website more valuable by clearly explaining your services, benefits, processes, and calls to action. Strong content helps visitors understand what the business offers and why they should choose it. Copywriting should therefore be considered a core part of the website rather than an optional final addition.",
   },
   {
-    heading: "SEO Setup and Ongoing Optimization",
-    text: "Basic SEO setup and a complete long-term SEO campaign are different services. A new website should at least include clean URLs, optimized page titles, logical heading structure, relevant metadata, mobile usability, internal linking opportunities, optimized images, and crawlable content. Ongoing SEO generally requires additional content creation, technical improvements, keyword optimization, link building, performance analysis, and continuous updates.",
+    heading: "Search Visibility Setup and Ongoing Optimization",
+    text: "Basic search visibility setup and a complete long-term search visibility plan are different services. A new website should at least include clean URLs, optimized page titles, logical heading structure, relevant metadata, mobile usability, internal linking opportunities, optimized images, and crawlable content. Ongoing search visibility work generally requires additional content creation, technical improvements, keyword optimization, link building, performance analysis, and continuous updates.",
   },
   {
     heading: "Do Not Forget Ongoing Website Costs",
-    text: "The initial launch price is only one part of a complete website budget. Depending on your setup, you may also need to pay for domain registration, hosting, platform subscriptions, premium plugins or apps, security tools, backups, maintenance, content updates, SEO, and technical support. Ask about these costs before signing a website contract. A surprisingly inexpensive website can become costly if every small update requires an additional fee.",
+    text: "The initial launch price is only one part of a complete website budget. Depending on your setup, you may also need to pay for domain registration, hosting, platform subscriptions, premium plugins or apps, security tools, backups, maintenance, content updates, search visibility, and technical support. Ask about these costs before signing a website contract. A surprisingly inexpensive website can become costly if every small update requires an additional fee.",
   },
   {
     heading: "How Much Should Your Business Spend?",
-    text: "Your budget should reflect the role the website plays in your company. If you only need a basic online presence, a simple professional website may be sufficient. If your website is responsible for generating leads, supporting advertising campaigns, attracting organic search traffic, selling products, or booking customers, investing more in usability, performance, content, SEO, and conversion strategy may make sense.",
+    text: "Your budget should reflect the role the website plays in your company. If you only need a basic online presence, a simple professional website may be sufficient. If your website is responsible for generating customer inquiries, supporting advertising campaigns, attracting organic search traffic, selling products, or booking customers, investing more in usability, performance, content, search visibility, and conversion strategy may make sense.",
   },
   {
     heading: "Choose Value Instead of Price Alone",
@@ -70,7 +70,7 @@ const SmallBusinessWebsiteCostBlog = () => {
     <BlogArticleLayout
       title="How Much Does a Small Business Website Cost?"
       metaTitle="Small Business Website Services Cost - Optivax Global"
-      metaDescription="Learn what a small business website costs and how design, page count, custom features, eCommerce, SEO, content, and maintenance affect pricing."
+      metaDescription="Learn what a small business website costs and how design, page count, custom features, eCommerce, search visibility, content, and maintenance affect pricing."
       canonicalUrl="https://optivaxglobal.com/small-business-websites-cost"
       category="Web Development"
       date="August 2026"

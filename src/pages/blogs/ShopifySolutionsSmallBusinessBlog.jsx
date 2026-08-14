@@ -45,7 +45,7 @@ const sections = [
   },
   {
     heading: "Shopify Can Grow With Your Business",
-    text: "Small businesses rarely remain exactly the same. As sales increase, a company may add products, expand marketing campaigns, enter new markets, introduce new sales channels, or require more advanced functionality. Shopify provides a flexible foundation that allows businesses to expand their online operations without immediately rebuilding their entire website. This scalability makes it useful for entrepreneurs who need a platform operations without immediately rebuilding their entire website. This scalability makes it useful for entrepreneurs who need capable of supporting both their current requirements and future eCommerce growth.",
+    text: "Small businesses rarely remain exactly the same. As sales increase, a company may add products, expand promotional campaigns, enter new markets, introduce new sales channels, or require more advanced functionality. Shopify provides a flexible foundation that allows businesses to expand their online operations without immediately rebuilding their entire website. This scalability makes it useful for entrepreneurs who need a platform operations without immediately rebuilding their entire website. This scalability makes it useful for entrepreneurs who need capable of supporting both their current requirements and future eCommerce growth.",
   },
   {
     heading: "Final Thoughts",

@@ -73,7 +73,7 @@ const sections = [
   },
   {
     heading: "Brand Identity Is an Investment, Not an Expense",
-    text: "Many small business owners delay branding because they consider it an optional cost. In reality, it is one of the most valuable long-term investments a company can make. A professional identity builds credibility, improves customer confidence, supports marketing campaigns, and strengthens recognition over time. Businesses with consistent branding often appear more established, even when competing against larger companies with bigger marketing budgets.",
+    text: "Many small business owners delay branding because they consider it an optional cost. In reality, it is one of the most valuable long-term investments a company can make. A professional identity builds credibility, improves customer confidence, supports promotional campaigns, and strengthens recognition over time. Businesses with consistent branding often appear more established, even when competing against larger companies with bigger marketing budgets.",
   },
   {
     heading: "Final Thoughts",

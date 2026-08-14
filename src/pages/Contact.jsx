@@ -12,6 +12,7 @@ import {
   FaPinterestP,
   FaTiktok,
 } from "react-icons/fa";
+import { FaXTwitter } from "react-icons/fa6";
 import { RiThreadsFill } from "react-icons/ri";
 
 import AnimatedBackground from "@/components/AnimatedBackground";
@@ -43,14 +44,22 @@ const Contact = () => {
       "Brand Management": "Brand Management",
       "Content Management": "Content Management System",
       "Content Management System": "Content Management System",
-      "Digital Marketing": "Digital Marketing",
-      "Email Marketing": "Email Marketing",
-      "Pay Per Click": "Pay Per Click (PPC)",
-      "Pay Per Click (PPC)": "Pay Per Click (PPC)",
-      "Search Engine Marketing": "Search Engine Marketing",
-      "Search Engine Optimization": "Search Engine Optimization (SEO)",
-      "Search Engine Optimization (SEO)": "Search Engine Optimization (SEO)",
-      "Social Media Marketing": "Social Media Marketing",
+      "Digital Marketing": "Digital Growth",
+      "Digital Growth": "Digital Growth",
+      "Email Marketing": "Email Communication Strategy",
+      "Email Engagement": "Email Communication Strategy",
+      "Email Communication Strategy": "Email Communication Strategy",
+      "Pay Per Click": "Paid Search Support",
+      "Pay Per Click (PPC)": "Paid Search Support",
+      "Paid Search Support": "Paid Search Support",
+      "Search Engine Marketing": "Search Visibility Strategy",
+      "Search Visibility Strategy": "Search Visibility Strategy",
+      "Search Engine Optimization": "Search Visibility Optimization",
+      "Search Engine Optimization (SEO)": "Search Visibility Optimization",
+      "Search Visibility Optimization": "Search Visibility Optimization",
+      "Social Media Marketing": "Social Media Management",
+      "Social Media Growth": "Social Media Management",
+      "Social Media Management": "Social Media Management",
       "Ebook Cover": "Ebook Cover Design",
       "Ebook Cover Design": "Ebook Cover Design",
       "Corporate Presentation": "Corporate Presentation",
@@ -104,6 +113,13 @@ const Contact = () => {
         "hover:bg-black hover:border-[#25F4EE] hover:text-white",
     },
     {
+      label: "X",
+      icon: <FaXTwitter size={16} />,
+      link: "https://x.com/OptivaxGlobal",
+      hover:
+        "hover:bg-black hover:border-white hover:text-white",
+    },
+    {
       label: "Threads",
       icon: <RiThreadsFill size={16} />,
       link: "https://www.threads.net/@optivaxglobal",
@@ -126,7 +142,7 @@ const Contact = () => {
 
         <meta
           name="description"
-          content="Contact Optivax Global for website design, Logo & Branding, app UI/UX, ebook cover design and digital marketing services."
+          content="Contact Optivax Global for website design, Logo & Branding, app UI/UX, ebook cover design and digital growth solutions."
         />
       </Helmet>
 

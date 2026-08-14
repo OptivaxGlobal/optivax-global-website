@@ -36,8 +36,8 @@ const sections = [
     text: "Professional website graphics such as hero banners, service icons, process sections, portfolio visuals, call-to-action banners, blog images, and landing page designs help visitors understand content without feeling overwhelmed. Strong graphics improve readability, engagement, and brand credibility.",
   },
   {
-    heading: "Graphic Design Supports Marketing Campaigns",
-    text: "Marketing campaigns need strong visuals to communicate effectively. Whether a business is promoting a service, launching a product, running an offer, or building awareness, good graphic design supports the campaign with clear messaging, readable text, brand consistency, purposeful imagery, and visible calls to action.",
+    heading: "Graphic Design Supports Promotional Campaigns",
+    text: "Promotional campaigns need strong visuals to communicate effectively. Whether a business is promoting a service, launching a product, running an offer, or building awareness, good graphic design supports the campaign with clear messaging, readable text, brand consistency, purposeful imagery, and visible calls to action.",
   },
   {
     heading: "Print Design Still Matters",
