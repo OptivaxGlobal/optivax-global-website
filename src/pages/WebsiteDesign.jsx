@@ -116,7 +116,7 @@ const WebsiteDesign = () => {
           <div className="max-w-7xl mx-auto px-6">
             <div className="max-w-3xl mb-12">
               <h2 className="text-3xl md:text-5xl font-extrabold mb-5">
-                Website Design That Supports Business Growth
+                Website Design Built Around Your Business
               </h2>
               <p className="text-gray-400 text-lg leading-relaxed">
                 A great website guides visitors, builds credibility, and makes
@@ -168,7 +168,7 @@ const WebsiteDesign = () => {
             <p>
               We build websites for businesses, startups, and service providers.
               The design is clean, intuitive, mobile-ready, and structured so it
-              supports growth and helps people understand your offer quickly.
+              helps people understand your offer quickly.
             </p>
 
             <h2 className="text-3xl md:text-4xl font-extrabold text-white">

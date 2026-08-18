@@ -60,7 +60,7 @@ const GameDevelopment = () => {
       canonicalUrl="https://optivaxglobal.com/game-development"
       serviceLabel="Game Development Services"
       heroHeadline="Game Development"
-      heroSubheadline="Built for Play, Performance, and Growth"
+      heroSubheadline="Built for Play, Performance, and Polish"
       heroText="We create custom games for mobile, PC, console, and emerging platforms with thoughtful design, strong gameplay flow, and reliable technical execution."
       buttonText="Start Game Development"
       contactServiceName="Game Development"

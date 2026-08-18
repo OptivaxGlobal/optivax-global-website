@@ -53,7 +53,7 @@ const sections = [
   },
   {
     heading: "Final Thoughts",
-    text: "UI UX design is about creating digital experiences that look professional, feel intuitive, and help users achieve their goals easily. Businesses that invest in high-quality UI UX design improve customer satisfaction, strengthen brand credibility, increase conversions, and support long-term digital growth. Optivax Global helps businesses create modern UI UX solutions that combine usability, visual excellence, and performance.",
+    text: "UI UX design is about creating digital experiences that look professional, feel intuitive, and help users achieve their goals easily. Businesses that invest in high-quality UI UX design improve customer satisfaction, strengthen brand credibility, and build a stronger digital presence. Optivax Global helps businesses create modern UI UX solutions that combine usability, visual excellence, and performance.",
   },
 ];
 

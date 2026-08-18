@@ -171,73 +171,6 @@ const servicesPackages = [
       },
     ],
   },
-  {
-  service: "Social Media Management",
-  icon: Sparkles,
-  description:
-    "Monthly social media packages for brands that need consistent content, platform presence, and professional social growth.",
-  packages: [
-    {
-      name: "Starter Social Package",
-      price: "$150.00",
-      badge: "Starter",
-      features: [
-        "2 Platform",
-        "Facebook and Instagram",
-        "Number of Posts 16/per month",
-        "100% Unique Design Guarantee",
-        "100% Satisfaction Guarantee",
-        "100% Money Back Guarantee *",
-        "100% Ownership Rights",
-        "Add on: $50 for 24 Hours Rush Delivery",
-      ],
-      suitable:
-        "Suitable for potential super-startups and brand revamps for companies.",
-    },
-    {
-      name: "Professional Social Package",
-      price: "$350.00",
-      oldPrice: "$600.00",
-      badge: "Popular",
-      popular: true,
-      features: [
-        "4 Platform",
-        "FB/Insta/LinkedIn/Pinterest",
-        "Number of Posts 22/Per Month",
-        "Video Reels 10/Per Month",
-        "100% Unique Design Guarantee",
-        "100% Satisfaction Guarantee",
-        "100% Money Back Guarantee *",
-        "100% Ownership Rights",
-        "Add on: $50 for 24 Hours Rush Delivery",
-      ],
-      suitable:
-        "Suitable for potential super-startups and brand revamps for companies.",
-    },
-    {
-      name: "Custom Social Package",
-      price: "Custom",
-      badge: "Custom",
-      features: [
-        "Custom Platform Selection",
-        "Facebook / Instagram / LinkedIn / Pinterest / TikTok",
-        "Custom Number of Posts Per Month",
-        "Custom Video Reels Plan",
-        "Monthly Content Calendar",
-        "Creative Post Designs",
-        "Caption Writing",
-        "Hashtag Research",
-        "Brand-Focused Content Strategy",
-        "100% Unique Design Guarantee",
-        "100% Satisfaction Guarantee",
-        "100% Ownership Rights",
-        "Add on: $50 for 24 Hours Rush Delivery",
-      ],
-      suitable:
-        "Best for businesses that need a custom social media plan based on platform goals, content volume, and monthly marketing needs.",
-    },
-  ],
- },
 ];
 
 const brandingSections = [
@@ -366,14 +299,14 @@ const PackagesPage = () => {
   return (
     <>
       <Helmet>
-        <title>Digital Growth Packages | Optivax Global</title>
+        <title>Design Packages | Optivax Global</title>
         <meta
           name="description"
-          content="Explore professional digital growth packages for logo design, website design, complete branding solutions, and business growth by Optivax Global."
+          content="Explore professional design packages for logo design, website design, and complete branding solutions by Optivax Global."
         />
         <meta
           name="keywords"
-          content="digital growth packages, logo design packages, website design packages, branding package, complete branding solution, Optivax Global"
+          content="design packages, logo design packages, website design packages, branding package, complete branding solution, Optivax Global"
         />
         <link
           rel="canonical"
@@ -432,7 +365,7 @@ const PackagesPage = () => {
                 </div>
 
                 <h1 className="og-heading-safe text-[36px] font-black sm:text-5xl md:text-[60px] xl:text-[74px]">
-                  Digital Growth
+                  Design
                   <span className="og-gradient-line bg-gradient-to-r from-[#1BBCEF] via-white to-[#1BBCEF] bg-clip-text text-transparent">
                     Packages Built
                   </span>
@@ -442,7 +375,7 @@ const PackagesPage = () => {
                 <p className="mt-5 max-w-2xl text-sm leading-relaxed text-gray-300 sm:text-base md:text-lg">
                   Compare professional logo design, website design, and complete
                   branding packages created to help your business look premium,
-                  build trust, and convert more customers.
+                  build trust, and make a strong impression.
                 </p>
 
                 <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:gap-4">
@@ -525,7 +458,7 @@ const PackagesPage = () => {
                             {item}
                           </p>
                           <p className="mt-1 text-xs text-gray-400">
-                            Growth Package
+                            Design Package
                           </p>
                         </div>
                       ))}
@@ -577,7 +510,7 @@ const PackagesPage = () => {
 
                 <p className="mt-2 max-w-3xl text-sm leading-relaxed text-gray-300 sm:text-base md:text-lg">
                   Choose the package that fits your current business stage,
-                  launch timeline, and growth goals.
+                  launch timeline, and project goals.
                 </p>
               </div>
 

@@ -32,17 +32,17 @@ const sections = [
     text: "Modern web development and marketing are not just extra business tools. They are essential parts of building a strong digital presence. A professional website helps create trust, while marketing helps bring the right people to that website. Together, they support visibility, engagement, and long-term business growth.",
   },
   {
-    heading: "Ready to Grow Your Business Online?",
-    text: "At Optivax Global, we help businesses build professional websites, strong branding, creative marketing materials, search visibility strategies, and digital solutions that support real growth. Optivax Global helps businesses improve their online presence with modern websites, impactful branding, digital growth, search visibility, and creative strategies designed to attract customers and increase business opportunities.",
+    heading: "Ready to Build Your Digital Presence?",
+    text: "At Optivax Global, we help businesses build professional websites, strong branding, and logo design that create a clear, consistent, and trustworthy digital identity.",
   },
 ];
 
 const WebDevelopmentMarketingBlog = () => {
   return (
     <BlogArticleLayout
-      title="How Businesses Can Maximize Growth with Modern Web Development and Marketing"
-      metaTitle="Maximize Growth with Modern Web Development - Optivax Global"
-      metaDescription="Learn how modern web development and a digital growth strategy help businesses build trust, improve visibility, attract customers, and achieve long-term growth."
+      title="How Businesses Can Build a Strong Digital Presence with Modern Web Development"
+      metaTitle="Build a Strong Digital Presence with Modern Web Development - Optivax Global"
+      metaDescription="Learn how modern web development helps businesses build trust, improve their online presence, attract customers, and achieve long-term growth."
       canonicalUrl="https://optivaxglobal.com/maximize-growth-modern-web-development"
       category="Web Development"
       date="June 2026"

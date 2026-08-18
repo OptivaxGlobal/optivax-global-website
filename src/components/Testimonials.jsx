@@ -2,8 +2,6 @@ import React, { useRef, useState, useEffect } from "react";
 import { ArrowLeft, ArrowRight, Quote, Star } from "lucide-react";
 import ResponsiveImage from "@/components/ResponsiveImage";
 
-import Avatar01 from "@/assets/testimonials/01.webp";
-import Avatar02 from "@/assets/testimonials/02.webp";
 import Avatar03 from "@/assets/testimonials/03.webp";
 import Avatar04 from "@/assets/testimonials/04.webp";
 import Avatar05 from "@/assets/testimonials/05.webp";
@@ -14,22 +12,6 @@ import Avatar09 from "@/assets/testimonials/09.webp";
 import Avatar10 from "@/assets/testimonials/10.webp";
 
 const testimonials = [
-  {
-    id: 1,
-    name: "Olivia Carter",
-    role: "Manager, TechVision",
-    content:
-      "Our brand’s online presence has been completely transformed by Optivax Global. The website now feels modern, professional, and much better aligned with our business goals. Since the redesign, we’ve also started getting higher quality leads.",
-    avatar: Avatar02,
-  },
-  {
-    id: 2,
-    name: "Ethan Walker",
-    role: "Marketing Assistant, GrowthCo",
-    content:
-      "Their team made growing our online presence feel simple and effective. Everything was explained clearly, and the strategies genuinely helped us improve engagement and build a much stronger brand.",
-    avatar: Avatar01,
-  },
   {
     id: 3,
     name: "Sophia Bennett",
@@ -165,14 +147,14 @@ const Testimonials = () => {
             <h2 className="text-4xl md:text-6xl font-extrabold text-white leading-tight">
               Trusted by Brands That
               <span className="block text-accent-purple">
-                Want Better Results
+                Value Great Design
               </span>
             </h2>
 
             <p className="text-lg text-gray-300 mt-5 leading-relaxed">
               Businesses choose Optivax Global for professional design, clear
-              strategy, reliable delivery, and digital solutions built to
-              support long-term growth.
+              strategy, reliable delivery, and digital solutions built around
+              their goals.
             </p>
           </div>
 

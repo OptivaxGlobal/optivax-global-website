@@ -69,7 +69,7 @@ const sections = [
   },
   {
     heading: "Final Thoughts",
-    text: "The choice between a web design agency and a DIY website builder depends on budget, timeline, technical requirements, business goals, and future plans. DIY builders can support a simple online presence, while professional agencies provide strategy, customization, performance, branding, and conversion-focused development. Optivax Global helps businesses create professional websites designed to build trust, improve visibility, and generate meaningful results.",
+    text: "The choice between a web design agency and a DIY website builder depends on budget, timeline, technical requirements, business goals, and future plans. DIY builders can support a simple online presence, while professional agencies provide strategy, customization, performance, and branding. Optivax Global helps businesses create professional websites designed to build trust and give visitors a clear, user-friendly experience.",
   },
 ];
 

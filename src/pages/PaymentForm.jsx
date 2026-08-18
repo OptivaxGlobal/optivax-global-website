@@ -26,29 +26,13 @@ const STRIPE_PAYMENT_LINK =
 
 const services = [
   "Web Design",
-  "Web Development",
   "Logo Design",
   "Brand Design",
-  "Animation",
   "Comic Art",
-  "Graphics Design",
-  "Brochure Design",
-  "Flyer Design",
-  "Stationary Design",
-  "Mobile App Development",
-  "Mobile App Design",
   "UI UX Design",
-  "Brand Management",
-  "Content Management System",
-  "Digital Growth",
-  "Email Communication Strategy",
-  "Paid Search Support",
-  "Search Visibility Strategy",
-  "Search Visibility Optimization",
-  "Social Media Management",
   "Ebook Cover Design",
   "eBook Publishing",
-  "Corporate Presentation",
+  "Other Design Project",
 ];
 
 /* =========================================================

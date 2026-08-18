@@ -234,8 +234,8 @@ const HappyIndependenceDayUSA = () => {
 
               <p className="mt-5 max-w-2xl text-sm font-semibold leading-relaxed text-white/88 sm:text-base md:text-lg">
                 Celebrate America’s 250th Anniversary with premium patriotic
-                visuals for social media, flyers, paid ads, branding, and
-                promotional campaigns designed for powerful visibility.
+                visuals for social media, flyers, ad creative, branding, and
+                promotional graphics designed for powerful visual impact.
               </p>
 
               <div className="mt-8 max-w-4xl space-y-3">

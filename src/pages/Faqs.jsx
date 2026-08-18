@@ -23,19 +23,34 @@ import AnimatedCtaBackground from "@/components/AnimatedCtaBackground";
 
 const faqs = [
   {
-    question: "What is Optivax Global?",
+    question: "What services does Optivax Global provide?",
     answer:
-      "Optivax Global is a creative digital agency that helps businesses establish a strong online presence through modern design, strategic branding, websites, marketing, app design, and quality digital solutions.",
+      "Optivax Global focuses on custom website design, UI/UX design, logo & branding design, and professional eBook design services for businesses, brands, professionals, and creators.",
   },
   {
-    question: "What does Optivax Global do?",
+    question: "Do you create custom website designs?",
     answer:
-      "We are a full-service digital solutions company providing website design and development, UI/UX design, logo and brand identity design, mobile app design, ebook cover design, publishing support, digital growth solutions, and creative business solutions for modern brands.",
+      "Yes. Website projects are designed according to the client's brand, content, preferred style, and project requirements, with clean, responsive layouts across desktop, tablet, and mobile.",
   },
   {
-    question: "Can you create a custom website for my business?",
+    question: "Do you provide UI/UX design?",
     answer:
-      "Yes. Every project is customized around your business goals, audience, and brand identity. We create professional, modern, responsive, and conversion-focused websites that help your business grow online.",
+      "Yes. We create user interface and user experience designs for websites, applications, dashboards, and other digital products.",
+  },
+  {
+    question: "Do you provide logo and branding design?",
+    answer:
+      "Yes. We create custom logos and supporting visual brand elements based on the client's requirements and brand direction.",
+  },
+  {
+    question: "Do you provide SEO services?",
+    answer:
+      "Optivax Global currently focuses on custom website design, UI/UX design, logo branding, and eBook design.",
+  },
+  {
+    question: "Do you provide eBook design?",
+    answer:
+      "Yes. Our eBook design services can include cover design, interior layout, formatting, and digital presentation based on the agreed project scope.",
   },
   {
     question: "Will my website be mobile friendly?",
@@ -45,17 +60,7 @@ const faqs = [
   {
     question: "Can you redesign my existing website?",
     answer:
-      "Yes. If your current website feels outdated or no longer represents your brand, we can redesign it with a modern look, better user experience, faster performance, and a more professional presentation.",
-  },
-  {
-    question: "Do you provide branding for companies?",
-    answer:
-      "Yes. Branding is more than just a logo. We help businesses build trust, improve brand recognition, create a consistent visual identity, and make a stronger impression online.",
-  },
-  {
-    question: "How do you help improve my website's search visibility?",
-    answer:
-      "We create search-friendly website structures and also provide optimization support to help improve your visibility, search ranking potential, and overall online presence.",
+      "Yes. If your current website feels outdated or no longer represents your brand, we can redesign it with a modern look, better user experience, and a more professional presentation.",
   },
   {
     question: "How long does a project take?",
@@ -80,7 +85,7 @@ const faqs = [
   {
     question: "Why choose Optivax Global?",
     answer:
-      "Optivax Global combines creativity, strategy, and modern design to help companies build a professional digital presence. Our goal is to create work that looks good, builds trust, supports growth, and helps brands stand out in today’s digital world.",
+      "Optivax Global combines creativity and modern design to help companies build a professional digital presence. Our goal is to create work that looks good, builds trust, and helps brands stand out.",
   },
 ];
 
@@ -92,8 +97,8 @@ const benefits = [
   },
   {
     icon: SearchCheck,
-    title: "Search-Friendly Structure",
-    text: "We build clean digital experiences that support visibility and long-term growth.",
+    title: "User-Friendly Structure",
+    text: "We build clean, organized digital experiences designed for clarity and ease of use.",
   },
   {
     icon: ShieldCheck,
@@ -125,10 +130,10 @@ const Faqs = () => {
   return (
     <>
       <Helmet>
-        <title>FAQs | Optivax Global Digital Agency</title>
+        <title>FAQs | Optivax Global</title>
         <meta
           name="description"
-          content="Find answers about Optivax Global services including website design, branding, UI/UX design, digital growth solutions, app design, and creative digital solutions."
+          content="Find answers about Optivax Global services including custom website design, UI/UX design, logo branding, and professional eBook design."
         />
         <link rel="canonical" href="https://optivaxglobal.com/faqs" />
       </Helmet>
@@ -151,14 +156,14 @@ const Faqs = () => {
               <h1 className="text-4xl md:text-6xl lg:text-7xl font-extrabold leading-tight mb-6">
                 Helping You
                 <span className="block text-accent-purple">
-                  Grow Digitally
+                  Design With Confidence
                 </span>
               </h1>
 
               <p className="text-lg md:text-xl text-gray-300 leading-relaxed max-w-2xl mb-8">
-                Learn how Optivax Global helps modern businesses grow through
-                website design, branding, UI/UX, search visibility, digital
-                growth, app design, and creative digital solutions.
+                Learn how Optivax Global helps modern businesses through
+                custom website design, branding, UI/UX design, and
+                professional eBook design services.
               </p>
 
               <div className="flex flex-col sm:flex-row gap-4">
@@ -196,7 +201,7 @@ const Faqs = () => {
               </h2>
 
               <p className="text-gray-300 leading-relaxed mb-6">
-                From project timelines to website ownership, search visibility,
+                From project timelines to website ownership, design details,
                 branding, and revisions, this page answers the most common
                 questions clients ask before starting a project with Optivax
                 Global.
@@ -206,7 +211,7 @@ const Faqs = () => {
                 {[
                   "Website design & development",
                   "Branding and logo design",
-                  "Search visibility and digital growth",
+                  "UI/UX and eBook design",
                   "Project process and support",
                 ].map((item) => (
                   <div key={item} className="flex items-center gap-3">
@@ -366,12 +371,12 @@ const Faqs = () => {
               {
                 icon: Layers3,
                 title: "For Growing Brands",
-                text: "Upgrade your digital presence with better design, better user experience, and stronger marketing direction.",
+                text: "Upgrade your digital presence with better design, better user experience, and a stronger visual direction.",
               },
               {
                 icon: Briefcase,
                 title: "For Professional Teams",
-                text: "Build trust with polished visuals, clear messaging, and digital solutions that support long-term growth.",
+                text: "Build trust with polished visuals, clear messaging, and digital solutions that support long-term success.",
               },
             ].map((item) => {
               const Icon = item.icon;
@@ -404,9 +409,9 @@ const Faqs = () => {
             </h2>
 
             <p className="text-gray-300 text-lg max-w-2xl mx-auto mb-8 leading-relaxed">
-              Whether you need a new website, a rebrand, better search
-              visibility, or a complete digital solution, Optivax Global is
-              ready to help you move forward with confidence.
+              Whether you need a new website, a rebrand, a new logo, or a
+              complete design solution, Optivax Global is ready to help you
+              move forward with confidence.
             </p>
 
             <button

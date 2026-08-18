@@ -30,10 +30,10 @@ const ChatBot = () => {
     {
       sender: "bot",
       text:
-        "Hi! Welcome to Optivax Global 👋\n\nI’m here to help you choose the right digital solution for your business. Whether you need a website, branding, search visibility, app UI/UX, eBook cover, or digital growth support, our team can guide you with a clear plan.",
+        "Hi! Welcome to Optivax Global 👋\n\nI’m here to help you choose the right design solution for your business. Whether you need a website, branding, app UI/UX, or eBook design, our team can guide you with a clear plan.",
       actions: [
         { label: "Explore Services", type: "route", value: "/#services" },
-        { label: "Free Consultation", type: "route", value: "/contact" },
+        { label: "Design Consultation", type: "route", value: "/contact" },
         { label: "View Portfolio", type: "route", value: "/#portfolio" },
       ],
     },
@@ -53,17 +53,15 @@ const ChatBot = () => {
   }, [messages, isTyping, isOpen]);
 
   const quickReplies = [
-    "I need a website",
-    "Website redesign",
-    "Ecommerce website",
+    "Website Design",
+    "Web Development",
+    "UI/UX Design",
     "Logo & Branding",
-    "Search Visibility",
-    "Social Media Growth",
-    "Google Ads",
-    "Mobile App UI/UX",
-    "eBook Cover",
-    "Presentation Design",
-    "Pricing",
+    "Mobile App Design",
+    "eBook Design",
+    "eBook Publishing",
+    "Animation",
+    "Brand Identity",
     "Portfolio",
   ];
 
@@ -162,11 +160,11 @@ const ChatBot = () => {
 
   const marketingActions = [
     {
-      label: "View Digital Growth",
+      label: "View Our Services",
       type: "route",
-      value: "/digital-marketing",
+      value: "/services",
     },
-    { label: "Grow My Business", type: "route", value: "/contact" },
+    { label: "Start a Project", type: "route", value: "/contact" },
     { label: "WhatsApp Team", type: "whatsapp" },
   ];
 
@@ -205,15 +203,15 @@ const ChatBot = () => {
       ],
       actions: [
         { label: "Explore Services", type: "route", value: "/#services" },
-        { label: "Free Consultation", type: "route", value: "/contact" },
+        { label: "Design Consultation", type: "route", value: "/contact" },
         { label: "WhatsApp Team", type: "whatsapp" },
       ],
       replies: [
-        "Hello 👋 Welcome to Optivax Global.\n\nI can help you choose the right digital solution for your business  website, branding, search visibility, digital growth, app UI/UX, eBook cover, or presentation design.\n\nWhat are you planning to build or improve?",
-        "Hi there 👋 Great to have you here.\n\nOptivax Global helps businesses create a stronger online presence with professional websites, branding, search visibility, and design solutions.\n\nTell me your business type, and I’ll guide you with the best option.",
-        "Welcome to Optivax Global 👋\n\nWe help brands look more professional, attract better customers, and grow online. Are you looking for a website, digital growth support, branding, or design support?",
-        "Hey 👋 You’re in the right place.\n\nOur team helps businesses with websites, logo design, search visibility, digital growth, app UI/UX, eBook covers, and presentation design.\n\nShare what you need, and I’ll guide you.",
-        "Hello and welcome 😊\n\nOptivax Global focuses on clean design, strong strategy, and business growth. Tell me what service you’re interested in so I can point you in the right direction.",
+        "Hello 👋 Welcome to Optivax Global.\n\nI can help you choose the right design solution for your business  website design, branding, app UI/UX, or eBook design.\n\nWhat are you planning to build or improve?",
+        "Hi there 👋 Great to have you here.\n\nOptivax Global helps businesses create a stronger online presence with professional websites, branding, and design solutions.\n\nTell me your business type, and I’ll guide you with the best option.",
+        "Welcome to Optivax Global 👋\n\nWe help brands look more professional with clean, custom design work. Are you looking for a website, branding, or design support?",
+        "Hey 👋 You’re in the right place.\n\nOur team helps businesses with websites, logo design, app UI/UX, and eBook design.\n\nShare what you need, and I’ll guide you.",
+        "Hello and welcome 😊\n\nOptivax Global focuses on clean, professional design work. Tell me what service you’re interested in so I can point you in the right direction.",
       ],
     },
     {
@@ -260,9 +258,9 @@ const ChatBot = () => {
       ],
       replies: [
         "Pricing depends on your project scope, number of pages, features, design level, and timeline.\n\nInstead of giving you a random package, our team first understands your business goal and then suggests the most suitable plan.\n\nYou can request a free consultation and we’ll guide you with a clear quote.",
-        "Every project is different, so the cost depends on what you need  website pages, branding, search visibility, ads, content, integrations, or custom design.\n\nThe best step is to share your requirement, and our team will recommend a package that fits your goal and budget.",
-        "We can guide you with a proper price after understanding your business, required service, and timeline.\n\nFor example, a simple website, ecommerce website, search visibility project, or branding project all have different scopes. A free consultation will help us suggest the right package.",
-        "Our packages are based on what your business actually needs.\n\nA landing page, full business website, ecommerce store, search visibility project, or branding project all require different planning. Share your goal and we’ll suggest the most suitable option.",
+        "Every project is different, so the cost depends on what you need  website pages, branding, UI/UX, content, integrations, or custom design.\n\nThe best step is to share your requirement, and our team will recommend a package that fits your goal and budget.",
+        "We can guide you with a proper price after understanding your business, required service, and timeline.\n\nFor example, a simple website, ecommerce website, eBook design project, or branding project all have different scopes. A free consultation will help us suggest the right package.",
+        "Our packages are based on what your business actually needs.\n\nA landing page, full business website, ecommerce store, eBook design project, or branding project all require different planning. Share your goal and we’ll suggest the most suitable option.",
         "We keep pricing transparent after understanding your requirement.\n\nTell us what you want to build, your preferred timeline, and any key features you need. Our team can then guide you with a professional quote.",
       ],
     },
@@ -310,7 +308,7 @@ const ChatBot = () => {
       ],
       replies: [
         "Yes, we can help you build a professional ecommerce website that makes your products easy to explore and easy to buy.\n\nWe focus on clean product pages, mobile-friendly shopping, clear categories, fast checkout flow, and trust-building design.\n\nThis is perfect if you want to sell products online and create a stronger brand experience.",
-        "An ecommerce website should not just look good  it should make buying simple.\n\nOptivax Global can help you create an online store with product sections, category pages, cart flow, contact options, and conversion-focused design so customers feel confident ordering from you.",
+        "An ecommerce website should not just look good  it should make buying simple.\n\nOptivax Global can help you create an online store with product sections, category pages, cart flow, contact options, and user-friendly design so customers feel confident ordering from you.",
         "Absolutely. For an online store, we can help with layout, product flow, homepage sections, category structure, mobile design, and strong calls-to-action.\n\nThe goal is to make your store look professional and help visitors become customers.",
         "A strong online store needs product clarity, easy navigation, trust signals, and a smooth buying process.\n\nWe can design and structure your ecommerce website so customers quickly understand your products and feel comfortable placing an order.",
         "If you want to sell online, we can help you create a store that looks clean, modern, and customer-friendly.\n\nFrom homepage layout to product pages and checkout flow, everything should guide visitors toward buying with confidence.",
@@ -357,11 +355,11 @@ const ChatBot = () => {
         { label: "View Portfolio", type: "route", value: "/#portfolio" },
       ],
       replies: [
-        "A website redesign can make a big difference in how customers see your business.\n\nWe can improve your layout, visuals, mobile responsiveness, page flow, service presentation, and calls-to-action so the website feels more modern and professional.",
-        "If your current website feels outdated or is not converting visitors, a redesign is a smart move.\n\nOptivax Global can refresh the design, improve user experience, make it mobile-friendly, and create a cleaner flow that guides visitors toward contacting you.",
-        "Yes, we can help redesign your website with a more premium look, better navigation, stronger content structure, and improved conversion flow.\n\nThe goal is not only to make it look better  but to make it work better for your business.",
-        "A good redesign improves both appearance and performance.\n\nWe can help your website feel cleaner, faster, easier to navigate, and more focused on getting inquiries or sales.",
-        "If visitors are not taking action on your current site, the issue is often layout, messaging, speed, or weak CTAs.\n\nWe can redesign the experience so customers understand your offer faster and feel more confident contacting you.",
+        "A website redesign can make a big difference in how customers see your business.\n\nWe can improve your layout, visuals, mobile responsiveness, page flow, and service presentation so the website feels more modern and professional.",
+        "If your current website feels outdated, a redesign is a smart move.\n\nOptivax Global can refresh the design, improve user experience, and make it mobile-friendly with a cleaner, more professional feel.",
+        "Yes, we can help redesign your website with a more premium look, better navigation, and stronger content structure.\n\nThe goal is not only to make it look better but to make it work better for your business.",
+        "A good redesign improves both appearance and performance.\n\nWe can help your website feel cleaner, faster, and easier to navigate.",
+        "If visitors find your current site confusing, the issue is often layout, messaging, or unclear structure.\n\nWe can redesign the experience so customers understand your offer faster and feel more confident reaching out.",
       ],
     },
     {
@@ -410,12 +408,12 @@ const ChatBot = () => {
       ],
       actions: websiteActions,
       replies: [
-        "Absolutely  a professional website can become your strongest online sales tool.\n\nOptivax Global designs modern, mobile-friendly, fast, and conversion-focused websites that help your business look trustworthy and attract more customers.\n\nWe can help with business websites, landing pages, portfolio websites, service pages, and complete website development.",
-        "A strong website helps customers understand your business, trust your brand, and take action.\n\nWe can create a clean, modern, responsive website with strong content flow, service sections, contact forms, and clear CTAs designed to convert visitors into customers.",
-        "Yes, we can build a professional website for your business.\n\nOur focus is clean design, smooth user experience, mobile responsiveness, fast loading, and lead-focused sections that help visitors quickly understand your value and contact you.",
-        "Your website should work like a 24/7 digital sales representative.\n\nWe can design it with strong visuals, clear content, service highlights, trust-building sections, and easy contact options so customers can quickly take action.",
+        "Absolutely  a professional website can become your strongest digital asset.\n\nOptivax Global designs modern, mobile-friendly, fast, and user-friendly websites that help your business look trustworthy and professional.\n\nWe can help with business websites, landing pages, portfolio websites, service pages, and complete website development.",
+        "A strong website helps customers understand your business, trust your brand, and take action.\n\nWe can create a clean, modern, responsive website with strong content flow, service sections, contact forms, and clear calls-to-action.",
+        "Yes, we can build a professional website for your business.\n\nOur focus is clean design, smooth user experience, mobile responsiveness, fast loading, and clearly structured sections that help visitors quickly understand your value and contact you.",
+        "Your website should work like a 24/7 digital storefront.\n\nWe can design it with strong visuals, clear content, service highlights, trust-building sections, and easy contact options so customers can quickly take action.",
         "A well-designed website gives your business instant credibility.\n\nWe can help you create a polished online presence with modern design, smooth navigation, clear messaging, and a layout built around your business goals.",
-        "Yes, we can help from layout to launch.\n\nWhether you need a simple business website or a complete service-based website, our team can guide you with structure, design, content flow, and conversion-focused sections.",
+        "Yes, we can help from layout to launch.\n\nWhether you need a simple business website or a complete service-based website, our team can guide you with structure, design, content flow, and clearly organized sections.",
       ],
     },
     {
@@ -585,20 +583,16 @@ const ChatBot = () => {
         "sitemap",
       ],
       actions: [
-        {
-          label: "View Digital Growth",
-          type: "route",
-          value: "/digital-marketing",
-        },
-        { label: "Get Visibility Plan", type: "route", value: "/contact" },
+        { label: "View Our Services", type: "route", value: "/services" },
+        { label: "Contact Our Team", type: "route", value: "/contact" },
         { label: "WhatsApp Team", type: "whatsapp" },
       ],
       replies: [
-        "Search visibility helps your business get discovered by people who are already searching for your services.\n\nOptivax Global can help improve your website structure, keyword targeting, content direction, technical optimization, and local visibility for long-term organic growth.",
-        "Better search visibility is not just about ranking  it’s about bringing the right audience to your website.\n\nWe focus on website optimization, service keywords, content improvement, technical fixes, and search visibility so your business can grow online more consistently.",
-        "Yes, we provide search visibility support for businesses that want better Google visibility.\n\nOur approach includes keyword research, on-page optimization, content strategy, website improvements, and local/business search growth.",
-        "If your website is not showing properly on Google, we can help improve visibility over time.\n\nWe can review your website structure, pages, content, keywords, and technical setup to create a better search direction.",
-        "Improving search visibility is a long-term growth strategy.\n\nWe focus on improving your website’s foundation, content, keywords, and local visibility so potential customers can find your business more easily.",
+        "Optivax Global currently focuses on custom website design, UI/UX design, logo branding, and eBook design.",
+        "Optivax Global currently focuses on custom website design, UI/UX design, logo branding, and eBook design.",
+        "Optivax Global currently focuses on custom website design, UI/UX design, logo branding, and eBook design.",
+        "Optivax Global currently focuses on custom website design, UI/UX design, logo branding, and eBook design.",
+        "Optivax Global currently focuses on custom website design, UI/UX design, logo branding, and eBook design.",
       ],
     },
     {
@@ -636,11 +630,11 @@ const ChatBot = () => {
       ],
       actions: marketingActions,
       replies: [
-        "Social media helps your brand stay active, visible, and connected with customers.\n\nWe can help with content planning, post designs, captions, hashtags, content ideas, and a professional brand look across platforms.",
-        "Yes, we can support your social media growth.\n\nOur focus is to make your pages look professional, improve engagement, communicate your services clearly, and guide people toward contacting your business.",
-        "A strong social media presence builds trust before the customer even visits your website.\n\nWe can create branded content, promotional posts, service highlights, and engagement-focused captions that match your business goals.",
-        "Social media works best when your content looks consistent and speaks clearly to the right audience.\n\nWe can help with post ideas, branded visuals, captions, and content that make your business look active and professional.",
-        "If your social pages are not getting attention, we can help improve the content direction.\n\nThe goal is to create posts that are visually clean, easy to understand, and designed to increase interest in your services.",
+        "Yes, we can help with social media marketing.\n\nOur team supports content planning, branded visuals, profile design, post templates, and consistent brand presentation across your social channels.",
+        "We can help manage and design your social presence.\n\nThis includes branded social media graphics, post templates, and content direction that keeps your channels consistent with your brand.",
+        "Social media support is one of our services.\n\nWe can help with profile design, post templates, and branded visuals to keep your social channels professional and consistent.",
+        "Yes, our design team can create branded visuals and post templates for your social channels as part of a broader social media presence.",
+        "We can help with your social media presence. Let us know what you're working on and our team can suggest the right next step.",
       ],
     },
     {
@@ -679,11 +673,11 @@ const ChatBot = () => {
       ],
       actions: marketingActions,
       replies: [
-        "Paid ads can help you reach the right audience faster when the strategy, creative, and landing page are aligned.\n\nOptivax Global can help with ad planning, ad creatives, audience direction, and conversion-focused landing pages.",
-        "Yes, we can help with paid ad strategy.\n\nOur goal is to create ads that attract qualified attention, explain your offer clearly, and guide users toward taking action  like calling, messaging, or submitting a form.",
-        "For customer acquisition, ads work best when your website or landing page is built to convert.\n\nWe can help plan the ad flow, improve the offer presentation, and create a clean path from ad click to customer inquiry.",
-        "A successful ad strategy needs the right offer, creative, audience, and follow-up path.\n\nWe can help you build that structure so your ads look professional and have a better chance of generating quality inquiries.",
-        "If you want more customer inquiries, paid ads can be a strong option.\n\nWe can guide you with ad strategy, creative direction, targeting, and the landing page experience needed to support conversions.",
+        "Yes, we can help with paid advertising.\n\nOur team can support ad creative, landing page design, and campaign presentation so your ads look professional and on-brand.",
+        "We can help with ad campaign creative and landing pages designed to support your paid advertising efforts.",
+        "Paid ads support is part of what we offer from ad creative to landing page design built around your campaign goals.",
+        "Yes, let us know more about your campaign and we can help with the creative and landing page side of it.",
+        "We can help design ad creative and campaign landing pages. Tell us more about your project and we'll guide you.",
       ],
     },
     {
@@ -714,11 +708,11 @@ const ChatBot = () => {
       ],
       actions: marketingActions,
       replies: [
-        "A strong digital growth strategy helps your business attract attention, build trust, and generate better opportunities online.\n\nWe can support you with search visibility, social media growth, paid ads direction, content strategy, and conversion-focused landing pages.",
-        "If your goal is growth, a digital growth strategy is the right direction.\n\nOptivax Global helps businesses improve visibility, communicate their value clearly, and create stronger customer journeys across website, search, and social media.",
-        "A good digital strategy connects everything  website, branding, content, search visibility, and outreach.\n\nWe can help you create a more professional online presence that supports long-term business growth.",
-        "Digital growth works best when your brand message, website, and outreach are aligned.\n\nWe can help you create a cleaner path from awareness to inquiry so more potential customers understand and trust your business.",
-        "To grow online, your business needs visibility, credibility, and a clear offer.\n\nOur team can help with the strategy and creative direction needed to make your digital presence stronger.",
+        "Yes, digital marketing is one of our services.\n\nWe can help with campaign planning, brand messaging, and a consistent digital presence built around your business goals.",
+        "We can help with digital marketing alongside a professionally designed website, app interface, or brand identity everything works better when it's consistent.",
+        "That's something we can help with. Our team supports website design, UI/UX design, branding, eBook design, and digital marketing.",
+        "Yes, we offer digital marketing support. A well-designed website and consistent brand identity are a great starting point happy to help with either.",
+        "That's something we offer. Let us know more about your business and goals and we'll guide you to the right next step.",
       ],
     },
     {
@@ -888,8 +882,8 @@ const ChatBot = () => {
         { label: "WhatsApp Team", type: "whatsapp" },
       ],
       replies: [
-        "Good content makes your business easier to understand and more persuasive.\n\nWe can help with website copy, service descriptions, search-friendly content, social media captions, and business-focused messaging.",
-        "Yes, content direction is very important for websites and online growth.\n\nWe can help write clear, professional, and conversion-focused content that explains your services and encourages visitors to take action.",
+        "Good content makes your business easier to understand and more persuasive.\n\nWe can help with website copy, service descriptions, eBook content structure, and business-focused messaging.",
+        "Yes, content direction is very important for websites and design projects.\n\nWe can help write clear, professional content that explains your services and gives visitors a strong impression of your brand.",
         "Your design attracts attention, but your content builds trust.\n\nWe can help create website sections, headlines, service descriptions, and CTAs that match your brand and business goals.",
         "If your current content feels weak or unclear, we can improve it with stronger wording, better structure, and a more professional tone.\n\nThis helps customers understand your offer faster.",
       ],
@@ -981,7 +975,7 @@ const ChatBot = () => {
       replies: [
         "Project timeline depends on the scope and required features.\n\nUsually, we first understand your requirement, prepare the direction, start the design/development work, share updates, collect feedback, and then finalize everything professionally.",
         "Our process is simple and clear:\n\n1. Understand your business\n2. Finalize the requirement\n3. Create design direction\n4. Develop or design the project\n5. Review and refine\n6. Final delivery\n\nFor urgent projects, our team can guide you based on availability.",
-        "Delivery time depends on whether you need a logo, website, search visibility support, app design, presentation, or digital growth project.\n\nShare your requirement and deadline, and we’ll guide you with a realistic timeline.",
+        "Delivery time depends on whether you need a logo, website, app design, presentation, or eBook design project.\n\nShare your requirement and deadline, and we’ll guide you with a realistic timeline.",
         "We keep the process organized so you know what is happening at each step.\n\nOnce we understand your project, we can give you a clear timeline, required details, and next steps.",
         "The starting process is easy.\n\nShare your business details, service requirement, preferred style, and deadline. Our team will review everything and guide you with the next step.",
       ],
@@ -1058,11 +1052,11 @@ const ChatBot = () => {
         { label: "Contact Team", type: "route", value: "/contact" },
       ],
       replies: [
-        "Optivax Global is a digital service provider helping businesses build stronger online experiences through websites, branding, UI/UX design, search visibility, digital growth, eBook covers, and professional presentations.\n\nOur focus is simple: premium design, clear strategy, and business growth.",
-        "We help businesses look more professional and grow online with creative digital solutions.\n\nFrom websites and branding to search visibility and digital growth, our team focuses on building trust, visibility, and better customer experience.",
-        "Optivax Global works with businesses that want to improve their online presence and brand image.\n\nWe combine design, strategy, and digital execution to help your business stand out professionally.",
-        "Our team focuses on helping businesses create a stronger digital identity.\n\nWhether you need a website, logo, marketing plan, or professional presentation, we guide you with a clean and growth-focused approach.",
-        "Optivax Global is built around modern digital solutions for businesses that want to look credible and grow online.\n\nWe focus on design quality, customer experience, and practical business outcomes.",
+        "Optivax Global is a digital company providing professional design, development, branding, publishing, and creative solutions.\n\nOur focus is simple: quality work, clear communication, and professional results.",
+        "We help businesses look more professional with creative digital design work.\n\nFrom websites and branding to UI/UX and eBook design, our team focuses on building trust and a better customer experience.",
+        "Optivax Global works with businesses that want to improve their online presence and brand image.\n\nWe combine design and craftsmanship to help your business stand out professionally.",
+        "Our team focuses on helping businesses create a stronger digital identity.\n\nWhether you need a website, logo, UI/UX design, or eBook design, we guide you with a clean, design-focused approach.",
+        "Optivax Global is built around modern digital design solutions for businesses that want to look credible and professional online.\n\nWe focus on design quality, customer experience, and practical results.",
       ],
     },
     {
@@ -1094,10 +1088,10 @@ const ChatBot = () => {
         { label: "Talk to Team", type: "route", value: "/contact" },
       ],
       replies: [
-        "You can explore our FAQs and Blog pages for helpful information about our services, process, website design, search visibility, branding, and digital growth.\n\nIf you still need help, our team can guide you directly.",
-        "Our FAQs answer common questions about services and process, while the blog shares useful insights about digital growth, search visibility, branding, and website growth.",
-        "Yes, we have helpful resources available.\n\nYou can visit the FAQs page for quick answers or the Blog page to learn more about digital strategy and online business growth.",
-        "The FAQs page is useful for quick service questions, and the Blog page gives more detailed insights about digital growth.\n\nYou can also contact our team for direct guidance.",
+        "You can explore our FAQs and Blog pages for helpful information about our services, process, website design, and branding.\n\nIf you still need help, our team can guide you directly.",
+        "Our FAQs answer common questions about services and process, while the blog shares useful insights about design, branding, and website best practices.",
+        "Yes, we have helpful resources available.\n\nYou can visit the FAQs page for quick answers or the Blog page to learn more about design and building a stronger online presence.",
+        "The FAQs page is useful for quick service questions, and the Blog page gives more detailed insights about design and branding.\n\nYou can also contact our team for direct guidance.",
       ],
     },
     {
@@ -1139,7 +1133,7 @@ const ChatBot = () => {
         "Perfect  our team would be happy to guide you.\n\nYou can contact Optivax Global through email, phone, WhatsApp, or the contact page. Share your project idea and we’ll help you understand the best next step.",
         "Great  let’s move your idea forward.\n\nYou can reach our team directly and share your business type, required service, timeline, and budget range. We’ll guide you with a clear professional direction.",
         "Absolutely. The best next step is to connect with our team for a free consultation.\n\nWe’ll understand your requirement and suggest the right solution for your business.",
-        "Yes, you can connect with our team directly.\n\nShare what you need  website, branding, search visibility, digital growth, app design, or eBook cover  and we’ll guide you with a professional next step.",
+        "Yes, you can connect with our team directly.\n\nShare what you need  website, branding, app design, or eBook design  and we’ll guide you with a professional next step.",
         "We’re ready to help.\n\nYou can contact us through WhatsApp, call, email, or the contact page, and our team will guide you based on your exact requirement.",
       ],
     },
@@ -1171,9 +1165,9 @@ const ChatBot = () => {
         { label: "WhatsApp Team", type: "whatsapp" },
       ],
       replies: [
-        "You’re welcome 😊\n\nWhenever you’re ready, Optivax Global can help turn your idea into a professional digital presence that looks premium, builds trust, and supports business growth.",
+        "You’re welcome 😊\n\nWhenever you’re ready, Optivax Global can help turn your idea into a professional digital presence that looks premium and builds trust.",
         "Glad to help 😊\n\nThe next step is simple  share your project idea with our team and we’ll guide you with the best solution.",
-        "Perfect 😊\n\nOur team can review your requirement and suggest a clear plan for website, branding, search visibility, digital growth, or design support.",
+        "Perfect 😊\n\nOur team can review your requirement and suggest a clear plan for website, branding, UI/UX, or design support.",
         "Happy to help 😊\n\nWhen you’re ready, you can connect with our team and we’ll guide you with a clean, professional direction.",
       ],
     },
@@ -1213,19 +1207,19 @@ const ChatBot = () => {
     }
 
     const fallbackReplies = [
-      "Thanks for sharing that.\n\nOptivax Global can help with websites, logo design, branding, app UI/UX, search visibility, digital growth, eBook covers, and corporate presentations.\n\nCould you tell me which service you are interested in?",
-      "I understand. To guide you better, please share what you need help with  website, branding, search visibility, digital growth, app UI/UX, eBook cover, or presentation design.\n\nOur team will suggest the best next step.",
+      "Thanks for sharing that.\n\nOptivax Global can help with websites, development, logo design, branding, app UI/UX, eBook covers, animation, and digital marketing.\n\nCould you tell me which service you are interested in?",
+      "I understand. To guide you better, please share what you need help with  website, branding, app UI/UX, eBook cover, digital marketing, or presentation design.\n\nOur team will suggest the best next step.",
       "That sounds interesting.\n\nOptivax Global can help you build a professional digital presence based on your business goal. Tell me your business type and what you want to improve, and I’ll guide you in the right direction.",
-      "Thanks for your message.\n\nTo give you the most useful direction, please share whether you need a new website, redesign, logo, search visibility, digital growth, app UI/UX, eBook cover, or presentation support.",
+      "Thanks for your message.\n\nTo give you the most useful direction, please share whether you need a new website, redesign, logo, app UI/UX, eBook cover, or presentation support.",
       "I can guide you better with one quick detail.\n\nAre you looking to build something new, improve your current online presence, or grow your business online?",
-      "Got it.\n\nOur team supports businesses with design, development, branding, search visibility, and digital growth. Share your goal in simple words, and I’ll suggest the most relevant service.",
+      "Got it.\n\nOur team supports businesses with design, development, branding, digital marketing, and more. Share your goal in simple words, and I'll suggest the most relevant service.",
     ];
 
     return {
       text: pickReply("fallback", fallbackReplies),
       actions: [
         { label: "Explore Services", type: "route", value: "/#services" },
-        { label: "Free Consultation", type: "route", value: "/contact" },
+        { label: "Design Consultation", type: "route", value: "/contact" },
         { label: "WhatsApp Team", type: "whatsapp" },
       ],
     };

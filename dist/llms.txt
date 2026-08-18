@@ -1,28 +1,21 @@
 # Optivax Global
 
-Optivax Global is a digital services agency specializing in website design, web development, logo design, branding, UI/UX design, mobile app design, SEO, digital marketing, eBook cover design, and publishing support.
+Optivax Global provides custom website design, UI/UX design, logo & branding design, and professional eBook design services.
 
 Website: https://optivaxglobal.com
 Contact: https://optivaxglobal.com/contact
 
 ## Services
 
-- Website Design
-- Web Development
-- Logo Design
-- Branding Services
+- Custom Website Design
 - UI/UX Design
-- Mobile App Design
-- SEO Services
-- Digital Marketing
-- eBook Cover Design
-- Corporate Presentation Design
-- Publishing Support
+- Logo & Branding Design
+- eBook Design
 
 ## Company Information
 
 Name: Optivax Global
-Industry: Digital Marketing & Web Design
+Industry: Design Services
 Service Area: Worldwide
 Languages: English, Urdu
 

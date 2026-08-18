@@ -7,7 +7,7 @@ const SoftwareDevelopment = () => {
     {
       icon: <Code2 size={24} />,
       title: "Custom Software Development",
-      text: "We design and build dependable software solutions that align with your business workflows, goals, and growth plans.",
+      text: "We design and build dependable software solutions that align with your business workflows and goals.",
     },
     {
       icon: <Boxes size={24} />,
@@ -47,8 +47,8 @@ const SoftwareDevelopment = () => {
       text: "Our team helps businesses move from initial planning and design into development, testing, deployment, and long-term support without losing focus on quality.",
     },
     {
-      title: "Built for Reliability and Growth",
-      text: "Whether you need a customer portal, internal management tool, or a scalable SaaS platform, we focus on dependable software that can evolve as your business grows.",
+      title: "Built for Reliability and Scale",
+      text: "Whether you need a customer portal, internal management tool, or a scalable SaaS platform, we focus on dependable software that can evolve alongside your business.",
     },
   ];
 
@@ -61,7 +61,7 @@ const SoftwareDevelopment = () => {
       serviceLabel="Software Development Services"
       heroHeadline="Software Development"
       heroSubheadline="Reliable Solutions for Modern Business Needs"
-      heroText="We help businesses plan, design, build, test, launch, and maintain custom software that supports daily operations and long-term growth."
+      heroText="We help businesses plan, design, build, test, launch, and maintain custom software that supports daily operations and long-term reliability."
       buttonText="Start Software Development"
       contactServiceName="Software Development"
       features={features}

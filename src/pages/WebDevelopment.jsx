@@ -60,7 +60,7 @@ const WebDevelopment = () => {
       canonicalUrl="https://optivaxglobal.com/web-development"
       serviceLabel="Web Development Services"
       heroHeadline="Modern Web Development "
-      heroSubheadline="That Builds Trust & Drives Growth"
+      heroSubheadline="That Builds Trust & Performs Reliably"
       heroText="We build websites with reliable code, fast loading pages, and a structure that supports your business goals today and tomorrow."
       buttonText="Start Web Development"
       contactServiceName="Web Development"

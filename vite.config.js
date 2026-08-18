@@ -49,6 +49,9 @@ function getRoutesFromAppJsx() {
     "/thank-you",
     "/payment-form",
     "/payment-successful",
+    // Hidden from public positioning redirected to /services.
+    "/game-development",
+    "/software-development",
   ];
 
   excludedRoutes.forEach((route) => routes.delete(route));

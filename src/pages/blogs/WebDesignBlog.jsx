@@ -30,16 +30,16 @@ const sections = [
 
   {
     heading: "Final Thoughts",
-    text: "At Optivax Global, web design is built around user experience, business growth, and professional branding. A modern website helps businesses create stronger digital experiences and long-term trust.",
+    text: "At Optivax Global, web design is built around user experience, clear structure, and professional branding. A modern website helps businesses create stronger digital experiences and long-term trust.",
   },
 ];
 
 const WebDesignBlog = () => {
   return (
     <BlogArticleLayout
-      title="The Importance of Modern Web Design for Business Growth"
+      title="The Importance of Modern Web Design for Your Business"
       metaTitle="Importance of Modern Web Design - Optivax Global"
-      metaDescription="Discover why modern web design is important for user experience, search visibility, trust, and long-term business growth."
+      metaDescription="Discover why modern web design is important for user experience, search visibility, trust, and long-term business success."
       canonicalUrl="https://optivaxglobal.com/importance-of-modern-web-design"
       category="Web Design"
       date="May 2026"

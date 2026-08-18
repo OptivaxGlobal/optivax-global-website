@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Routes, Route, useLocation } from "react-router-dom";
+import { Routes, Route, useLocation, Navigate } from "react-router-dom";
 import { AnimatePresence } from "framer-motion";
 
 import PrivacyPolicy from "./pages/PrivacyPolicy";
@@ -10,31 +10,30 @@ import Contact from "./pages/Contact";
 import ServicesPage from "./pages/ServicesPage";
 import Project from "./pages/Project";
 import WebDesign from "./pages/WebDesign";
+import WebDevelopment from "./pages/WebDevelopment";
 import ThankYou from "./pages/ThankYou";
 import LogoDesign from "./pages/LogoDesign";
-import DigitalMarketing from "./pages/DigitalMarketing";
-import MobileAppDesign from "./pages/MobileAppDesign";
-import MobileAppDevelopment from "./pages/MobileAppDevelopment";
-import WebDevelopment from "./pages/WebDevelopment";
-import GameDevelopment from "./pages/GameDevelopment";
-import SoftwareDevelopment from "./pages/SoftwareDevelopment";
 import UIUXDesign from "./pages/UIUXDesign";
 import BrandDesign from "./pages/BrandDesign";
 import BrochureDesign from "./pages/BrochureDesign";
 import GraphicsDesign from "./pages/GraphicsDesign";
+import MobileAppDesign from "./pages/MobileAppDesign";
+import MobileAppDevelopment from "./pages/MobileAppDevelopment";
 import FlyerDesign from "./pages/FlyerDesign";
 import StationaryDesign from "./pages/StationaryDesign";
-import BrandManagement from "./pages/BrandManagement";
 import ContentManagement from "./pages/ContentManagement";
+import Animation from "./pages/Animation";
+import CorporatePresentation from "./pages/CorporatePresentation";
+import BrandManagement from "./pages/BrandManagement";
+import PackagesPage from "./pages/PackagesPage";
+import DigitalMarketing from "./pages/DigitalMarketing";
 import EmailMarketing from "./pages/EmailMarketing";
 import PayPerClick from "./pages/PayPerClick";
 import SearchEngineMarketing from "./pages/SearchEngineMarketing";
 import SearchEngineOptimization from "./pages/SearchEngineOptimization";
 import SocialMediaMarketing from "./pages/SocialMediaMarketing";
-import Animation from "./pages/Animation";
 import EbookCover from "./pages/EbookCover";
 import EbookPublishing from "./pages/EbookPublishing";
-import CorporatePresentation from "./pages/CorporatePresentation";
 import ComicArts from "./pages/ComicArts";
 import HappyIndependenceDayUSA from "./pages/HappyIndependenceDayUSA";
 import HomeLeadPopup from "./components/HomeLeadPopup";
@@ -46,11 +45,11 @@ import NotFound from "./pages/NotFound";
 import Blog from "./pages/Blog";
 import LogoDesignBlog from "./pages/blogs/LogoDesignBlog";
 import WebDesignBlog from "./pages/blogs/WebDesignBlog";
-import SeoBlog from "./pages/blogs/SeoBlog";
 import BrandingBlog from "./pages/blogs/BrandingBlog";
 import BrochureDesignBlog from "./pages/Blogs/BrochureDesignBlog";
 import GraphicDesignBlog from "./pages/blogs/GraphicDesignBlog";
 import MobileAppDesignBlog from "./pages/blogs/MobileAppDesignBlog";
+import SeoBlog from "./pages/blogs/SeoBlog";
 import PPCAdvertisingBlog from "./pages/blogs/PPCAdvertisingBlog";
 import EbookCoverDesignBlog from "./pages/blogs/EbookCoverDesignBlog";
 import FlyerDesignBlog from "./pages/blogs/FlyerDesignBlog";
@@ -90,7 +89,6 @@ import BestBrandingServicesStartupsBlog from "./pages/blogs/BestBrandingServices
 import AnalyticsTracker from "./components/AnalyticsTracker";
 import PaymentForm from "@/pages/PaymentForm";
 import PaymentSuccessful from "@/pages/PaymentSuccessful";
-import PackagesPage from "./pages/PackagesPage";
 
 
 
@@ -157,6 +155,10 @@ function App() {
               path="project/:projectId"
               element={<Project />}
             />
+            <Route
+              path="digital-growth-packages"
+              element={<PackagesPage />}
+            />
 
             <Route
               path="web-design"
@@ -166,13 +168,14 @@ function App() {
               path="web-development"
               element={<WebDevelopment />}
             />
+            {/* Hidden from public positioning redirected to the active Services page */}
             <Route
               path="game-development"
-              element={<GameDevelopment />}
+              element={<Navigate to="/services" replace />}
             />
             <Route
               path="software-development"
-              element={<SoftwareDevelopment />}
+              element={<Navigate to="/services" replace />}
             />
 
             <Route
@@ -198,11 +201,6 @@ function App() {
 />
 
 <Route
-  path="/importance-of-small-businesses-seo-services"
-  element={<SeoBlog />}
-/>
-
-<Route
   path="/branding-more-critical-for-today-businesses"
   element={<BrandingBlog />}
 />
@@ -217,6 +215,10 @@ function App() {
 <Route
   path="/modern-bussiness-well-design-mobile-app"
   element={<MobileAppDesignBlog />}
+/>
+<Route
+  path="/importance-of-small-businesses-seo-services"
+  element={<SeoBlog />}
 />
 <Route
   path="/ppc-advertising-help-to-generate-results"
@@ -409,7 +411,7 @@ function App() {
               path="brand-management"
               element={<BrandManagement />}
             />
-            
+
             <Route
               path="content-management-system"
               element={<ContentManagement />}
@@ -463,8 +465,6 @@ function App() {
               path="250-anniversary-usa"
               element={<HappyIndependenceDayUSA />}
             />
-
-            <Route path="digital-growth-packages" element={<PackagesPage />} />
 
             <Route
               path="privacy-policy"

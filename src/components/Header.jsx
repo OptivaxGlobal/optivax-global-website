@@ -32,15 +32,6 @@ const Header = () => {
     { name: "UI UX Design", href: "/ui-ux-design" },
     { name: "Brand Management", href: "/brand-management" },
     { name: "Content Management System", href: "/content-management-system" },
-    { name: "Digital Growth", href: "/digital-marketing" },
-    { name: "Email Communication Strategy", href: "/email-marketing" },
-    { name: "Paid Search Support", href: "/pay-per-click" },
-    { name: "Search Visibility Strategy", href: "/search-engine-marketing" },
-    {
-      name: "Search Visibility Optimization",
-      href: "/search-engine-optimization",
-    },
-    { name: "Social Media Management", href: "/social-media-marketing" },
     {
       name: "Corporate Presentation",
       href: "/corporate-presentation-design",
@@ -242,7 +233,7 @@ const Header = () => {
               onClick={handleCTA}
               className="group bg-gradient-to-r from-[#1BBCEF] to-[#004495] hover:from-[#004495] hover:to-[#1BBCEF] text-[#E9FBFF] px-8 py-2.5 rounded-full flex items-center gap-2 font-semibold shadow-lg shadow-[#1BBCEF]/25 hover:shadow-[#1BBCEF]/45 hover:-translate-y-0.5 transition-all duration-300"
             >
-              Contact Us
+              Start Your Project
               <ArrowRight className="w-8 h-5 group-hover:translate-x-1 transition-transform duration-300" />
             </button>
           </div>
@@ -368,7 +359,7 @@ const Header = () => {
                   onClick={handleCTA}
                   className="w-full bg-gradient-to-r from-[#1BBCEF] to-[#004495] hover:from-[#004495] hover:to-[#1BBCEF] text-white py-4 rounded-full text-lg font-semibold shadow-lg shadow-[#1BBCEF]/25 transition-all duration-300"
                 >
-                  Contact Us
+                  Start Your Project
                 </button>
               </div>
             </div>
@@ -407,37 +398,29 @@ const Header = () => {
   const navigate = useNavigate();
 
   const servicesLinks = [
-    { name: "Web Design", href: "/web-design" },
+    { name: "Website Design", href: "/web-design" },
     { name: "Web Development", href: "/web-development" },
-    //{ name: "Game Development", href: "/game-development" },
-    //{ name: "Software Development", href: "/software-development" },
-    { name: "Ebook Cover Design", href: "/ebook-cover-design" },
-    { name: "eBook Publishing", href: "/ebook-publishing" },
-    { name: "Logo Design", href: "/logo-design" },
-    { name: "Brand Design", href: "/brand-design" },
-    { name: "Animation", href: "/animation" },
-    { name: "Graphics Design", href: "/graphics-design" },
-    { name: "Brochure Design", href: "/brochure-design" },
-    { name: "Flyer Design", href: "/flyer-design" },
-    { name: "Stationary Design", href: "/stationary-design" },
+    { name: "UI/UX Design", href: "/ui-ux-design" },
     { name: "Mobile App Development", href: "/mobile-app-development" },
     { name: "Mobile App Design", href: "/mobile-app-design" },
-    { name: "UI UX Design", href: "/ui-ux-design" },
+    { name: "Logo Design", href: "/logo-design" },
+    { name: "Branding Design", href: "/brand-design" },
     { name: "Brand Management", href: "/brand-management" },
-    { name: "Content Management System", href: "/content-management-system" },
-    { name: "Digital Growth", href: "/digital-marketing" },
-    { name: "Email Communication Strategy", href: "/email-marketing" },
-    { name: "Paid Search Support", href: "/pay-per-click" },
-    { name: "Search Visibility Strategy", href: "/search-engine-marketing" },
-    {
-      name: "Search Visibility Optimization",
-      href: "/search-engine-optimization",
-    },
-    { name: "Social Media Management", href: "/social-media-marketing" },
-    {
-      name: "Corporate Presentation",
-      href: "/corporate-presentation-design",
-    },
+    { name: "eBook Design", href: "/ebook-cover-design" },
+    { name: "eBook Publishing", href: "/ebook-publishing" },
+    { name: "Animation Services", href: "/animation" },
+    { name: "Corporate Presentation Design", href: "/corporate-presentation-design" },
+    { name: "Graphic Design", href: "/graphics-design" },
+    { name: "Brochure Design", href: "/brochure-design" },
+    { name: "Flyer Design", href: "/flyer-design" },
+    { name: "Stationery Design", href: "/stationary-design" },
+    { name: "CMS Solutions", href: "/content-management-system" },
+    { name: "Digital Marketing", href: "/digital-marketing" },
+    { name: "Search Engine Optimization", href: "/search-engine-optimization" },
+    { name: "Search Engine Marketing", href: "/search-engine-marketing" },
+    { name: "Social Media Marketing", href: "/social-media-marketing" },
+    { name: "Email Marketing", href: "/email-marketing" },
+    { name: "Pay Per Click", href: "/pay-per-click" },
   ];
 
   const navLinks = [
@@ -636,7 +619,7 @@ const Header = () => {
               onClick={handleCTA}
               className="group bg-gradient-to-r from-[#1BBCEF] to-[#004495] hover:from-[#004495] hover:to-[#1BBCEF] text-[#E9FBFF] px-8 py-2.5 rounded-full flex items-center gap-2 font-semibold shadow-lg shadow-[#1BBCEF]/25 hover:shadow-[#1BBCEF]/45 hover:-translate-y-0.5 transition-all duration-300"
             >
-              Contact Us
+              Start Your Project
               <ArrowRight className="w-8 h-5 group-hover:translate-x-1 transition-transform duration-300" />
             </button>
 
@@ -764,7 +747,7 @@ const Header = () => {
                   onClick={handleCTA}
                   className="w-full bg-gradient-to-r from-[#1BBCEF] to-[#004495] hover:from-[#004495] hover:to-[#1BBCEF] text-white py-4 rounded-full text-lg font-semibold shadow-lg shadow-[#1BBCEF]/25 transition-all duration-300"
                 >
-                  Contact Us
+                  Start Your Project
                 </button>
 
               </div>

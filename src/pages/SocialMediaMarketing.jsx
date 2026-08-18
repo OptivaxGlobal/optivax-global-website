@@ -7,7 +7,7 @@ const SocialMediaMarketing = () => {
     { icon: <MessageCircle size={24} />, title: "Engaging Social Strategy", text: "We build social media plans that help your brand post with purpose, consistency, and relevance." },
     { icon: <Heart size={24} />, title: "Audience Connection", text: "Content is designed to engage people and build stronger relationships with your followers." },
     { icon: <Layers size={24} />, title: "Brand Consistency", text: "Your social posts, stories, and ads all reflect the same brand style and message." },
-    { icon: <Sparkles size={24} />, title: "Built for Growth", text: "Social activity is created to increase visibility, trust, and meaningful responses." },
+    { icon: <Sparkles size={24} />, title: "Purpose-Built Content", text: "Social activity is created to support visibility, trust, and meaningful responses." },
   ];
 
   const deliverables = [

@@ -72,7 +72,7 @@ const RankOnGoogleWithoutPaidAdsBlog = () => {
       metaTitle="Rank On Google Without Paid Ads - Optivax Global"
       metaDescription="Learn how to rank higher on Google without paid ads using keyword research, useful content, on-page optimization, backlinks, technical improvements, and better UX."
       canonicalUrl="https://optivaxglobal.com/rank-on-google-without-paid-ads"
-      category="Search Visibility"
+      category="Search Visibility Insights"
       date="August 2026"
       image={rankGoogleWithoutAdsImg}
       imageAlt="How to rank higher on Google without using paid advertising"

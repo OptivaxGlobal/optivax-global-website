@@ -7,7 +7,7 @@ const EmailMarketing = () => {
     { icon: <Mail size={24} />, title: "Email Strategy", text: "Email communication built to deliver the right message to the right people at the right time." },
     { icon: <Target size={24} />, title: "Audience Focus", text: "Segmentation and targeting help your emails reach customers who are most likely to act." },
     { icon: <Sparkles size={24} />, title: "Engaging Creative", text: "Email layouts and messaging designed to feel professional and encourage clicks." },
-    { icon: <Layers size={24} />, title: "Performance Tracking", text: "We help structure your email content for better open rates, engagement, and conversions." },
+    { icon: <Layers size={24} />, title: "Performance Tracking", text: "We help structure your email content for clear open rates and engagement reporting." },
   ];
 
   const deliverables = [
@@ -18,7 +18,7 @@ const EmailMarketing = () => {
     "Audience targeting ideas",
     "Copy and design alignment",
     "Responsive email-ready assets",
-    "Conversion-focused email strategy",
+    "Engagement-focused email strategy",
   ];
 
   const contentSections = [

@@ -53,10 +53,10 @@ const Hero = () => {
 
              <h1 className="text-4xl sm:text-5xl md:text-7xl lg:text-[5.3rem] font-extrabold mb-6 leading-[0.95] text-white tracking-[-0.04em]"
 >
-    Build a Digital Brand
+    Custom Design Solutions
 
   <span className="block text-accent-purple">
-    That People Trust & Remember
+    for Modern Businesses
   </span>
 </h1>
 
@@ -66,9 +66,10 @@ const Hero = () => {
             transition={{ duration: 0.7, delay: 0.3 }}
             className="text-lg md:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed"
           >
-            Optivax Global helps businesses grow with modern websites,
-            strategic branding, UI/UX design, eBook design, and digital
-            growth solutions built to create trust, visibility, and long-term success.
+            Professional website design and development, UI/UX design,
+            branding, eBook design, and digital marketing solutions created
+            to give your business a clear, consistent, and professional
+            digital identity.
           </motion.p>
 
           <motion.div
@@ -94,15 +95,7 @@ const Hero = () => {
             </Link>
 
             <Link
-              to="/digital-marketing"
-              className="flex items-center gap-2 hover:text-accent-purple transition"
-            >
-              <CheckCircle2 className="w-5 h-5 text-accent-purple" />
-              <span>Digital Growth</span>
-            </Link>
-
-            <Link
-              to="/app-ui-ux-design"
+              to="/ui-ux-design"
               className="flex items-center gap-2 hover:text-accent-purple transition"
             >
               <CheckCircle2 className="w-5 h-5 text-accent-purple" />
@@ -128,7 +121,7 @@ const Hero = () => {
     size="lg"
     className="bg-gradient-to-r from-[#1BBCEF] to-[#004495] hover:from-[#004495] hover:to-[#1BBCEF] text-white font-semibold px-8 py-6 text-lg rounded-full group shadow-lg shadow-[#1BBCEF]/25 transition-all duration-300 border-0"
   >
-    Start Your Project
+    Start Your Design Project
     <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform duration-300" />
   </Button>
 
@@ -137,7 +130,7 @@ const Hero = () => {
     size="lg"
     className="bg-gradient-to-r from-[#1BBCEF] to-[#004495] hover:from-[#004495] hover:to-[#1BBCEF] text-white font-semibold px-8 py-6 text-lg rounded-full group shadow-lg shadow-[#1BBCEF]/25 transition-all duration-300 border-0"
   >
-    View Our Work
+    View Our Portfolio
     <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform duration-300" />
   </Button>
 </motion.div>

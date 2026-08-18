@@ -60,16 +60,14 @@ const Footer = () => {
       title: "Services",
       links: [
         { name: "Website Design", href: "/web-design" },
-        { name: "Logo Design", href: "/logo-design" },
+        { name: "Web Development", href: "/web-development" },
+        { name: "UI/UX Design", href: "/ui-ux-design" },
         { name: "Mobile App Design", href: "/mobile-app-design" },
-        { name: "Digital Growth", href: "/digital-marketing" },
-        { name: "Ebook Cover Design", href: "/ebook-cover-design" },
+        { name: "Logo Design", href: "/logo-design" },
+        { name: "eBook Design", href: "/ebook-cover-design" },
         { name: "eBook Publishing", href: "/ebook-publishing" },
-        {
-          name: "Corporate Presentation",
-          href: "/corporate-presentation-design",
-        },
-      ],
+        { name: "Branding Design", href: "/brand-design" },
+        ],
     },
   ];
 
@@ -167,17 +165,19 @@ const Footer = () => {
             </div>
 
             <p className="text-gray-400 mb-6 leading-relaxed">
-              We help businesses grow with high-performing websites, strategic
-              branding, app UI/UX design, professional presentations, eBook
-              services, and digital growth solutions.
+              Optivax Global provides professional website design,
+              development, UI/UX, branding, eBook, creative, and digital
+              solution services for businesses, brands, and creators.
             </p>
 
             <button
               onClick={() => navigate("/contact")}
-              className="group inline-flex items-center gap-2 bg-gradient-to-r from-[#1BBCEF] to-[#004495] hover:from-[#004495] hover:to-[#1BBCEF] text-white px-5 py-3 rounded-full font-semibold shadow-lg shadow-[#1BBCEF]/25 hover:-translate-y-0.5 transition-all duration-300 border-0"
+              className="group inline-flex w-full sm:w-auto max-w-full items-center justify-center gap-2 bg-gradient-to-r from-[#1BBCEF] to-[#004495] hover:from-[#004495] hover:to-[#1BBCEF] text-white px-5 py-3 rounded-full font-semibold shadow-lg shadow-[#1BBCEF]/25 hover:-translate-y-0.5 transition-all duration-300 border-0 text-center"
             >
-              Get a Free Consultation
-              <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" />
+              <span className="min-w-0 whitespace-normal break-words">
+                Start Your Project Now
+              </span>
+              <ArrowRight className="w-4 h-4 shrink-0 group-hover:translate-x-1 transition-transform duration-300" />
             </button>
           </div>
 

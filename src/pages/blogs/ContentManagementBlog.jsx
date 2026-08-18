@@ -21,15 +21,15 @@ const sections = [
   },
   {
     heading: "Content Management Supports Long-Term Growth",
-    text: "A strong content management approach helps businesses maximize the value of their digital assets. From improving customer experiences to supporting search visibility performance and brand visibility, effective content management contributes to sustainable business growth and long-term success.",
+    text: "A strong content management approach helps businesses maximize the value of their digital assets. From improving customer experiences to supporting a clear website structure, effective content management contributes to a more professional, sustainable website over the long term.",
   },
   {
     heading: "Final Thoughts",
-    text: "At Optivax Global, content management is focused on creating organized, impactful, and customer-focused marketing experiences. A strategic approach to content helps businesses strengthen communication, improve engagement, and build stronger digital brands.",
+    text: "At Optivax Global, content management is focused on creating organized, impactful, and customer-focused website experiences. A structured approach to content helps businesses strengthen communication and build a stronger digital presence.",
   },
   {
-    heading: "Ready to Improve Your Marketing Strategy?",
-    text: "Optivax Global helps businesses develop effective content strategies, strengthen brand messaging, improve digital visibility, and create marketing solutions that support lasting growth.",
+    heading: "Ready to Organize Your Website Content?",
+    text: "Optivax Global helps businesses set up and structure content management systems, strengthen website messaging, and create a clear, professional digital presence.",
   },
 ];
 

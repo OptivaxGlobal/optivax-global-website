@@ -6,39 +6,33 @@ import {
   Globe,
   PenTool,
   Smartphone,
-  Megaphone,
   BookOpen,
-  Presentation,
   ArrowUpRight,
-  Gamepad2,
-  Terminal,
 } from "lucide-react";
 
 const services = [
   {
-    title: "Website Design & Development",
+    title: "Website Design",
     slug: "/web-design",
     icon: Globe,
     description:
-      "Your website is often the first place people meet your brand. We design and develop clean, fast, and responsive websites that look professional, feel easy to use, and help turn visitors into real customers.",
+      "Professional, responsive websites designed around your brand identity, content, and required user experience.",
     points: [
-      { title: "Mobile App Design", link: "/mobile-app-design", highlight: true },
-      { title: "Search Visibility", link: "/search-engine-optimization", highlight: true },
-      { title: "Responsive Design" },
-      { title: "Landing Pages" },
+      { title: "Responsive Layouts" },
+      { title: "Modern Visual Design" },
+      { title: "Service Pages" },
     ],
   },
   {
-    title: "Branding",
-    slug: "/brand-design",
-    icon: PenTool,
+    title: "Web Development",
+    slug: "/web-development",
+    icon: Globe,
     description:
-      "A strong brand makes your business easier to remember and trust. We create meaningful brand identities with logos, colors, typography, and visuals that give your business a polished and consistent look.",
+      "Reliable, scalable websites developed with modern tools and clean functionality to support a smooth digital experience.",
     points: [
-      { title: "Logo Design", link: "/logo-design", highlight: true },
-      { title: "Brand Identity" },
-      { title: "Color Palette" },
-      { title: "Typography Style" },
+      { title: "Custom Builds" },
+      { title: "Modern Stack" },
+      { title: "Functionality" },
     ],
   },
   {
@@ -46,96 +40,95 @@ const services = [
     slug: "/ui-ux-design",
     icon: Smartphone,
     description:
-      "Good design is not just about how it looks. It is about how smoothly it works. We design modern, user-friendly interfaces that make websites and apps simple, clear, and enjoyable for your audience.",
+      "Intuitive interfaces and user experiences designed for clarity, usability, consistency, and stronger digital interaction.",
     points: [
-      { title: "Mobile App Design", link: "/mobile-app-design", highlight: true },
-      { title: "Website UI Design" },
       { title: "Wireframes" },
-      { title: "Interactive Prototypes" },
+      { title: "User Flows" },
+      { title: "Prototype Design" },
     ],
   },
   {
-    title: "Digital Growth",
-    slug: "/digital-marketing",
-    icon: Megaphone,
+    title: "Mobile App Design",
+    slug: "/mobile-app-design",
+    icon: Smartphone,
     description:
-      "We help your brand get seen by the right people. From search visibility and social presence to content strategy, our approach is focused on visibility, engagement, and better business results.",
+      "App interface design focused on clarity and usability, from first tap through everyday use.",
     points: [
-      { title: "Search Visibility", link: "/search-engine-optimization", highlight: true },
-      { title: "Social Media Management", link: "/social-media-marketing", highlight: true },
-      { title: "Audience Engagement" },
-      { title: "Content Strategy" },
+      { title: "App Screens" },
+      { title: "User-Friendly UX" },
+      { title: "Modern Interfaces" },
     ],
   },
   {
-    title: "Game Development",
-    slug: "/game-development",
-    icon: Gamepad2,
+    title: "Logo Design",
+    slug: "/logo-design",
+    icon: PenTool,
     description:
-      "We create custom games for mobile, PC, console, and emerging platforms with clear gameplay, immersive visuals, and a dependable build process.",
+      "Custom logo design that creates a clear, memorable, and professional visual identity for your business.",
     points: [
-      { title: "Unity & Unreal", link: "/game-development", highlight: true },
-      { title: "Multiplayer Games" },
-      { title: "AR & VR" },
-      { title: "Game UI/UX" },
+      { title: "Brand Identity" },
+      { title: "Concept Exploration" },
+      { title: "Logo Assets" },
     ],
   },
   {
-    title: "Software Development",
-    slug: "/software-development",
-    icon: Terminal,
+    title: "Branding Design",
+    slug: "/brand-design",
+    icon: PenTool,
     description:
-      "We build custom software for web platforms, internal operations, SaaS products, and business systems that need to be reliable from day one.",
+      "Visual identity systems, colors, typography, and brand elements designed to represent your business clearly and consistently.",
     points: [
-      { title: "Custom Software", link: "/software-development", highlight: true },
-      { title: "API Integration" },
-      { title: "CRM & ERP" },
-      { title: "Software Maintenance" },
+      { title: "Brand Identity" },
+      { title: "Color System" },
+      { title: "Visual Consistency" },
     ],
   },
   {
-    title: "eBook Cover Design",
+    title: "eBook Design",
     slug: "/ebook-cover-design",
     icon: BookOpen,
     description:
-      "A great cover can make readers stop, look, and click. We design professional eBook covers that match your story, build trust, and help your book stand out on Amazon KDP and other platforms.",
+      "Professional eBook cover and publishing visuals tailored to present your work with a polished, credible appearance.",
     points: [
-      { title: "eBook Publishing", link: "/ebook-publishing", highlight: true },
-      { title: "KDP Covers" },
+      { title: "Cover Design" },
       { title: "Book Branding" },
-      { title: "Creative Concepts" },
-      { title: "Sales-Focused Covers" },
+      { title: "Publishing Layout" },
     ],
   },
   {
-    title: "Corporate Presentation Design",
-    slug: "/corporate-presentation-design",
-    icon: Presentation,
+    title: "eBook Publishing",
+    slug: "/ebook-publishing",
+    icon: BookOpen,
     description:
-      "Your presentation should explain your ideas clearly and leave a strong impression. We design premium pitch decks, company profiles, and corporate presentations that look sharp, organized, and business-ready.",
+      "Formatting and presentation support for authors and creators who want clean, publish-ready digital book delivery.",
     points: [
-      { title: "Pitch Decks" },
-      { title: "Company Profiles" },
-      { title: "Business Proposals" },
-      { title: "Presentation Design" },
+      { title: "Formatting" },
+      { title: "Layout" },
+      { title: "Publishing Support" },
     ],
   },
 ];
 
 const filterTags = [
-  "Web Design",
-  "Branding",
+  "Website Design",
+  "Web Development",
   "UI/UX Design",
-  "Growth",
-  "eBook Covers",
+  "Mobile App Design",
+  "Logo Design",
+  "Branding Design",
+  "eBook Design",
+  "eBook Publishing",
 ];
 
 const tagLinks = {
-  "Web Design": "/web-design",
-  Branding: "/brand-design",
+  "Website Design": "/web-design",
+  "Web Development": "/web-development",
   "UI/UX Design": "/ui-ux-design",
-  Growth: "/digital-marketing",
-  "eBook Covers": "/ebook-cover-design",
+  "Mobile App Design": "/mobile-app-design",
+  "Logo Design": "/logo-design",
+  "Branding Design": "/brand-design",
+  "eBook Design": "/ebook-cover-design",
+  "eBook Publishing": "/ebook-publishing",
 };
 
 const Services = () => {
@@ -155,20 +148,20 @@ const Services = () => {
       <div className="container mx-auto px-6 relative z-10">
         <div className="mb-16 max-w-5xl">
           <span className="inline-block text-accent-purple font-semibold uppercase tracking-[0.25em] mb-4">
-            Professional Digital Services
+            Design Services
           </span>
 
           <h2 className="text-4xl md:text-6xl lg:text-7xl font-extrabold mb-6 leading-tight text-white">
-            Digital Solutions Built to
+            Design Solutions
             <span className="block text-accent-purple">
-              Elevate Modern Brands
+              Built Around Your Brand
             </span>
           </h2>
 
           <p className="text-lg md:text-2xl text-gray-300 max-w-3xl mt-4 leading-relaxed">
-            We help businesses build a stronger digital presence with
-            professional websites, creative branding, smooth UI/UX design,
-            result-focused marketing, and high-quality visual content.
+            We provide professional digital design, development, branding,
+            publishing, and creative solutions built around your business
+            requirements.
           </p>
 
           <div className="flex flex-wrap gap-3 mt-8">

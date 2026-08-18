@@ -5,8 +5,6 @@ import ContactForm from "@/components/ContactForm";
 import ResponsiveImage from "@/components/ResponsiveImage";
 
 // Import avatars
-import Avatar01 from "@/assets/testimonials/01.webp";
-import Avatar02 from "@/assets/testimonials/02.webp";
 import Avatar03 from "@/assets/testimonials/03.webp";
 import Avatar04 from "@/assets/testimonials/04.webp";
 import Avatar05 from "@/assets/testimonials/05.webp";
@@ -17,22 +15,6 @@ import Avatar09 from "@/assets/testimonials/09.webp";
 import Avatar10 from "@/assets/testimonials/10.webp";
 
 const testimonials = [
-  {
-    id: 1,
-    name: "Olivia Carter",
-    role: "Manager, TechVision",
-    content:
-      "Our brand's online presence has been completely transformed by Optivax Global. The website now feels modern, professional, and much better aligned with our business goals. Since the redesign, we've also started getting higher quality leads.",
-    avatar: Avatar02,
-  },
-  {
-    id: 2,
-    name: "Ethan Walker",
-    role: "Marketing Assistant, GrowthCo",
-    content:
-      "Their team made growing our online presence feel simple and effective. Everything was explained clearly, and the strategies genuinely helped us improve engagement and build a much stronger brand.",
-    avatar: Avatar01,
-  },
   {
     id: 3,
     name: "Sophia Bennett",

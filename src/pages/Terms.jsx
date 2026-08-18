@@ -56,10 +56,13 @@ const Terms = () => {
             <section>
               <h2 className="text-2xl font-bold mb-3">2. Our Services</h2>
               <p className="text-gray-400 leading-relaxed">
-                Optivax Global provides digital services including website
-                design, Logo & Branding, app UI/UX, eBook services, corporate
-                presentations, branding, content strategy, and digital growth
-                solutions.
+                Optivax Global provides professional digital design,
+                development, branding, publishing, and creative services,
+                including custom website design and development, UI/UX
+                design, mobile app design and development, logo and brand
+                design and management, eBook design and publishing, animation,
+                graphic and print design, corporate presentation design,
+                content management systems, and digital marketing services.
               </p>
             </section>
 

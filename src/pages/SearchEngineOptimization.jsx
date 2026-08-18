@@ -7,7 +7,7 @@ const SearchEngineOptimization = () => {
     { icon: <Search size={24} />, title: "Clear Page Structure", text: "We organize your page structure, headings, and copy so both visitors and search engines can quickly understand what you offer." },
     { icon: <ShieldCheck size={24} />, title: "Technical Site Health", text: "A clean site structure and strong page performance help your website perform more reliably in search results." },
     { icon: <Layers size={24} />, title: "Content Optimization", text: "We shape your content so it answers customer questions clearly and reflects the terms people actually search for." },
-    { icon: <LineChart size={24} />, title: "Long-Term Visibility Growth", text: "Our approach is built to improve your search visibility over time through consistent, steady progress." },
+    { icon: <LineChart size={24} />, title: "Long-Term Visibility Focus", text: "Our approach is built around consistent, steady work on your search visibility over time." },
   ];
 
   const deliverables = [
@@ -18,7 +18,7 @@ const SearchEngineOptimization = () => {
     "Technical optimization recommendations",
     "Search visibility planning",
     "Performance and mobile readiness",
-    "Conversion-focused visibility advice",
+    "Clarity-focused visibility advice",
   ];
 
   const contentSections = [
@@ -31,7 +31,7 @@ const SearchEngineOptimization = () => {
       text: "Improving your search visibility is a long-term effort. We refine your page structure, content, and technical setup so your website can earn steadier visibility over time.",
     },
     {
-      title: "Visibility That Supports Growth",
+      title: "Visibility Built Around Your Customers",
       text: "Stronger search visibility means more people finding your services. We help your website align with the terms your customers are actually searching for.",
     },
   ];

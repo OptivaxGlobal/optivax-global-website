@@ -217,15 +217,15 @@ const BlogArticleLayout = ({
                 <div className="relative z-10 grid gap-8 md:grid-cols-[1fr_auto] md:items-center">
                   <div>
                     <span className="mb-5 inline-flex rounded-full border border-[#1BBCEF]/30 bg-[#1BBCEF]/10 px-5 py-2 text-xs font-black uppercase tracking-[0.28em] text-[#A5F3FC]">
-                      Grow With Optivax
+                      Design With Optivax
                     </span>
 
                     <h2 className="text-2xl font-black leading-tight text-white md:text-4xl">
-                      Ready to improve your digital presence?
+                      Ready to start your next design project?
                     </h2>
 
                     <p className="mt-5 max-w-3xl text-base leading-8 text-gray-300 md:text-lg">
-                      Optivax Global helps businesses build professional websites, stronger branding, improved search visibility, and digital experiences that support sustainable growth.
+                      Optivax Global helps businesses build professional websites, stronger branding, and polished digital experiences that reflect their brand.
                     </p>
                   </div>
 

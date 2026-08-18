@@ -18,7 +18,6 @@ import {
   FileCheck2,
   Users,
   Wand2,
-  Megaphone,
   FileSearch,
   Rocket,
   Store,
@@ -141,9 +140,9 @@ const whyChooseUs = [
     text: "You'll always know where your project stands. No long silences, no guessing, just clear updates from review through to launch.",
   },
   {
-    icon: Megaphone,
-    title: "Digital Growth Support",
-    text: "Once your book is live, our digital growth team is available to help you build visibility and reach more readers.",
+    icon: BadgeCheck,
+    title: "Reliable Project Delivery",
+    text: "Clear timelines and dependable delivery so your manuscript moves from draft to published eBook without unnecessary delays.",
   },
 ];
 
@@ -183,8 +182,8 @@ const platforms = [
 
 const relatedServices = [
   { name: "eBook Cover Design", href: "/ebook-cover-design" },
-  { name: "Digital Growth", href: "/digital-marketing" },
   { name: "Web Design", href: "/web-design" },
+  { name: "UI/UX Design", href: "/ui-ux-design" },
 ];
 
 const faqs = [

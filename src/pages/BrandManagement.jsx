@@ -6,7 +6,7 @@ const BrandManagement = () => {
   const features = [
     { icon: <ShieldCheck size={24} />, title: "Consistent Brand Control", text: "We help keep your brand messaging and visuals consistent across every channel." },
     { icon: <Target size={24} />, title: "Audience Alignment", text: "Brand management ensures your message reaches the right people with the right tone." },
-    { icon: <Layers size={24} />, title: "Strategic Brand Growth", text: "We create guidelines and processes that support long-term brand reputation and recognition." },
+    { icon: <Layers size={24} />, title: "Strategic Brand Guidelines", text: "We create guidelines and processes that support long-term brand reputation and recognition." },
     { icon: <Sparkles size={24} />, title: "Trusted Brand Experience", text: "Every touchpoint is reviewed and aligned to protect how your brand is perceived." },
   ];
 

@@ -68,7 +68,7 @@ const DigitalMarketingMistakesBlog = () => {
       metaTitle="Digital Growth Mistakes to Avoid - Optivax Global"
       metaDescription="Discover common digital growth mistakes businesses should avoid, from unclear goals and weak landing pages to keyword stuffing and vanity metrics."
       canonicalUrl="https://optivaxglobal.com/digital-marketing-mistakes-avoid"
-      category="Digital Growth"
+      category="Digital Strategy Insights"
       date="August 2026"
       image={digitalMarketingMistakesImg}
       imageAlt="Common digital growth mistakes businesses should avoid"

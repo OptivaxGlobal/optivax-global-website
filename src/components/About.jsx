@@ -1,38 +1,38 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { CheckCircle2, Target, Lightbulb, TrendingUp } from "lucide-react";
+import { CheckCircle2, Target, Lightbulb } from "lucide-react";
 import AnimatedBackground from "@/components/AnimatedBackground";
 import ResponsiveImage from "@/components/ResponsiveImage";
 import AboutImage from "@/assets/about-images/001.webp";
 
 const About = () => {
   const strengths = [
-    "Business digital strategies",
+    "Original design concepts",
     "A modern, easy to use design",
-    "Search-optimized website structure",
-    "Conversion Layouts & Content",
+    "Clear, user-friendly website structure",
+    "Consistent layouts & content",
   ];
 
   const process = [
     {
       icon: Target,
-      title: "First Strategy",
+      title: "Project Consultation",
       description:
-        "We take the time to understand your business, your audience, your competitors and your goals before starting any project. This enables us to build solutions that align with your vision and growth strategies.",
+        "We take the time to understand your business, your brand direction, your audience and your project requirements before starting any work. This enables us to build solutions that align with your vision.",
     },
     {
       icon: Lightbulb,
       title: "Creative Execution",
       description:
 
-      
+
         "We turn ideas into finished websites, modern brand visuals, app interfaces and digital assets. Our work is professional, trustworthy and looks strong visually.",
     },
     {
-      icon: TrendingUp,
-      title: "Growth Focused",
+      icon: CheckCircle2,
+      title: "Professional Delivery",
       description:
-        "We plan each project with growth in mind to increase visibility and engagement, to generate quality leads and to build a stronger online presence for your brand.",
+        "We finalize each project with attention to detail, ensuring a polished, professional, and visually consistent result that reflects your brand.",
     },
   ];
 
@@ -54,7 +54,7 @@ const About = () => {
             <div className="relative rounded-3xl overflow-hidden aspect-[4/3] border border-white/10 shadow-2xl">
               <ResponsiveImage
                 className="w-full h-full object-cover"
-                alt="Optivax Global creative team working on projects for modern website design, branding and digital growth."
+                alt="Optivax Global creative team working on projects for modern website design, branding and digital design."
                 src={AboutImage}
                 aspectRatio="4/3"
                 sizes="(max-width: 640px) 100vw, (max-width: 1024px) 45vw, 40vw"
@@ -72,8 +72,8 @@ const About = () => {
                 </p>
 
                 <p className="text-white text-lg font-bold">
-                  We build digital solutions that help brands grow, build trust
-                  and stand out.
+                  We design digital experiences that help brands look
+                  polished, professional, and stand out.
                 </p>
               </div>
             </div>
@@ -90,22 +90,22 @@ const About = () => {
             </span>
 
             <h2 className="text-4xl md:text-5xl lg:text-6xl font-extrabold mb-6 leading-tight text-white">
-              We Create Digital 
+              Professional Design
               <span className="block text-accent-purple">
-               Experiences to Help Brands Grow
+               Built Around Your Brand
             </span>
             </h2>
 
             <p className="text-lg md:text-xl text-gray-300 leading-relaxed mb-8">
-              Optivax Global helps businesses, startups and modern brands to
-              build a stronger online presence with professional website design,
-              branding, UI/UX design, publishing support and results-driven
-              digital growth solutions.
+              At Optivax Global, we create custom digital designs tailored to
+              the visual identity and requirements of each client.
               <br />
               <br />
-              We’re all about creating digital experiences that are modern and
-              professional, and support businesses to build stronger
-              relationships with their audience and grow with confidence.
+              From business websites and user interfaces to logos and eBook
+              designs, our team focuses on clarity, usability, visual
+              consistency, and professional presentation. Every project is
+              carefully designed to reflect your brand and provide a polished
+              experience across digital platforms.
             </p>
 
             <div className="grid sm:grid-cols-2 gap-4">
@@ -138,8 +138,8 @@ const About = () => {
 
             <p className="text-lg text-gray-300 mt-5 leading-relaxed">
               We combine strategy, creativity and user experience to create
-              fresh digital solutions that perform and grow your business
-              long-term.
+              fresh digital designs that look professional and represent your
+              brand well.
             </p>
           </div>
 

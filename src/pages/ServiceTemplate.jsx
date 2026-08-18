@@ -96,7 +96,7 @@ const ServiceTemplate = ({
           <div className="max-w-7xl mx-auto px-6">
             <div className="max-w-3xl mb-12">
               <h2 className="text-3xl md:text-5xl font-extrabold mb-5">
-                {serviceLabel} Designed for Growth
+                {serviceLabel} Built Around Your Business
               </h2>
               <p className="text-gray-400 text-lg leading-relaxed">
                 {heroText}
@@ -140,12 +140,12 @@ const ServiceTemplate = ({
 
           <div className="max-w-5xl mx-auto px-6 text-center relative z-10">
             <h2 className="text-4xl md:text-6xl font-extrabold mb-6">
-              Ready to Grow with {serviceLabel}?
+              Ready to Get Started with {serviceLabel}?
             </h2>
 
             <p className="text-gray-400 text-lg max-w-2xl mx-auto mb-8">
-              Let’s create a professional experience that reflects your brand,
-              supports your goals, and helps you win more customers.
+              Let’s create a professional experience that reflects your brand
+              and supports your goals.
             </p>
 
             <button

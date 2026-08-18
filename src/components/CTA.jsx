@@ -29,20 +29,19 @@ const CTA = () => {
           </span>
 
           <h2 className="text-4xl md:text-6xl lg:text-7xl font-extrabold text-white mb-6 leading-tight">
-            Let’s Build a Brand
+            Have a Design Project
             <span className="block text-accent-purple">
-              That Grows Your Business
+              in Mind?
             </span>
           </h2>
 
           <p className="text-lg md:text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
-            Let’s build a professional website, brand identity, app UI/UX,
-            eBook cover, or digital growth strategy that helps your business
-            look premium, earn trust, and connect with more customers.
+            Tell us what you need and our team will help you plan a
+            professional design solution tailored to your project.
           </p>
 
           <div className="flex flex-wrap justify-center gap-4 mb-12 text-gray-200">
-            {["Free Consultation", "Fast Delivery", "Sales-Focused Design"].map(
+            {["Free Consultation", "Fast Delivery", "Custom Design Approach"].map(
               (item) => (
                 <div key={item} className="flex items-center gap-2">
                   <CheckCircle2 className="w-5 h-5 text-accent-purple" />
@@ -57,7 +56,7 @@ const CTA = () => {
             size="lg"
             className="bg-gradient-to-r from-[#1BBCEF] to-[#004495] hover:from-[#004495] hover:to-[#1BBCEF] text-white font-bold px-10 py-7 text-lg md:text-xl rounded-full group shadow-lg shadow-[#1BBCEF]/25 transition-all duration-300 hover:scale-105"
           >
-            Get a Free Consultation
+            Request a Design Consultation
             <ArrowRight className="ml-3 w-6 h-6 group-hover:translate-x-1.5 transition-transform" />
           </Button>
         </div>

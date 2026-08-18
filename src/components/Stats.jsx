@@ -43,7 +43,7 @@ const defaultStats = [
     suffix: "+",
     label: "Projects Delivered",
     description:
-      "Creative websites, branding, UI/UX, publishing, and marketing projects completed for growing businesses.",
+      "Creative websites, branding, UI/UX, publishing, and marketing projects completed for businesses of every size.",
     icon: Briefcase,
   },
   {
@@ -67,7 +67,7 @@ const defaultStats = [
     suffix: "/5",
     label: "Average Rating",
     description:
-      "Trusted for clean design, smart strategy, and conversion-focused digital solutions.",
+      "Trusted for clean design, thoughtful strategy, and professional digital solutions.",
     icon: Star,
   },
 ];
@@ -87,9 +87,9 @@ const Stats = ({ customStats }) => {
               </span>
 
               <h2 className="text-4xl md:text-6xl font-extrabold text-white leading-tight">
-                Digital Results That
+                Digital Work That
                 <span className="block text-accent-purple">
-                  Build Trust & Growth
+                  Builds Trust
                 </span>
               </h2>
             </div>

@@ -18,7 +18,7 @@ const Home = () => {
     "name": "Optivax Global",
     "url": "https://optivaxglobal.com/",
     "logo": "https://optivaxglobal.com/logo.png",
-    "description": "Optivax Global is a digital service provider offering website design, app UI/UX design, Logo & Branding, ebook cover design, digital growth support, and brand strategy services.",
+    "description": "Optivax Global creates professional website design, branding, UI/UX, eBook, and digital creative services for businesses and creators.",
     "sameAs": [
   "https://www.facebook.com/OptivaxGlobalSolution/",
   "https://www.instagram.com/optivaxglobal/",
@@ -35,41 +35,29 @@ const Home = () => {
   "@type": "ItemList",
   "name": "Our Services",
   "itemListElement": [
-    {
-      "@type": "Service",
-      "name": "Website Design & Development",
-      "url": " https://optivaxglobal.com/web-design"
-    },
-    {
-      "@type": "Service",
-      "name": "Logo & Branding",
-      "url": "https://optivaxglobal.com/logo-design"
-    },
-    {
-      "@type": "Service",
-      "name": "Digital Growth Solutions",
-      "url": "https://optivaxglobal.com/digital-marketing"
-    },
-    {
-      "@type": "Service",
-      "name": "App UI/UX Design",
-      "url": "https://optivaxglobal.com/ui-ux-design"
-    },
-    {
-      "@type": "Service",
-      "name": "Ebook Cover Design",
-      "url": "https://optivaxglobal.com/ebook-cover-design"
-    },
-    {
-      "@type": "Service",
-      "name": "eBook Publishing",
-      "url": "https://optivaxglobal.com/ebook-publishing"
-    },
-    {
-      "@type": "Service",
-      "name": "Corporate Presentation Design",
-      "url": "https://optivaxglobal.com/corporate-presentation-design"
-    }
+    { "@type": "Service", "name": "Website Design", "url": "https://optivaxglobal.com/web-design" },
+    { "@type": "Service", "name": "Web Development", "url": "https://optivaxglobal.com/web-development" },
+    { "@type": "Service", "name": "UI/UX Design", "url": "https://optivaxglobal.com/ui-ux-design" },
+    { "@type": "Service", "name": "Mobile App Development", "url": "https://optivaxglobal.com/mobile-app-development" },
+    { "@type": "Service", "name": "Mobile App Design", "url": "https://optivaxglobal.com/mobile-app-design" },
+    { "@type": "Service", "name": "Logo Design", "url": "https://optivaxglobal.com/logo-design" },
+    { "@type": "Service", "name": "Branding Design", "url": "https://optivaxglobal.com/brand-design" },
+    { "@type": "Service", "name": "Brand Management", "url": "https://optivaxglobal.com/brand-management" },
+    { "@type": "Service", "name": "eBook Cover Design", "url": "https://optivaxglobal.com/ebook-cover-design" },
+    { "@type": "Service", "name": "eBook Publishing", "url": "https://optivaxglobal.com/ebook-publishing" },
+    { "@type": "Service", "name": "Animation Services", "url": "https://optivaxglobal.com/animation" },
+    { "@type": "Service", "name": "Corporate Presentation Design", "url": "https://optivaxglobal.com/corporate-presentation-design" },
+    { "@type": "Service", "name": "Graphic Design", "url": "https://optivaxglobal.com/graphics-design" },
+    { "@type": "Service", "name": "Brochure Design", "url": "https://optivaxglobal.com/brochure-design" },
+    { "@type": "Service", "name": "Flyer Design", "url": "https://optivaxglobal.com/flyer-design" },
+    { "@type": "Service", "name": "Stationery Design", "url": "https://optivaxglobal.com/stationary-design" },
+    { "@type": "Service", "name": "CMS Solutions", "url": "https://optivaxglobal.com/content-management-system" },
+    { "@type": "Service", "name": "Digital Marketing", "url": "https://optivaxglobal.com/digital-marketing" },
+    { "@type": "Service", "name": "Search Engine Optimization", "url": "https://optivaxglobal.com/search-engine-optimization" },
+    { "@type": "Service", "name": "Search Engine Marketing", "url": "https://optivaxglobal.com/search-engine-marketing" },
+    { "@type": "Service", "name": "Social Media Marketing", "url": "https://optivaxglobal.com/social-media-marketing" },
+    { "@type": "Service", "name": "Email Marketing", "url": "https://optivaxglobal.com/email-marketing" },
+    { "@type": "Service", "name": "Pay Per Click", "url": "https://optivaxglobal.com/pay-per-click" }
   ]
 };
 
@@ -77,17 +65,17 @@ const Home = () => {
     <>
       <Helmet>
         <title>
-          Custom Web Design Services Company in USA - Optivax Global
+          Custom Website & Digital Design Services | Optivax Global
         </title>
 
         <meta
           name="description"
-          content="Professional website design and development services in the USA, backed by branding, UI/UX, and digital growth support from the Optivax Global team."
+          content="Optivax Global provides professional digital design, development, branding, publishing, and creative solutions for businesses, brands, and creators."
         />
 
         <meta
           name="keywords"
-          content="Optivax Global, website design agency, digital growth agency, Logo & Branding services, app UI UX design, ebook cover design, branding agency, web development services"
+          content="Optivax Global, website design, web development, UI/UX design agency, branding services, eBook design, digital marketing"
         />
 
         <meta name="author" content="Optivax Global" />
@@ -95,10 +83,10 @@ const Home = () => {
         <link rel="canonical" href="https://optivaxglobal.com/" />
 
         {/* Open Graph */}
-        <meta property="og:title" content="Optivax Global | Digital Services Provider" />
+        <meta property="og:title" content="Custom Website & Digital Design Services | Optivax Global" />
         <meta
           property="og:description"
-          content="Grow your business with professional websites, branding, Logo & Branding, app UI/UX, ebook covers, and digital growth solutions."
+          content="Optivax Global creates professional website design, branding, UI/UX, eBook, and digital creative services for businesses and creators."
         />
         <meta property="og:url" content="https://optivaxglobal.com/" />
         <meta property="og:type" content="website" />
@@ -106,10 +94,10 @@ const Home = () => {
 
         {/* Twitter Card */}
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Optivax Global | Website Design & Digital Growth Agency" />
+        <meta name="twitter:title" content="Custom Website & Digital Design Services | Optivax Global" />
         <meta
           name="twitter:description"
-          content="Professional digital services for businesses, authors, startups, and brands."
+          content="Professional website design, branding, UI/UX, eBook, and digital creative services for businesses and creators."
         />
         <meta name="twitter:image" content="https://optivaxglobal.com/og-image.jpg" />
 

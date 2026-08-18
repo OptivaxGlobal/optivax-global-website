@@ -29,7 +29,7 @@ const sections = [
   },
   {
     heading: "Final Thoughts",
-    text: "Search engine marketing is one of the fastest ways to connect businesses with customers who are actively searching for solutions. By combining the right keywords, compelling ads, optimized landing pages, and continuous performance tracking, businesses can transform online searches into valuable customer connections and sales. At Optivax Global, we help businesses create high-performing search visibility campaigns, optimized landing pages, and digital growth strategies that generate measurable business growth.",
+    text: "Search engine marketing is one of the fastest ways to connect businesses with customers who are actively searching for solutions. By combining the right keywords, compelling ads, optimized landing pages, and continuous performance tracking, businesses can transform online searches into valuable customer connections and sales. Optivax Global helps businesses build the professional, well-structured landing pages and websites that these efforts rely on.",
   },
 ];
 
@@ -40,7 +40,7 @@ const SEMMarketingBlog = () => {
       metaTitle="Search Visibility Strategy Turns Searches Into Sales - Optivax Global"
       metaDescription="Discover how a search visibility strategy helps businesses reach high-intent customers, increase visibility, improve conversions, and turn searches into sales."
       canonicalUrl="https://optivaxglobal.com/sem-turns-searches-into-sales"
-      category="Search Visibility Strategy"
+      category="Search Visibility Insights"
       date="June 2026"
       image={semBlogImg}
       imageAlt="Search visibility strategy blog by Optivax Global"

@@ -7,7 +7,7 @@ const Animation = () => {
     { icon: <Video size={24} />, title: "Engaging Motion Design", text: "Animations that help your message move, feel alive, and capture attention quickly." },
     { icon: <Sparkles size={24} />, title: "Brand-Aligned Animation", text: "Every animation is designed to match your brand style, colors, and tone." },
     { icon: <Layers size={24} />, title: "Modern Visual Storytelling", text: "We use motion to explain ideas clearly and make your content more memorable." },
-    { icon: <Target size={24} />, title: "Conversion-Focused Motion", text: "Animations are built to support your goals, whether that is clicks, leads, or awareness." },
+    { icon: <Target size={24} />, title: "Purpose-Driven Motion", text: "Animations are built to support your goals, whether that is engagement, storytelling, or brand awareness." },
   ];
 
   const deliverables = [

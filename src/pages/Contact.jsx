@@ -28,42 +28,46 @@ const Contact = () => {
 
     const serviceMap = {
       "Brand Design": "Brand Design",
-      "Brochure Design": "Brochure Design",
-      "Graphics Design": "Graphics Design",
       "Logo Design": "Logo Design",
-      "Mobile App Design": "Mobile App Design",
-      "Mobile App Development": "Mobile App Development",
-      "Flyer Design": "Flyer Design",
-      "Stationary Design": "Stationary Design",
       "UI UX Design": "UI UX Design",
       "UI/UX Design": "UI UX Design",
       "Web Design": "Web Design",
-      "Web Development": "Web Development",
-      Animation: "Animation",
-      "Animation Services": "Animation",
-      "Brand Management": "Brand Management",
-      "Content Management": "Content Management System",
-      "Content Management System": "Content Management System",
-      "Digital Marketing": "Digital Growth",
-      "Digital Growth": "Digital Growth",
-      "Email Marketing": "Email Communication Strategy",
-      "Email Engagement": "Email Communication Strategy",
-      "Email Communication Strategy": "Email Communication Strategy",
-      "Pay Per Click": "Paid Search Support",
-      "Pay Per Click (PPC)": "Paid Search Support",
-      "Paid Search Support": "Paid Search Support",
-      "Search Engine Marketing": "Search Visibility Strategy",
-      "Search Visibility Strategy": "Search Visibility Strategy",
-      "Search Engine Optimization": "Search Visibility Optimization",
-      "Search Engine Optimization (SEO)": "Search Visibility Optimization",
-      "Search Visibility Optimization": "Search Visibility Optimization",
-      "Social Media Marketing": "Social Media Management",
-      "Social Media Growth": "Social Media Management",
-      "Social Media Management": "Social Media Management",
       "Ebook Cover": "Ebook Cover Design",
       "Ebook Cover Design": "Ebook Cover Design",
-      "Corporate Presentation": "Corporate Presentation",
-      "Corporate Presentation Design": "Corporate Presentation",
+      "eBook Publishing": "eBook Publishing",
+
+      // Legacy/retired service query params mapped to a neutral option so
+      // an old link never displays a retired or deprioritized service as current.
+      "Brochure Design": "Other Design Project",
+      "Graphics Design": "Other Design Project",
+      "Mobile App Design": "Other Design Project",
+      "Mobile App Development": "Other Design Project",
+      "Flyer Design": "Other Design Project",
+      "Stationary Design": "Other Design Project",
+      "Web Development": "Other Design Project",
+      Animation: "Other Design Project",
+      "Animation Services": "Other Design Project",
+      "Brand Management": "Other Design Project",
+      "Content Management": "Other Design Project",
+      "Content Management System": "Other Design Project",
+      "Digital Marketing": "Other Design Project",
+      "Digital Growth": "Other Design Project",
+      "Email Marketing": "Other Design Project",
+      "Email Engagement": "Other Design Project",
+      "Email Communication Strategy": "Other Design Project",
+      "Pay Per Click": "Other Design Project",
+      "Pay Per Click (PPC)": "Other Design Project",
+      "Paid Search Support": "Other Design Project",
+      "Search Engine Marketing": "Other Design Project",
+      "Search Visibility Strategy": "Other Design Project",
+      "Search Engine Optimization": "Other Design Project",
+      "Search Engine Optimization (SEO)": "Other Design Project",
+      "Search Visibility Optimization": "Other Design Project",
+      "Social Media Marketing": "Other Design Project",
+      "Social Media Growth": "Other Design Project",
+      "Social Media Management": "Other Design Project",
+      "Corporate Presentation": "Other Design Project",
+      "Corporate Presentation Design": "Other Design Project",
     };
 
     return serviceMap[serviceName] || serviceName;
@@ -138,11 +142,11 @@ const Contact = () => {
   return (
     <>
       <Helmet>
-        <title>Contact Optivax Global | Get a Free Consultation</title>
+        <title>Contact Optivax Global | Start Your Design Project</title>
 
         <meta
           name="description"
-          content="Contact Optivax Global for website design, Logo & Branding, app UI/UX, ebook cover design and digital growth solutions."
+          content="Contact Optivax Global for custom website design, UI/UX design, logo branding, and professional eBook design services."
         />
       </Helmet>
 
@@ -156,16 +160,17 @@ const Contact = () => {
               animate={{ opacity: 1, x: 0 }}
             >
               <h1 className="text-4xl md:text-6xl font-extrabold mb-6">
-                Let’s Build Something Your
+                Start Your
                 <span className="block text-accent-purple">
-                  Customers Will Remember
+                  Design Project
                 </span>
               </h1>
 
               <p className="text-gray-300 mb-8 max-w-md leading-relaxed">
-                Share your vision with us. From websites and branding to UI/UX
-                and marketing, we create digital solutions designed to help
-                businesses grow with confidence.
+                Have a website, UI/UX, branding, or eBook design project in
+                mind? Share your requirements with Optivax Global and our
+                team will discuss the design, scope, and next steps with
+                you.
               </p>
 
               <div className="space-y-4">

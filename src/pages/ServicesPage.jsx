@@ -6,29 +6,13 @@ import {
   ArrowRight,
   ArrowUpRight,
   Globe,
-  Code2,
+  MousePointer2,
   PenTool,
   Palette,
-  Layers,
-  FileText,
-  Newspaper,
-  Stamp,
-  Smartphone,
-  AppWindow,
-  MousePointer2,
-  ShieldCheck,
-  Database,
-  Megaphone,
-  Mail,
-  Target,
-  TrendingUp,
-  SearchCheck,
-  Share2,
-  Clapperboard,
-  Presentation,
   BookOpen,
   BookMarked,
   Sparkles,
+  Smartphone
 } from "lucide-react";
 
 import AnimatedHeroBackground from "@/components/AnimatedHeroBackground";
@@ -37,165 +21,165 @@ import SectionAnimator from "@/components/SectionAnimator";
 
 const serviceCategories = [
   {
-    category: "Web & Development",
+    category: "Website & Digital Design",
     items: [
       {
         icon: Globe,
-        title: "Web Design",
-        text: "A website is often the first impression your business makes. We design sites that look professional, load quickly, and guide visitors toward taking action.",
+        title: "Website Design",
+        text: "Professional, responsive website design tailored to your brand, content, and desired user experience.",
         href: "/web-design",
       },
       {
-        icon: Code2,
+        icon: Globe,
         title: "Web Development",
-        text: "Behind every good website is code that holds up. We build fast, secure websites that are easy to maintain long after launch.",
+        text: "Reliable website development using clean functionality and modern technical implementation for dependable digital experiences.",
         href: "/web-development",
-      },
-      {
-        icon: Database,
-        title: "Content Management System",
-        text: "We set up and support content systems that make updating your website simple, even if you're not technical.",
-        href: "/content-management-system",
-      },
-    ],
-  },
-  {
-    category: "Branding & Creative",
-    items: [
-      {
-        icon: PenTool,
-        title: "Logo Design",
-        text: "Your logo shows up everywhere your brand does. We create marks that are simple enough to remember and distinctive enough to stand out.",
-        href: "/logo-design",
-      },
-      {
-        icon: Palette,
-        title: "Brand Design",
-        text: "From color palette to typography, we build a visual identity that stays consistent across your website, marketing, and everything in between.",
-        href: "/brand-design",
-      },
-      {
-        icon: ShieldCheck,
-        title: "Brand Management",
-        text: "Keeping a brand consistent across every platform takes ongoing attention. We help manage that, so your identity never feels disjointed.",
-        href: "/brand-management",
-      },
-      {
-        icon: Layers,
-        title: "Graphics Design",
-        text: "Social posts, ads, print materials, whatever you need designed, we create graphics that match your brand and actually get noticed.",
-        href: "/graphics-design",
-      },
-      {
-        icon: FileText,
-        title: "Brochure Design",
-        text: "Well-designed brochures still work. We create layouts that present your business clearly and give prospects a reason to keep reading.",
-        href: "/brochure-design",
-      },
-      {
-        icon: Newspaper,
-        title: "Flyer Design",
-        text: "For promotions, events, and campaigns, we design flyers built to catch attention fast and get your offer across clearly.",
-        href: "/flyer-design",
-      },
-      {
-        icon: Stamp,
-        title: "Stationary Design",
-        text: "Business cards, letterheads, and everyday materials designed to keep your brand looking consistent wherever it shows up.",
-        href: "/stationary-design",
-      },
-      {
-        icon: Presentation,
-        title: "Corporate Presentation",
-        text: "Pitch decks, company profiles, and business presentations designed to look sharp and support your message.",
-        href: "/corporate-presentation-design",
-      },
-      {
-        icon: Clapperboard,
-        title: "Animation",
-        text: "Custom animation and motion design that bring your brand, product, or story to life on screen.",
-        href: "/animation",
-      },
-    ],
-  },
-  {
-    category: "Search Visibility & Digital Growth",
-    items: [
-      {
-        icon: Megaphone,
-        title: "Digital Growth",
-        text: "A growth strategy built around search, social, and content, designed to connect the right people with your business.",
-        href: "/digital-marketing",
-      },
-      {
-        icon: Mail,
-        title: "Email Communication Strategy",
-        text: "Email communication built to stay in front of your audience and support ongoing customer relationships, without feeling like spam.",
-        href: "/email-marketing",
-      },
-      {
-        icon: Target,
-        title: "Paid Search Support",
-        text: "Targeted paid search advertising managed to bring in relevant traffic, not just clicks.",
-        href: "/pay-per-click",
-      },
-      {
-        icon: TrendingUp,
-        title: "Search Visibility Strategy",
-        text: "We help your business show up when people are actively searching for what you offer.",
-        href: "/search-engine-marketing",
-      },
-      {
-        icon: SearchCheck,
-        title: "Search Visibility Optimization",
-        text: "Ongoing site structure and content optimization support to help your business get found in search results.",
-        href: "/search-engine-optimization",
-      },
-      {
-        icon: Share2,
-        title: "Social Media Management",
-        text: "Strategy, content planning, and consistent posting built to create real engagement, not just impressions.",
-        href: "/social-media-marketing",
-      },
-    ],
-  },
-  {
-    category: "Mobile & UI/UX",
-    items: [
-      {
-        icon: Smartphone,
-        title: "Mobile App Development",
-        text: "We build custom iOS and Android apps around how your business actually works, not a one-size-fits-all template.",
-        href: "/mobile-app-development",
-      },
-      {
-        icon: AppWindow,
-        title: "Mobile App Design",
-        text: "App interfaces designed to feel intuitive from the first tap, so people stick around instead of bouncing.",
-        href: "/mobile-app-design",
       },
       {
         icon: MousePointer2,
         title: "UI/UX Design",
-        text: "We design interfaces based on how people actually use websites and apps, not just how they look in a mockup.",
+        text: "Interface and experience design focused on clarity, usability, consistency, and smooth digital interaction.",
         href: "/ui-ux-design",
+      },
+      {
+        icon: Smartphone,
+        title: "Mobile App Development",
+        text: "Custom mobile app experiences designed to support modern business workflows and intuitive user journeys.",
+        href: "/mobile-app-development",
+      },
+      {
+        icon: Smartphone,
+        title: "Mobile App Design",
+        text: "App interface design focused on clarity and usability, from first tap through everyday use.",
+        href: "/mobile-app-design",
       },
     ],
   },
   {
-    category: "Publishing & Content",
+    category: "Branding & Identity",
+    items: [
+      {
+        icon: PenTool,
+        title: "Logo Design",
+        text: "Custom logo design created to establish a clear, memorable, and professional identity for your brand.",
+        href: "/logo-design",
+      },
+      {
+        icon: Palette,
+        title: "Branding Design",
+        text: "Supporting visual brand elements including color system, typography, and consistent identity design across touchpoints.",
+        href: "/brand-design",
+      },
+      {
+        icon: PenTool,
+        title: "Graphic Design",
+        text: "Creative design work for digital and print assets that strengthen brand communication and visual presentation.",
+        href: "/graphics-design",
+      },
+      {
+        icon: PenTool,
+        title: "Corporate Presentation Design",
+        text: "Professional presentation design to communicate your message with clarity, confidence, and visual structure.",
+        href: "/corporate-presentation-design",
+      },
+      {
+        icon: Palette,
+        title: "Brand Management",
+        text: "Ongoing support to keep your visual identity consistent and organized across every platform and touchpoint.",
+        href: "/brand-management",
+      },
+    ],
+  },
+  {
+    category: "Creative & Publishing",
     items: [
       {
         icon: BookOpen,
-        title: "eBook Cover Design",
-        text: "Genre-appropriate cover design built to make your book stand out the moment readers see it.",
+        title: "eBook Design",
+        text: "Professional eBook cover design and visual presentation that help your work feel polished and credible.",
         href: "/ebook-cover-design",
       },
       {
         icon: BookMarked,
         title: "eBook Publishing",
-        text: "From manuscript preparation to formatting and platform setup, we help take your book from draft to published.",
+        text: "Interior layout, formatting, and presentation support that help authors prepare a publish-ready digital book.",
         href: "/ebook-publishing",
+      },
+      {
+        icon: PenTool,
+        title: "Brochure Design",
+        text: "Well-structured brochure design for clear communication of your services, offerings, and value.",
+        href: "/brochure-design",
+      },
+      {
+        icon: PenTool,
+        title: "Flyer Design",
+        text: "Promotional flyer design created to communicate offers, announcements, and key information in a visually strong way.",
+        href: "/flyer-design",
+      },
+      {
+        icon: PenTool,
+        title: "Stationery Design",
+        text: "Business stationery design that supports a polished, consistent, and professional brand identity.",
+        href: "/stationary-design",
+      },
+    ],
+  },
+  {
+    category: "Product & Experience",
+    items: [
+      {
+        icon: Globe,
+        title: "Animation Services",
+        text: "Creative motion graphics and visual storytelling that bring products, messages, and brand experiences to life.",
+        href: "/animation",
+      },
+      {
+        icon: Globe,
+        title: "CMS Solutions",
+        text: "Content management systems that make it easier to organize, update, and maintain digital content efficiently.",
+        href: "/content-management-system",
+      },
+    ],
+  },
+  {
+    category: "Digital Marketing",
+    items: [
+      {
+        icon: Globe,
+        title: "Digital Marketing",
+        text: "Professional digital marketing support built around your business goals, brand voice, and audience.",
+        href: "/digital-marketing",
+      },
+      {
+        icon: Globe,
+        title: "Search Engine Optimization",
+        text: "Website structure and content practices designed to help search engines understand and index your site clearly.",
+        href: "/search-engine-optimization",
+      },
+      {
+        icon: Globe,
+        title: "Search Engine Marketing",
+        text: "Search-based campaign design and landing page support built around clear, professional messaging.",
+        href: "/search-engine-marketing",
+      },
+      {
+        icon: Globe,
+        title: "Social Media Marketing",
+        text: "Social media content, visuals, and account presentation designed to reflect your brand consistently.",
+        href: "/social-media-marketing",
+      },
+      {
+        icon: Globe,
+        title: "Email Marketing",
+        text: "Email campaign design and communication templates built for clear, professional customer messaging.",
+        href: "/email-marketing",
+      },
+      {
+        icon: Globe,
+        title: "Pay Per Click",
+        text: "Paid search and social ad creative and landing page design built around clear, professional presentation.",
+        href: "/pay-per-click",
       },
     ],
   },
@@ -221,17 +205,17 @@ const ServicesPage = () => {
   return (
     <>
       <Helmet>
-        <title>Professional Digital Services | Optivax Global</title>
+        <title>Professional Digital Design Services | Optivax Global</title>
         <meta
           name="description"
-          content="Explore Optivax Global services including web design, development, branding, search visibility, digital growth, mobile apps, eBook design, publishing and more."
+          content="Explore Optivax Global services including website design and development, UI/UX design, branding, publishing, and digital marketing solutions."
         />
         <link rel="canonical" href="https://optivaxglobal.com/services" />
 
-        <meta property="og:title" content="Professional Digital Services | Optivax Global" />
+        <meta property="og:title" content="Professional Digital Design Services | Optivax Global" />
         <meta
           property="og:description"
-          content="Explore Optivax Global services including web design, development, branding, search visibility, digital growth, mobile apps, eBook design, publishing and more."
+          content="Explore Optivax Global services including website design and development, UI/UX design, branding, publishing, and digital marketing solutions."
         />
         <meta property="og:url" content="https://optivaxglobal.com/services" />
         <meta property="og:type" content="website" />
@@ -272,9 +256,10 @@ const ServicesPage = () => {
             </h1>
 
             <p className="text-lg md:text-xl text-gray-300 leading-relaxed max-w-3xl mx-auto mb-10">
-              From your first design concept to a fully launched digital
-              presence, Optivax Global brings design, development,
-              marketing, and publishing services together under one team.
+              Optivax Global provides professional digital design,
+              development, branding, publishing, and creative solutions for
+              businesses, brands, professionals, and creators tailored to
+              each client's individual requirements.
             </p>
 
             <div className="flex flex-col items-center gap-3">
@@ -287,7 +272,7 @@ const ServicesPage = () => {
               </button>
 
               <p className="text-sm text-gray-500">
-                Tell us what you need — we'll point you to the right service.
+                Tell us what you need we'll point you to the right service.
               </p>
             </div>
           </motion.div>

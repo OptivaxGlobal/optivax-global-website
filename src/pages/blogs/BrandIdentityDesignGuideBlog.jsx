@@ -28,7 +28,7 @@ const sections = [
     text: "Customers do not always buy the cheapest product or service. They often choose brands they understand, trust, and feel connected to. A clear identity communicates your company’s values, personality, and purpose, helping customers develop a stronger emotional relationship with the business.",
   },
   {
-    heading: "Improve Marketing Results",
+    heading: "Strengthen Marketing Consistency",
     text: "Consistent branding makes advertisements, websites, emails, presentations, and social media campaigns more effective because every piece reinforces the same message. Instead of starting from scratch for every campaign, your team can work from an established visual and verbal system.",
   },
   {
