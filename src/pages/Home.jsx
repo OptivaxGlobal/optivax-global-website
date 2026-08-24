@@ -53,6 +53,10 @@ const Home = () => {
     { "@type": "Service", "name": "Stationery Design", "url": "https://optivaxglobal.com/stationary-design" },
     { "@type": "Service", "name": "CMS Solutions", "url": "https://optivaxglobal.com/content-management-system" },
     { "@type": "Service", "name": "Digital Marketing", "url": "https://optivaxglobal.com/digital-marketing" },
+<<<<<<< HEAD
+=======
+    { "@type": "Service", "name": "Search Engine Optimization", "url": "https://optivaxglobal.com/search-engine-optimization" },
+>>>>>>> 1b088f866b1dd5ae1736967832b5f824858cac95
     { "@type": "Service", "name": "Search Engine Marketing", "url": "https://optivaxglobal.com/search-engine-marketing" },
     { "@type": "Service", "name": "Social Media Marketing", "url": "https://optivaxglobal.com/social-media-marketing" },
     { "@type": "Service", "name": "Email Marketing", "url": "https://optivaxglobal.com/email-marketing" },

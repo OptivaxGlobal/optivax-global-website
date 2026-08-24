@@ -54,6 +54,7 @@ import cover40 from "@/assets/ebook-cover-showcase/ebook-cover-40.webp";
 import cover41 from "@/assets/ebook-cover-showcase/ebook-cover-41.webp";
 import cover42 from "@/assets/ebook-cover-showcase/ebook-cover-42.webp";
 import cover43 from "@/assets/ebook-cover-showcase/ebook-cover-43.webp";
+<<<<<<< HEAD
 import cover44 from "@/assets/ebook-cover-showcase/ebook-cover-44.webp";
 import cover45 from "@/assets/ebook-cover-showcase/ebook-cover-45.webp";
 import cover46 from "@/assets/ebook-cover-showcase/ebook-cover-46.webp";
@@ -65,6 +66,8 @@ import cover51 from "@/assets/ebook-cover-showcase/ebook-cover-51.webp";
 import cover52 from "@/assets/ebook-cover-showcase/ebook-cover-52.webp";
 import cover53 from "@/assets/ebook-cover-showcase/ebook-cover-53.webp";
 import cover54 from "@/assets/ebook-cover-showcase/ebook-cover-54.webp";
+=======
+>>>>>>> 1b088f866b1dd5ae1736967832b5f824858cac95
 
 const EbookCover = () => {
   const navigate = useNavigate();
@@ -113,6 +116,7 @@ const EbookCover = () => {
     cover41,
     cover42,
     cover43,
+<<<<<<< HEAD
     cover44,
     cover45,
     cover46,
@@ -124,6 +128,8 @@ const EbookCover = () => {
     cover52,
     cover53,
     cover54,
+=======
+>>>>>>> 1b088f866b1dd5ae1736967832b5f824858cac95
   ];
 
   const deliverables = [

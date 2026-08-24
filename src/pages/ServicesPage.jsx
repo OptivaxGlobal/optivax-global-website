@@ -151,12 +151,20 @@ const serviceCategories = [
         text: "Professional digital marketing support built around your business goals, brand voice, and audience.",
         href: "/digital-marketing",
       },
+<<<<<<< HEAD
       /*{
+=======
+      {
+>>>>>>> 1b088f866b1dd5ae1736967832b5f824858cac95
         icon: Globe,
         title: "Search Engine Optimization",
         text: "Website structure and content practices designed to help search engines understand and index your site clearly.",
         href: "/search-engine-optimization",
+<<<<<<< HEAD
       },*/
+=======
+      },
+>>>>>>> 1b088f866b1dd5ae1736967832b5f824858cac95
       {
         icon: Globe,
         title: "Search Engine Marketing",

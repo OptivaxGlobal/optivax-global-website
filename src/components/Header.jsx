@@ -416,6 +416,10 @@ const Header = () => {
     { name: "Stationery Design", href: "/stationary-design" },
     { name: "CMS Solutions", href: "/content-management-system" },
     { name: "Digital Marketing", href: "/digital-marketing" },
+<<<<<<< HEAD
+=======
+    { name: "Search Engine Optimization", href: "/search-engine-optimization" },
+>>>>>>> 1b088f866b1dd5ae1736967832b5f824858cac95
     { name: "Search Engine Marketing", href: "/search-engine-marketing" },
     { name: "Social Media Marketing", href: "/social-media-marketing" },
     { name: "Email Marketing", href: "/email-marketing" },

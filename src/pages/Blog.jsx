@@ -48,6 +48,7 @@ import socialMediaGraphicsImg from "@/assets/blog-images/social-media-graphics-d
 import businessAppFeaturesImg from "@/assets/blog-images/essential-business-app-features.webp";
 import digitalMarketingMistakesImg from "@/assets/blog-images/digital-marketing-mistakes-avoid.webp";
 import startupBrandingServicesImg from "@/assets/blog-images/best-branding-services-startups.webp";
+<<<<<<< HEAD
 import businessWebsiteDesignImg from "@/assets/blog-images/professional-business-website-design-services.webp";
 
 export const blogPosts = [
@@ -61,6 +62,11 @@ export const blogPosts = [
   url: "/professional-business-website-design-services",
 },
   {
+=======
+
+export const blogPosts = [
+  {
+>>>>>>> 1b088f866b1dd5ae1736967832b5f824858cac95
     title: "Why Every Startup Needs Brand Identity Design",
     excerpt:
       "Learn how professional brand identity design helps startups build recognition, maintain consistency, communicate positioning, and appear more established.",

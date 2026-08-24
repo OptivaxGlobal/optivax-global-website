@@ -222,11 +222,14 @@ const ContactForm = ({ onSubmitSuccess, redirectTo = "/thank-you" }) => {
       return;
     }
 
+<<<<<<< HEAD
     if (!form.smsConsent) {
       alert("Please check the SMS consent checkbox before submitting.");
       return;
     }
 
+=======
+>>>>>>> 1b088f866b1dd5ae1736967832b5f824858cac95
     setLoading(true);
 
     const { smsConsent, ...restForm } = form;
@@ -638,10 +641,34 @@ const ContactForm = ({ onSubmitSuccess, redirectTo = "/thank-you" }) => {
               id="contact-sms-consent-text"
               className="text-sm text-gray-400 leading-relaxed"
             >
+<<<<<<< HEAD
               I agree to receive SMS messages from Optivax Global, including
               service updates, appointment reminders, and marketing/promotional
               offers. Message and data rates may apply. Reply STOP to
               unsubscribe.
+=======
+              I agree to receive service-related and inquiry follow-up text
+              messages from Optivax Global at the phone number provided.
+              Message frequency may vary. Message &amp; data rates may
+              apply. Reply STOP to unsubscribe or HELP for help.{" "}
+              <Link
+                to="/privacy-policy"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-accent-purple hover:text-white underline underline-offset-2 transition-colors"
+              >
+                Privacy Policy
+              </Link>{" "}
+              &amp;{" "}
+              <Link
+                to="/terms"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-accent-purple hover:text-white underline underline-offset-2 transition-colors"
+              >
+                Terms of Service
+              </Link>
+>>>>>>> 1b088f866b1dd5ae1736967832b5f824858cac95
             </span>
           </label>
 

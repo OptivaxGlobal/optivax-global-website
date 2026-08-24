@@ -13,6 +13,7 @@ import logo6 from "@/assets/logo-showcase/nativa.webp";
 import logo1 from "@/assets/logo-showcase/jh8-shoez.webp";
 
 /* EBOOKS */
+<<<<<<< HEAD
 import ebook1 from "@/assets/ebook-cover-showcase/ebook-cover-44.webp";
 import ebook2 from "@/assets/ebook-cover-showcase/ebook-cover-45.webp";
 import ebook3 from "@/assets/ebook-cover-showcase/ebook-cover-46.webp";
@@ -25,6 +26,20 @@ import ebook9 from "@/assets/ebook-cover-showcase/ebook-cover-52.webp";
 import ebook10 from "@/assets/ebook-cover-showcase/ebook-cover-53.webp";
 import ebook12 from "@/assets/ebook-cover-showcase/ebook-cover-54.webp";
 import ebook11 from "@/assets/ebook-cover-showcase/ebook-cover-21.webp";
+=======
+import ebook1 from "@/assets/ebook-cover-showcase/ebook-cover-23.webp";
+import ebook2 from "@/assets/ebook-cover-showcase/ebook-cover-24.webp";
+import ebook3 from "@/assets/ebook-cover-showcase/ebook-cover-26.webp";
+import ebook4 from "@/assets/ebook-cover-showcase/ebook-cover-27.webp";
+import ebook5 from "@/assets/ebook-cover-showcase/ebook-cover-15.webp";
+import ebook6 from "@/assets/ebook-cover-showcase/ebook-cover-16.webp";
+import ebook7 from "@/assets/ebook-cover-showcase/ebook-cover-17.webp";
+import ebook8 from "@/assets/ebook-cover-showcase/ebook-cover-18.webp";
+import ebook9 from "@/assets/ebook-cover-showcase/ebook-cover-19.webp";
+import ebook10 from "@/assets/ebook-cover-showcase/ebook-cover-20.webp";
+import ebook11 from "@/assets/ebook-cover-showcase/ebook-cover-21.webp";
+import ebook12 from "@/assets/ebook-cover-showcase/ebook-cover-22.webp";
+>>>>>>> 1b088f866b1dd5ae1736967832b5f824858cac95
 
 /* APP UI */
 import ui1 from "@/assets/app-uiux-showcase/app-uiux-1.webp";
@@ -99,7 +114,10 @@ const portfolioSections = [
       "Professional book covers crafted for authors, publishing platforms, and digital readers.",
     tag: "Publishing Design",
     images: [
+<<<<<<< HEAD
       
+=======
+>>>>>>> 1b088f866b1dd5ae1736967832b5f824858cac95
       ebook1,
       ebook2,
       ebook3,
