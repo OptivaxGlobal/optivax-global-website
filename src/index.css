@@ -1,0 +1,408 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: 260 100% 4%;
+  --foreground: 210 40% 98%;
+
+  --card: 260 100% 4%;
+  --card-foreground: 210 40% 98%;
+
+  --popover: 260 100% 4%;
+  --popover-foreground: 210 40% 98%;
+
+  --primary: 210 40% 98%;
+  --primary-foreground: 222.2 47.4% 11.2%;
+
+  --secondary: 217.2 32.6% 17.5%;
+  --secondary-foreground: 210 40% 98%;
+
+  --muted: 217.2 32.6% 17.5%;
+  --muted-foreground: 215 20.2% 65.1%;
+
+  --accent: 204 88% 52%;
+  --accent-foreground: 210 40% 98%;
+
+  --destructive: 0 62.8% 30.6%;
+  --destructive-foreground: 210 40% 98%;
+
+  --border: 217.2 32.6% 17.5%;
+  --input: 217.2 32.6% 17.5%;
+  --ring: 204 88% 52%;
+
+  --radius: 0.5rem;
+}
+
+* {
+  box-sizing: border-box;
+  border-color: hsl(var(--border));
+}
+
+html,
+body,
+#root {
+  margin: 0;
+  padding: 0;
+  min-height: 100%;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  color: hsl(var(--foreground));
+  font-family: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji",
+    "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  background-color: #0c0d0d;
+}
+
+a,
+button {
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+button {
+  border: none;
+}
+
+::selection {
+  background: #38d9ff;
+  color: #031c33;
+}
+
+/* Hide Scrollbar */
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Premium Blue Accent Override */
+.text-accent-purple {
+  color: #1699f1 !important;
+}
+
+.bg-accent-purple {
+  background: linear-gradient(135deg, #1699f1, #004495) !important;
+}
+
+.border-accent-purple {
+  border-color: #38d9ff !important;
+}
+
+.hover\:text-accent-purple:hover {
+  color: #38d9ff !important;
+}
+
+.hover\:bg-accent-purple:hover {
+  background: linear-gradient(135deg, #38d9ff, #1699f1) !important;
+}
+
+.hover\:border-accent-purple:hover {
+  border-color: #38d9ff !important;
+}
+
+/* Accent Opacity Classes */
+.bg-accent-purple\/5 {
+  background-color: rgba(22, 153, 241, 0.05) !important;
+}
+
+.bg-accent-purple\/10 {
+  background-color: rgba(22, 153, 241, 0.1) !important;
+}
+
+.bg-accent-purple\/15 {
+  background-color: rgba(22, 153, 241, 0.15) !important;
+}
+
+.bg-accent-purple\/20 {
+  background-color: rgba(22, 153, 241, 0.2) !important;
+}
+
+.bg-accent-purple\/30 {
+  background-color: rgba(22, 153, 241, 0.3) !important;
+}
+
+.hover\:bg-accent-purple\/10:hover {
+  background-color: rgba(22, 153, 241, 0.1) !important;
+}
+
+.hover\:bg-accent-purple\/20:hover {
+  background-color: rgba(22, 153, 241, 0.2) !important;
+}
+
+.hover\:bg-accent-purple\/90:hover {
+  background: linear-gradient(135deg, #38d9ff, #1699f1) !important;
+}
+
+/* Border Opacity */
+.border-accent-purple\/30 {
+  border-color: rgba(56, 217, 255, 0.3) !important;
+}
+
+.border-accent-purple\/40 {
+  border-color: rgba(56, 217, 255, 0.4) !important;
+}
+
+.border-accent-purple\/50 {
+  border-color: rgba(56, 217, 255, 0.5) !important;
+}
+
+.hover\:border-accent-purple\/40:hover {
+  border-color: rgba(56, 217, 255, 0.4) !important;
+}
+
+.hover\:border-accent-purple\/50:hover {
+  border-color: rgba(56, 217, 255, 0.5) !important;
+}
+
+/* Shadow Override */
+.shadow-accent-purple\/10 {
+  box-shadow: 0 12px 35px rgba(22, 153, 241, 0.14) !important;
+}
+
+.shadow-accent-purple\/20 {
+  box-shadow: 0 18px 45px rgba(22, 153, 241, 0.24) !important;
+}
+
+/* Text Gradient */
+.text-gradient {
+  background: linear-gradient(90deg, #e9fbff, #38d9ff, #1699f1) !important;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent !important;
+}
+
+/* Premium reusable glass classes */
+.glass-card,
+.glass-premium {
+  background: rgba(233, 251, 255, 0.08);
+  border: 1px solid rgba(233, 251, 255, 0.14);
+  backdrop-filter: blur(18px);
+  border-radius: 24px;
+  box-shadow: 0 20px 60px rgba(22, 153, 241, 0.16);
+  transition: all 0.3s ease;
+}
+
+.glass-card:hover,
+.glass-premium:hover {
+  transform: translateY(-6px);
+  background: rgba(22, 153, 241, 0.12);
+  border-color: rgba(56, 217, 255, 0.42);
+  box-shadow: 0 26px 80px rgba(22, 153, 241, 0.25);
+}
+
+.blue-btn {
+  background: linear-gradient(135deg, #1699f1, #004495);
+  color: #e9fbff;
+  border-radius: 999px;
+  box-shadow: 0 14px 38px rgba(22, 153, 241, 0.28);
+  transition: all 0.3s ease;
+}
+
+.blue-btn:hover {
+  background: linear-gradient(135deg, #38d9ff, #1699f1);
+  box-shadow: 0 18px 45px rgba(22, 153, 241, 0.36);
+}
+
+/* Global Image Aspect Ratio Fix */
+img,
+picture img,
+figure img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Responsive Images */
+.responsive-img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+  object-position: center;
+}
+
+/* Fixed Ratio Image Containers */
+.aspect-container {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.aspect-container > img,
+.aspect-container > picture > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.aspect-square-img {
+  aspect-ratio: 1 / 1;
+  overflow: hidden;
+}
+
+.aspect-video-img {
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+}
+
+.aspect-portfolio-img {
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+}
+
+.aspect-book-img {
+  aspect-ratio: 2 / 3;
+  overflow: hidden;
+}
+
+/* Tailwind/Common Image Stretch Fixes */
+img.w-full.h-full,
+img[class*="w-full"][class*="h-full"] {
+  object-fit: cover;
+  object-position: center;
+}
+
+/* Card/Portfolio Images */
+.card img,
+.project-card img,
+.portfolio-card img,
+.service-card img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  object-position: center;
+}
+
+/* Lazy loading placeholder */
+img[loading="lazy"] {
+  background-color: #1a1a1a;
+}
+
+/* Motion Accessibility */
+@media (prefers-reduced-motion: reduce) {
+  html,
+  body,
+  #root {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+/* Phone Country Code Dropdown - Optivax Theme */
+
+.react-tel-input {
+  width: 100% !important;
+  font-family: inherit !important;
+}
+
+.react-tel-input .form-control {
+  width: 100% !important;
+  height: 56px !important;
+  background: rgba(12, 13, 13, 0.35) !important;
+  color: #ffffff !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+  border-radius: 12px !important;
+  padding-left: 60px !important;
+  font-size: 15px !important;
+  outline: none !important;
+}
+
+.react-tel-input .form-control::placeholder {
+  color: #9ca3af !important;
+}
+
+.react-tel-input .form-control:focus {
+  border-color: rgba(27, 188, 239, 0.6) !important;
+  box-shadow: 0 0 0 4px rgba(27, 188, 239, 0.12) !important;
+}
+
+.react-tel-input .flag-dropdown {
+  background: #10131f !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+  border-radius: 12px 0 0 12px !important;
+}
+
+.react-tel-input .selected-flag {
+  background: transparent !important;
+  border-radius: 12px 0 0 12px !important;
+}
+
+.react-tel-input .selected-flag:hover,
+.react-tel-input .selected-flag:focus,
+.react-tel-input .flag-dropdown.open {
+  background: rgba(27, 188, 239, 0.12) !important;
+}
+
+.react-tel-input .selected-flag .arrow {
+  border-top-color: #1bbcef !important;
+}
+
+.react-tel-input .selected-flag .arrow.up {
+  border-bottom-color: #1bbcef !important;
+}
+
+.react-tel-input .country-list {
+  background: #031c33 !important;
+  color: #ffffff !important;
+  border: 1px solid rgba(255, 255, 255, 0.12) !important;
+  border-radius: 18px !important;
+  margin-top: 10px !important;
+  box-shadow: 0 24px 80px rgba(0, 0, 0, 0.45) !important;
+  padding: 8px 0 !important;
+}
+
+.react-tel-input .country-list .country {
+  padding: 12px 14px !important;
+  color: #e5e7eb !important;
+}
+
+.react-tel-input .country-list .country:hover,
+.react-tel-input .country-list .country.highlight {
+  background: rgba(27, 188, 239, 0.15) !important;
+  color: #ffffff !important;
+}
+
+.react-tel-input .country-list .country-name {
+  color: #ffffff !important;
+}
+
+.react-tel-input .country-list .dial-code {
+  color: #1bbcef !important;
+}
+
+.react-tel-input .search-box {
+  background: #10131f !important;
+  color: #ffffff !important;
+  border: 1px solid rgba(27, 188, 239, 0.25) !important;
+  border-radius: 10px !important;
+  padding: 10px 12px !important;
+  margin: 8px 10px 10px !important;
+}
+
+.react-tel-input .search-box::placeholder {
+  color: #9ca3af !important;
+}
+
+/* Scrollbar */
+.react-tel-input .country-list::-webkit-scrollbar {
+  width: 8px;
+}
+
+.react-tel-input .country-list::-webkit-scrollbar-track {
+  background: #061120;
+}
+
+.react-tel-input .country-list::-webkit-scrollbar-thumb {
+  background: #1bbcef;
+  border-radius: 20px;
+}

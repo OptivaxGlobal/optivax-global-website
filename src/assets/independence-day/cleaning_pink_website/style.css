@@ -1,0 +1,21 @@
+*{box-sizing:border-box}
+body{margin:0;font-family:Arial;background:#fffafd;color:#17203b}
+header{height:90px;background:white;display:flex;align-items:center;justify-content:space-between;padding:0 70px}
+.logo{font-size:32px;font-weight:bold;color:#ec2b79}
+nav a{margin:0 20px;font-size:18px}
+button{background:#ec2b79;color:white;border:0;border-radius:20px;padding:14px 28px;font-size:16px}
+
+.hero{margin:60px auto;width:90%;height:430px;border-radius:35px;background:#fff0f7;display:flex;justify-content:space-between;align-items:center;padding:50px}
+.hero h1{font-size:55px;margin:0}
+.hero span{color:#ec2b79}
+.hero p{font-size:22px}
+.image-box{width:420px;height:280px;border-radius:30px;background:#ffd5e8;display:flex;align-items:center;justify-content:center;color:#ec2b79;font-size:28px}
+
+h2{text-align:center;font-size:40px}
+.services{display:flex;gap:25px;justify-content:center}
+.services div{background:white;border:1px solid #eee;border-radius:20px;width:180px;height:140px;display:flex;align-items:center;justify-content:center;text-align:center;font-size:22px}
+
+.about{margin:80px;padding:50px;background:white;border-radius:35px}
+.circle{margin-left:auto;width:220px;height:220px;border-radius:50%;background:#ffd5e8;display:flex;align-items:center;justify-content:center;color:#ec2b79}
+
+footer{padding:80px;background:#fff0f7;text-align:center}
