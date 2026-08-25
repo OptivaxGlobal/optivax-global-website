@@ -48,25 +48,19 @@ import socialMediaGraphicsImg from "@/assets/blog-images/social-media-graphics-d
 import businessAppFeaturesImg from "@/assets/blog-images/essential-business-app-features.webp";
 import digitalMarketingMistakesImg from "@/assets/blog-images/digital-marketing-mistakes-avoid.webp";
 import startupBrandingServicesImg from "@/assets/blog-images/best-branding-services-startups.webp";
-<<<<<<< HEAD
 import businessWebsiteDesignImg from "@/assets/blog-images/professional-business-website-design-services.webp";
 
 export const blogPosts = [
   {
-  title: "Professional Business Website Design Services for Modern Brands",
-  excerpt:
-    "Explore how professional website design combines strategy, UI/UX, responsive layouts, performance, branding, SEO, and custom development.",
-  category: "Website Design",
-  date: "August 2026",
-  image: businessWebsiteDesignImg,
-  url: "/professional-business-website-design-services",
-},
+    title: "Professional Business Website Design Services for Modern Brands",
+    excerpt:
+      "Explore how professional website design combines strategy, UI/UX, responsive layouts, performance, branding, SEO, and custom development.",
+    category: "Website Design",
+    date: "August 2026",
+    image: businessWebsiteDesignImg,
+    url: "/professional-business-website-design-services",
+  },
   {
-=======
-
-export const blogPosts = [
-  {
->>>>>>> 1b088f866b1dd5ae1736967832b5f824858cac95
     title: "Why Every Startup Needs Brand Identity Design",
     excerpt:
       "Learn how professional brand identity design helps startups build recognition, maintain consistency, communicate positioning, and appear more established.",
@@ -74,6 +68,15 @@ export const blogPosts = [
     date: "August 2026",
     image: startupBrandIdentityImg,
     url: "/brand-identity-design-for-business-startup",
+  },
+  {
+    title: "Best Branding Services for Startups That Want to Stand Out",
+    excerpt:
+      "Explore the best branding services for startups, including strategy, naming, logo design, visual identity, messaging, guidelines, and digital branding.",
+    category: "Brand Design",
+    date: "August 2026",
+    image: startupBrandingServicesImg,
+    url: "/startup-for-best-branding-services",
   },
   {
     title: "Brand Identity Design Guide for Small Businesses",
@@ -101,6 +104,69 @@ export const blogPosts = [
     date: "August 2026",
     image: graphicDesignModernBrandsImg,
     url: "/graphic-design-service-for-modern-brands",
+  },
+  {
+    title: "Marketing Material Design Ideas for Better Brand Visibility",
+    excerpt:
+      "Explore practical marketing material design ideas that improve brand visibility, maintain visual consistency, and help customers recognize your business.",
+    category: "Graphic Design",
+    date: "August 2026",
+    image: marketingDesignIdeasImg,
+    url: "/marketing-design-ideas-brands-visibility",
+  },
+  {
+    title: "Social Media Graphic Design for Businesses",
+    excerpt:
+      "Learn practical social media graphic design tips for building reusable templates, maintaining brand consistency, improving accessibility, and creating faster.",
+    category: "Graphic Design",
+    date: "August 2026",
+    image: socialMediaGraphicsImg,
+    url: "/social-media-graphics-design-tips",
+  },
+  {
+    title: "How to Rank Higher on Google Without Paid Ads",
+    excerpt:
+      "Learn how to rank higher on Google without paid ads using keyword research, useful content, on-page optimization, backlinks, technical improvements, and better UX.",
+    category: "Search Visibility Insights",
+    date: "August 2026",
+    image: rankGoogleWithoutAdsImg,
+    url: "/rank-on-google-without-paid-ads",
+  },
+  {
+    title: "How Shopify Makes Online Selling Easier for Small Business Owners",
+    excerpt:
+      "Discover how Shopify makes online selling easier for small businesses through simple store setup, product management, payments, marketing, and inventory tools.",
+    category: "Shopify Development",
+    date: "August 2026",
+    image: shopifySmallBusinessImg,
+    url: "/shopify-solution-for-small-business",
+  },
+  {
+    title: "How Much Does a Small Business Website Cost?",
+    excerpt:
+      "Learn what a small business website costs and how design, page count, custom features, eCommerce, search visibility, content, and maintenance affect pricing.",
+    category: "Web Development",
+    date: "August 2026",
+    image: smallBusinessWebsiteCostImg,
+    url: "/small-business-websites-cost",
+  },
+  {
+    title: "Essential Features Every Business App Needs",
+    excerpt:
+      "Discover the essential features every business app needs, including intuitive navigation, security, search, payments, accessibility, support, and analytics.",
+    category: "App Design Insights",
+    date: "August 2026",
+    image: businessAppFeaturesImg,
+    url: "/essential-feature-for-business-needs",
+  },
+  {
+    title: "Common Digital Growth Mistakes Businesses Should Avoid",
+    excerpt:
+      "Discover common digital growth mistakes businesses should avoid, from unclear goals and weak landing pages to keyword stuffing and vanity metrics.",
+    category: "Digital Strategy Insights",
+    date: "August 2026",
+    image: digitalMarketingMistakesImg,
+    url: "/digital-marketing-mistakes-avoid",
   },
   {
     title: "Creative Logo and Graphic Design Services for Modern Brands",
@@ -166,6 +232,24 @@ export const blogPosts = [
     url: "/compare-logo-design-for-popular-business-software",
   },
   {
+    title: "Creative Packaging Design Services for Better Product Appeal",
+    excerpt:
+      "Discover how creative packaging design improves product appeal, branding, customer trust, shelf visibility, ecommerce presentation, and the unboxing experience.",
+    category: "Packaging Design",
+    date: "July 2026",
+    image: creativePackagingBlogImg,
+    url: "/creative-packaging-design-better-product-appeal",
+  },
+  {
+    title: "250th Anniversary Celebrate America",
+    excerpt:
+      "Explore the meaning of America's 250th anniversary, its history, unity, freedom, responsibility, and the future of the United States.",
+    category: "USA 250th Anniversary",
+    date: "July 2026",
+    image: america250BlogImg,
+    url: "/celebrating-americas-250th-anniversary",
+  },
+  {
     title: "Why Branding Is Critical for Today's Businesses",
     excerpt:
       "Strong branding helps businesses build trust, improve recognition, create emotional connection, and stand out in competitive markets.",
@@ -193,6 +277,132 @@ export const blogPosts = [
     url: "/modern-bussiness-well-design-mobile-app",
   },
   {
+    title: "Why Brochure Design Is More Important for Professional Businesses Than Ever",
+    excerpt:
+      "Learn why professional brochure design helps businesses build trust, communicate services clearly, improve branding, and create a stronger first impression.",
+    category: "Brochure Design",
+    date: "June 2026",
+    image: brochureBlogImg,
+    url: "/important-of-professional-brochure-design",
+  },
+  {
+    title: "How Paid Search Advertising Helps Businesses Generate Faster Results",
+    excerpt:
+      "Learn how paid search advertising helps businesses gain faster visibility, encourage more customer inquiries, improve conversions, and achieve measurable results.",
+    category: "Paid Search Insights",
+    date: "June 2026",
+    image: ppcBlogImg,
+    url: "/ppc-advertising-help-to-generate-results",
+  },
+  {
+    title: "Creative Flyer Design Services That Get Your Business Noticed",
+    excerpt:
+      "Discover how professional flyer design helps businesses attract attention, improve engagement, and strengthen branding.",
+    category: "Flyer Design",
+    date: "June 2026",
+    image: flyerDesignBlogImg,
+    url: "/Creative-flyer-design-get-your-business-noticed",
+  },
+  {
+    title: "The Strategic Importance of Content Management in Modern Marketing",
+    excerpt:
+      "Learn how content management helps businesses improve customer engagement, maintain consistency, strengthen branding, and support long-term marketing success.",
+    category: "Content Management",
+    date: "June 2026",
+    image: contentManagementBlogImg,
+    url: "/strategic-important-of-content-management-marketing",
+  },
+  {
+    title: "How Great UI/UX Design Turns Visitors into Loyal Customers",
+    excerpt:
+      "Discover how great UI/UX design improves customer experience, builds trust, increases retention, and helps businesses convert visitors into loyal customers.",
+    category: "UI/UX Design",
+    date: "June 2026",
+    image: uiUxBlogImg,
+    url: "/ui-ux-design-turns-into-loyal-customers",
+  },
+  {
+    title: "How Email Communication Builds Stronger Customer Relationships",
+    excerpt:
+      "Learn how thoughtful email communication helps businesses build trust, improve customer engagement, strengthen loyalty, and create long-term customer relationships.",
+    category: "Email Communication Insights",
+    date: "June 2026",
+    image: emailMarketingBlogImg,
+    url: "/stronge-email-marketing-to-build-relationship",
+  },
+  {
+    title: "Why Social Media Matters in Today's Digital Landscape",
+    excerpt:
+      "Discover why social media presence matters for businesses, how it builds visibility, engages audiences, and strengthens brand credibility.",
+    category: "Social Media Insights",
+    date: "June 2026",
+    image: socialMediaMarketingBlogImg,
+    url: "/power-of-social-media-in-digital-landscape",
+  },
+  {
+    title: "Why Strong Brand Management Is the Foundation of Business Growth",
+    excerpt:
+      "Learn how strong brand management helps businesses build trust, improve recognition, strengthen customer loyalty, and support long-term business growth.",
+    category: "Brand Management",
+    date: "June 2026",
+    image: brandManagementBlogImg,
+    url: "/Strong-brand-management-business-growth",
+  },
+  {
+    title: "How Businesses Can Build a Strong Digital Presence with Modern Web Development",
+    excerpt:
+      "Learn how modern web development helps businesses build trust, improve their online presence, attract customers, and achieve long-term growth.",
+    category: "Web Development",
+    date: "June 2026",
+    image: webDevelopmentMarketingBlogImg,
+    url: "/maximize-growth-modern-web-development",
+  },
+  {
+    title: "Why Mobile Apps Development Have Become a Business Growth Necessity",
+    excerpt:
+      "Discover how mobile app development helps businesses improve accessibility, customer experience, communication, conversions, and long-term growth.",
+    category: "Mobile App Development",
+    date: "June 2026",
+    image: mobileAppDevelopmentBlogImg,
+    url: "/mobile-app-development-business-growth-necessity",
+  },
+  {
+    title: "The Growing Importance of Animation for Modern Brands",
+    excerpt:
+      "Learn how animation helps businesses capture attention, explain complex ideas, improve brand storytelling, and increase engagement.",
+    category: "Animation",
+    date: "June 2026",
+    image: animationBlogImg,
+    url: "/important-of-animation-in-digital-marketing",
+  },
+  {
+    title: "Why a Consistent Brand Presence Produces Long-Term Results",
+    excerpt:
+      "Learn how consistent branding and a strong digital presence help businesses build trust, strengthen brand recognition, and create long-term results.",
+    category: "Brand Strategy Insights",
+    date: "June 2026",
+    image: digitalMarketingBlogImg,
+    url: "/digital-marketing-produce-long-term-result",
+  },
+  {
+    title: "From Slides to Strategy: The Impact of Corporate Presentation Design",
+    excerpt:
+      "Learn how corporate presentation design helps businesses communicate clearly, build trust, explain data, support decisions, and create stronger business impact.",
+    category: "Corporate Presentation",
+    date: "June 2026",
+    image: corporatePresentationBlogImg,
+    url: "/impact-of-corporate-design",
+  },
+  {
+    title: "How Search Visibility Strategy Turns Searches Into Sales",
+    excerpt:
+      "Discover how a search visibility strategy helps businesses reach high-intent customers, increase visibility, improve conversions, and turn searches into sales.",
+    category: "Search Visibility Insights",
+    date: "June 2026",
+    image: semBlogImg,
+    url: "/sem-turns-searches-into-sales",
+  },
+  {
     title: "How Custom Stationery Design Builds Business Credibility",
     excerpt:
       "Professional stationery design helps businesses strengthen branding and create a more polished, credible image.",
@@ -218,6 +428,24 @@ export const blogPosts = [
     date: "April 2026",
     image: logoBlogImg,
     url: "/importance-of-professional-logo-design-businesses",
+  },
+  {
+    title: "Why Graphic Design Is More Important for Professional Businesses Than Ever",
+    excerpt:
+      "Learn why professional graphic design helps businesses build trust, improve brand recognition, create strong visuals, and communicate more effectively.",
+    category: "Graphic Design",
+    date: "April 2026",
+    image: graphicDesignBlogImg,
+    url: "/important-of-graphic-design-bussiness",
+  },
+  {
+    title: "Why Search Visibility Matters for Small Businesses",
+    excerpt:
+      "Learn why search visibility matters for service businesses, how it builds trust, and why website structure plays a role in being found online.",
+    category: "Search Visibility Insights",
+    date: "April 2026",
+    image: seoBlogImg,
+    url: "/importance-of-small-businesses-seo-services",
   },
 ];
 

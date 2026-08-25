@@ -1,22 +1,4 @@
 User-agent: *
 Allow: /
 
-<<<<<<< HEAD
-User-agent: GPTBot
-Allow: /
-
-User-agent: ChatGPT-User
-Allow: /
-
-User-agent: Google-Extended
-Allow: /
-
-User-agent: PerplexityBot
-Allow: /
-
-User-agent: ClaudeBot
-Allow: /
-
-=======
->>>>>>> 1b088f866b1dd5ae1736967832b5f824858cac95
 Sitemap: https://optivaxglobal.com/sitemap.xml

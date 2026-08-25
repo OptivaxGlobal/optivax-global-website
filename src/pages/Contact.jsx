@@ -187,10 +187,10 @@ const Contact = () => {
                 <div className="flex items-center gap-3 text-gray-300">
                   <Phone size={18} className="text-accent-purple" />
                   <a
-                    href="tel:+13074301006"
+                    href="tel:+19363649578"
                     className="hover:text-accent-purple transition-colors"
                   >
-                    +1 307-430-1006
+                    +1 936 364 9578
                   </a>
                 </div>
 

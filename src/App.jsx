@@ -30,10 +30,8 @@ import DigitalMarketing from "./pages/DigitalMarketing";
 import EmailMarketing from "./pages/EmailMarketing";
 import PayPerClick from "./pages/PayPerClick";
 import SearchEngineMarketing from "./pages/SearchEngineMarketing";
-<<<<<<< HEAD
-=======
+
 import SearchEngineOptimization from "./pages/SearchEngineOptimization";
->>>>>>> 1b088f866b1dd5ae1736967832b5f824858cac95
 import SocialMediaMarketing from "./pages/SocialMediaMarketing";
 import EbookCover from "./pages/EbookCover";
 import EbookPublishing from "./pages/EbookPublishing";
@@ -88,10 +86,9 @@ import SocialMediaGraphicDesignTipsBlog from "./pages/blogs/SocialMediaGraphicDe
 import EssentialBusinessAppFeaturesBlog from "./pages/blogs/EssentialBusinessAppFeaturesBlog";
 import DigitalMarketingMistakesBlog from "./pages/blogs/DigitalMarketingMistakesBlog";
 import BestBrandingServicesStartupsBlog from "./pages/blogs/BestBrandingServicesStartupsBlog";
-<<<<<<< HEAD
+
 import ProfessionalBusinessWebsiteDesignBlog from "./pages/blogs/ProfessionalBusinessWebsiteDesignBlog";
-=======
->>>>>>> 1b088f866b1dd5ae1736967832b5f824858cac95
+
 
 import AnalyticsTracker from "./components/AnalyticsTracker";
 import PaymentForm from "@/pages/PaymentForm";
@@ -371,13 +368,10 @@ function App() {
   path="/startup-for-best-branding-services"
   element={<BestBrandingServicesStartupsBlog />}
 />
-<<<<<<< HEAD
 <Route
   path="/professional-business-website-design-services"
   element={<ProfessionalBusinessWebsiteDesignBlog />}
 />
-=======
->>>>>>> 1b088f866b1dd5ae1736967832b5f824858cac95
 
 
 <Route path="/payment-form" element={<PaymentForm />} />
@@ -443,13 +437,10 @@ function App() {
               element={<SearchEngineMarketing />}
             />
             <Route
-<<<<<<< HEAD
-=======
               path="search-engine-optimization"
               element={<SearchEngineOptimization />}
             />
             <Route
->>>>>>> 1b088f866b1dd5ae1736967832b5f824858cac95
               path="social-media-marketing"
               element={<SocialMediaMarketing />}
             />

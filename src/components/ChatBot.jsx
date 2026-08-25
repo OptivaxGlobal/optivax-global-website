@@ -95,7 +95,7 @@ const ChatBot = () => {
     }
 
     if (action.type === "phone") {
-      window.location.href = "tel:+13074301006";
+      window.location.href = "tel:+19363649578";
       return;
     }
 
