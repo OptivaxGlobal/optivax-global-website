@@ -159,7 +159,15 @@ const Terms = () => {
             </section>
 
             <section>
-              <h2 className="text-2xl font-bold mb-4">9. Contact Us</h2>
+              <h2 className="text-2xl font-bold mb-3">9. Refund Policy</h2>
+              <p className="text-gray-400 leading-relaxed">
+                All refunds are subject to the company’s refund policy. As per company policy, approved refunds will be processed and settled within 60–90 days from the date of refund approval.
+              </p>
+            </section>
+
+
+            <section>
+              <h2 className="text-2xl font-bold mb-4">10. Contact Us</h2>
 
               <div className="grid md:grid-cols-3 gap-4">
                 <a href={`mailto:${SITE.email}`} className="bg-[#0C0D0D]/25 border border-white/10 rounded-2xl p-5 hover:border-accent-purple/40 transition">

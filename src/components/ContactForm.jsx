@@ -641,12 +641,7 @@ const ContactForm = ({ onSubmitSuccess, redirectTo = "/thank-you" }) => {
               I agree to receive SMS messages from Optivax Global, including
               service updates, appointment reminders, and marketing/promotional
               offers. Message and data rates may apply. Reply STOP to
-              unsubscribe.
-
-              I agree to receive service-related and inquiry follow-up text
-              messages from Optivax Global at the phone number provided.
-              Message frequency may vary. Message &amp; data rates may
-              apply. Reply STOP to unsubscribe or HELP for help.{" "}
+              unsubscribe.{" "}
               <Link
                 to="/privacy-policy"
                 target="_blank"
