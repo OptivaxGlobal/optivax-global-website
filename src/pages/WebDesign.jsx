@@ -5,26 +5,92 @@ import { useNavigate } from "react-router-dom";
 import AnimatedHeroBackground from "@/components/AnimatedHeroBackground";
 import AnimatedCtaBackground from "@/components/AnimatedCtaBackground";
 
+import caulk from "@/assets/website-design-showcase/Caulk-a-doodle Website.png";
+import detective from "@/assets/website-design-showcase/Local Detectives Website Design V2.png";
+import detectiveDark from "@/assets/website-design-showcase/localdetectives.png";
+import stickyMeds from "@/assets/website-design-showcase/Stickymeds Layout 6.png";
+import dental from "@/assets/website-design-showcase/DOTQ Website Layout RV 01.png";
+import tmmc from "@/assets/website-design-showcase/TMMC25 Website.png";
+import juccini from "@/assets/website-design-showcase/Juccini Scrub Web UI 2 copy.jpg";
+import marvel from "@/assets/website-design-showcase/Web Design Marvel.png";
+import bx5 from "@/assets/website-design-showcase/B5-X Boron-Infused Coating website layout 2.png";
+import version from "@/assets/website-design-showcase/Version 5 Gray Sample 1.png";
+
+
 const WebDesign = () => {
   const navigate = useNavigate();
 
   const features = [
-    { icon: Globe, title: "Professional Business Website", text: "Modern website design built to create trust and present your brand professionally." },
-    { icon: Smartphone, title: "Mobile Responsive Design", text: "Your website will look clean and work smoothly on mobile, tablet, and desktop." },
-    { icon: Search, title: "Search-Ready Structure", text: "Clean heading structure, optimized content flow, and search-friendly page layout." },
-    { icon: Zap, title: "Fast Loading Experience", text: "Optimized layouts focused on speed, smooth browsing, and better user experience." }
+    { icon: Globe, title: "Small Business & Brand Websites", text: "Premium WordPress/Elementor website design built for small businesses, startups, and brand websites that need to look professional from day one." },
+    { icon: Smartphone, title: "Landing Pages That Convert", text: "High-converting landing pages and business websites designed to turn visitors into inquiries, calls, and paying customers." },
+    { icon: Search, title: "Search-Ready Structure", text: "Clean heading structure, optimized content flow, and search-friendly page layout so US customers can find your business." },
+    { icon: Zap, title: "Fast Loading Experience", text: "Optimized layouts focused on speed, smooth browsing, and a better mobile experience for every visitor." }
   ];
 
   const deliverables = [
     "Custom website design",
-    "Responsive layout",
+    "Small business website design",
     "Landing page design",
+    "Responsive layout",
+    "WordPress/Elementor setup",
     "Service page structure",
     "CTA sections",
     "Contact form setup",
     "Search-friendly content structure",
     "Brand and style direction"
   ];
+  const portfolioProjects = [
+  {
+    title: "Detective.com",
+    category: "Private Investigation Website",
+    image: detective,
+  },
+  {
+    title: "Sticky Meds",
+    category: "E-Commerce Website",
+    image: stickyMeds,
+  },
+  {
+    title: "Bright Tomorrow Counseling",
+    category: "Healthcare Website",
+    image: version,
+  },
+  {
+    title: "Missing Middle Conference",
+    category: "Event Website",
+    image: tmmc,
+  },
+  {
+    title: "Juccini Scrubs",
+    category: "Healthcare E-Commerce",
+    image: juccini,
+  },
+  {
+    title: "Web Design Marvel",
+    category: "Digital Agency Website",
+    image: marvel,
+  },
+  {
+    title: "B5-X Coating",
+    category: "Automotive Product Website",
+    image: bx5,
+  },
+  {
+    title: "Caulk-A-Doodle",
+    category: "Construction Website",
+    image: caulk,
+  },
+  {
+    title: "Dental Clinic",
+    category: "Dental Website",
+    image: dental,
+  },
+  {
+  title: "Local Detectives",
+  category: "Investigation Website",
+  image: detectiveDark,
+},
+];
 
   const faqs = [
     { question: "Do you design websites for small businesses?", answer: "Yes. We create professional websites for startups, small businesses, agencies, authors, and service-based brands." },
@@ -57,18 +123,18 @@ const WebDesign = () => {
             <div className="grid lg:grid-cols-2 gap-14 items-center">
               <div>
                 <span className="inline-block text-accent-purple font-semibold uppercase tracking-[0.25em] mb-5">
-                  Website Design Services
+                  Website Design For Small Business & Brands
                 </span>
 
                 <h1 className="text-4xl md:text-6xl lg:text-7xl font-extrabold leading-tight mb-6">
-                  Professional Websites
+                  Premium Websites
                   <span className="block text-accent-purple">
                     Built to Convert
                   </span>
                 </h1>
 
                 <p className="text-lg md:text-xl text-gray-400 leading-relaxed max-w-2xl mb-8">
-                  We design modern websites that make it easy for visitors to understand your services and take the next step. The result is a polished, mobile-friendly site that looks professional and helps your business feel trustworthy.
+                  Professional WordPress and landing page design for small businesses, startups, and brand websites across the USA. We design modern, mobile-friendly websites that make it easy for visitors to understand your services and take the next step.
                 </p>
 
                 <div className="flex flex-col sm:flex-row gap-4">
@@ -80,7 +146,7 @@ const WebDesign = () => {
 }
                     className="inline-flex items-center justify-center gap-2 bg-gradient-to-r from-[#1BBCEF] to-[#004495] hover:from-[#004495] hover:to-[#1BBCEF] text-white px-7 py-4 rounded-full font-bold transition-all duration-300 group shadow-lg shadow-[#1BBCEF]/20"
                                     >
-                                      Get Website Design
+                                      Get a Free Website Design Quote
                                       <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                                     </button>
                     
@@ -147,6 +213,210 @@ const WebDesign = () => {
             </div>
           </div>
         </section>
+
+
+       {/* PORTFOLIO */}
+
+<section className="py-28 border-t border-white/10 relative overflow-hidden">
+
+<div className="absolute -top-40 left-0 w-[500px] h-[500px] bg-[#1BBCEF]/10 blur-[160px] rounded-full"></div>
+
+<div className="absolute bottom-0 right-0 w-[500px] h-[500px] bg-[#004495]/10 blur-[160px] rounded-full"></div>
+
+
+<div className="max-w-7xl mx-auto px-6 relative z-10">
+
+
+<div className="text-center max-w-3xl mx-auto mb-16">
+
+<span className="text-accent-purple uppercase tracking-[0.35em] text-sm font-semibold">
+Our Portfolio
+</span>
+
+
+<h2 className="text-4xl md:text-6xl font-extrabold mt-5">
+Website Designs We Created
+</h2>
+
+
+<p className="text-gray-400 mt-5 text-lg">
+Explore our premium website design projects created for businesses,
+brands, and organizations.
+</p>
+
+
+</div>
+
+
+
+<div className="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
+
+
+{portfolioProjects.map((project)=>(
+
+
+<div
+key={project.title}
+className="
+group
+rounded-3xl
+overflow-hidden
+bg-[#151621]
+border border-white/10
+hover:border-[#1BBCEF]/50
+transition-all
+duration-500
+hover:-translate-y-3
+shadow-xl
+"
+>
+
+
+<a
+href={project.image}
+target="_blank"
+rel="noopener noreferrer"
+className="block"
+>
+
+
+<div className="
+relative
+h-[520px]
+overflow-hidden
+"
+>
+
+
+<img
+src={project.image}
+alt={project.title}
+className="
+w-full
+h-full
+object-cover
+object-top
+transition-transform
+duration-700
+group-hover:scale-110
+"
+/>
+
+
+<div className="
+absolute
+inset-x-0
+bottom-0
+h-24
+bg-gradient-to-t
+from-[#151621]
+to-transparent
+pointer-events-none
+"></div>
+
+
+<div className="
+absolute
+inset-0
+bg-black/70
+opacity-0
+group-hover:opacity-100
+transition-all
+duration-500
+flex
+items-center
+justify-center
+">
+
+
+<div
+className="
+bg-gradient-to-r
+from-[#1BBCEF]
+to-[#004495]
+px-8
+py-4
+rounded-full
+font-bold
+shadow-xl
+"
+>
+
+View Full Website
+
+</div>
+
+
+</div>
+
+
+</div>
+
+
+</a>
+
+
+
+
+<div className="p-7">
+
+
+<p className="
+text-[#1BBCEF]
+text-xs
+uppercase
+tracking-widest
+font-semibold
+">
+
+{project.category}
+
+</p>
+
+
+
+<h3 className="
+text-2xl
+font-bold
+mt-3
+">
+
+{project.title}
+
+</h3>
+
+
+<p className="
+text-gray-400
+text-sm
+mt-4
+leading-relaxed
+">
+
+Complete responsive website design with modern UI,
+professional layout and user-focused experience.
+
+</p>
+
+
+
+</div>
+
+
+</div>
+
+
+))}
+
+
+</div>
+
+
+</div>
+
+
+</section>
+
 
         {/* SEARCH VISIBILITY CONTENT */}
         <section className="py-20 border-t border-white/10">

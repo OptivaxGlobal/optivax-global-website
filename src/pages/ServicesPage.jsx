@@ -26,14 +26,18 @@ const serviceCategories = [
       {
         icon: Globe,
         title: "Website Design",
-        text: "Professional, responsive website design tailored to your brand, content, and desired user experience.",
+        text: "Premium WordPress and landing page design for small businesses, startups, and brand websites that need to look professional and convert.",
         href: "/web-design",
+        flagship: true,
+        flagshipNote: "Small Business & Brand Websites",
       },
       {
         icon: Globe,
         title: "Web Development",
-        text: "Reliable website development using clean functionality and modern technical implementation for dependable digital experiences.",
+        text: "Custom-coded web development React applications, dashboards, e-commerce platforms, and SaaS products built to scale with your business.",
         href: "/web-development",
+        flagship: true,
+        flagshipNote: "React, Dashboards & E-Commerce",
       },
       {
         icon: MousePointer2,
@@ -151,17 +155,17 @@ const serviceCategories = [
         text: "Professional digital marketing support built around your business goals, brand voice, and audience.",
         href: "/digital-marketing",
       },
-      {
-      /*{
+     /*{ {
+      
 
         icon: Globe,
         title: "Search Engine Optimization",
         text: "Website structure and content practices designed to help search engines understand and index your site clearly.",
         href: "/search-engine-optimization",
 
-      },*/
-
       },
+
+      },*/
 
       {
         icon: Globe,
@@ -316,10 +320,21 @@ const ServicesPage = () => {
                     return (
                       <div
                         key={service.title}
-                        className="group relative flex flex-col h-full bg-white/[0.04] p-8 rounded-3xl border border-white/10 overflow-hidden hover:border-accent-purple/40 hover:bg-white/[0.07] hover:-translate-y-1 hover:shadow-[0_20px_60px_-20px_rgba(22,153,241,0.35)] transition-all duration-300"
+                        className={`group relative flex flex-col h-full p-8 rounded-3xl border overflow-hidden hover:-translate-y-1 transition-all duration-300 ${
+                          service.flagship
+                            ? "bg-gradient-to-b from-accent-purple/10 to-white/[0.04] border-accent-purple/40 hover:border-accent-purple/60 hover:shadow-[0_20px_60px_-20px_rgba(22,153,241,0.5)]"
+                            : "bg-white/[0.04] border-white/10 hover:border-accent-purple/40 hover:bg-white/[0.07] hover:shadow-[0_20px_60px_-20px_rgba(22,153,241,0.35)]"
+                        }`}
                       >
                         {/* top accent line, appears on hover */}
                         <span className="absolute top-0 left-8 right-8 h-px bg-gradient-to-r from-transparent via-accent-purple/0 group-hover:via-accent-purple/70 to-transparent transition-all duration-500" />
+
+                        {service.flagship && (
+                          <span className="absolute top-5 right-5 inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-accent-purple/20 border border-accent-purple/40 text-accent-purple text-[10px] font-bold uppercase tracking-[0.15em]">
+                            <Sparkles className="w-3 h-3" />
+                            Flagship
+                          </span>
+                        )}
 
                         <div className="w-16 h-16 rounded-2xl bg-accent-purple/15 border border-accent-purple/30 flex items-center justify-center text-accent-purple mb-6 group-hover:bg-accent-purple/25 group-hover:scale-105 transition-all duration-300">
                           <Icon size={28} />
@@ -330,6 +345,12 @@ const ServicesPage = () => {
                         <p className="text-gray-400 text-[15px] leading-relaxed mb-6 flex-1">
                           {service.text}
                         </p>
+
+                        {service.flagship && (
+                          <p className="text-accent-purple text-xs font-semibold uppercase tracking-[0.1em] mb-4">
+                            {service.flagshipNote}
+                          </p>
+                        )}
 
                         <Link
                           to={service.href}

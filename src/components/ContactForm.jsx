@@ -30,6 +30,7 @@ const serviceOptions = [
   "Design Packages",
 
   "Web Design",
+  "Web Development",
   "Brand Design",
   "UI UX Design",
   "Ebook Cover Design",
@@ -55,83 +56,100 @@ const normalizeServiceName = (serviceName) => {
     .trim();
 
   const serviceMap = {
-    "Independence Day Campaign Design": "Independence Day Campaign Design",
-    "Custom Patriotic Design": "Custom Patriotic Design",
-    "Patriotic Creative Design": "Patriotic Creative Design",
-    "USA Campaign Design": "Independence Day Campaign Design",
-    "Independence Day Design": "Independence Day Campaign Design",
-    "Independence Day Creative Design": "Independence Day Campaign Design",
+  "Independence Day Campaign Design": "Independence Day Campaign Design",
+  "Custom Patriotic Design": "Custom Patriotic Design",
+  "Patriotic Creative Design": "Patriotic Creative Design",
+  "USA Campaign Design": "Independence Day Campaign Design",
+  "Independence Day Design": "Independence Day Campaign Design",
+  "Independence Day Creative Design": "Independence Day Campaign Design",
 
-    "Flyer Design": "Flyer Design",
-    "Flyers & Banners": "Flyers & Banners",
-    "Social Media": "Social Media Design",
-    "Social Media Design": "Social Media Design",
-    "Social Media Creatives": "Social Media Design",
-    "Logo Design": "Logo Design",
-    "Cover Design": "Cover Design",
-    "Book Publishing": "Book Publishing",
-    "Promo Design": "Promo Design",
-    "Ad Campaign Visuals": "Ad Campaign Visuals",
+  "Flyer Design": "Flyer Design",
+  "Flyers & Banners": "Flyers & Banners",
 
-    "Basic Logo Package": "Basic Logo Package",
-    "Start Up Logo Package": "Start Up Logo Package",
-    "Startup Logo Package": "Start Up Logo Package",
-    "Professional Logo Package": "Professional Logo Package",
-    "Website Design": "Website Design",
-    "Start Up Website Package": "Start Up Website Package",
-    "Startup Website Package": "Start Up Website Package",
-    "Professional Website Package": "Professional Website Package",
-    "Custom Website Package": "Custom Website Package",
-    "Complete Branding Solution": "Complete Branding Solution",
-    "Complete Branding Package": "Complete Branding Solution",
-    "Custom Package": "Custom Package",
-    "Digital Growth Packages": "Design Packages",
-    "Design Packages": "Design Packages",
+  "Social Media": "Social Media Design",
+  "Social Media Design": "Social Media Design",
+  "Social Media Creatives": "Social Media Design",
 
-    "Brand Design": "Brand Design",
-    "UI UX Design": "UI UX Design",
-    "UI/UX Design": "UI UX Design",
-    "Web Design": "Web Design",
-    "Ebook Cover": "Ebook Cover Design",
-    "Ebook Cover Design": "Ebook Cover Design",
-    "eBook Publishing": "eBook Publishing",
-    "Ebook Publishing": "eBook Publishing",
+  "Logo Design": "Logo Design",
+  "Cover Design": "Cover Design",
 
-    // Legacy/retired service query params mapped to a neutral option so an
-    // old link never displays a retired or deprioritized service as current.
-    "Brochure Design": "Other Design Project",
-    "Graphics Design": "Other Design Project",
-    "Mobile App Design": "Other Design Project",
-    "Mobile App Development": "Other Design Project",
-    "Stationary Design": "Other Design Project",
-    "Stationery Design": "Other Design Project",
-    "Web Development": "Other Design Project",
-    Animation: "Other Design Project",
-    "Animation Services": "Other Design Project",
-    "Brand Management": "Other Design Project",
-    "Content Management": "Other Design Project",
-    "Content Management System": "Other Design Project",
-    "Digital Marketing": "Other Design Project",
-    "Digital Growth": "Other Design Project",
-    "Email Marketing": "Other Design Project",
-    "Email Engagement": "Other Design Project",
-    "Email Communication Strategy": "Other Design Project",
-    "Pay Per Click": "Other Design Project",
-    "Pay Per Click PPC": "Other Design Project",
-    "Pay Per Click (PPC)": "Other Design Project",
-    "Paid Search Support": "Other Design Project",
-    "Search Engine Marketing": "Other Design Project",
-    "Search Visibility Strategy": "Other Design Project",
-    "Search Engine Optimization": "Other Design Project",
-    "Search Engine Optimization SEO": "Other Design Project",
-    "Search Engine Optimization (SEO)": "Other Design Project",
-    "Search Visibility Optimization": "Other Design Project",
-    "Social Media Marketing": "Other Design Project",
-    "Social Media Growth": "Other Design Project",
-    "Social Media Management": "Other Design Project",
-    "Corporate Presentation": "Other Design Project",
-    "Corporate Presentation Design": "Other Design Project",
-  };
+  "Book Publishing": "Book Publishing",
+  "eBook Publishing": "eBook Publishing",
+  "Ebook Publishing": "eBook Publishing",
+
+  "Promo Design": "Promo Design",
+  "Ad Campaign Visuals": "Ad Campaign Visuals",
+
+  "Basic Logo Package": "Basic Logo Package",
+  "Start Up Logo Package": "Start Up Logo Package",
+  "Startup Logo Package": "Start Up Logo Package",
+  "Professional Logo Package": "Professional Logo Package",
+
+  "Website Design": "Website Design",
+  "Web Design": "Web Design",
+  "Start Up Website Package": "Start Up Website Package",
+  "Startup Website Package": "Start Up Website Package",
+  "Professional Website Package": "Professional Website Package",
+  "Custom Website Package": "Custom Website Package",
+
+  "Complete Branding Solution": "Complete Branding Solution",
+  "Complete Branding Package": "Complete Branding Solution",
+
+  "Custom Package": "Custom Package",
+  "Digital Growth Packages": "Design Packages",
+  "Design Packages": "Design Packages",
+
+  "Brand Design": "Brand Design",
+
+  "UI UX Design": "UI UX Design",
+  "UI/UX Design": "UI UX Design",
+
+  "Ebook Cover": "Ebook Cover Design",
+  "Ebook Cover Design": "Ebook Cover Design",
+
+  // Development Services
+  "Web Development": "Web Development",
+  "Frontend Development": "Web Development",
+  "Website Development": "Web Development",
+
+  // App Services
+  "Mobile App Design": "Mobile App Design",
+  "Mobile App Development": "Mobile App Development",
+
+  // Marketing Services
+  "Digital Marketing": "Digital Marketing",
+  "Social Media Marketing": "Social Media Marketing",
+  "Social Media Management": "Social Media Management",
+  "SEO": "Search Engine Optimization",
+  "Search Engine Optimization": "Search Engine Optimization",
+  "Search Engine Optimization (SEO)": "Search Engine Optimization",
+  "Paid Search Support": "Paid Search Support",
+  "Pay Per Click": "Pay Per Click",
+  "Pay Per Click (PPC)": "Pay Per Click",
+
+  // Other Services
+  "Animation": "Animation",
+  "Animation Services": "Animation",
+
+  "Brand Management": "Brand Management",
+
+  "Content Management": "Content Management",
+  "Content Management System": "Content Management System",
+
+  "Email Marketing": "Email Marketing",
+  "Email Engagement": "Email Engagement",
+  "Email Communication Strategy": "Email Communication Strategy",
+
+  "Corporate Presentation": "Corporate Presentation Design",
+  "Corporate Presentation Design": "Corporate Presentation Design",
+
+  "Brochure Design": "Brochure Design",
+  "Graphics Design": "Graphics Design",
+  "Stationary Design": "Stationary Design",
+  "Stationery Design": "Stationery Design",
+
+  "Other Design Project": "Other Design Project",
+};
 
   const matchedService = Object.entries(serviceMap).find(
     ([key]) => key.toLowerCase() === formattedServiceName.toLowerCase()
@@ -140,18 +158,22 @@ const normalizeServiceName = (serviceName) => {
   return matchedService ? matchedService[1] : formattedServiceName;
 };
 
-const ContactForm = ({ onSubmitSuccess, redirectTo = "/thank-you" }) => {
+const ContactForm = ({
+  onSubmitSuccess,
+  redirectTo = "/thank-you",
+  selectedService
+}) => {
   const navigate = useNavigate();
   const location = useLocation();
 
   const [form, setForm] = useState({
-    name: "",
-    email: "",
-    phone: "",
-    service: "",
-    message: "",
-    smsConsent: false,
-  });
+  name: "",
+  email: "",
+  phone: "",
+  service: selectedService || "",
+  message: "",
+  smsConsent:false,
+});
 
   const [loading, setLoading] = useState(false);
   const [servicesOpen, setServicesOpen] = useState(false);
@@ -184,23 +206,38 @@ const ContactForm = ({ onSubmitSuccess, redirectTo = "/thank-you" }) => {
   }, [location.search]);
 
   useEffect(() => {
-    const handleClickOutside = (event) => {
-      if (
-        dropdownRef.current &&
-        event.target instanceof Node &&
-        !dropdownRef.current.contains(event.target)
-      ) {
-        setServicesOpen(false);
-        setServiceSearch("");
-      }
-    };
-
-    if (servicesOpen) {
-      document.addEventListener("mousedown", handleClickOutside);
-
-      return () => document.removeEventListener("mousedown", handleClickOutside);
+  const handleClickOutside = (event) => {
+    if (
+      dropdownRef.current &&
+      event.target instanceof Node &&
+      !dropdownRef.current.contains(event.target)
+    ) {
+      setServicesOpen(false);
+      setServiceSearch("");
     }
-  }, [servicesOpen]);
+  };
+
+  if (servicesOpen) {
+    document.addEventListener("mousedown", handleClickOutside);
+
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }
+}, [servicesOpen]);
+
+
+
+useEffect(() => {
+  if (selectedService) {
+    const normalizedService = normalizeServiceName(selectedService);
+
+    setForm((prev) => ({
+      ...prev,
+      service: normalizedService,
+    }));
+  }
+}, [selectedService]);
 
   const handleChange = (e) => {
     setForm({ ...form, [e.target.name]: e.target.value });

@@ -27,48 +27,41 @@ const Contact = () => {
     if (!serviceName) return "";
 
     const serviceMap = {
-      "Brand Design": "Brand Design",
-      "Logo Design": "Logo Design",
-      "UI UX Design": "UI UX Design",
-      "UI/UX Design": "UI UX Design",
-      "Web Design": "Web Design",
-      "Ebook Cover": "Ebook Cover Design",
-      "Ebook Cover Design": "Ebook Cover Design",
-      "eBook Publishing": "eBook Publishing",
+  "Brand Design": "Brand Design",
+  "Logo Design": "Logo Design",
+  "UI UX Design": "UI UX Design",
+  "UI/UX Design": "UI UX Design",
 
-      // Legacy/retired service query params mapped to a neutral option so
-      // an old link never displays a retired or deprioritized service as current.
-      "Brochure Design": "Other Design Project",
-      "Graphics Design": "Other Design Project",
-      "Mobile App Design": "Other Design Project",
-      "Mobile App Development": "Other Design Project",
-      "Flyer Design": "Other Design Project",
-      "Stationary Design": "Other Design Project",
-      "Web Development": "Other Design Project",
-      Animation: "Other Design Project",
-      "Animation Services": "Other Design Project",
-      "Brand Management": "Other Design Project",
-      "Content Management": "Other Design Project",
-      "Content Management System": "Other Design Project",
-      "Digital Marketing": "Other Design Project",
-      "Digital Growth": "Other Design Project",
-      "Email Marketing": "Other Design Project",
-      "Email Engagement": "Other Design Project",
-      "Email Communication Strategy": "Other Design Project",
-      "Pay Per Click": "Other Design Project",
-      "Pay Per Click (PPC)": "Other Design Project",
-      "Paid Search Support": "Other Design Project",
-      "Search Engine Marketing": "Other Design Project",
-      "Search Visibility Strategy": "Other Design Project",
-      "Search Engine Optimization": "Other Design Project",
-      "Search Engine Optimization (SEO)": "Other Design Project",
-      "Search Visibility Optimization": "Other Design Project",
-      "Social Media Marketing": "Other Design Project",
-      "Social Media Growth": "Other Design Project",
-      "Social Media Management": "Other Design Project",
-      "Corporate Presentation": "Other Design Project",
-      "Corporate Presentation Design": "Other Design Project",
-    };
+  "Web Design": "Web Design",
+  "Website Design": "Web Design",
+
+  "Web Development": "Web Development",
+
+  "Ebook Cover": "Ebook Cover Design",
+  "Ebook Cover Design": "Ebook Cover Design",
+
+  "eBook Publishing": "eBook Publishing",
+
+  "Mobile App Design": "Mobile App Design",
+  "Mobile App Development": "Mobile App Development",
+
+  "Animation": "Animation",
+  "Animation Services": "Animation",
+
+  "Brand Management": "Brand Management",
+
+  "Digital Marketing": "Digital Marketing",
+
+  "Search Engine Optimization": "Search Engine Optimization",
+  "SEO": "Search Engine Optimization",
+
+  "Social Media Marketing": "Social Media Marketing",
+
+  "Corporate Presentation": "Corporate Presentation Design",
+  "Corporate Presentation Design": "Corporate Presentation Design",
+
+  "Other Design Project": "Other Design Project",
+};
 
     return serviceMap[serviceName] || serviceName;
   };
@@ -224,7 +217,7 @@ const Contact = () => {
               initial={{ opacity: 0, x: 50 }}
               animate={{ opacity: 1, x: 0 }}
             >
-              <ContactForm />
+              <ContactForm selectedService={preselectedService} />
             </motion.div>
           </div>
 

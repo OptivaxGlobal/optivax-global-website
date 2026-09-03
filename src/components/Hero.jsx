@@ -87,6 +87,15 @@ const Hero = () => {
             </Link>
 
             <Link
+              to="/web-development"
+              className="flex items-center gap-2 hover:text-accent-purple transition"
+            >
+              <CheckCircle2 className="w-5 h-5 text-accent-purple" />
+              <span>Web Development</span>
+            </Link>
+
+            
+            <Link
               to="/logo-design"
               className="flex items-center gap-2 hover:text-accent-purple transition"
             >

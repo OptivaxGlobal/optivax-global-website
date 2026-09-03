@@ -424,6 +424,19 @@ const Header = () => {
     { name: "Pay Per Click", href: "/pay-per-click" },
   ];
 
+  const coreServiceLinks = [
+    {
+      name: "Website Design",
+      href: "/web-design",
+      blurb: "Small business & brand websites",
+    },
+    {
+      name: "Web Development",
+      href: "/web-development",
+      blurb: "React, dashboards & e-commerce",
+    },
+  ];
+
   const navLinks = [
     { name: "About", href: "/#about" },
     { name: "Portfolio", href: "/#portfolio" },
@@ -581,6 +594,35 @@ const Header = () => {
                     className="absolute top-full left-0 mt-3 w-[44rem] rounded-2xl overflow-hidden bg-[#031C33]/95 backdrop-blur-xl border border-[#E9FBFF]/12 shadow-[0_24px_70px_rgba(0,0,0,0.35)]"
                   >
                     <div className="p-2">
+                      <div className="px-2 pt-2 pb-3">
+                        <p className="px-2 pb-2 text-[10px] font-bold uppercase tracking-[0.25em] text-[#38D9FF]">
+                          Core Services
+                        </p>
+
+                        <div className="grid grid-cols-2 gap-2">
+                          {coreServiceLinks.map((service) => (
+                            <Link
+                              key={service.name}
+                              to={service.href}
+                              onClick={handleServiceClick}
+                              className="group/core flex flex-col gap-1 rounded-xl border border-[#38D9FF]/25 bg-gradient-to-br from-[#1699F1]/18 to-transparent px-4 py-3 hover:border-[#38D9FF]/50 hover:bg-[#1699F1]/22 transition-all duration-300"
+                            >
+                              <span className="flex items-center justify-between text-sm font-semibold text-white">
+                                {service.name}
+                                <ArrowRight className="w-3.5 h-3.5 opacity-0 -translate-x-1 group-hover/core:opacity-100 group-hover/core:translate-x-0 transition-all duration-300 text-[#38D9FF]" />
+                              </span>
+                              <span className="text-xs text-[#E9FBFF]/60">
+                                {service.blurb}
+                              </span>
+                            </Link>
+                          ))}
+                        </div>
+                      </div>
+
+                      <p className="px-4 pb-2 text-[10px] font-bold uppercase tracking-[0.2em] text-[#E9FBFF]/35">
+                        All Services
+                      </p>
+
                       <div className="grid grid-cols-3 gap-2">
                         {servicesLinks.map((service) => (
                           <Link
@@ -614,7 +656,7 @@ const Header = () => {
           </nav>
 
           <div className="hidden md:flex items-center gap-3">
-            
+
             <button
               type="button"
               onClick={handleCTA}
@@ -624,7 +666,7 @@ const Header = () => {
               <ArrowRight className="w-8 h-5 group-hover:translate-x-1 transition-transform duration-300" />
             </button>
 
-            
+
           </div>
 
           <button
@@ -708,8 +750,30 @@ const Header = () => {
                         className="overflow-hidden"
                       >
                         <div className="mt-4 rounded-3xl border border-[#E9FBFF]/10 bg-[#02182D]/70 p-3 max-h-[52vh] overflow-y-auto">
+                          <p className="text-[#38D9FF] text-xs uppercase tracking-[0.25em] mb-2 text-center">
+                            Core Services
+                          </p>
+
+                          <div className="grid grid-cols-1 gap-3 mb-4">
+                            {coreServiceLinks.map((service) => (
+                              <Link
+                                key={service.name}
+                                to={service.href}
+                                onClick={handleServiceClick}
+                                className="w-full text-left px-4 py-3 rounded-2xl bg-gradient-to-br from-[#1699F1]/20 to-transparent border border-[#38D9FF]/30 hover:border-[#38D9FF]/50 hover:bg-[#1699F1]/25 transition-all duration-300"
+                              >
+                                <span className="block text-base font-bold text-white">
+                                  {service.name}
+                                </span>
+                                <span className="block text-xs text-[#E9FBFF]/60 mt-0.5">
+                                  {service.blurb}
+                                </span>
+                              </Link>
+                            ))}
+                          </div>
+
                           <p className="text-[#38D9FF] text-xs uppercase tracking-[0.25em] mb-3 text-center">
-                            Select a Service
+                            All Services
                           </p>
 
                           <div className="grid gap-3">

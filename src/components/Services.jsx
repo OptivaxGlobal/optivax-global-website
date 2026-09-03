@@ -16,11 +16,11 @@ const services = [
     slug: "/web-design",
     icon: Globe,
     description:
-      "Professional, responsive websites designed around your brand identity, content, and required user experience.",
+      "Premium WordPress and landing page design built for small businesses, startups, and brand websites that need to look professional and convert visitors from day one.",
     points: [
-      { title: "Responsive Layouts" },
-      { title: "Modern Visual Design" },
-      { title: "Service Pages" },
+      { title: "Small Business Websites" },
+      { title: "Landing Pages" },
+      { title: "WordPress & Brand Sites" },
     ],
   },
   {
@@ -28,11 +28,11 @@ const services = [
     slug: "/web-development",
     icon: Globe,
     description:
-      "Reliable, scalable websites developed with modern tools and clean functionality to support a smooth digital experience.",
+      "Custom-coded web development for businesses that need more than a template React applications, dashboards, e-commerce platforms, and SaaS products built to scale.",
     points: [
-      { title: "Custom Builds" },
-      { title: "Modern Stack" },
-      { title: "Functionality" },
+      { title: "React Applications" },
+      { title: "Dashboards & Admin Panels" },
+      { title: "E-Commerce & SaaS" },
     ],
   },
   {

@@ -1,6 +1,6 @@
 import React from "react";
 import { Helmet } from "react-helmet";
-import { CheckCircle2, ArrowRight } from "lucide-react";
+import { CheckCircle2, ArrowRight, Globe } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 import AnimatedHeroBackground from "@/components/AnimatedHeroBackground";
 import AnimatedCtaBackground from "@/components/AnimatedCtaBackground";
@@ -19,6 +19,7 @@ const ServiceTemplate = ({
   features,
   deliverables,
   contentSections,
+  portfolioProjects = [],
 }) => {
   const navigate = useNavigate();
 
@@ -121,6 +122,7 @@ const ServiceTemplate = ({
           </div>
         </section>
 
+
         <section className="py-20 border-t border-white/10">
           <div className="max-w-4xl mx-auto px-6 space-y-10 text-gray-300 leading-relaxed">
             {contentSections.map((section) => (
@@ -133,6 +135,154 @@ const ServiceTemplate = ({
             ))}
           </div>
         </section>
+
+        {portfolioProjects.length > 0 && (
+<section className="py-24 border-t border-white/10 relative overflow-hidden">
+
+<div className="absolute top-0 left-0 w-[500px] h-[500px] bg-[#1BBCEF]/10 blur-[160px] rounded-full"></div>
+
+<div className="absolute bottom-0 right-0 w-[500px] h-[500px] bg-[#004495]/10 blur-[160px] rounded-full"></div>
+
+
+<div className="max-w-7xl mx-auto px-6 relative z-10">
+
+
+<div className="text-center max-w-3xl mx-auto mb-16">
+
+<span className="text-accent-purple uppercase tracking-[0.3em] text-sm font-semibold">
+Our Development Portfolio
+</span>
+
+
+<h2 className="text-4xl md:text-6xl font-extrabold mt-5">
+Websites We Developed
+</h2>
+
+
+<p className="text-gray-400 text-lg mt-5">
+Explore our real-world web development projects built for businesses,
+brands, and digital platforms.
+</p>
+
+
+</div>
+
+
+
+<div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-stretch">
+
+
+{portfolioProjects.map((project)=>(
+
+<div
+key={project.title}
+className="group relative h-full"
+>
+
+<div className="absolute -inset-[1px] rounded-[32px] bg-gradient-to-r from-[#1BBCEF]/35 via-white/5 to-[#004495]/35 opacity-0 blur-sm transition duration-500 group-hover:opacity-100"></div>
+
+<article className="relative h-full flex flex-col overflow-hidden rounded-[32px] bg-[#0B1625]/92 border border-white/10 p-5 md:p-6 shadow-[0_18px_60px_rgba(0,0,0,0.35)] backdrop-blur-xl hover:border-[#1BBCEF]/45 hover:-translate-y-2 hover:shadow-[0_26px_90px_rgba(27,188,239,0.13)] transition-all duration-500">
+
+{project.image && (
+<a
+href={project.link}
+target="_blank"
+rel="noopener noreferrer"
+className="relative block overflow-hidden rounded-3xl border border-white/10 bg-[#07121F] h-[280px]"
+>
+<img
+src={project.image}
+alt={`${project.title} project screenshot`}
+loading="lazy"
+decoding="async"
+className="w-full h-full object-contain mx-auto transition duration-700 ease-out group-hover:scale-[1.04]"
+/>
+
+<div className="absolute inset-0 bg-gradient-to-t from-[#07121F]/45 via-transparent to-transparent opacity-70"></div>
+
+<div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(255,255,255,0.08),transparent_28%),radial-gradient(circle_at_bottom_right,rgba(27,188,239,0.10),transparent_32%)] opacity-0 group-hover:opacity-100 transition duration-500"></div>
+
+<div className="absolute inset-0 translate-x-[-120%] bg-gradient-to-r from-transparent via-white/[0.07] to-transparent transition duration-700 group-hover:translate-x-[120%]"></div>
+</a>
+)}
+
+<div className="pt-6 flex flex-col flex-1">
+
+<div className="w-14 h-14 rounded-2xl bg-[#1BBCEF]/10 flex items-center justify-center mb-6">
+
+<Globe className="text-[#1BBCEF]" size={28}/>
+
+</div>
+
+
+<h3 className="text-2xl font-bold mb-2">
+{project.title}
+</h3>
+
+
+<span className="
+text-[#1BBCEF]
+text-sm
+font-semibold
+">
+{project.category}
+</span>
+
+
+<p className="
+text-gray-400
+mt-4
+leading-relaxed
+">
+{project.description}
+</p>
+
+
+<a
+href={project.link}
+target="_blank"
+rel="noopener noreferrer"
+className="
+inline-flex
+items-center
+gap-2
+mt-6
+px-5
+py-3
+rounded-full
+bg-white/5
+border
+border-white/10
+hover:bg-[#1BBCEF]
+hover:text-black
+transition-all
+font-semibold
+"
+>
+
+View Live Project
+<ArrowRight size={18}/>
+
+</a>
+
+
+</div>
+
+</article>
+
+</div>
+
+))}
+
+
+</div>
+
+
+</div>
+
+
+</section>
+)}
 
         <section className="relative py-20 border-t border-white/10 overflow-hidden bg-[#031426]">
           <AnimatedCtaBackground />

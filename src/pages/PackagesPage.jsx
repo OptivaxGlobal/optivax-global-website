@@ -8,6 +8,7 @@ import {
   Star,
   Palette,
   Globe2,
+  Code2,
   Sparkles,
   ShieldCheck,
   BadgeCheck,
@@ -96,7 +97,7 @@ const servicesPackages = [
     service: "Website Design",
     icon: Globe2,
     description:
-      "Professional WordPress and Elementor website packages for startups, business websites, and growing companies.",
+      "Professional WordPress and Elementor website packages for small businesses, startups, landing pages, and growing brand websites.",
     packages: [
       {
         name: "Start Up Website Package",
@@ -168,6 +169,77 @@ const servicesPackages = [
         ],
         suitable:
           "Best for businesses that need a fully custom website scope, advanced functionality, or a larger project plan.",
+      },
+    ],
+  },
+  {
+    service: "Web Development",
+    icon: Code2,
+    description:
+      "Custom web development packages for businesses that need more than a template React applications, dashboards, and e-commerce or SaaS platforms.",
+    packages: [
+      {
+        name: "Starter Custom Website",
+        price: "$599.00",
+        badge: "Starter",
+        features: [
+          "Custom-Coded Website (No Templates)",
+          "Up to 5 Pages",
+          "React / Modern Frontend Stack",
+          "Mobile Responsive Development",
+          "Contact & Lead Capture Forms",
+          "Basic API Integration",
+          "Performance Optimization",
+          "7 to 10 Days TAT",
+          "100% Satisfaction Guarantee",
+          "100% Money Back Guarantee *",
+          "100% Ownership Rights",
+          "Add on: $50 for 24 Hours Rush Delivery",
+        ],
+        suitable:
+          "Suitable for small businesses and startups that need a custom-coded website instead of a template-based design.",
+      },
+      {
+        name: "Business Web Application",
+        price: "$1,299.00",
+        badge: "Popular",
+        popular: true,
+        features: [
+          "Custom React Web Application",
+          "Admin Dashboard / Control Panel",
+          "User Login & Authentication",
+          "Database Integration",
+          "API Development & Integration",
+          "Mobile Responsive Development",
+          "Performance & Security Optimization",
+          "Testing And Deployment",
+          "10 to 15 Days TAT",
+          "100% Satisfaction Guarantee",
+          "100% Money Back Guarantee *",
+          "100% Ownership Rights",
+          "Add on: $50 for 24 Hours Rush Delivery",
+        ],
+        suitable:
+          "Best for businesses that need a custom dashboard, internal tool, or web application beyond a standard website.",
+      },
+      {
+        name: "E-Commerce / SaaS Platform",
+        price: "Custom",
+        badge: "Custom",
+        features: [
+          "Custom E-Commerce or SaaS Build",
+          "Product / Subscription Management",
+          "Secure Payment Gateway Integration",
+          "Custom User Roles & Permissions",
+          "Scalable Database Architecture",
+          "API & Third-Party Integrations",
+          "Advanced Performance Optimization",
+          "Dedicated Project Direction",
+          "Quote Based on Requirements",
+          "Add on: $50 for 24 Hours Rush Delivery",
+        ],
+        suitable:
+          "Best for businesses launching an e-commerce store, SaaS product, or platform that needs full custom development.",
       },
     ],
   },
@@ -252,6 +324,10 @@ const heroStats = [
     value: "$448",
   },
   {
+    label: "Web Development",
+    value: "$599",
+  },
+  {
     label: "Full Branding",
     value: "$1,499",
   },
@@ -302,11 +378,11 @@ const PackagesPage = () => {
         <title>Design Packages | Optivax Global</title>
         <meta
           name="description"
-          content="Explore professional design packages for logo design, website design, and complete branding solutions by Optivax Global."
+          content="Explore professional design packages for logo design, website design, web development, and complete branding solutions by Optivax Global."
         />
         <meta
           name="keywords"
-          content="design packages, logo design packages, website design packages, branding package, complete branding solution, Optivax Global"
+          content="design packages, logo design packages, website design packages, web development packages, branding package, complete branding solution, Optivax Global"
         />
         <link
           rel="canonical"
@@ -373,9 +449,10 @@ const PackagesPage = () => {
                 </h1>
 
                 <p className="mt-5 max-w-2xl text-sm leading-relaxed text-gray-300 sm:text-base md:text-lg">
-                  Compare professional logo design, website design, and complete
-                  branding packages created to help your business look premium,
-                  build trust, and make a strong impression.
+                  Compare professional logo design, website design, web
+                  development, and complete branding packages created to help
+                  your business look premium, build trust, and make a strong
+                  impression.
                 </p>
 
                 <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:gap-4">
@@ -395,7 +472,7 @@ const PackagesPage = () => {
                   </Link>
                 </div>
 
-                <div className="mt-8 grid max-w-xl grid-cols-1 gap-3 sm:grid-cols-3">
+                <div className="mt-8 grid max-w-2xl grid-cols-2 gap-3 sm:grid-cols-4">
                   {heroStats.map((stat) => (
                     <div
                       key={stat.label}
