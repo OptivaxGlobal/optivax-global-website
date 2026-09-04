@@ -15,6 +15,7 @@ import juccini from "@/assets/website-design-showcase/Juccini Scrub Web UI 2 cop
 import marvel from "@/assets/website-design-showcase/Web Design Marvel.png";
 import bx5 from "@/assets/website-design-showcase/B5-X Boron-Infused Coating website layout 2.png";
 import version from "@/assets/website-design-showcase/Version 5 Gray Sample 1.png";
+import ruthEllenWeisberg from "@/assets/website-design-showcase/ruth-ellen-weisberg.png";
 
 
 const WebDesign = () => {
@@ -89,7 +90,12 @@ const WebDesign = () => {
   title: "Local Detectives",
   category: "Investigation Website",
   image: detectiveDark,
-},
+  },
+  {
+    title: "Ruth Ellen Weisberg",
+    category: "Art Gallery Website",
+    image: ruthEllenWeisberg,
+  }
 ];
 
   const faqs = [
@@ -284,6 +290,7 @@ className="block"
 relative
 h-[520px]
 overflow-hidden
+bg-[#07121F]
 "
 >
 
@@ -294,25 +301,13 @@ alt={project.title}
 className="
 w-full
 h-full
-object-cover
+object-contain
 object-top
 transition-transform
 duration-700
 group-hover:scale-110
 "
 />
-
-
-<div className="
-absolute
-inset-x-0
-bottom-0
-h-24
-bg-gradient-to-t
-from-[#151621]
-to-transparent
-pointer-events-none
-"></div>
 
 
 <div className="
