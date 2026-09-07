@@ -101,6 +101,7 @@ const servicesPackages = [
     packages: [
       {
         name: "Start Up Website Package",
+        oldPrice: "$399.00",
         price: "$229.00",
         badge: "Starter",
         rushDelivery: "$100 for 5-7 Business Days Delivery",
@@ -123,6 +124,7 @@ const servicesPackages = [
       },
       {
         name: "Professional Website Package",
+        oldPrice: "$799.00",
         price: "$448.00",
         badge: "Popular",
         rushDelivery: "$150 for 5-7 Business Days Delivery",
@@ -158,7 +160,7 @@ const servicesPackages = [
         features: [
           "Custom Website Scope",
           "Custom UI/UX Design",
-          "WordPress + Elementor or Custom Development",
+          "WordPress + Elementor (Included) | Custom Development Available at Additional Cost",
           "Advanced Forms & Integrations",
           "Mobile Responsive Layout",
           "Search-Friendly Structure",
@@ -176,10 +178,11 @@ const servicesPackages = [
     service: "Web Development",
     icon: Code2,
     description:
-      "Custom web development packages for businesses that need more than a template React applications, dashboards, and e-commerce or SaaS platforms.",
+      "Custom web development packages for businesses that need more than templates — including React applications, dashboards, e-commerce platforms, and SaaS solutions.",
     packages: [
       {
         name: "Starter Custom Website",
+        oldPrice: "$999.00",
         price: "$599.00",
         badge: "Starter",
         rushDelivery: "$200 for 7-10 Business Days Delivery",
@@ -201,6 +204,7 @@ const servicesPackages = [
       },
       {
         name: "Business Web Application",
+        oldPrice: "$1,999.00",
         price: "$1,299.00",
         badge: "Popular",
         rushDelivery: "$350 for 7-10 Business Days Delivery",
@@ -372,10 +376,10 @@ const PackagesPage = () => {
   return (
     <>
       <Helmet>
-        <title>Design Packages | Optivax Global</title>
+        <title>Website Design & Web Development Packages | Optivax Global</title>
         <meta
           name="description"
-          content="Explore professional design packages for logo design, website design, web development, and complete branding solutions by Optivax Global."
+          content="Explore professional website design, web development, custom development, and complete branding packages built for startups, businesses, and growing brands."
         />
         <meta
           name="keywords"
@@ -438,18 +442,17 @@ const PackagesPage = () => {
                 </div>
 
                 <h1 className="og-heading-safe text-[36px] font-black sm:text-5xl md:text-[60px] xl:text-[74px]">
-                  Design
+                  Website Design 
                   <span className="og-gradient-line bg-gradient-to-r from-[#1BBCEF] via-white to-[#1BBCEF] bg-clip-text text-transparent">
-                    Packages Built
+                   & Development
                   </span>
-                  <span className="block">For Business</span>
+                  <span className="block">Packages Built To Grow</span>
                 </h1>
 
                 <p className="mt-5 max-w-2xl text-sm leading-relaxed text-gray-300 sm:text-base md:text-lg">
-                  Compare professional logo design, website design, web
-                  development, and complete branding packages created to help
-                  your business look premium, build trust, and make a strong
-                  impression.
+                  From professional WordPress websites to custom-coded React applications,
+                  choose the right digital solution based on your business goals,
+                  functionality, timeline, and growth requirements.
                 </p>
 
                 <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:gap-4">
@@ -557,6 +560,80 @@ const PackagesPage = () => {
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(27,188,239,0.12),transparent_35%),radial-gradient(circle_at_bottom_left,rgba(0,68,149,0.16),transparent_35%)]" />
 
           <div className="relative mx-auto w-full max-w-[1320px] px-4 sm:px-6 lg:px-8">
+
+            {/* WordPress vs Custom Development Comparison */}
+            <section className="mb-16 rounded-[1.7rem] border border-white/10 bg-white/[0.035] p-5 sm:p-8 lg:p-10">
+              <div className="max-w-3xl">
+                <p className="text-[10px] font-bold uppercase tracking-[0.25em] text-accent-purple sm:text-xs">
+                  Choose The Right Solution
+                </p>
+
+                <h2 className="og-heading-safe mt-3 text-3xl font-black sm:text-4xl">
+                  WordPress Website vs Custom Development
+                </h2>
+
+                <p className="mt-4 text-sm leading-relaxed text-gray-300 sm:text-base">
+                  Most businesses do not need complex custom development.
+                  A professionally designed WordPress website is often the
+                  smarter choice for companies that need a premium online
+                  presence, easy updates, and faster delivery.
+                </p>
+              </div>
+
+              <div className="mt-8 grid gap-5 lg:grid-cols-2">
+                <div className="rounded-2xl border border-[#1BBCEF]/25 bg-[#031426]/80 p-6">
+                  <h3 className="text-2xl font-black text-white">
+                    WordPress Website
+                  </h3>
+
+                  <p className="mt-3 text-sm leading-relaxed text-gray-400">
+                    Recommended for most businesses, startups, service
+                    providers, and companies that need a professional website
+                    without unnecessary complexity.
+                  </p>
+
+                  <ul className="mt-5 space-y-3 text-sm text-gray-300">
+                    <li>✓ Professional business website</li>
+                    <li>✓ WordPress + Elementor</li>
+                    <li>✓ Easy content updates</li>
+                    <li>✓ Faster launch timeline</li>
+                    <li>✓ Cost-effective solution</li>
+                    <li>✓ SEO-friendly website structure</li>
+                  </ul>
+                </div>
+
+                <div className="rounded-2xl border border-white/10 bg-white/[0.04] p-6">
+                  <h3 className="text-2xl font-black text-white">
+                    Custom Development
+                  </h3>
+
+                  <p className="mt-3 text-sm leading-relaxed text-gray-400">
+                    Recommended when a business requires unique functionality,
+                    custom workflows, applications, dashboards, or advanced
+                    integrations.
+                  </p>
+
+                  <ul className="mt-5 space-y-3 text-sm text-gray-300">
+                    <li>✓ React / modern development stack</li>
+                    <li>✓ Custom business logic</li>
+                    <li>✓ Dashboards and web applications</li>
+                    <li>✓ API and database integrations</li>
+                    <li>✓ Scalable architecture</li>
+                    <li>✓ Custom pricing based on complexity</li>
+                  </ul>
+                </div>
+              </div>
+
+              <div className="mt-6 rounded-2xl border border-[#1BBCEF]/20 bg-[#1BBCEF]/10 p-5">
+                <p className="text-sm leading-relaxed text-gray-200">
+                  Custom development is recommended only when your project requires unique functionality. It requires deeper planning, testing, and
+                  technical expertise. Even experienced developers can face
+                  challenges when building complex systems, so custom projects
+                  are carefully evaluated and priced according to requirements,
+                  functionality, and development scope.
+                </p>
+              </div>
+            </section>
             <div className="mb-10 flex flex-col gap-5 lg:mb-12 lg:flex-row lg:items-end lg:justify-between">
               <div>
                 <p className="mb-3 text-[10px] font-bold uppercase tracking-[0.25em] text-accent-purple sm:text-xs">
@@ -788,8 +865,9 @@ const PackagesPage = () => {
                     <p className="mt-4 max-w-3xl text-sm leading-relaxed text-gray-300 sm:text-base md:text-lg">
                       A complete business branding solution combining logo design,
                       stationery, social media branding, and a professional
-                      WordPress website. Custom-coded development is available
-                      separately at a higher price based on project scope.
+                      WordPress website. Custom-coded React development, web applications,
+                      advanced integrations, and SaaS solutions are available separately
+                      with pricing based on project scope and complexity.
                     </p>
                   </div>
 
