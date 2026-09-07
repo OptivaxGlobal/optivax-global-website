@@ -13,6 +13,7 @@ import devdentalcare from "@/assets/web-development-showcase/dental.png";
 import devebook from "@/assets/web-development-showcase/ebook.png";
 import devpraxis from "@/assets/web-development-showcase/praxis.png";
 import devzova from "@/assets/web-development-showcase/zova.png";
+import devaestheticclinic from "@/assets/web-development-showcase/aesthetic-clinic.png";
 
 
 
@@ -136,6 +137,14 @@ const WebDevelopment = () => {
       link: "https://zovacoffee.com/",
       image: devzova,
     },
+    {
+  title: "Aesthetic Clinic",
+  category: "Healthcare Website Development",
+  description:
+    "A modern aesthetic clinic website developed with a premium healthcare-focused design, responsive layout, and user-friendly experience for cosmetic services.",
+  link: "https://aestheticclinic.optivaxglobal.com/",
+  image: devaestheticclinic,
+  },
     {
     title:"DentalCare Website",
     category: "Healthcare Website",

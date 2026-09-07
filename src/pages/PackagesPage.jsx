@@ -32,6 +32,7 @@ const servicesPackages = [
         name: "Basic Logo Package",
         price: "$88.00",
         badge: "Basic",
+        rushDelivery: "$30 for 2–3 Business Days Delivery",
         features: [
           "3 Custom Logo Design Concepts",
           "1 Dedicated Designer",
@@ -39,57 +40,56 @@ const servicesPackages = [
           "48 to 72 hours TAT",
           "100% Unique Design Guarantee",
           "100% Satisfaction Guarantee",
-          "All Format (AI, PSD, EPS, PNG, GIF, JPG, PDF)",
+          "Final Files Delivered in Client-Requested Formats (AI, PSD, EPS, PNG, GIF, JPG, PDF)",
           "100% Money Back Guarantee *",
           "100% Ownership Rights",
-          "Add on: $50 for 24 Hours Rush Delivery",
         ],
         suitable:
-          "Suitable for potential super-startups and brand revamps for companies.",
+          "Best for individuals, small businesses, and early-stage startups looking for a professional logo with essential brand-ready files.",
       },
       {
         name: "Start Up Logo Package",
         price: "$168.00",
         badge: "Popular",
+        rushDelivery: "$50 for 1-2 Business Days Delivery",
         popular: true,
         features: [
           "5 Custom Logo Design Concepts",
           "By 2 Designers",
           "FREE Icon",
           "FREE Business Card Design",
-          "UNLIMITED Revisions",
+          "5-10 Revisions",
           "48 to 72 hours TAT",
-          "All Format (AI, PSD, PNG, GIF, JPG, PDF)",
+          "Final Files Delivered in Client-Requested Formats (AI, PSD, EPS, PNG, GIF, JPG, PDF)",
           "100% Satisfaction Guarantee",
           "100% Unique Design Guarantee",
           "100% Money Back Guarantee *",
           "100% Ownership Rights",
-          "Add on: $50 for 24 Hours Rush Delivery",
         ],
         suitable:
-          "Suitable for potential super-startups and brand revamps for companies.",
+          "Designed for startups and growing brands that need multiple creative directions, supporting brand assets, and greater flexibility during the design process.",
       },
       {
         name: "Professional Logo Package",
         price: "$248.00",
         badge: "Professional",
+        rushDelivery: "$75 for 24 Hour Rush Delivery",
         features: [
           "100% Unique Design Guarantee",
           "By 3 Designers",
-          "UNLIMITED Revisions",
+          "10 Plus Revisions",
           "FREE Stationary Design Set",
           "FREE MS Word Letterhead",
           "48 to 72 hours TAT",
-          "All Format (AI, PSD, EPS, PNG, GIF, JPG, PDF)",
+          "Final Files Delivered in Client-Requested Formats (AI, PSD, EPS, PNG, GIF, JPG, PDF)",
           "UNLIMITED Logo Design Concepts",
           "100% Ownership Rights",
           "100% Satisfaction Guarantee",
           "100% Money Back Guarantee *",
           "15% Discount on your next order",
-          "Add on: $50 for 24 Hours Rush Delivery",
         ],
         suitable:
-          "Suitable for potential super-startups and brand revamps for companies.",
+          "Built for established businesses and serious brand launches that require a complete logo identity, stationery assets, extensive concepts, and premium creative support.",
       },
     ],
   },
@@ -103,9 +103,10 @@ const servicesPackages = [
         name: "Start Up Website Package",
         price: "$229.00",
         badge: "Starter",
+        rushDelivery: "$100 for 5-7 Business Days Delivery",
         features: [
           "Website",
-          "Five Pages",
+          "Up to 5 Pages",
           "Conceptual and Dynamic Website",
           "Team of Expert Designers & Developers",
           "Custom Forms",
@@ -116,19 +117,19 @@ const servicesPackages = [
           "WordPress + Elementor",
           "Unique Interface",
           "Search-Friendly Design",
-          "Add on: $50 for 24 Hours Rush Delivery",
         ],
         suitable:
-          "Suitable for potential super-startups and brand revamps for companies.",
+          "Best for startups, local businesses, and new brands that need a professional five-page website with an efficient design process and essential business functionality.",
       },
       {
         name: "Professional Website Package",
         price: "$448.00",
         badge: "Popular",
+        rushDelivery: "$150 for 5-7 Business Days Delivery",
         popular: true,
         features: [
           "Website",
-          "Unlimited Pages",
+          "Up to 10 Pages",
           "Conceptual and Dynamic Website",
           "Team of Expert Designers & Developers",
           "Mobile Responsive",
@@ -145,15 +146,15 @@ const servicesPackages = [
           "Cross Browser Compatible",
           "Unique Interface",
           "Search-Friendly Design",
-          "Add on: $50 for 24 Hours Rush Delivery",
         ],
         suitable:
-          "Suitable for potential super-startups and brand revamps for companies.",
+          "Ideal for growing and established businesses that need a complete professional website with 15 Plus pages, responsive design, CMS functionality, and a polished customer experience.",
       },
       {
         name: "Custom Website Package",
         price: "Custom",
         badge: "Custom",
+        rushDelivery: "Custom Quote Based on Project Scope & Timeline",
         features: [
           "Custom Website Scope",
           "Custom UI/UX Design",
@@ -165,7 +166,6 @@ const servicesPackages = [
           "Cross Browser Compatible",
           "Dedicated Project Direction",
           "Quote Based on Requirements",
-          "Add on: $50 for 24 Hours Rush Delivery",
         ],
         suitable:
           "Best for businesses that need a fully custom website scope, advanced functionality, or a larger project plan.",
@@ -182,6 +182,7 @@ const servicesPackages = [
         name: "Starter Custom Website",
         price: "$599.00",
         badge: "Starter",
+        rushDelivery: "$200 for 7-10 Business Days Delivery",
         features: [
           "Custom-Coded Website (No Templates)",
           "Up to 5 Pages",
@@ -190,19 +191,19 @@ const servicesPackages = [
           "Contact & Lead Capture Forms",
           "Basic API Integration",
           "Performance Optimization",
-          "7 to 10 Days TAT",
+          "10 to 15 Days TAT",
           "100% Satisfaction Guarantee",
           "100% Money Back Guarantee *",
           "100% Ownership Rights",
-          "Add on: $50 for 24 Hours Rush Delivery",
         ],
         suitable:
-          "Suitable for small businesses and startups that need a custom-coded website instead of a template-based design.",
+          "Best for small businesses and startups that need a professionally coded website with modern frontend technology, responsive development, and essential integrations.",
       },
       {
         name: "Business Web Application",
         price: "$1,299.00",
         badge: "Popular",
+        rushDelivery: "$350 for 7-10 Business Days Delivery",
         popular: true,
         features: [
           "Custom React Web Application",
@@ -217,15 +218,15 @@ const servicesPackages = [
           "100% Satisfaction Guarantee",
           "100% Money Back Guarantee *",
           "100% Ownership Rights",
-          "Add on: $50 for 24 Hours Rush Delivery",
         ],
         suitable:
-          "Best for businesses that need a custom dashboard, internal tool, or web application beyond a standard website.",
+          "Ideal for businesses that need a functional web application with authentication, dashboards, database integration, APIs, and production-ready functionality.",
       },
       {
         name: "E-Commerce / SaaS Platform",
         price: "Custom",
         badge: "Custom",
+        rushDelivery: "Custom Quote Based on Project Scope & Timeline",
         features: [
           "Custom E-Commerce or SaaS Build",
           "Product / Subscription Management",
@@ -236,10 +237,9 @@ const servicesPackages = [
           "Advanced Performance Optimization",
           "Dedicated Project Direction",
           "Quote Based on Requirements",
-          "Add on: $50 for 24 Hours Rush Delivery",
         ],
         suitable:
-          "Best for businesses launching an e-commerce store, SaaS product, or platform that needs full custom development.",
+          "Built for businesses launching custom e-commerce platforms, SaaS products, subscription systems, or advanced digital platforms requiring scalable architecture and custom integrations.",
       },
     ],
   },
@@ -249,30 +249,27 @@ const brandingSections = [
   {
     title: "Logo Design",
     items: [
-      "Unlimited Logo Concepts",
-      "Unlimited Revisions",
-      "File Formats (PSD, PDF, AI, JPEG, PNG)",
-      "Icon Design",
+      "Custom Logo Concepts",
+      "Professional Logo Design",
+      "Multiple Revision Rounds",
+      "Final Files in Client-Requested Formats",
     ],
   },
   {
-    title: "Stationary",
+    title: "Stationery",
     items: [
-      "Custom Stationery Designs",
-      "MS Word Letterhead",
-      "Letterhead",
-      "Envelope",
-      "Business Card",
-      "Invoice",
+      "Business Card Design",
+      "Letterhead Design",
+      "Envelope Design",
+      "Invoice Design",
     ],
   },
   {
     title: "Social Media",
     items: [
-      "Facebook Page Design",
-      "Twitter Page Design",
       "YouTube Page Design",
-      "Google+ Page Design",
+      "Social Media Branding",
+      "Consistent Brand Visuals",
     ],
   },
   {
@@ -280,36 +277,36 @@ const brandingSections = [
     collapsible: true,
     visibleLimit: 6,
     items: [
-      "Website",
-      "Unlimited Pages",
+      "Professional Business Website",
+      "Up to 10 Pages",
       "Conceptual and Dynamic Website",
-      "Content Management System (CMS)",
-      "Team of Expert Designers & Developers",
-      "Mobile Responsive",
-      "Custom Forms",
-      "Lead Capturing Forms (Optional)",
-      "15 Stock images",
-      "8 Unique Banner Designs",
-      "Jquery Sliders",
-      "Free Google Friendly Sitemap",
-      "Complete W3C Certified HTML",
-      "WordPress Add/Edit Pages, Products, Images & Videos",
-      "Testing And Deployment",
-      "Cross Browser Compatible",
-      "Unique Interface",
-      "Search-Friendly Design",
+      "WordPress + Elementor",
+      "Mobile Responsive Design",
+      "Custom Contact Forms",
+      "Lead Capture Forms",
+      "Stock Images & Website Graphics",
+      "Custom Banner Designs",
+      "SEO-Friendly Website Structure",
+      "Google-Friendly Sitemap",
+      "Cross-Browser Compatible",
+      "Testing & Deployment",
+      "Basic Website Content Placement",
+      "Custom UI Layout & Brand Styling",
+      "Custom Coding Available at Additional Cost",
+      "Custom Development Requires Separate Pricing Based on Scope",
     ],
   },
   {
-    title: "Value Added Services",
+    title: "Support & Delivery",
     collapsible: true,
-    visibleLimit: 3,
+    visibleLimit: 4,
     items: [
-      "All Final File Formats",
-      "Dedicated Account Manager",
+      "Dedicated Project Support",
+      "Final Files in Client-Requested Formats",
+      "Website Testing & Launch Support",
       "100% Satisfaction Guarantee",
-      "100% Unique Design Guarantee",
-      "100% Satisfaction And Money Back Guarantee**",
+      "100% Ownership Rights",
+      "Post-Launch Guidance",
     ],
   },
 ];
@@ -329,7 +326,7 @@ const heroStats = [
   },
   {
     label: "Full Branding",
-    value: "$1,499",
+    value: "$1,950",
   },
 ];
 
@@ -524,22 +521,7 @@ const PackagesPage = () => {
                       </div>
                     </div>
 
-                    <div className="mt-4 grid grid-cols-1 gap-3 sm:grid-cols-3">
-                      {["Logo", "Website", "Branding"].map((item) => (
-                        <div
-                          key={item}
-                          className="rounded-2xl border border-white/10 bg-white/[0.05] p-4"
-                        >
-                          <CheckCircle2 className="mb-3 h-5 w-5 text-accent-purple" />
-                          <p className="text-sm font-extrabold leading-snug">
-                            {item}
-                          </p>
-                          <p className="mt-1 text-xs text-gray-400">
-                            Design Package
-                          </p>
-                        </div>
-                      ))}
-                    </div>
+                    
                   </div>
 
                   <div className="mt-4 grid grid-cols-1 gap-3 sm:grid-cols-3">
@@ -720,7 +702,7 @@ const PackagesPage = () => {
                                   Rush Delivery Available
                                 </p>
                                 <p className="mt-1 text-xs text-gray-400">
-                                  Add on: $50 for 24 Hours Rush Delivery
+                                  {pkg.rushDelivery}
                                 </p>
                               </div>
 
@@ -804,9 +786,10 @@ const PackagesPage = () => {
                     </h2>
 
                     <p className="mt-4 max-w-3xl text-sm leading-relaxed text-gray-300 sm:text-base md:text-lg">
-                      Complete business branding package including logo,
-                      stationery, social media branding, website development,
-                      final files, dedicated support, and value-added services.
+                      A complete business branding solution combining logo design,
+                      stationery, social media branding, and a professional
+                      WordPress website. Custom-coded development is available
+                      separately at a higher price based on project scope.
                     </p>
                   </div>
 
@@ -828,11 +811,11 @@ const PackagesPage = () => {
 
                       <div className="my-8 text-right">
                         <p className="og-price-safe text-3xl font-black text-white/35 line-through sm:text-4xl">
-                          $5,000
+                          $6,500
                         </p>
 
                         <p className="og-price-safe mt-2 text-7xl font-black tracking-[-0.045em] text-white drop-shadow-[0_0_24px_rgba(255,255,255,0.35)] sm:text-8xl">
-                          $1,499
+                          $1,950
                         </p>
 
                         <p className="mt-3 text-base font-bold text-white/75 sm:text-lg">
@@ -841,6 +824,16 @@ const PackagesPage = () => {
                       </div>
 
                       <div>
+                        <div className="mb-5 rounded-[1.25rem] border border-[#1BBCEF]/20 bg-[#1BBCEF]/10 p-5">
+                          <p className="flex items-center gap-2 text-sm font-bold text-white">
+                            <Clock className="h-4 w-4 shrink-0 text-accent-purple" />
+                            Rush Delivery Available
+                          </p>
+                          <p className="mt-1 text-xs leading-relaxed text-gray-400">
+                            Priority delivery is available at an additional cost based on the branding and website scope.
+                          </p>
+                        </div>
+
                         <div className="rounded-[1.25rem] border border-white/10 bg-[#031426]/75 p-5 backdrop-blur-xl sm:p-6">
                           <div className="flex items-center justify-between gap-5">
                             <div>
@@ -848,13 +841,13 @@ const PackagesPage = () => {
                                 Save Big
                               </p>
                               <p className="mt-2 text-sm leading-relaxed text-white/70 sm:text-base">
-                                Premium full brand package
+                                Complete brand identity + WordPress website
                               </p>
                             </div>
 
                             <div className="text-right">
                               <p className="og-price-safe text-3xl font-black text-white drop-shadow-[0_0_16px_rgba(27,188,239,0.55)] sm:text-4xl">
-                                $3,501
+                                $4,550
                               </p>
                               <p className="text-xs font-semibold text-white/50 sm:text-sm">
                                 Saved
@@ -935,8 +928,11 @@ const PackagesPage = () => {
 
                 <div className="relative mt-7 flex flex-col gap-5 rounded-[1.35rem] border border-white/10 bg-white/[0.05] p-5 sm:p-6 lg:flex-row lg:items-center lg:justify-between">
                   <p className="max-w-3xl text-sm leading-relaxed text-gray-300 sm:text-base">
-                    Suitable for potential super-startups, growing businesses,
-                    and complete brand revamps.
+                    Best for startups, growing businesses, and companies planning a complete
+                    brand launch or professional brand refresh. The included website
+                    is built on WordPress + Elementor; custom-coded development,
+                    advanced applications, and complex integrations are quoted
+                    separately based on requirements.
                   </p>
 
                   <Link
@@ -1027,7 +1023,7 @@ const PackagesPage = () => {
 
                   <div className="mt-3 flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
                     <p className="og-price-safe text-4xl font-black tracking-[-0.035em] text-white drop-shadow-[0_0_16px_rgba(27,188,239,0.45)] sm:text-5xl">
-                      $1,499
+                      $1,950
                     </p>
                     <p className="w-fit rounded-full bg-white px-4 py-2 text-base font-black text-[#031426] sm:text-xl">
                       70% OFF
