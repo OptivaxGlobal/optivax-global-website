@@ -178,7 +178,7 @@ const servicesPackages = [
     service: "Web Development",
     icon: Code2,
     description:
-      "Custom web development packages for businesses that need more than templates — including React applications, dashboards, e-commerce platforms, and SaaS solutions.",
+      "Custom web development packages for businesses that need more than templates including React applications, dashboards, e-commerce platforms, and SaaS solutions.",
     packages: [
       {
         name: "Starter Custom Website",
