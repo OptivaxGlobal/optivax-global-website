@@ -32,7 +32,7 @@ const sections = [
     text: "Social media is more than a content-sharing platform. For many businesses, it is a valuable channel for increasing visibility, strengthening customer relationships, and building a strong digital presence in today's competitive marketplace.",
   },
   {
-    heading: "Ready to Strengthen Your Brand Identity?",
+    heading: "Ready To Strengthen Your Brand Identity?",
     text: "Optivax Global helps businesses create branded social media graphics, profile designs, and post templates as part of a professional visual identity. If you are exploring a website, UI/UX, logo and branding, or eBook design project, our team is happy to help.",
   },
 ];
@@ -40,7 +40,7 @@ const sections = [
 const SocialMediaMarketingBlog = () => {
   return (
     <BlogArticleLayout
-      title="Why Social Media Matters in Today's Digital Landscape"
+      title="Why Social Media Matters In Today's Digital Landscape"
       metaTitle="Why Social Media Matters for Businesses - Optivax Global"
       metaDescription="Discover why social media presence matters for businesses, how it builds visibility, engages audiences, and strengthens brand credibility."
       canonicalUrl="https://optivaxglobal.com/power-of-social-media-in-digital-landscape"

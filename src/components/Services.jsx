@@ -8,6 +8,7 @@ import {
   Smartphone,
   BookOpen,
   ArrowUpRight,
+  Code2,
 } from "lucide-react";
 
 const services = [
@@ -16,23 +17,23 @@ const services = [
     slug: "/web-design",
     icon: Globe,
     description:
-      "Premium WordPress and landing page design built for small businesses, startups, and brand websites that need to look professional and convert visitors from day one.",
+      "WordPress and Elementor websites for businesses that need a premium first impression, faster launch, easy updates, and a structure built to support search and enquiries.",
     points: [
-      { title: "Small Business Websites" },
-      { title: "Landing Pages" },
-      { title: "WordPress & Brand Sites" },
+      { title: "WordPress + Elementor" },
+      { title: "SEO-friendly structure" },
+      { title: "Fast, cost-effective launch" },
     ],
   },
   {
     title: "Web Development",
     slug: "/web-development",
-    icon: Globe,
+    icon: Code2,
     description:
-      "Custom-coded web development for businesses that need more than a template React applications, dashboards, e-commerce platforms, and SaaS products built to scale.",
+      "Custom development for businesses that need more than a template: React apps, dashboards, APIs, SaaS products, and workflows built around how the business actually operates.",
     points: [
-      { title: "React Applications" },
-      { title: "Dashboards & Admin Panels" },
-      { title: "E-Commerce & SaaS" },
+      { title: "React applications" },
+      { title: "Dashboards + APIs" },
+      { title: "SaaS and custom workflows" },
     ],
   },
   {
@@ -148,20 +149,20 @@ const Services = () => {
       <div className="container mx-auto px-6 relative z-10">
         <div className="mb-16 max-w-5xl">
           <span className="inline-block text-accent-purple font-semibold uppercase tracking-[0.25em] mb-4">
-            Design Services
+            Website Design & Development
           </span>
 
           <h2 className="text-4xl md:text-6xl lg:text-7xl font-extrabold mb-6 leading-tight text-white">
-            Design Solutions
+            The Right Digital Build
             <span className="block text-accent-purple">
-              Built Around Your Brand
+              For The Next Stage Of Growth
             </span>
           </h2>
 
           <p className="text-lg md:text-2xl text-gray-300 max-w-3xl mt-4 leading-relaxed">
-            We provide professional digital design, development, branding,
-            publishing, and creative solutions built around your business
-            requirements.
+            Start with a professional business website or move to custom
+            development when your workflows, customers, and growth plans
+            demand more.
           </p>
 
           <div className="flex flex-wrap gap-3 mt-8">

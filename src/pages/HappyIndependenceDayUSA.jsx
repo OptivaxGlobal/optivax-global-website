@@ -540,7 +540,7 @@ const HappyIndependenceDayUSA = () => {
               </p>
 
               <h2 className="max-w-4xl text-[clamp(2.2rem,6.4vw,4.2rem)] font-black uppercase leading-[1.02] tracking-[-0.02em] text-[#F00000]">
-                Let’s Create a
+                Let’s Create A
                 <span className="block text-white">Patriotic Campaign</span>
                 <span className="block text-[#F00000]">For Your Brand.</span>
               </h2>

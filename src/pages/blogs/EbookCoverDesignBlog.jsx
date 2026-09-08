@@ -28,7 +28,7 @@ const sections = [
     text: "At Optivax Global, ebook cover design is approached as a strategic marketing asset that helps authors increase visibility, strengthen credibility, and improve sales potential.",
   },
   {
-    heading: "Ready to Make Your Book Stand Out?",
+    heading: "Ready To Make Your Book Stand Out?",
     text: "Optivax Global helps authors and publishers create professional ebook covers, powerful branding, engaging digital assets, and creative solutions designed to support long-term success.",
   },
 ];
@@ -36,7 +36,7 @@ const sections = [
 const EbookCoverDesignBlog = () => {
   return (
     <BlogArticleLayout
-      title="The Importance of Ebook Cover Design in a Competitive Marketplace"
+      title="The Importance Of Ebook Cover Design In A Competitive Marketplace"
       metaTitle="Important Of Ebook Design For Competitive Market - Optivax Global"
       metaDescription="Learn why professional ebook cover design is essential for attracting readers, improving visibility, increasing sales potential, and building author recognition."
       canonicalUrl="https://optivaxglobal.com/important-of-ebook-design-for-competitive-market"

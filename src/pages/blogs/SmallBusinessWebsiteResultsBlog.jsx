@@ -44,11 +44,11 @@ const sections = [
     text: "Before contacting a business, visitors often look for proof. Testimonials, reviews, portfolio examples, case studies, certifications, business details, FAQs, and clear contact information help show that the business is real, experienced, and ready to help. These trust signals can make a major difference in turning visitors into customers.",
   },
   {
-    heading: "Clear Calls to Action Guide Visitors",
+    heading: "Clear Calls To Action Guide Visitors",
     text: "A website should tell visitors what to do next. Call-to-action buttons such as “Get a Free Quote,” “Book a Consultation,” “Contact Us,” or “Start Your Project” help guide users toward action. Clear CTAs should appear across the homepage, service pages, and contact sections to make the customer journey simple.",
   },
   {
-    heading: "Search Visibility Helps People Find the Website",
+    heading: "Search Visibility Helps People Find The Website",
     text: "A beautiful website is not enough if people cannot find it. Search-friendly websites use proper headings, relevant keywords, optimized page titles, internal links, image optimization, fast speed, and helpful content. Service pages and blog articles can help small businesses attract organic traffic and encourage more customer inquiries over time.",
   },
   {

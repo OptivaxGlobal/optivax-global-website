@@ -24,7 +24,7 @@ const sections = [
     text: "More customers now browse and shop using smartphones and tablets. A website that does not perform well on mobile devices can quickly lose potential buyers. Shopify themes are designed to adapt to different screen sizes, helping businesses provide a consistent shopping experience across desktops, tablets, and smartphones. A mobile-friendly Shopify store makes it easier for customers to browse products, read descriptions, add items to their carts, and complete purchases from almost anywhere.",
   },
   {
-    heading: "Built-In Tools for Managing Orders",
+    heading: "Built-In Tools For Managing Orders",
     text: "Order management can become increasingly difficult as a business grows. Shopify provides business owners with a centralized system for tracking orders, customer information, payments, and fulfillment activity. This helps reduce manual work and makes daily store operations easier to manage. Instead of checking different systems for every order, owners can monitor important store activity through one dashboard. Organized order information can also help businesses respond to customers more efficiently and provide better support.",
   },
   {
@@ -32,7 +32,7 @@ const sections = [
     text: "Building an online store is only the first step. Businesses also need effective ways to attract customers and encourage repeat purchases. Shopify works with a wide range of marketing tools that support email marketing, search engine optimization, social media promotion, discount campaigns, product offers, and customer retention strategies. Store owners can also optimize important website elements such as product titles, descriptions, page URLs, image alt text, and metadata to support stronger search engine visibility.",
   },
   {
-    heading: "A Wide Range of Apps and Integrations",
+    heading: "A Wide Range Of Apps And Integrations",
     text: "Every business has different operational requirements. Some companies may need advanced inventory tools, while others may want customer reviews, email automation, subscriptions, analytics, accounting, or shipping integrations. Shopify’s app ecosystem allows business owners to add extra functionality as their needs change. This means a small business can start with a relatively simple store and gradually expand its features as the company attracts more customers and develops more complex requirements.",
   },
   {
@@ -56,7 +56,7 @@ const sections = [
 const ShopifySolutionsSmallBusinessBlog = () => {
   return (
     <BlogArticleLayout
-      title="How Shopify Makes Online Selling Easier for Small Business Owners"
+      title="How Shopify Makes Online Selling Easier For Small Business Owners"
       metaTitle="Shopify Solutions for Easy Small Business Selling - Optivax Global"
       metaDescription="Discover how Shopify makes online selling easier for small businesses through simple store setup, product management, payments, marketing, and inventory tools."
       canonicalUrl="https://optivaxglobal.com/shopify-solution-for-small-business"

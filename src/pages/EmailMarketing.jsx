@@ -27,7 +27,7 @@ const EmailMarketing = () => {
       text: "The best email communication delivers real value, not noise. We help you send messages people actually want to open.",
     },
     {
-      title: "Designed for Engagement",
+      title: "Designed For Engagement",
       text: "Clear layouts and strong calls to action make it easy for readers to understand what to do next.",
     },
     {
@@ -44,7 +44,7 @@ const EmailMarketing = () => {
       canonicalUrl="https://optivaxglobal.com/email-marketing"
       serviceLabel="Email Communication Strategy"
       heroHeadline="Email Communication Strategy"
-      heroSubheadline="That Connects with Customers"
+      heroSubheadline="That Connects With Customers"
       heroText="Email is the direct channel for people who already know your business. We craft messages that feel helpful, clear, and worth opening."
       buttonText="Start Email Communication"
       contactServiceName="Email Communication Strategy"

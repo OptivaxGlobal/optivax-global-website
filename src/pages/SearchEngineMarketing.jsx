@@ -23,7 +23,7 @@ const SearchEngineMarketing = () => {
 
   const contentSections = [
     {
-      title: "Search Strategy with Clear Intent",
+      title: "Search Strategy With Clear Intent",
       text: "A strong search presence helps your brand appear where customers are already looking. We plan the right mix of paid and organic visibility for your business.",
     },
     {
@@ -44,7 +44,7 @@ const SearchEngineMarketing = () => {
       canonicalUrl="https://optivaxglobal.com/search-engine-marketing"
       serviceLabel="Search Visibility Strategy"
       heroHeadline="Search Visibility Strategy"
-      heroSubheadline="That Connects Your Brand with Searchers"
+      heroSubheadline="That Connects Your Brand With Searchers"
       heroText="We build a search visibility plan around how people actually search, then connect that with landing pages and messaging that make sense for your business."
       buttonText="Start Search Strategy"
       contactServiceName="Search Visibility Strategy"

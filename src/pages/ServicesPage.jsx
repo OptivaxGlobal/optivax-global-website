@@ -379,7 +379,7 @@ const ServicesPage = () => {
           <div className="max-w-4xl mx-auto px-6 relative z-10">
             <div className="bg-white/[0.03] backdrop-blur-xl border border-white/10 rounded-3xl p-10 md:p-14 shadow-2xl">
               <h2 className="text-3xl md:text-5xl font-extrabold mb-5">
-                Not Sure Where to Start?
+                Not Sure Where To Start?
               </h2>
 
               <p className="text-gray-300 text-lg max-w-2xl mx-auto mb-8 leading-relaxed">

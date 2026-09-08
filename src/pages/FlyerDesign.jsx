@@ -7,7 +7,7 @@ const FlyerDesign = () => {
     { icon: <Megaphone size={24} />, title: "Promotional Focus", text: "Flyers designed to clearly share your offer and motivate fast action." },
     { icon: <Layout size={24} />, title: "Strong Visual Hierarchy", text: "Information is organized so readers understand the message instantly." },
     { icon: <Sparkles size={24} />, title: "Brand-Aligned Design", text: "Every flyer matches your brand style, color palette, and tone." },
-    { icon: <FilePlus size={24} />, title: "Print and Digital Ready", text: "Delivered in formats ready for printing or sharing online." },
+    { icon: <FilePlus size={24} />, title: "Print And Digital Ready", text: "Delivered in formats ready for printing or sharing online." },
   ];
 
   const deliverables = [
@@ -27,7 +27,7 @@ const FlyerDesign = () => {
       text: "A flyer is a quick way to share a service, event, or promotion. We design flyers that look professional and make the desired action easy to understand.",
     },
     {
-      title: "Flexible for Print and Online",
+      title: "Flexible For Print And Online",
       text: "Whether you need a printed handout or a digital social asset, we design flyers that work beautifully in both formats.",
     },
     {

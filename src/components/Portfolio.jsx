@@ -10,6 +10,9 @@ import backgroundImage from "../assets/Animated-background/BACKGROUND IMAGE.webp
 import wd1 from "@/assets/website-design-showcase/Caulk-a-doodle Website.png";
 import wd2 from "@/assets/website-design-showcase/Local Detectives Website Design V2.png";
 import wd3 from "@/assets/website-design-showcase/Web Design Marvel.png";
+import wd4 from "@/assets/website-design-showcase/Stickymeds Layout 6.png";
+import wd5 from "@/assets/website-design-showcase/DOTQ Website Layout RV 01.png";
+import wd6 from "@/assets/website-design-showcase/TMMC25 Website.png";
 
 
 // WEB DEVELOPMENT
@@ -39,18 +42,6 @@ import ebook5 from "@/assets/ebook-cover-showcase/ebook-cover-48.webp";
 import ebook6 from "@/assets/ebook-cover-showcase/ebook-cover-49.webp";
 
 
-// UI UX
-import ui1 from "@/assets/app-uiux-showcase/app-uiux-1.webp";
-import ui2 from "@/assets/app-uiux-showcase/app-uiux-2.webp";
-import ui3 from "@/assets/app-uiux-showcase/app-uiux-3.webp";
-import ui4 from "@/assets/app-uiux-showcase/app-uiux-4.webp";
-
-
-// DIGITAL MARKETING
-import dm1 from "@/assets/digital-marketing-showcase/digital-marketing-1.webp";
-import dm2 from "@/assets/digital-marketing-showcase/digital-marketing-2.webp";
-import dm3 from "@/assets/digital-marketing-showcase/digital-marketing-3.webp";
-import dm4 from "@/assets/digital-marketing-showcase/digital-marketing-4.webp";
 
 
 
@@ -94,7 +85,7 @@ title:"Website Design",
 subtitle:
 "Premium WordPress and landing page design for small businesses, startups, and brand websites, with modern UI and conversion-focused experiences.",
 tag:"Web Design",
-images:[wd1,wd2,wd3],
+images:[wd1,wd2,wd3,wd4,wd5,wd6],
 contain:false,
 link:"/web-design",
 },
@@ -170,37 +161,6 @@ contain:true,
 link:"/ebook-cover-design",
 },
 
-
-{
-title:"UI/UX Design",
-subtitle:
-"User-focused interfaces designed for mobile apps and digital products.",
-tag:"App Experience",
-images:[
-ui1,
-ui2,
-ui3,
-ui4
-],
-contain:false,
-link:"/ui-ux-design",
-},
-
-
-{
-title:"Digital Marketing",
-subtitle:
-"Creative marketing visuals designed to improve online presence and brand communication.",
-tag:"Marketing",
-images:[
-dm1,
-dm2,
-dm3,
-dm4
-],
-contain:false,
-link:"/digital-marketing",
-},
 
 ];
 

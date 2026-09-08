@@ -31,7 +31,7 @@ const SocialMediaMarketing = () => {
       text: "A strong social media plan connects content, timing, and message so your activity supports real business goals.",
     },
     {
-      title: "Building Visibility and Trust",
+      title: "Building Visibility And Trust",
       text: "When your social presence is consistent and helpful, your business becomes easier to recognize and trust.",
     },
   ];

@@ -12,23 +12,23 @@ const sections = [
     text: "The 250th anniversary reminds people that independence was not only a political event. It became the beginning of a larger national journey. The ideas written in 1776 inspired future generations to expand the meaning of freedom, citizenship, opportunity, and justice.",
   },
   {
-    heading: "A Moment to Remember the Past",
+    heading: "A Moment To Remember The Past",
     text: "A meaningful celebration begins with remembering history honestly. America’s past includes courage, sacrifice, invention, leadership, and resilience. It also includes conflict, inequality, and difficult chapters that shaped the nation’s development.",
   },
   {
-    heading: "Celebrating Freedom and Responsibility",
+    heading: "Celebrating Freedom And Responsibility",
     text: "Independence Day is often connected with celebration, but the 250th anniversary also invites responsibility. Freedom depends on civic participation, education, respect, leadership, and a shared commitment to building a better future.",
   },
   {
-    heading: "Unity in a Diverse Nation",
+    heading: "Unity In A Diverse Nation",
     text: "One of America’s greatest strengths is its diversity. The 250th Anniversary USA celebration can become a moment of unity by bringing people together around shared history while recognizing that every community has its own story.",
   },
   {
-    heading: "Looking Toward the Future",
+    heading: "Looking Toward The Future",
     text: "A 250th anniversary is not only about looking back. The next chapter of America will be shaped by technology, education, sustainability, business innovation, community leadership, and civic responsibility.",
   },
   {
-    heading: "Why This Milestone Matters for Brands and Communities",
+    heading: "Why This Milestone Matters For Brands And Communities",
     text: "The 250th Anniversary USA will also be important for businesses, organizations, schools, cities, and creative campaigns. Patriotic designs, community events, educational content, anniversary branding, digital campaigns, social media posts, and public messages will play a major role in how people experience the celebration.",
   },
   {

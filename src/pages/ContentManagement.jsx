@@ -23,11 +23,11 @@ const ContentManagement = () => {
 
   const contentSections = [
     {
-      title: "Manage Content with Confidence",
+      title: "Manage Content With Confidence",
       text: "Content should feel organized and easy to update. We set up the process so your team can publish with less friction.",
     },
     {
-      title: "Content That Works for Your Brand",
+      title: "Content That Works For Your Brand",
       text: "Every page, post, and email should support your brand story. We shape content so it feels consistent, useful, and easy to understand.",
     },
     {

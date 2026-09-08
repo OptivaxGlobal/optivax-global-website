@@ -221,7 +221,7 @@ const BlogArticleLayout = ({
                     </span>
 
                     <h2 className="text-2xl font-black leading-tight text-white md:text-4xl">
-                      Ready to start your next design project?
+                      Ready To Start Your Next Design Project?
                     </h2>
 
                     <p className="mt-5 max-w-3xl text-base leading-8 text-gray-300 md:text-lg">

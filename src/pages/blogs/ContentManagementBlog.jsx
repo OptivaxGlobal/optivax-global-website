@@ -28,7 +28,7 @@ const sections = [
     text: "At Optivax Global, content management is focused on creating organized, impactful, and customer-focused website experiences. A structured approach to content helps businesses strengthen communication and build a stronger digital presence.",
   },
   {
-    heading: "Ready to Organize Your Website Content?",
+    heading: "Ready To Organize Your Website Content?",
     text: "Optivax Global helps businesses set up and structure content management systems, strengthen website messaging, and create a clear, professional digital presence.",
   },
 ];
@@ -36,7 +36,7 @@ const sections = [
 const ContentManagementBlog = () => {
   return (
     <BlogArticleLayout
-      title="The Strategic Importance of Content Management in Modern Marketing"
+      title="The Strategic Importance Of Content Management In Modern Marketing"
       metaTitle="Strategic Important Of Content Management In Marketing - Optivax Global"
       metaDescription="Learn how content management helps businesses improve customer engagement, maintain consistency, strengthen branding, and support long-term marketing success."
       canonicalUrl="https://optivaxglobal.com/strategic-important-of-content-management-marketing"

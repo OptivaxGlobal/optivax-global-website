@@ -317,8 +317,8 @@ const brandingSections = [
 
 const heroStats = [
   {
-    label: "Starting From",
-    value: "$88",
+    label: "Website Starter",
+    value: "$229",
   },
   {
     label: "Popular Website",
@@ -329,8 +329,8 @@ const heroStats = [
     value: "$599",
   },
   {
-    label: "Full Branding",
-    value: "$1,950",
+    label: "Advanced Build",
+    value: "Custom",
   },
 ];
 
@@ -352,8 +352,67 @@ const benefits = [
   },
 ];
 
+const portfolioHighlights = [
+  {
+    name: "American Business Formations",
+    type: "Business platform",
+    description: "A clear, service-led experience for a business helping customers form companies.",
+    href: "https://americanbusinessformations.com/",
+  },
+  {
+    name: "GoGetShip",
+    type: "E-commerce platform",
+    description: "A customer-focused shopping experience built around products, browsing, and conversion.",
+    href: "https://gogetship.com/",
+  },
+  {
+    name: "Key Velocity",
+    type: "Custom web application",
+    description: "A specialized interface showing how custom development can support a focused business workflow.",
+    href: "http://keyvelocity.optivaxglobal.com/",
+  },
+];
+
+const packageFaqs = [
+  {
+    question: "Which package is right for most businesses?",
+    answer:
+      "The Professional Website Package is the best fit for most growing businesses. It combines WordPress + Elementor, responsive design, CMS editing, lead capture, search-friendly structure, testing, and launch support without the cost or complexity of custom software.",
+  },
+  {
+    question: "When should I choose custom development?",
+    answer:
+      "Choose custom development when your project needs user accounts, dashboards, APIs, databases, SaaS functionality, custom business rules, or workflows that WordPress cannot handle efficiently.",
+  },
+  {
+    question: "Is WordPress professional and SEO-friendly?",
+    answer:
+      "Yes. WordPress with Elementor is a professional solution when it is planned and built well. It gives your team easy updates, supports SEO-friendly page structure, launches faster, and keeps ongoing costs practical for most businesses.",
+  },
+  {
+    question: "What happens after I choose a package?",
+    answer:
+      "We confirm your goals, pages, content, functionality, and timeline, then provide a clear project plan before design or development begins. You always know the next step and what is included.",
+  },
+];
+
 const getContactLink = (selectedService) =>
   `/contact?service=${encodeURIComponent(selectedService)}`;
+
+const getDiscountPercentage = (oldPrice, price) => {
+  const original = Number.parseFloat(oldPrice?.replace(/[^0-9.]/g, ""));
+  const current = Number.parseFloat(price?.replace(/[^0-9.]/g, ""));
+
+  if (!original || !current || current >= original) return null;
+
+  return Math.round(((original - current) / original) * 100);
+};
+
+const servicePriority = {
+  "Website Design": 1,
+  "Web Development": 2,
+  "Logo Design": 3,
+};
 
 const PackagesPage = () => {
   const [openPackages, setOpenPackages] = useState({});
@@ -500,23 +559,23 @@ const PackagesPage = () => {
                           Package Overview
                         </p>
                         <h2 className="og-card-heading-safe mt-1 text-2xl font-black sm:text-3xl">
-                          Smart Plans
+                          Website + Development Plans
                         </h2>
                       </div>
 
                       <div className="inline-flex w-fit items-center gap-2 rounded-full border border-[#1BBCEF]/35 bg-gradient-to-r from-[#1BBCEF] to-[#004495] px-5 py-2.5 text-sm font-black uppercase tracking-[0.12em] text-white shadow-lg shadow-[#1BBCEF]/25">
                         <Clock className="h-5 w-5" />
-                        Limited Slots
+                        Compare Paths
                       </div>
                     </div>
 
                     <div className="mt-6 rounded-3xl border border-dashed border-[#1BBCEF]/40 bg-white/[0.04] p-5">
                       <p className="text-sm text-gray-400">
-                        Packages start at
+                        Website packages start at
                       </p>
                       <div className="mt-2 flex items-end gap-3">
                         <span className="og-price-safe text-5xl font-black tracking-[-0.04em] text-white drop-shadow-[0_0_18px_rgba(27,188,239,0.5)] sm:text-6xl">
-                          $88
+                          $229
                         </span>
                         <span className="pb-2 text-xs font-bold text-gray-300">
                           USD
@@ -569,7 +628,7 @@ const PackagesPage = () => {
                 </p>
 
                 <h2 className="og-heading-safe mt-3 text-3xl font-black sm:text-4xl">
-                  WordPress Website vs Custom Development
+                  WordPress Website Vs Custom Development
                 </h2>
 
                 <p className="mt-4 text-sm leading-relaxed text-gray-300 sm:text-base">
@@ -660,7 +719,9 @@ const PackagesPage = () => {
             </div>
 
             <div className="space-y-8 lg:space-y-10">
-              {servicesPackages.map((service) => {
+              {[...servicesPackages]
+                .sort((first, second) => servicePriority[first.service] - servicePriority[second.service])
+                .map((service) => {
                 const Icon = service.icon;
 
                 return (
@@ -766,9 +827,16 @@ const PackagesPage = () => {
                                   </span>
 
                                   {pkg.oldPrice && (
-                                    <span className="og-price-safe pb-1 text-2xl font-black tracking-[-0.04em] text-white/35 line-through sm:text-3xl">
-                                      {pkg.oldPrice}
-                                    </span>
+                                    <div className="flex flex-col pb-1">
+                                      <span className="og-price-safe text-2xl font-black tracking-[-0.04em] text-white/35 line-through sm:text-3xl">
+                                        {pkg.oldPrice}
+                                      </span>
+                                      {getDiscountPercentage(pkg.oldPrice, pkg.price) && (
+                                        <span className="mt-1 text-xs font-black uppercase tracking-[0.12em] text-[#38D9FF]">
+                                          Save {getDiscountPercentage(pkg.oldPrice, pkg.price)}%
+                                        </span>
+                                      )}
+                                    </div>
                                   )}
                                 </div>
                               </div>
@@ -821,6 +889,7 @@ const PackagesPage = () => {
                               <div className="mt-auto pt-6">
                                 {pkg.suitable && (
                                   <p className="mb-5 border-t border-white/10 pt-5 text-[13px] leading-relaxed text-gray-400">
+                                    <span className="font-bold text-gray-200">Best for: </span>
                                     {pkg.suitable}
                                   </p>
                                 )}
@@ -1026,6 +1095,166 @@ const PackagesPage = () => {
           </div>
         </section>
 
+        <section className="border-t border-white/10 bg-[#0C0D0D] py-20">
+          <div className="mx-auto max-w-[1320px] px-4 sm:px-6 lg:px-8">
+            <div className="rounded-[1.7rem] border border-[#1BBCEF]/25 bg-[#031426]/80 p-6 shadow-2xl shadow-[#1BBCEF]/10 sm:p-8 lg:flex lg:items-center lg:justify-between lg:gap-10">
+              <div className="max-w-3xl">
+                <p className="text-[10px] font-bold uppercase tracking-[0.25em] text-accent-purple sm:text-xs">
+                  Limited-time launch value
+                </p>
+                <h2 className="og-heading-safe mt-3 text-3xl font-black sm:text-4xl">
+                  Launch Professionally Now. Add Complexity Only When You Need It.
+                </h2>
+                <p className="mt-4 text-sm leading-relaxed text-gray-300 sm:text-base">
+                  Website packages include the structure, responsive experience,
+                  WordPress + Elementor setup, and launch support most businesses
+                  need to start generating enquiries. Custom development is available
+                  when your platform requires advanced functionality.
+                </p>
+              </div>
+              <Link
+                to={getContactLink("Website Design")}
+                className="group mt-6 inline-flex shrink-0 items-center justify-center gap-2 rounded-full bg-gradient-to-r from-[#1BBCEF] to-[#004495] px-6 py-3.5 text-sm font-bold text-white transition hover:-translate-y-0.5 hover:from-[#004495] hover:to-[#1BBCEF] lg:mt-0"
+              >
+                Claim website offer
+                <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
+              </Link>
+            </div>
+          </div>
+        </section>
+
+        <section className="border-t border-white/10 bg-[#0C0D0D] py-20">
+          <div className="mx-auto max-w-[1320px] px-4 sm:px-6 lg:px-8">
+            <div className="mb-10 max-w-3xl">
+              <p className="text-[10px] font-bold uppercase tracking-[0.25em] text-accent-purple sm:text-xs">
+                Proof before the proposal
+              </p>
+              <h2 className="og-heading-safe mt-3 text-3xl font-black sm:text-4xl md:text-5xl">
+                Digital Experiences Built For Real Businesses.
+              </h2>
+              <p className="mt-4 text-sm leading-relaxed text-gray-300 sm:text-base">
+                Explore examples across business platforms, e-commerce, and custom web applications before choosing your build path.
+              </p>
+            </div>
+
+            <div className="grid gap-5 lg:grid-cols-3">
+              {portfolioHighlights.map((project) => (
+                <a
+                  key={project.name}
+                  href={project.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="group rounded-[1.4rem] border border-white/10 bg-white/[0.04] p-6 transition duration-300 hover:-translate-y-1 hover:border-[#1BBCEF]/40 hover:bg-white/[0.07]"
+                >
+                  <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-accent-purple">
+                    {project.type}
+                  </p>
+                  <h3 className="mt-4 text-2xl font-black text-white">{project.name}</h3>
+                  <p className="mt-3 text-sm leading-relaxed text-gray-400">{project.description}</p>
+                  <span className="mt-6 inline-flex items-center gap-2 text-sm font-bold text-white">
+                    View project
+                    <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
+                  </span>
+                </a>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        <section className="border-t border-white/10 bg-[#031426] py-20">
+          <div className="mx-auto max-w-[1320px] px-4 sm:px-6 lg:px-8">
+            <div className="grid gap-10 lg:grid-cols-[0.75fr_1.25fr] lg:items-end">
+              <div>
+                <p className="text-[10px] font-bold uppercase tracking-[0.25em] text-accent-purple sm:text-xs">
+                  Why choose Optivax
+                </p>
+                <h2 className="og-heading-safe mt-3 text-3xl font-black sm:text-4xl md:text-5xl">
+                  A Clear Build, With A Clear Business Purpose.
+                </h2>
+                <p className="mt-4 text-sm leading-relaxed text-gray-300 sm:text-base">
+                  We match the technology to the job, so you get a website that is practical today and a path forward when your business outgrows it.
+                </p>
+              </div>
+
+              <div className="grid gap-5 sm:grid-cols-3">
+                {[
+                  [CheckCircle2, "Business-Focused", "Every deliverable is tied to credibility, clarity, or conversion."],
+                  [ShieldCheck, "Professional Delivery", "Responsive builds, testing, ownership, and launch support included."],
+                  [Zap, "Right-Sized Scope", "WordPress when it is smarter. Custom development when it is necessary."],
+                ].map(([Icon, title, text]) => (
+                  <div key={title} className="border-t border-white/10 pt-5">
+                    <Icon className="h-6 w-6 text-accent-purple" />
+                    <h3 className="mt-4 text-lg font-bold text-white">{title}</h3>
+                    <p className="mt-2 text-sm leading-relaxed text-gray-400">{text}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section className="border-t border-white/10 bg-[#0C0D0D] py-20">
+          <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
+            <div className="mb-10">
+              <p className="text-[10px] font-bold uppercase tracking-[0.25em] text-accent-purple sm:text-xs">
+                How your project moves forward
+              </p>
+              <h2 className="og-heading-safe mt-3 text-3xl font-black sm:text-4xl md:text-5xl">
+                A Straightforward Development Process.
+              </h2>
+            </div>
+
+            <div className="grid gap-4 md:grid-cols-3">
+              {[
+                ["01", "Discover", "We clarify your audience, goals, pages, functionality, and timeline."],
+                ["02", "Build", "We design or develop the approved direction with regular project visibility."],
+                ["03", "Launch", "We test, refine, deploy, and help you understand what comes next."],
+              ].map(([number, title, text]) => (
+                <div key={number} className="rounded-3xl border border-white/10 bg-white/[0.04] p-6">
+                  <span className="text-3xl font-black text-accent-purple">{number}</span>
+                  <h3 className="mt-5 text-xl font-bold text-white">{title}</h3>
+                  <p className="mt-3 text-sm leading-relaxed text-gray-400">{text}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        <section className="border-t border-white/10 bg-[#0C0D0D] py-20">
+          <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
+            <div className="mb-8">
+              <p className="text-[10px] font-bold uppercase tracking-[0.25em] text-accent-purple sm:text-xs">
+                Package questions
+              </p>
+              <h2 className="og-heading-safe mt-3 text-3xl font-black sm:text-4xl md:text-5xl">
+                Choose With Confidence.
+              </h2>
+            </div>
+
+            <div className="divide-y divide-white/10 border-y border-white/10">
+              {packageFaqs.map((faq) => (
+                <details key={faq.question} className="group py-5">
+                  <summary className="flex cursor-pointer list-none items-center justify-between gap-5 text-lg font-bold text-white">
+                    {faq.question}
+                    <ChevronDown className="h-5 w-5 shrink-0 text-accent-purple transition group-open:rotate-180" />
+                  </summary>
+                  <p className="max-w-3xl pt-4 text-sm leading-relaxed text-gray-400">{faq.answer}</p>
+                </details>
+              ))}
+            </div>
+
+            <div className="mt-8 text-center">
+              <Link
+                to={getContactLink("Website Design")}
+                className="group inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-[#1BBCEF] to-[#004495] px-7 py-3.5 text-sm font-bold text-white transition hover:-translate-y-0.5 hover:from-[#004495] hover:to-[#1BBCEF]"
+              >
+                Get help choosing your package
+                <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
+              </Link>
+            </div>
+          </div>
+        </section>
+
         <section className="relative py-20 border-t border-white/10 text-center overflow-hidden bg-[#031426]">
           <AnimatedCtaBackground />
           <div className="absolute inset-0 bg-gradient-to-b from-[#031426]/30 via-[#031426]/55 to-[#031426]/80" />
@@ -1038,7 +1267,7 @@ const PackagesPage = () => {
                 </p>
 
                 <h2 className="og-heading-safe max-w-3xl text-3xl font-black sm:text-4xl md:text-5xl lg:text-6xl">
-                  Ready to Grow with
+                  Ready To Grow With
                   <span className="og-gradient-line bg-gradient-to-r from-[#1BBCEF] via-white to-[#1BBCEF] bg-clip-text text-transparent">
                     Digital Packages?
                   </span>
@@ -1075,10 +1304,10 @@ const PackagesPage = () => {
                     Starting
                   </p>
                   <p className="og-price-safe mt-2 text-4xl font-black tracking-[-0.035em] text-white drop-shadow-[0_0_16px_rgba(27,188,239,0.45)] sm:text-5xl">
-                    $88
+                    $229
                   </p>
                   <p className="mt-3 text-sm text-gray-400">
-                    Logo design packages
+                    Website starter package
                   </p>
                 </div>
 
@@ -1096,15 +1325,15 @@ const PackagesPage = () => {
 
                 <div className="rounded-[1.4rem] border border-[#1BBCEF]/25 bg-[#1BBCEF]/10 p-5 backdrop-blur-xl sm:col-span-2 sm:p-6">
                   <p className="text-xs font-bold uppercase tracking-[0.22em] text-accent-purple sm:text-sm">
-                    Complete Branding Solution
+                    Custom Development
                   </p>
 
                   <div className="mt-3 flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
                     <p className="og-price-safe text-4xl font-black tracking-[-0.035em] text-white drop-shadow-[0_0_16px_rgba(27,188,239,0.45)] sm:text-5xl">
-                      $1,950
+                      $599+
                     </p>
                     <p className="w-fit rounded-full bg-white px-4 py-2 text-base font-black text-[#031426] sm:text-xl">
-                      70% OFF
+                      Scope-based pricing
                     </p>
                   </div>
                 </div>

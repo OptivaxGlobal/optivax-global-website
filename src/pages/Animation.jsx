@@ -27,11 +27,11 @@ const Animation = () => {
       text: "Animation helps ideas land faster and feel more engaging. We build motion that supports your brand story and helps viewers understand your message quickly.",
     },
     {
-      title: "Motion Built for Your Brand",
+      title: "Motion Built For Your Brand",
       text: "Every animation is designed with your brand’s colors, style, and tone in mind so the final result feels consistent and professional.",
     },
     {
-      title: "Ready for Web and Social",
+      title: "Ready For Web And Social",
       text: "Animations can be used on websites, social media, ads, and presentations. We deliver motion assets that are easy to share and use in digital campaigns.",
     },
   ];
@@ -44,7 +44,7 @@ const Animation = () => {
       canonicalUrl="https://optivaxglobal.com/animation"
       serviceLabel="Animation Services"
       heroHeadline="Custom Animation Services"
-      heroSubheadline="That Bring Your Brand to Life"
+      heroSubheadline="That Bring Your Brand To Life"
       heroText="We create branded animations that make your message more engaging, memorable, and easy to share across web and social media."
       buttonText="Start Animation Project"
       contactServiceName="Animation Services"

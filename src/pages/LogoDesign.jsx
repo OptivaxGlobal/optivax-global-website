@@ -54,7 +54,7 @@ const LogoDesign = () => {
     },
     {
       icon: Target,
-      title: "Made for Real Use",
+      title: "Made For Real Use",
       text: "We create logos that work smoothly on websites, social media, business cards, packaging, profiles, and marketing materials.",
     },
   ];
@@ -149,7 +149,7 @@ const LogoDesign = () => {
         <section className="py-20 border-t border-white/10">
           <div className="max-w-7xl mx-auto px-6">
             <h2 className="text-3xl md:text-5xl font-extrabold mb-5">
-              Logo Designs Made to Look Clear, Premium & Memorable
+              Logo Designs Made To Look Clear, Premium & Memorable
             </h2>
 
             <p className="text-gray-300 text-lg leading-relaxed max-w-3xl mb-12">
@@ -188,7 +188,7 @@ const LogoDesign = () => {
         <section className="py-20 border-t border-white/10">
           <div className="max-w-4xl mx-auto px-6 space-y-8 text-gray-300 leading-relaxed">
             <h2 className="text-3xl md:text-4xl font-extrabold text-white">
-              Why Your Business Needs a Professional Logo
+              Why Your Business Needs A Professional Logo
             </h2>
 
             <p>
@@ -272,7 +272,7 @@ const LogoDesign = () => {
 
           <div className="max-w-5xl mx-auto px-6 relative z-10">
             <h2 className="text-4xl md:text-6xl font-extrabold mb-6">
-              Need a Logo That Looks Professional Everywhere?
+              Need A Logo That Looks Professional Everywhere?
             </h2>
 
             <p className="text-gray-300 text-lg max-w-2xl mx-auto mb-8 leading-relaxed">

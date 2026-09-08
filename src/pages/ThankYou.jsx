@@ -38,7 +38,7 @@ const ThankYou = () => {
               </span>
 
               <h1 className="text-4xl md:text-6xl font-extrabold leading-tight mb-6">
-                Thank You for
+                Thank You For
                 <span className="block bg-gradient-to-r from-[#1BBCEF] to-[#004495] bg-clip-text text-transparent">
                   Contacting Us
                 </span>

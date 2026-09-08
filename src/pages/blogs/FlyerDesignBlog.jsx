@@ -28,7 +28,7 @@ heading: "Final Thoughts",
 text: "At Optivax Global, flyer design is focused on creating marketing materials that attract attention, communicate value clearly, and present a professional image. A well-designed flyer can help businesses reach more customers.",
 },
 {
-heading: "Ready to Promote Your Business More Effectively?",
+heading: "Ready To Promote Your Business More Effectively?",
 text: "Optivax Global helps businesses create professional flyer designs, impactful branding, and engaging marketing materials tailored to their needs.",
 },
 ];

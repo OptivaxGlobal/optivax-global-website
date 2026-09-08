@@ -24,7 +24,7 @@ const sections = [
   },
 
   {
-    heading: "Search Visibility and Performance",
+    heading: "Search Visibility And Performance",
     text: "Google favors websites that are fast, mobile-friendly, and user-focused. Modern web design supports search visibility, better rankings, and stronger online visibility.",
   },
 
@@ -37,7 +37,7 @@ const sections = [
 const WebDesignBlog = () => {
   return (
     <BlogArticleLayout
-      title="The Importance of Modern Web Design for Your Business"
+      title="The Importance Of Modern Web Design For Your Business"
       metaTitle="Importance of Modern Web Design - Optivax Global"
       metaDescription="Discover why modern web design is important for user experience, search visibility, trust, and long-term business success."
       canonicalUrl="https://optivaxglobal.com/importance-of-modern-web-design"

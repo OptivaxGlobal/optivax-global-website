@@ -11,17 +11,17 @@ const GameDevelopment = () => {
     },
     {
       icon: <MonitorPlay size={24} />,
-      title: "2D and 3D Experiences",
+      title: "2D And 3D Experiences",
       text: "From casual 2D projects to immersive 3D worlds, we shape the experience around your audience and goals.",
     },
     {
       icon: <Sparkles size={24} />,
-      title: "Unity and Unreal Builds",
+      title: "Unity And Unreal Builds",
       text: "We work with modern engines to deliver reliable builds, clean project structure, and smoother development cycles.",
     },
     {
       icon: <ShieldCheck size={24} />,
-      title: "Testing and Ongoing Support",
+      title: "Testing And Ongoing Support",
       text: "Our work includes quality assurance, bug resolution, and updates that keep your game stable after launch.",
     },
   ];
@@ -39,15 +39,15 @@ const GameDevelopment = () => {
 
   const contentSections = [
     {
-      title: "Games Designed for Real Players",
+      title: "Games Designed For Real Players",
       text: "We approach game development as both a creative and technical process. Every build is shaped around gameplay clarity, visual quality, and a smoother experience from the first screen to the final level.",
     },
     {
-      title: "Built for Different Platforms",
+      title: "Built For Different Platforms",
       text: "Whether you need a mobile game, a desktop experience, or a cross-platform release, we help plan the right structure, features, and performance approach for each target platform.",
     },
     {
-      title: "Support Beyond the Launch",
+      title: "Support Beyond The Launch",
       text: "A successful game does not end at release. We also support ongoing improvements, updates, bug fixing, and quality checks so your project stays strong as it grows.",
     },
   ];
@@ -60,7 +60,7 @@ const GameDevelopment = () => {
       canonicalUrl="https://optivaxglobal.com/game-development"
       serviceLabel="Game Development Services"
       heroHeadline="Game Development"
-      heroSubheadline="Built for Play, Performance, and Polish"
+      heroSubheadline="Built For Play, Performance, And Polish"
       heroText="We create custom games for mobile, PC, console, and emerging platforms with thoughtful design, strong gameplay flow, and reliable technical execution."
       buttonText="Start Game Development"
       contactServiceName="Game Development"

@@ -99,9 +99,9 @@ const WebDesign = () => {
 ];
 
   const faqs = [
-    { question: "Do you design websites for small businesses?", answer: "Yes. We create professional websites for startups, small businesses, agencies, authors, and service-based brands." },
-    { question: "Will my website be mobile responsive?", answer: "Yes. Every website is designed to work properly on mobile, tablet, laptop, and desktop screens." },
-    { question: "Can you help my website show up better in search results?", answer: "Yes. We structure pages with proper titles, descriptions, headings, keywords, and user-focused content." }
+    { question: "Do You Design Websites For Small Businesses?", answer: "Yes. We create professional websites for startups, small businesses, agencies, authors, and service-based brands." },
+    { question: "Will My Website Be Mobile Responsive?", answer: "Yes. Every website is designed to work properly on mobile, tablet, laptop, and desktop screens." },
+    { question: "Can You Help My Website Show Up Better In Search Results?", answer: "Yes. We structure pages with proper titles, descriptions, headings, keywords, and user-focused content." }
   ];
 
   return (
@@ -135,7 +135,7 @@ const WebDesign = () => {
                 <h1 className="text-4xl md:text-6xl lg:text-7xl font-extrabold leading-tight mb-6">
                   Premium Websites
                   <span className="block text-accent-purple">
-                    Built to Convert
+                    Built To Convert
                   </span>
                 </h1>
 
@@ -155,7 +155,7 @@ const WebDesign = () => {
                                       Get a Free Website Design Quote
                                       <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                                     </button>
-                    
+
                                     <a
                                       href="https://wa.me/13074301006"
                                       target="_blank"
@@ -216,6 +216,20 @@ const WebDesign = () => {
                   </div>
                 );
               })}
+            </div>
+
+            <div className="mt-10 flex flex-col gap-4 rounded-3xl border border-white/10 bg-white/[0.04] p-6 sm:flex-row sm:items-center sm:justify-between sm:p-7">
+              <div>
+                <p className="text-sm font-bold text-white">Ready for a clearer website plan?</p>
+                <p className="mt-1 text-sm text-gray-400">We will recommend the right pages, platform, and next steps for your business.</p>
+              </div>
+              <button
+                onClick={() => navigate("/contact", { state: { service: "Website Design" } })}
+                className="inline-flex shrink-0 items-center justify-center gap-2 rounded-full bg-gradient-to-r from-[#1BBCEF] to-[#004495] px-5 py-3 font-bold text-white transition hover:from-[#004495] hover:to-[#1BBCEF]"
+              >
+                Get a website plan
+                <ArrowRight className="h-4 w-4" />
+              </button>
             </div>
           </div>
         </section>
@@ -417,7 +431,7 @@ professional layout and user-focused experience.
         <section className="py-20 border-t border-white/10">
           <div className="max-w-4xl mx-auto px-6 space-y-8 text-gray-300 leading-relaxed">
             <h2 className="text-3xl md:text-4xl font-extrabold text-white">
-              Why Your Business Needs a Professional Website
+              Why Your Business Needs A Professional Website
             </h2>
 
             <p>
@@ -476,7 +490,7 @@ professional layout and user-focused experience.
 
           <div className="max-w-5xl mx-auto px-6 text-center relative z-10">
             <h2 className="text-4xl md:text-6xl font-extrabold mb-6">
-              Ready to Build Your Website?
+              Ready To Build Your Website?
             </h2>
 
             <p className="text-gray-400 text-lg max-w-2xl mx-auto mb-8">

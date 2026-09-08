@@ -12,7 +12,7 @@ const sections = [
     text: "The first step in ebook cover design is understanding the genre. Every genre has its own visual language. Romance, thriller, business, children’s books, fantasy, and self-help titles use different colors, fonts, imagery, and layouts. The cover should match reader expectations while still presenting something fresh and original.",
   },
   {
-    heading: "Make the Title Easy to Read",
+    heading: "Make The Title Easy To Read",
     text: "The title should be clear, readable, and easy to recognize. Avoid fonts that are too thin, overly decorative, or difficult to understand. Since many readers browse books on mobile devices, the title should remain visible and readable when the cover appears as a small thumbnail.",
   },
   {
@@ -24,31 +24,31 @@ const sections = [
     text: "Colors create mood and communicate personality. Dark colors may support mystery or serious nonfiction, while soft colors can suit romance, wellness, or lifestyle books. Bright colors often work for children’s books and energetic topics. The selected palette should match the book’s message while maintaining enough contrast for clear readability.",
   },
   {
-    heading: "Keep the Design Simple",
+    heading: "Keep The Design Simple",
     text: "Adding too many images, fonts, effects, icons, textures, or colors can make an ebook cover confusing. Simple design does not mean boring. It means focused. Every design element should support the genre, title, message, or mood of the book.",
   },
   {
-    heading: "Use High-Quality Images and Graphics",
+    heading: "Use High-Quality Images And Graphics",
     text: "Blurry images, stretched graphics, poor cutouts, and low-resolution visuals can make a book look less professional. Photography, illustrations, and digital artwork should be sharp, well-composed, and relevant to the book’s subject or story.",
   },
   {
-    heading: "Pick Fonts That Match the Book’s Personality",
+    heading: "Pick Fonts That Match The Book’s Personality",
     text: "Typography can completely change the mood of a cover. Bold modern fonts can feel confident, serif fonts can appear classic, handwritten fonts can feel personal, and clean sans-serif fonts often work well for business and technology books. Most professional covers use one or two complementary fonts.",
   },
   {
-    heading: "Design for Thumbnail View",
+    heading: "Design For Thumbnail View",
     text: "Ebook covers are often displayed at small sizes on online stores, advertisements, social media, and mobile screens. Test the cover at thumbnail size to make sure the title remains readable, the main image stays clear, and the overall design continues to feel strong.",
   },
   {
-    heading: "Match the Cover With the Book’s Promise",
+    heading: "Match The Cover With The Book’s Promise",
     text: "A cover should honestly represent the content inside the book. A thriller should create tension, a children’s book should feel imaginative, a self-help book should appear inspiring, and a business ebook should look professional. The goal is to attract the right reader and set accurate expectations.",
   },
   {
-    heading: "Include the Subtitle Carefully",
+    heading: "Include The Subtitle Carefully",
     text: "Subtitles are especially useful for nonfiction ebooks because they explain the benefit or subject more clearly. However, the subtitle should remain short, helpful, and readable without overpowering the main title or making the cover feel crowded.",
   },
   {
-    heading: "Make the Author Name Look Professional",
+    heading: "Make The Author Name Look Professional",
     text: "The author name should be visible and consistent with the overall cover style. For new authors, the title and concept usually require greater attention. Authors publishing multiple books can use a consistent name style to strengthen recognition across their catalog.",
   },
   {
@@ -68,7 +68,7 @@ const sections = [
 const EbookCoverDesignTipsBlog = () => {
   return (
     <BlogArticleLayout
-      title="Ebook Cover Design Tips to Make Your Book Stand Out"
+      title="Ebook Cover Design Tips To Make Your Book Stand Out"
       metaTitle="Ebook Cover Design Tips for Authors - Optivax Global"
       metaDescription="Explore practical ebook cover design tips for authors, including genre research, typography, colors, visual hierarchy, thumbnail testing, branding, and image quality."
       canonicalUrl="https://optivaxglobal.com/ebook-cover-design-tip-for-author"

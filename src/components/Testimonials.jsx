@@ -145,7 +145,7 @@ const Testimonials = () => {
             </span>
 
             <h2 className="text-4xl md:text-6xl font-extrabold text-white leading-tight">
-              Trusted by Brands That
+              Trusted By Brands That
               <span className="block text-accent-purple">
                 Value Great Design
               </span>

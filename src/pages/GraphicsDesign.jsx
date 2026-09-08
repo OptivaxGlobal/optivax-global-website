@@ -23,7 +23,7 @@ const GraphicsDesign = () => {
 
   const contentSections = [
     {
-      title: "Graphics Designed to Perform",
+      title: "Graphics Designed To Perform",
       text: "Strong graphic design helps your business stand out in crowded feeds, ads, and email campaigns. We create visuals that communicate your message quickly and professionally.",
     },
     {
@@ -31,7 +31,7 @@ const GraphicsDesign = () => {
       text: "We design graphics with consistent style, color, and typography so every piece of content feels part of the same brand story.",
     },
     {
-      title: "Fast Visual Support for Marketing",
+      title: "Fast Visual Support For Marketing",
       text: "Whether you need social posts, ad banners, or campaign visuals, we deliver graphics that are ready to launch with your marketing plan.",
     },
   ];

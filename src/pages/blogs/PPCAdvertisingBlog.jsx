@@ -28,7 +28,7 @@ const sections = [
     text: "Paid search advertising remains a common way for businesses to reach the right audience at the right time. A strategic, well-planned approach can help businesses generate faster results and increase brand visibility in competitive markets.",
   },
   {
-    heading: "Looking to Strengthen Your Online Presence?",
+    heading: "Looking To Strengthen Your Online Presence?",
     text: "Optivax Global helps businesses build professional, custom-designed websites with clear structure and strong user experience the foundation any online marketing effort relies on.",
   },
 ];

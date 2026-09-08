@@ -90,7 +90,7 @@ const MobileAppDesign = () => {
               <h1 className="text-4xl md:text-6xl lg:text-7xl font-extrabold leading-tight mb-6">
                 Mobile App Interfaces
                 <span className="block text-accent-purple">
-                  Designed for Real Users
+                  Designed For Real Users
                 </span>
               </h1>
 
@@ -247,7 +247,7 @@ const MobileAppDesign = () => {
 
           <div className="max-w-5xl mx-auto px-6 relative z-10">
             <h2 className="text-4xl md:text-6xl font-extrabold mb-6">
-              Need a Better App Experience?
+              Need A Better App Experience?
             </h2>
 
             <p className="text-gray-300 text-lg max-w-2xl mx-auto mb-8 leading-relaxed">

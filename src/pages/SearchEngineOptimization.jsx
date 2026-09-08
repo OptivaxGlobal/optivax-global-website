@@ -23,7 +23,7 @@ const SearchEngineOptimization = () => {
 
   const contentSections = [
     {
-      title: "Built for People and Search Engines",
+      title: "Built For People And Search Engines",
       text: "Website visibility works best when your content is clear, useful, and easy to navigate. We help shape pages that customers and search engines both understand.",
     },
     {

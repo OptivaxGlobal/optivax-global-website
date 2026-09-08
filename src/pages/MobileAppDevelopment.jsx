@@ -7,7 +7,7 @@ const MobileAppDevelopment = () => {
     { icon: <Smartphone size={24} />, title: "App Performance Focus", text: "We build mobile app experiences optimized for smooth loading, responsive behavior, and stable interactions." },
     { icon: <Code2 size={24} />, title: "Technical App Development", text: "Our process covers the frontend, integration points, and launch readiness for your mobile product." },
     { icon: <Layers size={24} />, title: "Functional App Architecture", text: "We structure app screens, data flow, and navigation so your app works reliably across devices." },
-    { icon: <Zap size={24} />, title: "Ready for Launch", text: "Your mobile app project will be prepared for testing, deployment, and ongoing improvement." },
+    { icon: <Zap size={24} />, title: "Ready For Launch", text: "Your mobile app project will be prepared for testing, deployment, and ongoing improvement." },
   ];
 
   const deliverables = [
@@ -23,7 +23,7 @@ const MobileAppDevelopment = () => {
 
   const contentSections = [
     {
-      title: "Development That Starts with Strategy",
+      title: "Development That Starts With Strategy",
       text: "We define the customer journey, technical requirements, and success criteria so the app delivers real value.",
     },
     {
@@ -44,7 +44,7 @@ const MobileAppDevelopment = () => {
       canonicalUrl="https://optivaxglobal.com/mobile-app-development"
       serviceLabel="Mobile App Development"
       heroHeadline="Mobile App Development"
-      heroSubheadline="Built for Smooth Mobile Experiences"
+      heroSubheadline="Built For Smooth Mobile Experiences"
       heroText="We build mobile apps that feel fast, function reliably, and are ready for testing, launch, and future updates." 
       buttonText="Start App Development"
       contactServiceName="Mobile App Development"

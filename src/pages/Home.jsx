@@ -10,6 +10,7 @@ import Testimonials from '@/components/Testimonials';
 import Stats from '@/components/Stats';
 import CTA from '@/components/CTA';
 import SectionAnimator from '@/components/SectionAnimator';
+import HomepageConversionSections from '@/components/HomepageConversionSections';
 
 const Home = () => {
   const organizationSchema = {
@@ -65,12 +66,12 @@ const Home = () => {
     <>
       <Helmet>
         <title>
-          Custom Website & Digital Design Services | Optivax Global
+          Business Websites & Custom Web Development | Optivax Global
         </title>
 
         <meta
           name="description"
-          content="Optivax Global provides professional digital design, development, branding, publishing, and creative solutions for businesses, brands, and creators."
+          content="Optivax Global builds professional WordPress websites and scalable custom web platforms for businesses ready to grow."
         />
 
         <meta
@@ -86,7 +87,7 @@ const Home = () => {
         <meta property="og:title" content="Custom Website & Digital Design Services | Optivax Global" />
         <meta
           property="og:description"
-          content="Optivax Global creates professional website design, branding, UI/UX, eBook, and digital creative services for businesses and creators."
+          content="Optivax Global builds professional business websites and scalable custom digital platforms for growing companies."
         />
         <meta property="og:url" content="https://optivaxglobal.com/" />
         <meta property="og:type" content="website" />
@@ -121,6 +122,8 @@ const Home = () => {
         <SectionAnimator>
           <Services />
         </SectionAnimator>
+
+        <HomepageConversionSections />
 
         <About />
 

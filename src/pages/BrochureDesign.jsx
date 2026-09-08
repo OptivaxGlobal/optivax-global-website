@@ -27,11 +27,11 @@ const BrochureDesign = () => {
       text: "A good brochure should present your product, service, or brand story in a way that is easy to understand. We design brochure layouts that feel modern, readable, and attractive.",
     },
     {
-      title: "Print and Digital Versatility",
+      title: "Print And Digital Versatility",
       text: "Your brochure can work as a printed handout, a downloadable PDF, or a digital brochure for email and social campaigns. We design with each format in mind.",
     },
     {
-      title: "Designed to Support Your Marketing",
+      title: "Designed To Support Your Marketing",
       text: "With the right brochure design, you can share your message confidently in meetings, events, and client outreach while maintaining a professional brand image.",
     },
   ];

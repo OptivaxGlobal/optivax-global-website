@@ -8,7 +8,7 @@ const sections = [
     text: "A customer may discover your business through an Instagram post, a Google ad, a brochure, an email, a presentation, or even a business card. Although these marketing materials serve different purposes, they should all feel as if they belong to the same brand. That is where thoughtful marketing material design becomes important. Strong design is not simply about making an advertisement look attractive. It helps people recognize your business, understand your message faster, and remember the brand after they have moved on. Here are practical marketing material design ideas that can improve brand visibility across digital and print channels.",
   },
   {
-    heading: "1. Build a Recognizable Visual System",
+    heading: "1. Build A Recognizable Visual System",
     text: "Instead of designing every marketing asset from scratch, create a visual system that your team can repeat. Define your primary and secondary colors, headline fonts, body typography, photography style, icon style, button appearance, shapes, and spacing. The objective is not to make every advertisement identical but to give them a visual relationship. A social post, brochure, landing-page banner, and presentation slide may have completely different layouts while still feeling connected to the same company. Consistency makes brand recognition easier.",
   },
   {
@@ -28,15 +28,15 @@ const sections = [
     text: "Marketing teams often need content quickly. Instead of sacrificing consistency whenever a new post, advertisement, proposal, or campaign is required, build reusable branded templates. These can include social media posts, Stories and vertical ads, promotional banners, email headers, business proposals, presentations, case studies, flyers, and service brochures. Templates save production time while reducing accidental changes to fonts, colors, logo placement, and visual style. They also make it easier to scale marketing without losing brand identity.",
   },
   {
-    heading: "6. Design for the Platform, Not Just the Brand",
+    heading: "6. Design For The Platform, Not Just The Brand",
     text: "Consistency does not mean using exactly the same layout everywhere. A billboard has different requirements from an Instagram Story, while a printed brochure is consumed differently from a website banner. Adapt your marketing design to the environment in which people will see it. Social media often needs an immediate visual hook, brochures can provide more detailed information, website banners should communicate quickly and lead visitors toward the next action, and presentations need clear storytelling from one slide to another. The brand remains consistent while the execution changes.",
   },
   {
-    heading: "7. Make Calls to Action Visually Obvious",
+    heading: "7. Make Calls To Action Visually Obvious",
     text: "Marketing materials should normally encourage the audience to take a specific action, such as booking a consultation, requesting a quote, shopping now, downloading a guide, exploring services, or contacting your team. The call to action should not disappear inside the design. Use size, spacing, contrast, placement, and visual hierarchy to make the next step easy to identify. Avoid filling one small advertisement with several equally important calls to action. When everything asks for attention, the audience may choose nothing.",
   },
   {
-    heading: "8. Think About Print and Digital Together",
+    heading: "8. Think About Print And Digital Together",
     text: "A complete brand exists beyond a single screen. Your visual identity may eventually appear on packaging, signage, business cards, exhibition materials, apparel, printed documents, digital advertising, social media, and websites. Design with this flexibility in mind. For print materials, images should be prepared at a suitable resolution, while artwork that reaches the paper edge should account for proper bleed and trimming. For digital materials, layouts should remain readable across different screen sizes. A flexible design system prevents the brand from looking excellent in one format and weak in another.",
   },
   {
@@ -44,7 +44,7 @@ const sections = [
     text: "Empty space is not wasted space. White space helps separate information, create hierarchy, increase readability, and give important elements greater visual impact. Premium brands often appear polished because they resist the temptation to fill every available area. Instead of always asking what else can be added to a design, sometimes the better question is what can be removed.",
   },
   {
-    heading: "10. Review Marketing Materials as a Collection",
+    heading: "10. Review Marketing Materials As A Collection",
     text: "Do not judge each design only by itself. Place your recent social graphics, advertisements, brochures, banners, emails, and presentation slides next to one another. Ask whether someone would immediately recognize that they came from the same company. If the answer is no, the problem may not be the quality of the individual designs. It may be the lack of a shared visual system that connects every marketing asset to the brand.",
   },
   {
@@ -56,7 +56,7 @@ const sections = [
 const MarketingDesignIdeasBrandVisibilityBlog = () => {
   return (
     <BlogArticleLayout
-      title="Marketing Material Design Ideas for Better Brand Visibility"
+      title="Marketing Material Design Ideas For Better Brand Visibility"
       metaTitle="Marketing Design Ideas For Brand Visibility - Optivax Global"
       metaDescription="Explore practical marketing material design ideas that improve brand visibility, maintain visual consistency, and help customers recognize your business."
       canonicalUrl="https://optivaxglobal.com/marketing-design-ideas-brands-visibility"

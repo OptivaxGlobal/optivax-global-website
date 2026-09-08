@@ -119,6 +119,20 @@ const ServiceTemplate = ({
                 </div>
               ))}
             </div>
+
+            <div className="mt-10 flex flex-col gap-4 rounded-3xl border border-white/10 bg-white/[0.04] p-6 sm:flex-row sm:items-center sm:justify-between sm:p-7">
+              <div>
+                <p className="text-sm font-bold text-white">Have a project in mind?</p>
+                <p className="mt-1 text-sm text-gray-400">Share the workflow, product, or platform you want to build and we will scope the right next step.</p>
+              </div>
+              <button
+                onClick={() => navigate("/contact", { state: { service: contactServiceName } })}
+                className="inline-flex shrink-0 items-center justify-center gap-2 rounded-full bg-gradient-to-r from-[#1BBCEF] to-[#004495] px-5 py-3 font-bold text-white transition hover:from-[#004495] hover:to-[#1BBCEF]"
+              >
+                Discuss your project
+                <ArrowRight className="h-4 w-4" />
+              </button>
+            </div>
           </div>
         </section>
 
@@ -290,7 +304,7 @@ View Live Project
 
           <div className="max-w-5xl mx-auto px-6 text-center relative z-10">
             <h2 className="text-4xl md:text-6xl font-extrabold mb-6">
-              Ready to Get Started with {serviceLabel}?
+              Ready To Get Started With {serviceLabel}?
             </h2>
 
             <p className="text-gray-400 text-lg max-w-2xl mx-auto mb-8">

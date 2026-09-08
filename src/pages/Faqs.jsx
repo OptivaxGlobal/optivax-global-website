@@ -197,7 +197,7 @@ const Faqs = () => {
               </div>
 
               <h2 className="text-2xl md:text-3xl font-bold mb-5">
-                What You Need to Know
+                What You Need To Know
               </h2>
 
               <p className="text-gray-300 leading-relaxed mb-6">
@@ -227,7 +227,7 @@ const Faqs = () => {
         <section className="py-20 border-t border-white/10">
           <div className="max-w-7xl mx-auto px-6">
             <h2 className="text-3xl md:text-5xl font-extrabold mb-5">
-              Built for Businesses That Need Clarity Before Starting
+              Built For Businesses That Need Clarity Before Starting
             </h2>
 
             <p className="text-gray-300 text-lg leading-relaxed max-w-3xl mb-12">
@@ -405,7 +405,7 @@ const Faqs = () => {
 
           <div className="max-w-5xl mx-auto px-6 relative z-10">
             <h2 className="text-4xl md:text-6xl font-extrabold mb-6">
-              Ready to Build a Digital Presence That Feels Professional?
+              Ready To Build A Digital Presence That Feels Professional?
             </h2>
 
             <p className="text-gray-300 text-lg max-w-2xl mx-auto mb-8 leading-relaxed">

@@ -301,7 +301,7 @@ const Project = () => {
         <SectionAnimator>
             <section className="py-24 text-center">
                 <div className="container mx-auto px-6">
-                    <h2 className="text-3xl md:text-4xl font-bold mb-4">Ready to Work Together?</h2>
+                    <h2 className="text-3xl md:text-4xl font-bold mb-4">Ready To Work Together?</h2>
                     <p className="text-lg text-gray-400 mb-8">Let's discuss your next big idea and how we can bring it to life.</p>
                      <Button asChild size="lg" className="bg-accent-purple text-white hover:bg-accent-purple/90 group rounded-full text-lg py-7 px-10">
                         <Link to="/contact">

@@ -23,11 +23,11 @@ const PayPerClick = () => {
 
   const contentSections = [
     {
-      title: "Paid Ads with Purpose",
+      title: "Paid Ads With Purpose",
       text: "Paid search advertising is built around focused offers, audience intent, and strong messaging.",
     },
     {
-      title: "Designed to Be Measurable",
+      title: "Designed To Be Measurable",
       text: "Every paid search effort should be easy to measure. We structure your ad plan so you can see how each click relates to your goals.",
     },
     {

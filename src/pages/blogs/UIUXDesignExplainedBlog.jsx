@@ -16,11 +16,11 @@ const sections = [
     text: "UX stands for User Experience. It focuses on how users feel while using a website, application, or digital platform. UX covers navigation, page speed, usability, mobile experience, forms, user flow, and overall interaction. Good UX removes confusion and helps people complete tasks quickly and confidently.",
   },
   {
-    heading: "UI and UX Work Together",
+    heading: "UI And UX Work Together",
     text: "UI and UX are different but closely connected. A product can look attractive but still be difficult to use, while another may function well but appear outdated. Successful digital products combine visually appealing interfaces with smooth user experiences to improve engagement, trust, and usability.",
   },
   {
-    heading: "Why UI UX Design Matters for Businesses",
+    heading: "Why UI UX Design Matters For Businesses",
     text: "Businesses benefit from strong UI UX because it improves first impressions, builds customer trust, increases engagement, reduces bounce rates, strengthens brand image, and helps convert visitors into customers. A better user experience often leads to better business results.",
   },
   {
@@ -40,7 +40,7 @@ const sections = [
     text: "Modern users access websites primarily through smartphones. Responsive layouts, readable typography, optimized images, touch-friendly buttons, and mobile-friendly forms ensure users enjoy the same experience across every device.",
   },
   {
-    heading: "Speed and Performance Improve UX",
+    heading: "Speed And Performance Improve UX",
     text: "User experience also depends on website performance. Fast loading speeds, responsive interactions, and stable page layouts help reduce frustration, improve engagement, and support stronger search visibility performance.",
   },
   {
@@ -60,7 +60,7 @@ const sections = [
 const UIUXDesignExplainedBlog = () => {
   return (
     <BlogArticleLayout
-      title="UI UX Design Explained for Better Digital Experiences"
+      title="UI UX Design Explained For Better Digital Experiences"
       metaTitle="UI UX Design Explained for Businesses - Optivax Global"
       metaDescription="Learn how UI UX design improves usability, customer experience, accessibility, navigation, mobile responsiveness, trust, and business growth."
       canonicalUrl="https://optivaxglobal.com/explain-business-for-ui-ux-design"

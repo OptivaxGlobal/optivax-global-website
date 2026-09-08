@@ -12,7 +12,7 @@ const sections = [
     text: "People see hundreds of posts, ads, and videos every day. Static content can easily get ignored, especially when users are scrolling quickly. Animation helps catch attention because movement naturally attracts the eye. Whether it is a short motion graphic, animated logo, product video, or explainer animation, moving visuals can stop users for a moment and encourage them to watch, click, or learn more about the brand.",
   },
   {
-    heading: "Complex Ideas Become Easier to Understand",
+    heading: "Complex Ideas Become Easier To Understand",
     text: "Some products and services are difficult to explain with simple text or images. Animation makes it easier to break down complex ideas into simple visual steps. Businesses can use animated videos to explain how a service works, why a product is useful, or what makes their brand different. This helps customers understand the message faster and makes the business look more professional and clear.",
   },
   {
@@ -20,11 +20,11 @@ const sections = [
     text: "Strong marketing is not only about selling. It is also about telling a story that customers can remember. Animation gives brands a creative way to express their message, values, personality, and style. With the right colors, characters, motion, and visual flow, businesses can create content that feels unique and emotionally connected. This helps the brand become more recognizable and memorable over time.",
   },
   {
-    heading: "Animated Content Works Well on Social Media",
+    heading: "Animated Content Works Well On Social Media",
     text: "Social media platforms are highly visual, and short videos often perform better than plain images. Animation can be used for reels, stories, ads, banners, product highlights, service introductions, and promotional campaigns. Because animated content is flexible and creative, businesses can use it in many different formats. This makes it easier to keep marketing fresh, modern, and engaging.",
   },
   {
-    heading: "Animation Builds a Professional Digital Image",
+    heading: "Animation Builds A Professional Digital Image",
     text: "A business that uses clean, high-quality animation often appears more modern and trustworthy. Animated logos, motion graphics, website animations, and explainer videos can improve the overall brand experience. When customers see polished visual content, they are more likely to feel that the business is active, creative, and serious about its online presence.",
   },
   {
@@ -32,7 +32,7 @@ const sections = [
     text: "Animation has become an important part of a strong digital presence because it helps businesses attract attention, explain ideas, and create stronger brand experiences. In a crowded online market, businesses need content that is not only beautiful but also engaging and easy to understand. Animation gives brands a creative way to communicate their message and connect with customers more effectively.",
   },
   {
-    heading: "Ready to Make Your Brand More Engaging?",
+    heading: "Ready To Make Your Brand More Engaging?",
     text: "At Optivax Global, we help businesses create professional animation, motion graphics, and brand visuals designed to strengthen their digital presence. Ready to bring your brand story to life? Optivax Global helps businesses create modern, creative animation content.",
   },
 ];
@@ -40,7 +40,7 @@ const sections = [
 const AnimationMarketingBlog = () => {
   return (
     <BlogArticleLayout
-      title="The Growing Importance of Animation for Modern Brands"
+      title="The Growing Importance Of Animation For Modern Brands"
       metaTitle="The Importance of Animation for Modern Brands - Optivax Global"
       metaDescription="Learn how animation helps businesses capture attention, explain complex ideas, improve brand storytelling, and increase engagement."
       canonicalUrl="https://optivaxglobal.com/important-of-animation-in-digital-marketing"

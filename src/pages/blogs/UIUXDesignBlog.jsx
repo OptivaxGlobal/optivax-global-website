@@ -8,7 +8,7 @@ const sections = [
     text: "Every business wants more website traffic, but attracting visitors is only the first step. The real challenge is turning those visitors into engaged customers who trust your brand and return repeatedly. This is where great UI/UX design plays a critical role.",
   },
   {
-    heading: "Understanding UI and UX Design",
+    heading: "Understanding UI And UX Design",
     text: "User Interface (UI) design focuses on the visual elements users interact with, while User Experience (UX) design focuses on how users feel when navigating a website or application. Together, they create digital experiences that influence customer decisions, satisfaction, and loyalty.",
   },
   {
@@ -36,7 +36,7 @@ const sections = [
 const UIUXDesignBlog = () => {
   return (
     <BlogArticleLayout
-      title="How Great UI/UX Design Turns Visitors into Loyal Customers"
+      title="How Great UI/UX Design Turns Visitors Into Loyal Customers"
       metaTitle="UI/UX Design Turns into Loyal Customers - Optivax Global"
       metaDescription="Discover how great UI/UX design improves customer experience, builds trust, increases retention, and helps businesses convert visitors into loyal customers."
       canonicalUrl="https://optivaxglobal.com/ui-ux-design-turns-into-loyal-customers"

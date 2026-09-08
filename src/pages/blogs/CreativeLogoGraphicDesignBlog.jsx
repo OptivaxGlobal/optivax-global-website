@@ -16,7 +16,7 @@ const sections = [
     text: "Graphic design creates a complete visual identity through social media graphics, website banners, brochures, flyers, packaging, advertisements, business cards, presentations, and other marketing materials. Consistent design helps customers recognize the brand more easily and strengthens professionalism.",
   },
   {
-    heading: "Design Creates a Strong First Impression",
+    heading: "Design Creates A Strong First Impression",
     text: "Customers often form opinions about a business within seconds. Clean logos, modern website graphics, professional brochures, and polished social media visuals create positive first impressions that increase credibility and encourage customers to learn more about the business.",
   },
   {
@@ -28,7 +28,7 @@ const sections = [
     text: "Promotional campaigns become more effective when supported by professional visuals. Well-designed advertisements, social media graphics, brochures, landing pages, and promotional materials communicate information more clearly and encourage customers to take action.",
   },
   {
-    heading: "Logo and Graphic Design Work Together",
+    heading: "Logo And Graphic Design Work Together",
     text: "A logo alone does not create a complete brand identity. Graphic design extends that identity across every customer touchpoint. Consistent colors, typography, layouts, imagery, and branding elements create a unified experience that builds trust and professionalism.",
   },
   {
@@ -44,7 +44,7 @@ const sections = [
 const CreativeLogoGraphicDesignBlog = () => {
   return (
     <BlogArticleLayout
-      title="Creative Logo and Graphic Design Services for Modern Brands"
+      title="Creative Logo And Graphic Design Services For Modern Brands"
       metaTitle="Creative Logo & Graphic Design For Modren Brands - Optivax Global"
       metaDescription="Discover how professional logo and graphic design services help modern brands build recognition, improve marketing, strengthen trust, and create a consistent visual identity."
       canonicalUrl="https://optivaxglobal.com/creative-logo-and-graphic-design-modern-brands"

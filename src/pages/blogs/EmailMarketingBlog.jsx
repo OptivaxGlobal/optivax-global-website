@@ -32,7 +32,7 @@ const sections = [
     text: "Email communication is more than a promotional tool. For many businesses, it is a valuable communication channel that helps build trust, improve customer engagement, and create stronger long-term relationships.",
   },
   {
-    heading: "Ready to Strengthen Your Digital Presence?",
+    heading: "Ready To Strengthen Your Digital Presence?",
     text: "Optivax Global helps businesses build professional websites, UI/UX design, and consistent brand identity that give customers a clear and trustworthy digital experience.",
   },
 ];

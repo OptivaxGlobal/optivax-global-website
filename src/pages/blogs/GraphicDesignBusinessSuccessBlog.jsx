@@ -12,7 +12,7 @@ const sections = [
     text: "First impressions matter in business. Customers often judge a company by its logo, website, social media graphics, or product packaging before reading any details. Professional, clean, and consistent design makes a business appear more credible, modern, and trustworthy from the very first interaction.",
   },
   {
-    heading: "Design Makes a Brand Easier to Recognize",
+    heading: "Design Makes A Brand Easier To Recognize",
     text: "Graphic design creates recognition through consistent use of logos, colors, typography, icons, layouts, and imagery. A unified visual identity helps customers remember a brand across websites, social media, packaging, advertisements, and printed materials.",
   },
   {
@@ -52,7 +52,7 @@ const sections = [
     text: "Many businesses offer similar products and services. A unique visual identity helps brands differentiate themselves through distinctive colors, layouts, typography, and design style. Strong branding makes businesses easier to remember and more competitive in crowded markets.",
   },
   {
-    heading: "Consistency Makes a Business Look Professional",
+    heading: "Consistency Makes A Business Look Professional",
     text: "Using consistent logos, fonts, colors, spacing, layouts, and branding across every marketing channel helps businesses appear organized and reliable. Consistency strengthens recognition and builds customer trust over time.",
   },
   {
@@ -64,7 +64,7 @@ const sections = [
 const GraphicDesignBusinessSuccessBlog = () => {
   return (
     <BlogArticleLayout
-      title="Why Graphic Design Matters for Business Success"
+      title="Why Graphic Design Matters For Business Success"
       metaTitle="Graphic Design Matter For Business Success - Optivax Global"
       metaDescription="Learn how professional graphic design improves branding, builds trust, strengthens marketing, enhances customer experience, and supports long-term business growth."
       canonicalUrl="https://optivaxglobal.com/graphic-design-matters-for-business-success"

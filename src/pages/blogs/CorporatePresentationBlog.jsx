@@ -16,7 +16,7 @@ const sections = [
     text: "Many business ideas are strong, but they fail to create impact because they are presented in a confusing way. Too much text, weak structure, poor visuals, and inconsistent formatting can make even valuable information hard to understand. Professional presentation design solves this problem by organizing content into a clear flow. It helps separate key points from supporting details and makes the message easier to follow.",
   },
   {
-    heading: "Visual Hierarchy Guides the Audience",
+    heading: "Visual Hierarchy Guides The Audience",
     text: "A strong presentation should guide the viewer’s attention. The audience should instantly know what to look at first, what matters most, and what action should come next. Design elements like size, spacing, contrast, alignment, color, and layout help create a natural reading path. In corporate presentations, this helps leaders communicate faster and with more confidence.",
   },
   {
@@ -40,7 +40,7 @@ const sections = [
 const CorporatePresentationBlog = () => {
   return (
     <BlogArticleLayout
-      title="From Slides to Strategy: The Impact of Corporate Presentation Design"
+      title="From Slides To Strategy: The Impact Of Corporate Presentation Design"
       metaTitle="Impact Of Corporate Presentation Design - Optivax Global"
       metaDescription="Learn how corporate presentation design helps businesses communicate clearly, build trust, explain data, support decisions, and create stronger business impact."
       canonicalUrl="https://optivaxglobal.com/impact-of-corporate-design"

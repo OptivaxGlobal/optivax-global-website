@@ -33,7 +33,7 @@ const ComicArts = () => {
       text: "The heart of any great comic is unforgettable characters. We design characters with personality built into every line from their shape language to their expressions to the way they move. Each character we create has a distinct visual identity that makes them instantly recognizable and emotionally real. Your readers won't just follow the story; they'll care about the people in it.",
     },
     {
-      title: "Panel Layouts Built for Impact",
+      title: "Panel Layouts Built For Impact",
       text: "Great comic art isn't just pretty pictures it's carefully structured visual choreography. We design panel compositions, pacing, and transitions that guide readers through your story with perfect rhythm. Action feels punchy. Emotions land harder. Dramatic moments breathe. Every panel flows naturally to the next, creating a reading experience that feels intentional and immersive.",
     },
     {
@@ -41,11 +41,11 @@ const ComicArts = () => {
       text: "Whether your story is set in a bustling city, a fantasy realm, or outer space, we create environments that feel lived-in and authentic. Detailed backgrounds, consistent lighting, and thoughtful design choices make your world feel believable and make your characters feel like they genuinely belong there.",
     },
     {
-      title: "Flexible Styles for Every Story",
+      title: "Flexible Styles For Every Story",
       text: "Comic art comes in many flavors. Classic comic book style. Manga-inspired aesthetics. Indie comic vibes. Realistic illustrations. Digital or hand-drawn feels. We work in the style that fits your story and speaks to your audience. Whether you need bold, clean lines or intricate detail work, we adapt our craft to match your vision.",
     },
     {
-      title: "Ready for Print or Digital",
+      title: "Ready For Print Or Digital",
       text: "Your comic art is delivered in formats that work for whatever comes next. Publication-ready files for print. Web-optimized versions for digital platforms. High-resolution master files for future reproductions. Files organized and documented so your comic is ready to reach readers however you want to share it.",
     },
   ];

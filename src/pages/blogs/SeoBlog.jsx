@@ -37,7 +37,7 @@ const sections = [
 const SeoBlog = () => {
   return (
     <BlogArticleLayout
-      title="Why Search Visibility Matters for Small Businesses"
+      title="Why Search Visibility Matters For Small Businesses"
       metaTitle="Why Search Visibility Matters for Small Businesses - Optivax Global"
       metaDescription="Learn why search visibility matters for service businesses, how it builds trust, and why website structure plays a role in being found online."
       canonicalUrl="https://optivaxglobal.com/importance-of-small-businesses-seo-services"

@@ -27,11 +27,11 @@ const StationaryDesign = () => {
       text: "Business stationery is a subtle but powerful way to show professionalism. We design cohesive stationery sets that reinforce your brand in every client interaction.",
     },
     {
-      title: "Designed for Every Touchpoint",
+      title: "Designed For Every Touchpoint",
       text: "From printed envelopes to email footers, your stationery should feel consistent and well-crafted across every business asset.",
     },
     {
-      title: "Ready for Printing and Sharing",
+      title: "Ready For Printing And Sharing",
       text: "We deliver stationery visuals in print-ready formats so you can order high-quality materials without extra design work.",
     },
   ];

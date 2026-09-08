@@ -353,7 +353,7 @@ const EbookPublishing = () => {
               transition={{ duration: 0.6, delay: 0.1 }}
               className="bg-white/[0.04] backdrop-blur-xl border border-white/10 rounded-3xl p-8 shadow-2xl"
             >
-              <h2 className="text-2xl font-bold mb-6">At a Glance</h2>
+              <h2 className="text-2xl font-bold mb-6">At A Glance</h2>
 
               <div className="grid gap-4">
                 {[
@@ -388,7 +388,7 @@ const EbookPublishing = () => {
                 </span>
 
                 <h2 className="text-3xl md:text-5xl font-extrabold mb-5">
-                  What's Included in eBook Publishing
+                  What's Included In eBook Publishing
                 </h2>
 
                 <p className="text-gray-400 text-lg leading-relaxed">
@@ -605,7 +605,7 @@ const EbookPublishing = () => {
           <section className="py-20 border-t border-white/10">
             <div className="max-w-4xl mx-auto px-6">
               <h2 className="text-3xl md:text-5xl font-extrabold mb-6">
-                Take Your Manuscript From Draft to Published eBook
+                Take Your Manuscript From Draft To Published eBook
               </h2>
 
               <div className="space-y-5 text-gray-300 text-lg leading-relaxed">
@@ -702,7 +702,7 @@ const EbookPublishing = () => {
 
           <div className="max-w-5xl mx-auto px-6 relative z-10">
             <h2 className="text-4xl md:text-6xl font-extrabold mb-6">
-              Ready to Publish Your eBook?
+              Ready To Publish Your eBook?
             </h2>
 
             <p className="text-gray-300 text-lg max-w-2xl mx-auto mb-8 leading-relaxed">

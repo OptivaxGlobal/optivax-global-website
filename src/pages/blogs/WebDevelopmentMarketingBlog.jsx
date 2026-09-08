@@ -32,7 +32,7 @@ const sections = [
     text: "Modern web development and marketing are not just extra business tools. They are essential parts of building a strong digital presence. A professional website helps create trust, while marketing helps bring the right people to that website. Together, they support visibility, engagement, and long-term business growth.",
   },
   {
-    heading: "Ready to Build Your Digital Presence?",
+    heading: "Ready To Build Your Digital Presence?",
     text: "At Optivax Global, we help businesses build professional websites, strong branding, and logo design that create a clear, consistent, and trustworthy digital identity.",
   },
 ];
@@ -40,7 +40,7 @@ const sections = [
 const WebDevelopmentMarketingBlog = () => {
   return (
     <BlogArticleLayout
-      title="How Businesses Can Build a Strong Digital Presence with Modern Web Development"
+      title="How Businesses Can Build A Strong Digital Presence With Modern Web Development"
       metaTitle="Build a Strong Digital Presence with Modern Web Development - Optivax Global"
       metaDescription="Learn how modern web development helps businesses build trust, improve their online presence, attract customers, and achieve long-term growth."
       canonicalUrl="https://optivaxglobal.com/maximize-growth-modern-web-development"

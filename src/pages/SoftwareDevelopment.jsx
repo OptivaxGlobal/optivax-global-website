@@ -11,17 +11,17 @@ const SoftwareDevelopment = () => {
     },
     {
       icon: <Boxes size={24} />,
-      title: "Web and Enterprise Systems",
+      title: "Web And Enterprise Systems",
       text: "Our development work includes web-based tools, internal platforms, SaaS products, and business systems built for daily use.",
     },
     {
       icon: <HardDrive size={24} />,
-      title: "API and Integration Support",
+      title: "API And Integration Support",
       text: "We connect your software with third-party tools, databases, and platforms so your operations stay connected and efficient.",
     },
     {
       icon: <RefreshCw size={24} />,
-      title: "Modernization and Maintenance",
+      title: "Modernization And Maintenance",
       text: "We help improve older systems, modernize legacy workflows, and support long-term performance after launch.",
     },
   ];
@@ -43,11 +43,11 @@ const SoftwareDevelopment = () => {
       text: "We begin with a clear understanding of your workflows, user needs, and business priorities so the final product is practical, reliable, and easy to maintain.",
     },
     {
-      title: "From Planning to Launch",
+      title: "From Planning To Launch",
       text: "Our team helps businesses move from initial planning and design into development, testing, deployment, and long-term support without losing focus on quality.",
     },
     {
-      title: "Built for Reliability and Scale",
+      title: "Built For Reliability And Scale",
       text: "Whether you need a customer portal, internal management tool, or a scalable SaaS platform, we focus on dependable software that can evolve alongside your business.",
     },
   ];
@@ -60,7 +60,7 @@ const SoftwareDevelopment = () => {
       canonicalUrl="https://optivaxglobal.com/software-development"
       serviceLabel="Software Development Services"
       heroHeadline="Software Development"
-      heroSubheadline="Reliable Solutions for Modern Business Needs"
+      heroSubheadline="Reliable Solutions For Modern Business Needs"
       heroText="We help businesses plan, design, build, test, launch, and maintain custom software that supports daily operations and long-term reliability."
       buttonText="Start Software Development"
       contactServiceName="Software Development"

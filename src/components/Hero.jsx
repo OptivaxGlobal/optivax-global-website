@@ -1,4 +1,4 @@
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import React from "react";
 import { motion } from "framer-motion";
 import { ArrowRight, Sparkles, CheckCircle2 } from "lucide-react";
@@ -47,16 +47,15 @@ const Hero = () => {
           >
             <Sparkles className="w-4 h-4 text-accent-purple" />
             <span className="text-sm md:text-base text-[#d8d0ff] font-medium">
-              Creative Digital Solutions for Ambitious Brands
+              Websites and digital products built for growth
             </span>
           </motion.div>
 
              <h1 className="text-4xl sm:text-5xl md:text-7xl lg:text-[5.3rem] font-extrabold mb-6 leading-[0.95] text-white tracking-[-0.04em]"
 >
-    Custom Design Solutions
-
+    Your Next Website Should
   <span className="block text-accent-purple">
-    for Modern Businesses
+    Do More Than Look Good.
   </span>
 </h1>
 
@@ -66,10 +65,9 @@ const Hero = () => {
             transition={{ duration: 0.7, delay: 0.3 }}
             className="text-lg md:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed"
           >
-            Professional website design and development, UI/UX design,
-            branding, eBook design, and digital marketing solutions created
-            to give your business a clear, consistent, and professional
-            digital identity.
+            Optivax builds professional business websites and scalable digital
+            platforms that make your company easier to trust, easier to find,
+            and easier to grow.
           </motion.p>
 
           <motion.div
@@ -78,46 +76,18 @@ const Hero = () => {
             transition={{ duration: 0.7, delay: 0.45 }}
             className="flex flex-wrap gap-4 justify-start md:justify-center mb-10 text-gray-200"
           >
-            <Link
-              to="/web-design"
-              className="flex items-center gap-2 hover:text-accent-purple transition"
-            >
+            <span className="flex items-center gap-2">
               <CheckCircle2 className="w-5 h-5 text-accent-purple" />
-              <span>Web Design</span>
-            </Link>
-
-            <Link
-              to="/web-development"
-              className="flex items-center gap-2 hover:text-accent-purple transition"
-            >
+              <span>Conversion-focused structure</span>
+            </span>
+            <span className="flex items-center gap-2">
               <CheckCircle2 className="w-5 h-5 text-accent-purple" />
-              <span>Web Development</span>
-            </Link>
-
-            
-            <Link
-              to="/logo-design"
-              className="flex items-center gap-2 hover:text-accent-purple transition"
-            >
+              <span>Mobile-ready from day one</span>
+            </span>
+            <span className="flex items-center gap-2">
               <CheckCircle2 className="w-5 h-5 text-accent-purple" />
-              <span>Logo Design</span>
-            </Link>
-
-            <Link
-              to="/ui-ux-design"
-              className="flex items-center gap-2 hover:text-accent-purple transition"
-            >
-              <CheckCircle2 className="w-5 h-5 text-accent-purple" />
-              <span>UI/UX Design</span>
-            </Link>
-
-            <Link
-              to="/ebook-cover-design"
-              className="flex items-center gap-2 hover:text-accent-purple transition"
-            >
-              <CheckCircle2 className="w-5 h-5 text-accent-purple" />
-              <span>eBook Cover Design</span>
-            </Link>
+              <span>Clear plan before we build</span>
+            </span>
           </motion.div>
 <motion.div
   initial={{ opacity: 0, y: 28 }}
@@ -130,7 +100,7 @@ const Hero = () => {
     size="lg"
     className="bg-gradient-to-r from-[#1BBCEF] to-[#004495] hover:from-[#004495] hover:to-[#1BBCEF] text-white font-semibold px-8 py-6 text-lg rounded-full group shadow-lg shadow-[#1BBCEF]/25 transition-all duration-300 border-0"
   >
-    Start Your Design Project
+    Start a Website Project
     <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform duration-300" />
   </Button>
 
@@ -139,7 +109,7 @@ const Hero = () => {
     size="lg"
     className="bg-gradient-to-r from-[#1BBCEF] to-[#004495] hover:from-[#004495] hover:to-[#1BBCEF] text-white font-semibold px-8 py-6 text-lg rounded-full group shadow-lg shadow-[#1BBCEF]/25 transition-all duration-300 border-0"
   >
-    View Our Portfolio
+    See Recent Work
     <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform duration-300" />
   </Button>
 </motion.div>

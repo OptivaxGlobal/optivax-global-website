@@ -8,7 +8,7 @@ const sections = [
     text: "Graphic design is more than decoration. It is the visual language that helps a brand communicate, attract attention, build trust, and stay memorable in a crowded market. Before customers read a full website, ask for a quote, or explore a service, they often judge the brand from what they see first: logo, colors, social media graphics, website visuals, ads, packaging, brochures, or presentations.",
   },
   {
-    heading: "Why Graphic Design Matters for Brand Visibility",
+    heading: "Why Graphic Design Matters For Brand Visibility",
     text: "Brand visibility is not only about being seen. It is about being recognized and remembered. Creative graphic design helps build a recognizable look through consistent colors, fonts, layouts, icons, image styles, and brand elements. When customers see the same visual style across different platforms, the brand becomes easier to identify.",
   },
   {
@@ -56,7 +56,7 @@ const sections = [
     text: "Templates can be useful for quick designs, but they often lack originality. Creative graphic design services focus on custom visuals that match the business identity, audience, and goals. A custom design should feel like it belongs to the brand rather than appearing copied from a generic layout.",
   },
   {
-    heading: "Design and Strategy Work Together",
+    heading: "Design And Strategy Work Together",
     text: "The best graphic design is not based only on personal taste. It is based on strategy. Designers should understand the target audience, industry, competitors, brand message, and marketing goals before creating visuals. Design becomes more effective when it is created with a clear purpose.",
   },
   {

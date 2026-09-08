@@ -52,7 +52,7 @@ import businessWebsiteDesignImg from "@/assets/blog-images/professional-business
 
 export const blogPosts = [
   {
-    title: "Professional Business Website Design Services for Modern Brands",
+    title: "Professional Business Website Design Services For Modern Brands",
     excerpt:
       "Explore how professional website design combines strategy, UI/UX, responsive layouts, performance, branding, SEO, and custom development.",
     category: "Website Design",
@@ -70,7 +70,7 @@ export const blogPosts = [
     url: "/brand-identity-design-for-business-startup",
   },
   {
-    title: "Best Branding Services for Startups That Want to Stand Out",
+    title: "Best Branding Services For Startups That Want To Stand Out",
     excerpt:
       "Explore the best branding services for startups, including strategy, naming, logo design, visual identity, messaging, guidelines, and digital branding.",
     category: "Brand Design",
@@ -79,7 +79,7 @@ export const blogPosts = [
     url: "/startup-for-best-branding-services",
   },
   {
-    title: "Brand Identity Design Guide for Small Businesses",
+    title: "Brand Identity Design Guide For Small Businesses",
     excerpt:
       "Learn how a consistent brand identity helps small businesses build customer trust, improve recognition, and stand out from competitors.",
     category: "Brand Design",
@@ -106,7 +106,7 @@ export const blogPosts = [
     url: "/graphic-design-service-for-modern-brands",
   },
   {
-    title: "Marketing Material Design Ideas for Better Brand Visibility",
+    title: "Marketing Material Design Ideas For Better Brand Visibility",
     excerpt:
       "Explore practical marketing material design ideas that improve brand visibility, maintain visual consistency, and help customers recognize your business.",
     category: "Graphic Design",
@@ -115,7 +115,7 @@ export const blogPosts = [
     url: "/marketing-design-ideas-brands-visibility",
   },
   {
-    title: "Social Media Graphic Design for Businesses",
+    title: "Social Media Graphic Design For Businesses",
     excerpt:
       "Learn practical social media graphic design tips for building reusable templates, maintaining brand consistency, improving accessibility, and creating faster.",
     category: "Graphic Design",
@@ -124,7 +124,7 @@ export const blogPosts = [
     url: "/social-media-graphics-design-tips",
   },
   {
-    title: "How to Rank Higher on Google Without Paid Ads",
+    title: "How To Rank Higher On Google Without Paid Ads",
     excerpt:
       "Learn how to rank higher on Google without paid ads using keyword research, useful content, on-page optimization, backlinks, technical improvements, and better UX.",
     category: "Search Visibility Insights",
@@ -133,7 +133,7 @@ export const blogPosts = [
     url: "/rank-on-google-without-paid-ads",
   },
   {
-    title: "How Shopify Makes Online Selling Easier for Small Business Owners",
+    title: "How Shopify Makes Online Selling Easier For Small Business Owners",
     excerpt:
       "Discover how Shopify makes online selling easier for small businesses through simple store setup, product management, payments, marketing, and inventory tools.",
     category: "Shopify Development",
@@ -142,7 +142,7 @@ export const blogPosts = [
     url: "/shopify-solution-for-small-business",
   },
   {
-    title: "How Much Does a Small Business Website Cost?",
+    title: "How Much Does A Small Business Website Cost?",
     excerpt:
       "Learn what a small business website costs and how design, page count, custom features, eCommerce, search visibility, content, and maintenance affect pricing.",
     category: "Web Development",
@@ -169,7 +169,7 @@ export const blogPosts = [
     url: "/digital-marketing-mistakes-avoid",
   },
   {
-    title: "Creative Logo and Graphic Design Services for Modern Brands",
+    title: "Creative Logo And Graphic Design Services For Modern Brands",
     excerpt:
       "Learn how professional logo and graphic design services strengthen branding, improve recognition, build customer trust, and support lasting business visuals.",
     category: "Graphic Design",
@@ -178,7 +178,7 @@ export const blogPosts = [
     url: "/creative-logo-and-graphic-design-modern-brands",
   },
   {
-    title: "Why Graphic Design Matters for Business Success",
+    title: "Why Graphic Design Matters For Business Success",
     excerpt:
       "Discover how professional graphic design improves branding, builds trust, and helps businesses look more credible and memorable.",
     category: "Graphic Design",
@@ -196,7 +196,7 @@ export const blogPosts = [
     url: "/small-business-websites-that-get-results",
   },
   {
-    title: "Ebook Cover Design Tips to Make Your Book Stand Out",
+    title: "Ebook Cover Design Tips To Make Your Book Stand Out",
     excerpt:
       "Learn how genre, typography, colors, imagery, and visual hierarchy help authors create professional ebook covers.",
     category: "Ebook Cover Design",
@@ -205,7 +205,7 @@ export const blogPosts = [
     url: "/ebook-cover-design-tip-for-author",
   },
   {
-    title: "UI UX Design Explained for Better Digital Experiences",
+    title: "UI UX Design Explained For Better Digital Experiences",
     excerpt:
       "Learn how UI and UX design improve usability, accessibility, and customer trust through clearer digital experiences.",
     category: "UI/UX Design",
@@ -214,7 +214,7 @@ export const blogPosts = [
     url: "/explain-business-for-ui-ux-design",
   },
   {
-    title: "Web Design Agency vs DIY Website Builder: Which Is Better?",
+    title: "Web Design Agency Vs DIY Website Builder: Which Is Better?",
     excerpt:
       "Compare DIY website builders and professional web design agencies based on cost, customization, branding, and long-term design quality.",
     category: "Web Design",
@@ -232,7 +232,7 @@ export const blogPosts = [
     url: "/compare-logo-design-for-popular-business-software",
   },
   {
-    title: "Creative Packaging Design Services for Better Product Appeal",
+    title: "Creative Packaging Design Services For Better Product Appeal",
     excerpt:
       "Discover how creative packaging design improves product appeal, branding, customer trust, shelf visibility, ecommerce presentation, and the unboxing experience.",
     category: "Packaging Design",
@@ -250,7 +250,7 @@ export const blogPosts = [
     url: "/celebrating-americas-250th-anniversary",
   },
   {
-    title: "Why Branding Is Critical for Today's Businesses",
+    title: "Why Branding Is Critical For Today's Businesses",
     excerpt:
       "Strong branding helps businesses build trust, improve recognition, create emotional connection, and stand out in competitive markets.",
     category: "Brand Design",
@@ -259,7 +259,7 @@ export const blogPosts = [
     url: "/branding-more-critical-for-today-businesses",
   },
   {
-    title: "The Importance of Ebook Cover Design in a Competitive Marketplace",
+    title: "The Importance Of Ebook Cover Design In A Competitive Marketplace",
     excerpt:
       "Professional ebook cover design helps authors attract readers, improve visibility, and strengthen credibility in competitive marketplaces.",
     category: "Ebook Cover Design",
@@ -268,7 +268,7 @@ export const blogPosts = [
     url: "/important-of-ebook-design-for-competitive-market",
   },
   {
-    title: "Why Every Modern Business Needs a Well-Designed Mobile App",
+    title: "Why Every Modern Business Needs A Well-Designed Mobile App",
     excerpt:
       "A professionally designed mobile app improves customer experience, strengthens brand identity, and keeps businesses competitive in a mobile-first world.",
     category: "UI/UX Design",
@@ -277,7 +277,7 @@ export const blogPosts = [
     url: "/modern-bussiness-well-design-mobile-app",
   },
   {
-    title: "Why Brochure Design Is More Important for Professional Businesses Than Ever",
+    title: "Why Brochure Design Is More Important For Professional Businesses Than Ever",
     excerpt:
       "Learn why professional brochure design helps businesses build trust, communicate services clearly, improve branding, and create a stronger first impression.",
     category: "Brochure Design",
@@ -304,7 +304,7 @@ export const blogPosts = [
     url: "/Creative-flyer-design-get-your-business-noticed",
   },
   {
-    title: "The Strategic Importance of Content Management in Modern Marketing",
+    title: "The Strategic Importance Of Content Management In Modern Marketing",
     excerpt:
       "Learn how content management helps businesses improve customer engagement, maintain consistency, strengthen branding, and support long-term marketing success.",
     category: "Content Management",
@@ -313,7 +313,7 @@ export const blogPosts = [
     url: "/strategic-important-of-content-management-marketing",
   },
   {
-    title: "How Great UI/UX Design Turns Visitors into Loyal Customers",
+    title: "How Great UI/UX Design Turns Visitors Into Loyal Customers",
     excerpt:
       "Discover how great UI/UX design improves customer experience, builds trust, increases retention, and helps businesses convert visitors into loyal customers.",
     category: "UI/UX Design",
@@ -331,7 +331,7 @@ export const blogPosts = [
     url: "/stronge-email-marketing-to-build-relationship",
   },
   {
-    title: "Why Social Media Matters in Today's Digital Landscape",
+    title: "Why Social Media Matters In Today's Digital Landscape",
     excerpt:
       "Discover why social media presence matters for businesses, how it builds visibility, engages audiences, and strengthens brand credibility.",
     category: "Social Media Insights",
@@ -340,7 +340,7 @@ export const blogPosts = [
     url: "/power-of-social-media-in-digital-landscape",
   },
   {
-    title: "Why Strong Brand Management Is the Foundation of Business Growth",
+    title: "Why Strong Brand Management Is The Foundation Of Business Growth",
     excerpt:
       "Learn how strong brand management helps businesses build trust, improve recognition, strengthen customer loyalty, and support long-term business growth.",
     category: "Brand Management",
@@ -349,7 +349,7 @@ export const blogPosts = [
     url: "/Strong-brand-management-business-growth",
   },
   {
-    title: "How Businesses Can Build a Strong Digital Presence with Modern Web Development",
+    title: "How Businesses Can Build A Strong Digital Presence With Modern Web Development",
     excerpt:
       "Learn how modern web development helps businesses build trust, improve their online presence, attract customers, and achieve long-term growth.",
     category: "Web Development",
@@ -358,7 +358,7 @@ export const blogPosts = [
     url: "/maximize-growth-modern-web-development",
   },
   {
-    title: "Why Mobile Apps Development Have Become a Business Growth Necessity",
+    title: "Why Mobile Apps Development Have Become A Business Growth Necessity",
     excerpt:
       "Discover how mobile app development helps businesses improve accessibility, customer experience, communication, conversions, and long-term growth.",
     category: "Mobile App Development",
@@ -367,7 +367,7 @@ export const blogPosts = [
     url: "/mobile-app-development-business-growth-necessity",
   },
   {
-    title: "The Growing Importance of Animation for Modern Brands",
+    title: "The Growing Importance Of Animation For Modern Brands",
     excerpt:
       "Learn how animation helps businesses capture attention, explain complex ideas, improve brand storytelling, and increase engagement.",
     category: "Animation",
@@ -376,7 +376,7 @@ export const blogPosts = [
     url: "/important-of-animation-in-digital-marketing",
   },
   {
-    title: "Why a Consistent Brand Presence Produces Long-Term Results",
+    title: "Why A Consistent Brand Presence Produces Long-Term Results",
     excerpt:
       "Learn how consistent branding and a strong digital presence help businesses build trust, strengthen brand recognition, and create long-term results.",
     category: "Brand Strategy Insights",
@@ -385,7 +385,7 @@ export const blogPosts = [
     url: "/digital-marketing-produce-long-term-result",
   },
   {
-    title: "From Slides to Strategy: The Impact of Corporate Presentation Design",
+    title: "From Slides To Strategy: The Impact Of Corporate Presentation Design",
     excerpt:
       "Learn how corporate presentation design helps businesses communicate clearly, build trust, explain data, support decisions, and create stronger business impact.",
     category: "Corporate Presentation",
@@ -412,7 +412,7 @@ export const blogPosts = [
     url: "/custom-stationery-design-builds-business-credilbility",
   },
   {
-    title: "The Importance of Modern Web Design for Your Business",
+    title: "The Importance Of Modern Web Design For Your Business",
     excerpt:
       "Modern web design helps businesses improve user experience, build trust, and create a stronger digital presence.",
     category: "Web Design",
@@ -421,7 +421,7 @@ export const blogPosts = [
     url: "/importance-of-modern-web-design",
   },
   {
-    title: "Why Professional Logo Design Matters for Modern Businesses",
+    title: "Why Professional Logo Design Matters For Modern Businesses",
     excerpt:
       "A professional logo is more than a graphic. It builds trust, improves recognition, and creates a stronger first impression across every platform.",
     category: "Logo Design",
@@ -430,7 +430,7 @@ export const blogPosts = [
     url: "/importance-of-professional-logo-design-businesses",
   },
   {
-    title: "Why Graphic Design Is More Important for Professional Businesses Than Ever",
+    title: "Why Graphic Design Is More Important For Professional Businesses Than Ever",
     excerpt:
       "Learn why professional graphic design helps businesses build trust, improve brand recognition, create strong visuals, and communicate more effectively.",
     category: "Graphic Design",
@@ -439,7 +439,7 @@ export const blogPosts = [
     url: "/important-of-graphic-design-bussiness",
   },
   {
-    title: "Why Search Visibility Matters for Small Businesses",
+    title: "Why Search Visibility Matters For Small Businesses",
     excerpt:
       "Learn why search visibility matters for service businesses, how it builds trust, and why website structure plays a role in being found online.",
     category: "Search Visibility Insights",
@@ -543,7 +543,7 @@ const Blog = () => {
             </span>
 
             <h1 className="text-4xl md:text-6xl lg:text-7xl font-extrabold leading-tight mb-6">
-              Read the Latest Insights for
+              Read The Latest Insights For
               <span className="block text-accent-purple">
                 Websites, Branding & <br /> Design Excellence
               </span>
@@ -740,7 +740,7 @@ const Blog = () => {
             <div className="grid lg:grid-cols-[1.5fr_0.8fr] gap-10">
               <div>
                 <h2 className="text-4xl md:text-5xl font-extrabold mb-6">
-                  Professional blog content for{" "}
+                  Professional Blog Content For{" "}
                   <span className="text-accent-purple">Custom Service Brands.</span>
                 </h2>
 
@@ -752,22 +752,22 @@ const Blog = () => {
                   {[
                     {
                       icon: <Search className="w-6 h-6" />,
-                      title: "Practical topics",
+                      title: "Practical Topics",
                       text: "Helpful articles focused on websites, search visibility, branding, content, and digital marketing.",
                     },
                     {
                       icon: <Layers className="w-6 h-6" />,
-                      title: "Easy to read",
+                      title: "Easy To Read",
                       text: "Clear headings, simple language, and structured content for better understanding.",
                     },
                     {
                       icon: <ShieldCheck className="w-6 h-6" />,
-                      title: "Brand-first advice",
+                      title: "Brand-First Advice",
                       text: "Insights that help businesses look more professional, trustworthy, and memorable.",
                     },
                     {
                       icon: <Sparkles className="w-6 h-6" />,
-                      title: "Practical ideas",
+                      title: "Practical Ideas",
                       text: "Actionable guidance that supports visibility, engagement, and consistent brand presence.",
                     },
                   ].map((item) => (
@@ -786,7 +786,7 @@ const Blog = () => {
               </div>
 
               <aside className="rounded-3xl bg-[#111827]/90 border border-white/10 p-8">
-                <h3 className="text-2xl font-bold mb-4">Browse by topic</h3>
+                <h3 className="text-2xl font-bold mb-4">Browse By Topic</h3>
                 <div className="grid gap-3">
                   {categories.map((category) => (
                     <a
@@ -813,7 +813,7 @@ const Blog = () => {
             </p>
 
             <h2 className="text-4xl md:text-6xl font-extrabold mb-6">
-              Let’s build something your audience can trust.
+              Let’s Build Something Your Audience Can Trust.
             </h2>
 
             <p className="text-gray-300 text-lg leading-relaxed max-w-2xl mx-auto mb-10">

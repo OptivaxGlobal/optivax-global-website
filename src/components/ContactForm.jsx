@@ -537,7 +537,7 @@ useEffect(() => {
 
       <div className="bg-[#1E1E2A]/70 backdrop-blur-xl p-8 rounded-3xl border border-white/10 shadow-2xl">
         <h2 className="text-2xl font-bold mb-6 text-white">
-          Request a Design Consultation
+          Request A Design Consultation
         </h2>
 
         <form onSubmit={handleSubmit} className="space-y-5">

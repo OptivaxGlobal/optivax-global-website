@@ -202,7 +202,7 @@ const CorporatePresentation = () => {
 
           <div className="max-w-5xl mx-auto px-6 relative z-10">
             <h2 className="text-4xl md:text-6xl font-extrabold mb-6">
-              Need a Presentation That Looks Professional?
+              Need A Presentation That Looks Professional?
             </h2>
 
             <p className="text-gray-300 text-lg max-w-2xl mx-auto mb-8 leading-relaxed">

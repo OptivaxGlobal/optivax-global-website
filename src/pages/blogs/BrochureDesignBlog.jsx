@@ -32,7 +32,7 @@ const sections = [
 const BrochureDesignBlog = () => {
   return (
     <BlogArticleLayout
-      title="Why Brochure Design Is More Important for Professional Businesses Than Ever"
+      title="Why Brochure Design Is More Important For Professional Businesses Than Ever"
       metaTitle="Important Of Professional Brochure Design Services - Optivax Global"
       metaDescription="Learn why professional brochure design helps businesses build trust, communicate services clearly, improve branding, and create a stronger first impression."
       canonicalUrl="https://optivaxglobal.com/important-of-professional-brochure-design"

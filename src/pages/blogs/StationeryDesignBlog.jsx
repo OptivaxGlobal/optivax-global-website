@@ -28,7 +28,7 @@ const sections = [
     text: "At Optivax Global, custom stationery design focuses on creating professional branding materials that strengthen business identity and enhance credibility. Thoughtfully designed stationery helps businesses communicate more effectively, build trust with customers, and establish a stronger presence in their industry.",
   },
   {
-    heading: "Ready to Elevate Your Brand Image?",
+    heading: "Ready To Elevate Your Brand Image?",
     text: "Optivax Global helps businesses create professional stationery designs, strengthen brand consistency, improve customer perception, and develop visual identities that support long-term business success.",
   },
 ];

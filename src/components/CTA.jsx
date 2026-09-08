@@ -29,9 +29,9 @@ const CTA = () => {
           </span>
 
           <h2 className="text-4xl md:text-6xl lg:text-7xl font-extrabold text-white mb-6 leading-tight">
-            Have a Design Project
+            Have A Design Project
             <span className="block text-accent-purple">
-              in Mind?
+              In Mind?
             </span>
           </h2>
 

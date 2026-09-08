@@ -20,7 +20,7 @@ const sections = [
     text: "Customers are more likely to engage with businesses that appear polished and professional. High-quality graphic design helps communicate attention to detail, reliability, and professionalism, which can positively influence buying decisions.",
   },
   {
-    heading: "Modern Marketing Depends on Visual Communication",
+    heading: "Modern Marketing Depends On Visual Communication",
     text: "In today's digital world, businesses compete for attention every day. Effective graphic design helps brands communicate their message quickly and clearly across websites, social media, advertisements, and promotional campaigns.",
   },
   {
@@ -32,7 +32,7 @@ const sections = [
 const GraphicDesignBlog = () => {
   return (
     <BlogArticleLayout
-      title="Why Graphic Design Is More Important for Professional Businesses Than Ever"
+      title="Why Graphic Design Is More Important For Professional Businesses Than Ever"
       metaTitle="Important Of Graphic Design Services For Business - Optivax Global"
       metaDescription="Learn why professional graphic design helps businesses build trust, improve brand recognition, create strong visuals, and communicate more effectively."
       canonicalUrl="https://optivaxglobal.com/important-of-graphic-design-bussiness"

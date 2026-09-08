@@ -12,7 +12,7 @@ const sections = [
     text: "Popular logo design software tools help users create logos through templates, icons, fonts, colors, and drag-and-drop features. Some platforms also use AI to generate logo ideas based on business name, industry, and style preferences. These tools can be helpful for startups, small businesses, creators, and entrepreneurs who want quick logo concepts without starting from scratch.",
   },
   {
-    heading: "Ease of Use Matters",
+    heading: "Ease Of Use Matters",
     text: "One of the most important features of logo design software is ease of use. A good logo tool should be simple enough for beginners but flexible enough to create a clean and professional design. Platforms like Canva, Adobe Express, Wix Logo Maker, and Looka are popular because they allow users to create logos without advanced design skills.",
   },
   {
@@ -28,7 +28,7 @@ const sections = [
     text: "Some logo design tools offer brand kit features. A brand kit may include logo variations, color palettes, typography, social media templates, business cards, and marketing graphics. These features help businesses maintain consistent branding across websites, social media, advertisements, and promotional content.",
   },
   {
-    heading: "File Quality and Export Options",
+    heading: "File Quality And Export Options",
     text: "A professional logo should be available in high-quality formats. Businesses should look for tools that offer transparent background files, high-resolution images, and scalable formats. This matters because the logo may be used on websites, banners, documents, packaging, and social media profiles.",
   },
   {

@@ -141,7 +141,7 @@ const UIUXDesign = () => {
         <section className="py-20 border-t border-white/10">
           <div className="max-w-7xl mx-auto px-6">
             <h2 className="text-3xl md:text-5xl font-extrabold mb-5">
-              UI/UX Design That Feels Clear & Easy to Use
+              UI/UX Design That Feels Clear & Easy To Use
             </h2>
 
             <p className="text-gray-300 text-lg leading-relaxed max-w-3xl mb-12">
@@ -191,7 +191,7 @@ const UIUXDesign = () => {
             </p>
 
             <h2 className="text-3xl md:text-4xl font-extrabold text-white">
-              Design with Real Users in Mind
+              Design With Real Users In Mind
             </h2>
 
             <p>
@@ -207,7 +207,7 @@ const UIUXDesign = () => {
 
           <div className="max-w-5xl mx-auto px-6 text-center relative z-10">
             <h2 className="text-4xl md:text-6xl font-extrabold mb-6">
-              Ready to Build a Better UI/UX?
+              Ready To Build A Better UI/UX?
             </h2>
 
             <p className="text-gray-400 text-lg max-w-2xl mx-auto mb-8">

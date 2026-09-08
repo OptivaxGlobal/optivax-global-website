@@ -8,23 +8,23 @@ const sections = [
     text: "Starting a business usually begins with an idea, a problem worth solving, and the determination to turn that idea into something people will pay for. Branding often comes later. That order may feel practical, but it can create problems. A startup can have a strong product and still look uncertain if its website, logo, social media, sales presentation, and marketing materials all feel disconnected. Customers do not see the internal effort behind a new company. They see what the company puts in front of them. That is where professional brand identity design becomes valuable.",
   },
   {
-    heading: "What Brand Identity Gives a Startup",
+    heading: "What Brand Identity Gives A Startup",
     text: "Brand identity gives a startup a recognizable visual and verbal system that helps people understand who the company is, what it represents, and how it should be remembered. It creates a unified direction for customer-facing communication and helps the business present itself more confidently across digital and physical channels.",
   },
   {
-    heading: "Brand Identity Is More Than a Logo",
+    heading: "Brand Identity Is More Than A Logo",
     text: "A logo is important, but it is only one part of the identity. A complete brand identity can include the company logo, color palette, typography, imagery style, iconography, graphic elements, tone of voice, presentation style, and rules for using those elements consistently. Think of the logo as a signature and brand identity as everything surrounding that signature. When these elements work together, a startup begins to look like one organization rather than a collection of unrelated marketing materials.",
   },
   {
-    heading: "Recognition Matters in Crowded Markets",
+    heading: "Recognition Matters In Crowded Markets",
     text: "Most startups enter markets where customers already have alternatives. Your brand may appear beside competitors in Google results, social media feeds, marketplaces, directories, emails, and advertisements. Being visually recognizable can therefore become extremely valuable. Research into distinctive brand assets emphasizes the importance of creating recognizable elements such as colors, shapes, logos, and other visual cues that customers begin associating with a particular company.",
   },
   {
-    heading: "Create a Clear and Memorable Identity",
+    heading: "Create A Clear And Memorable Identity",
     text: "For a startup, building recognition does not mean creating the loudest or most complicated design possible. It means creating an identity that is clear enough to be remembered, distinctive enough to stand apart, and consistent enough to become familiar. A simple visual system applied correctly can often produce stronger recognition than an elaborate identity used inconsistently.",
   },
   {
-    heading: "Consistency Makes a Young Company Feel Established",
+    heading: "Consistency Makes A Young Company Feel Established",
     text: "Imagine discovering a startup through Instagram. Its social media page uses one color palette, but its website contains completely different fonts and colors. You then receive a proposal featuring another logo variation. Nothing may be technically wrong, but the complete experience feels unfinished. Consistent branding helps a young company appear more organized, professional, and dependable.",
   },
   {

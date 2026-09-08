@@ -240,7 +240,7 @@ const EbookCover = () => {
         <section className="py-20 border-t border-white/10">
           <div className="max-w-7xl mx-auto px-6">
             <h2 className="text-3xl md:text-5xl font-extrabold mb-5">
-              Book Covers Designed to Catch Attention
+              Book Covers Designed To Catch Attention
             </h2>
 
             <p className="text-gray-300 text-lg leading-relaxed max-w-3xl mb-12">
@@ -362,7 +362,7 @@ const EbookCover = () => {
 
           <div className="max-w-5xl mx-auto px-6 relative z-10">
             <h2 className="text-4xl md:text-6xl font-extrabold mb-6">
-              Ready to Make Your Book Stand Out?
+              Ready To Make Your Book Stand Out?
             </h2>
 
             <p className="text-gray-300 text-lg max-w-2xl mx-auto mb-8 leading-relaxed">

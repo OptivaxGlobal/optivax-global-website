@@ -28,7 +28,7 @@ const sections = [
     text: "At Optivax Global, mobile app design focuses on usability, performance, and customer experience. A professionally designed mobile app helps businesses stay accessible, build trust, and create stronger connections with their audience.",
   },
   {
-    heading: "Ready to Grow Your Digital Presence?",
+    heading: "Ready To Grow Your Digital Presence?",
     text: "Optivax Global helps businesses create modern mobile apps, professional websites, stronger branding, and digital solutions designed for long-term success.",
   },
 ];
@@ -36,7 +36,7 @@ const sections = [
 const MobileAppDesignBlog = () => {
   return (
     <BlogArticleLayout
-      title="Why Every Modern Business Needs a Well-Designed Mobile App"
+      title="Why Every Modern Business Needs A Well-Designed Mobile App"
       metaTitle="Modern Business Well-Designed Mobile App - Optivax Global"
       metaDescription="Discover why a professionally designed mobile app helps businesses improve customer experience, increase engagement, strengthen branding, and drive long-term growth."
       canonicalUrl="https://optivaxglobal.com/modern-bussiness-well-design-mobile-app"
