@@ -415,13 +415,13 @@ const Header = () => {
     { name: "Flyer Design", href: "/flyer-design" },
     { name: "Stationery Design", href: "/stationary-design" },
     { name: "CMS Solutions", href: "/content-management-system" },
-    { name: "Digital Marketing", href: "/digital-marketing" },
 
+   //{ name: "Digital Marketing", href: "/digital-marketing" },
    //{ name: "Search Engine Optimization", href: "/search-engine-optimization" },
-    { name: "Search Engine Marketing", href: "/search-engine-marketing" },
-    { name: "Social Media Marketing", href: "/social-media-marketing" },
-    { name: "Email Marketing", href: "/email-marketing" },
-    { name: "Pay Per Click", href: "/pay-per-click" },
+   //{ name: "Search Engine Marketing", href: "/search-engine-marketing" },
+   //{ name: "Social Media Marketing", href: "/social-media-marketing" },
+   //{ name: "Email Marketing", href: "/email-marketing" },
+   //{ name: "Pay Per Click", href: "/pay-per-click" },
   ];
 
   const coreServiceLinks = [

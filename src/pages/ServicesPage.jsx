@@ -146,6 +146,9 @@ const serviceCategories = [
       },
     ],
   },
+  // Hidden from public view: not part of the active design-focused service lineup.
+  // Data kept in place (not deleted) so it can be restored later if needed.
+  /*
   {
     category: "Digital Marketing",
     items: [
@@ -155,18 +158,12 @@ const serviceCategories = [
         text: "Professional digital marketing support built around your business goals, brand voice, and audience.",
         href: "/digital-marketing",
       },
-     /*{ {
-      
-
+      {
         icon: Globe,
         title: "Search Engine Optimization",
         text: "Website structure and content practices designed to help search engines understand and index your site clearly.",
         href: "/search-engine-optimization",
-
       },
-
-      },*/
-
       {
         icon: Globe,
         title: "Search Engine Marketing",
@@ -193,6 +190,7 @@ const serviceCategories = [
       },
     ],
   },
+  */
 ];
 
 const allServices = serviceCategories.flatMap((group) => group.items);
@@ -218,14 +216,14 @@ const ServicesPage = () => {
         <title>Professional Digital Design Services | Optivax Global</title>
         <meta
           name="description"
-          content="Explore Optivax Global services including website design and development, UI/UX design, branding, publishing, and digital marketing solutions."
+          content="Explore Optivax Global services including custom website design and development, UI/UX design, branding, and eBook publishing solutions."
         />
         <link rel="canonical" href="https://optivaxglobal.com/services" />
 
         <meta property="og:title" content="Professional Digital Design Services | Optivax Global" />
         <meta
           property="og:description"
-          content="Explore Optivax Global services including website design and development, UI/UX design, branding, publishing, and digital marketing solutions."
+          content="Explore Optivax Global services including custom website design and development, UI/UX design, branding, and eBook publishing solutions."
         />
         <meta property="og:url" content="https://optivaxglobal.com/services" />
         <meta property="og:type" content="website" />

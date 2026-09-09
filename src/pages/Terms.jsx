@@ -61,8 +61,8 @@ const Terms = () => {
                 including custom website design and development, UI/UX
                 design, mobile app design and development, logo and brand
                 design and management, eBook design and publishing, animation,
-                graphic and print design, corporate presentation design,
-                content management systems, and digital marketing services.
+                graphic and print design, corporate presentation design, and
+                content management systems.
               </p>
             </section>
 

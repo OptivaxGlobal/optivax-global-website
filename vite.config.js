@@ -47,6 +47,22 @@ function getRoutesFromAppJsx() {
     "/payment-successful",
     "/game-development",
     "/software-development",
+
+    // Hidden from public view (routes still exist / redirect, not deleted):
+    // keeps marketing/SEO-topic pages out of the generated sitemap.
+    "/digital-marketing",
+    "/email-marketing",
+    "/pay-per-click",
+    "/search-engine-marketing",
+    "/search-engine-optimization",
+    "/social-media-marketing",
+    "/rank-on-google-without-paid-ads",
+    "/digital-marketing-mistakes-avoid",
+    "/ppc-advertising-help-to-generate-results",
+    "/stronge-email-marketing-to-build-relationship",
+    "/power-of-social-media-in-digital-landscape",
+    "/sem-turns-searches-into-sales",
+    "/importance-of-small-businesses-seo-services",
   ];
 
   excludedRoutes.forEach((route) => routes.delete(route));

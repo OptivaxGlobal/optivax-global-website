@@ -287,10 +287,10 @@ const brandingSections = [
       "WordPress + Elementor",
       "Mobile Responsive Design",
       "Custom Contact Forms",
-      "Lead Capture Forms",
+      "Inquiry & Booking Forms",
       "Stock Images & Website Graphics",
       "Custom Banner Designs",
-      "SEO-Friendly Website Structure",
+      "Search-Friendly Website Structure",
       "Google-Friendly Sitemap",
       "Cross-Browser Compatible",
       "Testing & Deployment",
@@ -385,9 +385,9 @@ const packageFaqs = [
       "Choose custom development when your project needs user accounts, dashboards, APIs, databases, SaaS functionality, custom business rules, or workflows that WordPress cannot handle efficiently.",
   },
   {
-    question: "Is WordPress professional and SEO-friendly?",
+    question: "Is WordPress a professional website platform?",
     answer:
-      "Yes. WordPress with Elementor is a professional solution when it is planned and built well. It gives your team easy updates, supports SEO-friendly page structure, launches faster, and keeps ongoing costs practical for most businesses.",
+      "Yes. WordPress with Elementor is a professional solution when it is planned and built well. It gives your team easy updates, supports a clean, search-friendly page structure, launches faster, and keeps ongoing costs practical for most businesses.",
   },
   {
     question: "What happens after I choose a package?",
@@ -657,7 +657,7 @@ const PackagesPage = () => {
                     <li>✓ Easy content updates</li>
                     <li>✓ Faster launch timeline</li>
                     <li>✓ Cost-effective solution</li>
-                    <li>✓ SEO-friendly website structure</li>
+                    <li>✓ Search-friendly website structure</li>
                   </ul>
                 </div>
 

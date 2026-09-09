@@ -54,7 +54,7 @@ export const blogPosts = [
   {
     title: "Professional Business Website Design Services For Modern Brands",
     excerpt:
-      "Explore how professional website design combines strategy, UI/UX, responsive layouts, performance, branding, SEO, and custom development.",
+      "Explore how professional website design combines strategy, UI/UX, responsive layouts, performance, branding, and custom development.",
     category: "Website Design",
     date: "August 2026",
     image: businessWebsiteDesignImg,
@@ -123,6 +123,9 @@ export const blogPosts = [
     image: socialMediaGraphicsImg,
     url: "/social-media-graphics-design-tips",
   },
+  // Hidden from public view (not deleted): search/marketing-topic posts are
+  // excluded from the public blog listing to keep the site design-focused.
+  /*
   {
     title: "How To Rank Higher On Google Without Paid Ads",
     excerpt:
@@ -132,6 +135,7 @@ export const blogPosts = [
     image: rankGoogleWithoutAdsImg,
     url: "/rank-on-google-without-paid-ads",
   },
+  */
   {
     title: "How Shopify Makes Online Selling Easier For Small Business Owners",
     excerpt:
@@ -159,6 +163,8 @@ export const blogPosts = [
     image: businessAppFeaturesImg,
     url: "/essential-feature-for-business-needs",
   },
+  // Hidden from public view (not deleted).
+  /*
   {
     title: "Common Digital Growth Mistakes Businesses Should Avoid",
     excerpt:
@@ -168,6 +174,7 @@ export const blogPosts = [
     image: digitalMarketingMistakesImg,
     url: "/digital-marketing-mistakes-avoid",
   },
+  */
   {
     title: "Creative Logo And Graphic Design Services For Modern Brands",
     excerpt:
@@ -285,6 +292,8 @@ export const blogPosts = [
     image: brochureBlogImg,
     url: "/important-of-professional-brochure-design",
   },
+  // Hidden from public view (not deleted).
+  /*
   {
     title: "How Paid Search Advertising Helps Businesses Generate Faster Results",
     excerpt:
@@ -294,6 +303,7 @@ export const blogPosts = [
     image: ppcBlogImg,
     url: "/ppc-advertising-help-to-generate-results",
   },
+  */
   {
     title: "Creative Flyer Design Services That Get Your Business Noticed",
     excerpt:
@@ -321,6 +331,8 @@ export const blogPosts = [
     image: uiUxBlogImg,
     url: "/ui-ux-design-turns-into-loyal-customers",
   },
+  // Hidden from public view (not deleted).
+  /*
   {
     title: "How Email Communication Builds Stronger Customer Relationships",
     excerpt:
@@ -339,6 +351,7 @@ export const blogPosts = [
     image: socialMediaMarketingBlogImg,
     url: "/power-of-social-media-in-digital-landscape",
   },
+  */
   {
     title: "Why Strong Brand Management Is The Foundation Of Business Growth",
     excerpt:
@@ -393,6 +406,8 @@ export const blogPosts = [
     image: corporatePresentationBlogImg,
     url: "/impact-of-corporate-design",
   },
+  // Hidden from public view (not deleted).
+  /*
   {
     title: "How Search Visibility Strategy Turns Searches Into Sales",
     excerpt:
@@ -402,6 +417,7 @@ export const blogPosts = [
     image: semBlogImg,
     url: "/sem-turns-searches-into-sales",
   },
+  */
   {
     title: "How Custom Stationery Design Builds Business Credibility",
     excerpt:
@@ -438,6 +454,8 @@ export const blogPosts = [
     image: graphicDesignBlogImg,
     url: "/important-of-graphic-design-bussiness",
   },
+  // Hidden from public view (not deleted).
+  /*
   {
     title: "Why Search Visibility Matters For Small Businesses",
     excerpt:
@@ -447,6 +465,7 @@ export const blogPosts = [
     image: seoBlogImg,
     url: "/importance-of-small-businesses-seo-services",
   },
+  */
 ];
 
 const categories = [
@@ -745,7 +764,7 @@ const Blog = () => {
                 </h2>
 
                 <p className="text-gray-300 leading-relaxed mb-8">
-                  Our blog is built for business owners, startups, and service brands that want clear, practical guidance on websites, search visibility, branding, and digital marketing. Every article is written to be easy to understand and useful for real businesses.
+                  Our blog is built for business owners, startups, and service brands that want clear, practical guidance on websites, UI/UX, and branding. Every article is written to be easy to understand and useful for real businesses.
                 </p>
 
                 <div className="grid sm:grid-cols-2 gap-6">
@@ -753,7 +772,7 @@ const Blog = () => {
                     {
                       icon: <Search className="w-6 h-6" />,
                       title: "Practical Topics",
-                      text: "Helpful articles focused on websites, search visibility, branding, content, and digital marketing.",
+                      text: "Helpful articles focused on websites, UI/UX, branding, and design content.",
                     },
                     {
                       icon: <Layers className="w-6 h-6" />,
@@ -817,7 +836,7 @@ const Blog = () => {
             </h2>
 
             <p className="text-gray-300 text-lg leading-relaxed max-w-2xl mx-auto mb-10">
-              From websites and search visibility to branding and digital strategy, Optivax Global helps businesses create stronger online experiences.
+              From websites and UI/UX to branding and creative design, Optivax Global helps businesses create stronger online experiences.
             </p>
 
             <a

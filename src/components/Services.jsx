@@ -20,7 +20,7 @@ const services = [
       "WordPress and Elementor websites for businesses that need a premium first impression, faster launch, easy updates, and a structure built to support search and enquiries.",
     points: [
       { title: "WordPress + Elementor" },
-      { title: "SEO-friendly structure" },
+      { title: "Clean, structured layout" },
       { title: "Fast, cost-effective launch" },
     ],
   },

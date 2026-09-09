@@ -42,11 +42,14 @@ const faqs = [
     answer:
       "Yes. We create custom logos and supporting visual brand elements based on the client's requirements and brand direction.",
   },
+  // Hidden from public view (not deleted): kept for future restoration if needed.
+  /*
   {
     question: "Do you provide SEO services?",
     answer:
       "Optivax Global currently focuses on custom website design, UI/UX design, logo branding, and eBook design.",
   },
+  */
   {
     question: "Do you provide eBook design?",
     answer:

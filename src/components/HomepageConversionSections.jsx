@@ -13,7 +13,7 @@ const solutionPaths = [
     benefits: [
       "WordPress + Elementor",
       "Faster launch and easy updates",
-      "SEO-friendly, responsive structure",
+      "Clean, responsive structure",
       "Cost-effective for growing teams",
     ],
     href: "/web-design",
@@ -42,7 +42,7 @@ const faqs = [
   {
     question: "Should I choose WordPress or custom development?",
     answer:
-      "WordPress with Elementor is usually the right fit for a professional business website, service company, or marketing site that needs fast launch and easy updates. Custom development makes sense when you need unique logic, user accounts, dashboards, APIs, or a product that will grow beyond standard website functionality.",
+      "WordPress with Elementor is usually the right fit for a professional business website or service company site that needs fast launch and easy updates. Custom development makes sense when you need unique logic, user accounts, dashboards, APIs, or a product that will grow beyond standard website functionality.",
   },
   {
     question: "Can you improve an existing website instead of starting over?",

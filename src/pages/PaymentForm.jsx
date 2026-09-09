@@ -996,11 +996,11 @@ const PaymentForm = () => {
                     id="payment-sms-consent-text"
                     className="text-xs leading-5 text-slate-400"
                   >
-                    I agree to receive service-related and inquiry
-                    follow-up text messages from Optivax Global at the
-                    phone number provided. Message frequency may vary.
-                    Message &amp; data rates may apply. Reply STOP to
-                    unsubscribe or HELP for help.{" "}
+                    I agree to receive SMS messages from Optivax Global
+                    regarding service updates, appointment reminders, and
+                    promotional messages. Message frequency may vary.
+                    Message and data rates may apply. Reply STOP to
+                    unsubscribe or HELP for help. View our{" "}
                     <Link
                       to="/privacy-policy"
                       target="_blank"
@@ -1009,7 +1009,7 @@ const PaymentForm = () => {
                     >
                       Privacy Policy
                     </Link>{" "}
-                    &amp;{" "}
+                    and{" "}
                     <Link
                       to="/terms"
                       target="_blank"
@@ -1018,6 +1018,7 @@ const PaymentForm = () => {
                     >
                       Terms of Service
                     </Link>
+                    .
                   </span>
 
                 </label>

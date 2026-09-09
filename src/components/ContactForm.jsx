@@ -675,10 +675,10 @@ useEffect(() => {
               id="contact-sms-consent-text"
               className="text-sm text-gray-400 leading-relaxed"
             >
-              I agree to receive SMS messages from Optivax Global, including
-              service updates, appointment reminders, and marketing/promotional
-              offers. Message and data rates may apply. Reply STOP to
-              unsubscribe.{" "}
+              I agree to receive SMS messages from Optivax Global regarding
+              service updates, appointment reminders, and promotional
+              messages. Message frequency may vary. Message and data rates
+              may apply. Reply STOP to unsubscribe or HELP for help. View our{" "}
               <Link
                 to="/privacy-policy"
                 target="_blank"
@@ -687,7 +687,7 @@ useEffect(() => {
               >
                 Privacy Policy
               </Link>{" "}
-              &amp;{" "}
+              and{" "}
               <Link
                 to="/terms"
                 target="_blank"
@@ -696,6 +696,7 @@ useEffect(() => {
               >
                 Terms of Service
               </Link>
+              .
             </span>
           </label>
 

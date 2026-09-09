@@ -52,13 +52,9 @@ const Home = () => {
     { "@type": "Service", "name": "Brochure Design", "url": "https://optivaxglobal.com/brochure-design" },
     { "@type": "Service", "name": "Flyer Design", "url": "https://optivaxglobal.com/flyer-design" },
     { "@type": "Service", "name": "Stationery Design", "url": "https://optivaxglobal.com/stationary-design" },
-    { "@type": "Service", "name": "CMS Solutions", "url": "https://optivaxglobal.com/content-management-system" },
-    { "@type": "Service", "name": "Digital Marketing", "url": "https://optivaxglobal.com/digital-marketing" },
-    { "@type": "Service", "name": "Search Engine Optimization", "url": "https://optivaxglobal.com/search-engine-optimization" },
-    { "@type": "Service", "name": "Search Engine Marketing", "url": "https://optivaxglobal.com/search-engine-marketing" },
-    { "@type": "Service", "name": "Social Media Marketing", "url": "https://optivaxglobal.com/social-media-marketing" },
-    { "@type": "Service", "name": "Email Marketing", "url": "https://optivaxglobal.com/email-marketing" },
-    { "@type": "Service", "name": "Pay Per Click", "url": "https://optivaxglobal.com/pay-per-click" }
+    { "@type": "Service", "name": "CMS Solutions", "url": "https://optivaxglobal.com/content-management-system" }
+    /* Hidden from public view (not deleted): Digital Marketing, SEO, SEM, Social Media Marketing,
+       Email Marketing, and Pay Per Click service entries have been removed from public structured data. */
   ]
 };
 
@@ -76,7 +72,7 @@ const Home = () => {
 
         <meta
           name="keywords"
-          content="Optivax Global, website design, web development, UI/UX design agency, branding services, eBook design, digital marketing"
+          content="Optivax Global, website design, web development, UI/UX design agency, branding services, eBook design, logo design"
         />
 
         <meta name="author" content="Optivax Global" />

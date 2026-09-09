@@ -13,7 +13,7 @@ const sections = [
   },
   {
     heading: "Strong Online Presence Helps Customers Find You",
-    text: "Even the best business can struggle if customers cannot find it online. A digital growth strategy helps improve visibility through search visibility, social media, content, paid ads, and online branding. When a business appears in search results and stays active on digital platforms, it becomes easier for potential customers to discover its services and connect with the brand.",
+    text: "Even the best business can struggle if customers cannot find it online. A strong, consistent online presence helps improve visibility through a well-structured website, social media presence, content, and online branding. When a business appears professionally online and stays active on digital platforms, it becomes easier for potential customers to discover its services and connect with the brand.",
   },
   {
     heading: "Good Design Improves Customer Experience",

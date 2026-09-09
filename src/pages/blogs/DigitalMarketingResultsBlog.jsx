@@ -13,7 +13,7 @@ const sections = [
   },
   {
     heading: "Regular Marketing Keeps Businesses Visible",
-    text: "Even if a business offers great products or services, customers may forget about it if the brand is not active online. A digital growth strategy helps businesses stay visible in front of their audience through social media, search visibility, paid ads, content strategy, email communication, and online branding. When a business shows up consistently, it stays in the customer’s mind and increases the chances of being chosen when the customer is ready to buy.",
+    text: "Even if a business offers great products or services, customers may forget about it if the brand is not active online. A consistent brand presence helps businesses stay visible in front of their audience through social media, a well-structured website, content strategy, and online branding. When a business shows up consistently, it stays in the customer’s mind and increases the chances of being chosen when the customer is ready to buy.",
   },
   {
     heading: "Trust Grows Over Time",

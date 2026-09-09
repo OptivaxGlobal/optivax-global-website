@@ -220,13 +220,14 @@ function App() {
   path="/modern-bussiness-well-design-mobile-app"
   element={<MobileAppDesignBlog />}
 />
+{/* Hidden from public positioning redirected to the active Blog page */}
 <Route
   path="/importance-of-small-businesses-seo-services"
-  element={<SeoBlog />}
+  element={<Navigate to="/blog" replace />}
 />
 <Route
   path="/ppc-advertising-help-to-generate-results"
-  element={<PPCAdvertisingBlog />}
+  element={<Navigate to="/blog" replace />}
 />
 <Route
   path="/important-of-ebook-design-for-competitive-market"
@@ -248,13 +249,14 @@ function App() {
   path="/ui-ux-design-turns-into-loyal-customers"
   element={<UIUXDesignBlog />}
 />
+{/* Hidden from public positioning redirected to the active Blog page */}
 <Route
   path="/stronge-email-marketing-to-build-relationship"
-  element={<EmailMarketingBlog />}
+  element={<Navigate to="/blog" replace />}
 />
 <Route
   path="/power-of-social-media-in-digital-landscape"
-  element={<SocialMediaMarketingBlog />}
+  element={<Navigate to="/blog" replace />}
 />
 <Route
   path="/Strong-brand-management-business-growth"
@@ -280,9 +282,10 @@ function App() {
   path="/impact-of-corporate-design"
   element={<CorporatePresentationBlog />}
 />
+{/* Hidden from public positioning redirected to the active Blog page */}
 <Route
   path="/sem-turns-searches-into-sales"
-  element={<SEMMarketingBlog />}
+  element={<Navigate to="/blog" replace />}
 />
 <Route
   path="/celebrating-americas-250th-anniversary"
@@ -336,9 +339,10 @@ function App() {
   path="/brand-identity-design-guide-for-business"
   element={<BrandIdentityDesignGuideBlog />}
 />
+{/* Hidden from public positioning redirected to the active Blog page */}
 <Route
   path="/rank-on-google-without-paid-ads"
-  element={<RankOnGoogleWithoutPaidAdsBlog />}
+  element={<Navigate to="/blog" replace />}
 />
 <Route
   path="/shopify-solution-for-small-business"
@@ -360,9 +364,10 @@ function App() {
   path="/essential-feature-for-business-needs"
   element={<EssentialBusinessAppFeaturesBlog />}
 />
+{/* Hidden from public positioning redirected to the active Blog page */}
 <Route
   path="/digital-marketing-mistakes-avoid"
-  element={<DigitalMarketingMistakesBlog />}
+  element={<Navigate to="/blog" replace />}
 />
 <Route
   path="/startup-for-best-branding-services"
@@ -382,9 +387,10 @@ function App() {
               element={<LogoDesign />}
             />
 
+            {/* Hidden from public positioning redirected to the active Services page */}
             <Route
               path="digital-marketing"
-              element={<DigitalMarketing />}
+              element={<Navigate to="/services" replace />}
             />
 
             <Route
@@ -424,25 +430,27 @@ function App() {
               path="content-management-system"
               element={<ContentManagement />}
             />
+
+            {/* Hidden from public positioning redirected to the active Services page */}
             <Route
               path="email-marketing"
-              element={<EmailMarketing />}
+              element={<Navigate to="/services" replace />}
             />
             <Route
               path="pay-per-click"
-              element={<PayPerClick />}
+              element={<Navigate to="/services" replace />}
             />
             <Route
               path="search-engine-marketing"
-              element={<SearchEngineMarketing />}
+              element={<Navigate to="/services" replace />}
             />
             <Route
               path="search-engine-optimization"
-              element={<SearchEngineOptimization />}
+              element={<Navigate to="/services" replace />}
             />
             <Route
               path="social-media-marketing"
-              element={<SocialMediaMarketing />}
+              element={<Navigate to="/services" replace />}
             />
             <Route
               path="animation"

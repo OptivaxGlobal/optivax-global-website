@@ -119,10 +119,11 @@ const PrivacyPolicy = () => {
               </p>
 
               <p className="text-gray-400 leading-relaxed mb-4">
-                No mobile information will be shared with third parties/affiliates
-                for marketing/promotional purposes. All the above categories
-                exclude text messaging originator opt-in data and consent; this
-                information will not be shared with any third parties.
+                No mobile information will be shared with third parties or
+                affiliates for marketing or promotional purposes. All the
+                above categories exclude text messaging originator opt-in
+                data and consent; this information will not be shared with
+                any third parties.
               </p>
 
               <p className="text-gray-400 leading-relaxed mb-4">

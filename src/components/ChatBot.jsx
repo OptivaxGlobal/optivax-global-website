@@ -628,13 +628,17 @@ const ChatBot = () => {
         "brand posts",
         "creative posts",
       ],
-      actions: marketingActions,
+      actions: [
+        { label: "View Graphic Design", type: "route", value: "/graphics-design" },
+        { label: "Start a Project", type: "route", value: "/contact" },
+        { label: "WhatsApp Team", type: "whatsapp" },
+      ],
       replies: [
-        "Yes, we can help with social media marketing.\n\nOur team supports content planning, branded visuals, profile design, post templates, and consistent brand presentation across your social channels.",
-        "We can help manage and design your social presence.\n\nThis includes branded social media graphics, post templates, and content direction that keeps your channels consistent with your brand.",
-        "Social media support is one of our services.\n\nWe can help with profile design, post templates, and branded visuals to keep your social channels professional and consistent.",
-        "Yes, our design team can create branded visuals and post templates for your social channels as part of a broader social media presence.",
-        "We can help with your social media presence. Let us know what you're working on and our team can suggest the right next step.",
+        "We can help with branded social media graphic design.\n\nOur team creates profile visuals, post templates, and graphics that keep your channels looking consistent with your brand.",
+        "Yes, our design team can create branded social media graphics and post templates so your channels look professional and consistent.",
+        "Social media graphic design is one of our services.\n\nWe can help with profile design, post templates, and branded visuals for your channels.",
+        "Optivax Global currently focuses on custom website design, UI/UX design, logo branding, and eBook design, including branded graphics for social platforms.",
+        "We can help with branded visuals for your social channels. Let us know what you're working on and our team can suggest the right next step.",
       ],
     },
     {
@@ -671,13 +675,17 @@ const ChatBot = () => {
         "messages campaign",
         "whatsapp campaign",
       ],
-      actions: marketingActions,
+      actions: [
+        { label: "View Our Services", type: "route", value: "/services" },
+        { label: "Contact Our Team", type: "route", value: "/contact" },
+        { label: "WhatsApp Team", type: "whatsapp" },
+      ],
       replies: [
-        "Yes, we can help with paid advertising.\n\nOur team can support ad creative, landing page design, and campaign presentation so your ads look professional and on-brand.",
-        "We can help with ad campaign creative and landing pages designed to support your paid advertising efforts.",
-        "Paid ads support is part of what we offer from ad creative to landing page design built around your campaign goals.",
-        "Yes, let us know more about your campaign and we can help with the creative and landing page side of it.",
-        "We can help design ad creative and campaign landing pages. Tell us more about your project and we'll guide you.",
+        "Optivax Global currently focuses on custom website design, UI/UX design, logo branding, and eBook design.",
+        "Optivax Global currently focuses on custom website design, UI/UX design, logo branding, and eBook design.",
+        "Optivax Global currently focuses on custom website design, UI/UX design, logo branding, and eBook design.",
+        "Optivax Global currently focuses on custom website design, UI/UX design, logo branding, and eBook design.",
+        "Optivax Global currently focuses on custom website design, UI/UX design, logo branding, and eBook design.",
       ],
     },
     {
@@ -706,12 +714,16 @@ const ChatBot = () => {
         "increase sales",
         "business promote",
       ],
-      actions: marketingActions,
+      actions: [
+        { label: "View Our Services", type: "route", value: "/services" },
+        { label: "Contact Our Team", type: "route", value: "/contact" },
+        { label: "WhatsApp Team", type: "whatsapp" },
+      ],
       replies: [
-        "Yes, digital marketing is one of our services.\n\nWe can help with campaign planning, brand messaging, and a consistent digital presence built around your business goals.",
-        "We can help with digital marketing alongside a professionally designed website, app interface, or brand identity everything works better when it's consistent.",
-        "That's something we can help with. Our team supports website design, UI/UX design, branding, eBook design, and digital marketing.",
-        "Yes, we offer digital marketing support. A well-designed website and consistent brand identity are a great starting point happy to help with either.",
+        "Optivax Global currently focuses on custom website design, UI/UX design, logo branding, and eBook design. A professionally designed website and consistent brand identity are a great starting point.",
+        "Optivax Global currently focuses on custom website design, UI/UX design, logo branding, and eBook design.",
+        "That's something we can help with in a design sense. Our team supports website design, UI/UX design, branding, and eBook design.",
+        "Optivax Global currently focuses on custom website design, UI/UX design, logo branding, and eBook design.",
         "That's something we offer. Let us know more about your business and goals and we'll guide you to the right next step.",
       ],
     },
@@ -1207,12 +1219,12 @@ const ChatBot = () => {
     }
 
     const fallbackReplies = [
-      "Thanks for sharing that.\n\nOptivax Global can help with websites, development, logo design, branding, app UI/UX, eBook covers, animation, and digital marketing.\n\nCould you tell me which service you are interested in?",
-      "I understand. To guide you better, please share what you need help with  website, branding, app UI/UX, eBook cover, digital marketing, or presentation design.\n\nOur team will suggest the best next step.",
+      "Thanks for sharing that.\n\nOptivax Global can help with websites, development, logo design, branding, app UI/UX, eBook covers, and animation.\n\nCould you tell me which service you are interested in?",
+      "I understand. To guide you better, please share what you need help with  website, branding, app UI/UX, eBook cover, or presentation design.\n\nOur team will suggest the best next step.",
       "That sounds interesting.\n\nOptivax Global can help you build a professional digital presence based on your business goal. Tell me your business type and what you want to improve, and I’ll guide you in the right direction.",
       "Thanks for your message.\n\nTo give you the most useful direction, please share whether you need a new website, redesign, logo, app UI/UX, eBook cover, or presentation support.",
-      "I can guide you better with one quick detail.\n\nAre you looking to build something new, improve your current online presence, or grow your business online?",
-      "Got it.\n\nOur team supports businesses with design, development, branding, digital marketing, and more. Share your goal in simple words, and I'll suggest the most relevant service.",
+      "I can guide you better with one quick detail.\n\nAre you looking to build something new or improve your current website or brand design?",
+      "Got it.\n\nOur team supports businesses with design, development, branding, and more. Share your goal in simple words, and I'll suggest the most relevant service.",
     ];
 
     return {
